@@ -1,5 +1,5 @@
 <?php
-if ($_GET['installplugin-getdir']) {
+if (isset($_GET['installplugin-getdir'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>getdir plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -9,7 +9,7 @@ if ($_GET['installplugin-getdir']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-getdir']) {
+if (isset($_GET['removeplugin-getdir'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>getdir plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -19,7 +19,7 @@ if ($_GET['removeplugin-getdir']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-task']) {
+if (isset($_GET['installplugin-task'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>task plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -29,7 +29,7 @@ if ($_GET['installplugin-task']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-task']) {
+if (isset($_GET['removeplugin-task'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>task plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -39,7 +39,7 @@ if ($_GET['removeplugin-task']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-autodl']) {
+if (isset($_GET['installplugin-autodl'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>autodl-irssi plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -49,7 +49,7 @@ if ($_GET['installplugin-autodl']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-autodl']) {
+if (isset($_GET['removeplugin-autodl'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>autodl-irssi plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -59,7 +59,7 @@ if ($_GET['removeplugin-autodl']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-autotools']) {
+if (isset($_GET['installplugin-autotools'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>autotools plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -69,7 +69,7 @@ if ($_GET['installplugin-autotools']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-autotools']) {
+if (isset($_GET['removeplugin-autotools'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>autotools plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -79,7 +79,7 @@ if ($_GET['removeplugin-autotools']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-checkport']) {
+if (isset($_GET['installplugin-checkport'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>checkport plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -89,7 +89,7 @@ if ($_GET['installplugin-checkport']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-checkport']) {
+if (isset($_GET['removeplugin-checkport'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>checkport plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -99,7 +99,7 @@ if ($_GET['removeplugin-checkport']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-chunks']) {
+if (isset($_GET['installplugin-chunks'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>chunks plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -109,7 +109,7 @@ if ($_GET['installplugin-chunks']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-chunks']) {
+if (isset($_GET['removeplugin-chunks'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>chunks plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -119,7 +119,7 @@ if ($_GET['removeplugin-chunks']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-cookies']) {
+if (isset($_GET['installplugin-cookies'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>cookies plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -129,7 +129,7 @@ if ($_GET['installplugin-cookies']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-cookies']) {
+if (isset($_GET['removeplugin-cookies'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>cookies plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -139,7 +139,7 @@ if ($_GET['removeplugin-cookies']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-cpuload']) {
+if (isset($_GET['installplugin-cpuload'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>cpuload plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -149,7 +149,7 @@ if ($_GET['installplugin-cpuload']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-cpuload']) {
+if (isset($_GET['removeplugin-cpuload'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>cpuload plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -159,7 +159,7 @@ if ($_GET['removeplugin-cpuload']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-create']) {
+if (isset($_GET['installplugin-create'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>create plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -169,7 +169,7 @@ if ($_GET['installplugin-create']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-create']) {
+if (isset($_GET['removeplugin-create'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>create plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -179,7 +179,7 @@ if ($_GET['removeplugin-create']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-data']) {
+if (isset($_GET['installplugin-data'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>data plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -189,7 +189,7 @@ if ($_GET['installplugin-data']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-data']) {
+if (isset($_GET['removeplugin-data'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>data plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -199,7 +199,7 @@ if ($_GET['removeplugin-data']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-datadir']) {
+if (isset($_GET['installplugin-datadir'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>datadir plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -209,7 +209,7 @@ if ($_GET['installplugin-datadir']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-datadir']) {
+if (isset($_GET['removeplugin-datadir'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>datadir plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -219,7 +219,7 @@ if ($_GET['removeplugin-datadir']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-diskspace']) {
+if (isset($_GET['installplugin-diskspace'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -229,7 +229,7 @@ if ($_GET['installplugin-diskspace']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-diskspace']) {
+if (isset($_GET['removeplugin-diskspace'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -242,7 +242,7 @@ if ($_GET['removeplugin-diskspace']) {
 /*! ----------------------------------------------------------------------
   BEGIN: If Using /home As The Primary partition Install Plugin diskspaceh
 ---------------------------------------------------------------------- !*/
-if ($_GET['installplugin-diskspaceh']) {
+if (isset($_GET['installplugin-diskspaceh'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -252,7 +252,7 @@ if ($_GET['installplugin-diskspaceh']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-diskspaceh']) {
+if (isset($_GET['removeplugin-diskspaceh'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -265,7 +265,7 @@ if ($_GET['removeplugin-diskspaceh']) {
 /*! ----------------------------------------------------------------------
   END: If Using /home As The Primary partition Install Plugin diskspaceh
 ---------------------------------------------------------------------- !*/
-if ($_GET['installplugin-edit']) {
+if (isset($_GET['installplugin-edit'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>edit plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -275,7 +275,7 @@ if ($_GET['installplugin-edit']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-edit']) {
+if (isset($_GET['removeplugin-edit'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>edit plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -285,7 +285,7 @@ if ($_GET['removeplugin-edit']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-erasedata']) {
+if (isset($_GET['installplugin-erasedata'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>erasedata plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -295,7 +295,7 @@ if ($_GET['installplugin-erasedata']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-erasedata']) {
+if (isset($_GET['removeplugin-erasedata'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>erasedata plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -305,7 +305,7 @@ if ($_GET['removeplugin-erasedata']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-extratio']) {
+if (isset($_GET['installplugin-extratio'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>extratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -315,7 +315,7 @@ if ($_GET['installplugin-extratio']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-extratio']) {
+if (isset($_GET['removeplugin-extratio'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>extratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -325,7 +325,7 @@ if ($_GET['removeplugin-extratio']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-extsearch']) {
+if (isset($_GET['installplugin-extsearch'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>extsearch plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -335,7 +335,7 @@ if ($_GET['installplugin-extsearch']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-extsearch']) {
+if (isset($_GET['removeplugin-extsearch'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>extsearch plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -345,7 +345,7 @@ if ($_GET['removeplugin-extsearch']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-feeds']) {
+if (isset($_GET['installplugin-feeds'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>feeds plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -355,7 +355,7 @@ if ($_GET['installplugin-feeds']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-feeds']) {
+if (isset($_GET['removeplugin-feeds'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>feeds plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -365,7 +365,7 @@ if ($_GET['removeplugin-feeds']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-filedrop']) {
+if (isset($_GET['installplugin-filedrop'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>filedrop plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -375,7 +375,7 @@ if ($_GET['installplugin-filedrop']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-filedrop']) {
+if (isset($_GET['removeplugin-filedrop'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>filedrop plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -385,7 +385,7 @@ if ($_GET['removeplugin-filedrop']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-filemanager']) {
+if (isset($_GET['installplugin-filemanager'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>filemanager plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -395,7 +395,7 @@ if ($_GET['installplugin-filemanager']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-filemanager']) {
+if (isset($_GET['removeplugin-filemanager'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>filemanager plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -405,7 +405,7 @@ if ($_GET['removeplugin-filemanager']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-fileshare']) {
+if (isset($_GET['installplugin-fileshare'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>fileshare plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -415,7 +415,7 @@ if ($_GET['installplugin-fileshare']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-fileshare']) {
+if (isset($_GET['removeplugin-fileshare'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>fileshare plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -425,7 +425,7 @@ if ($_GET['removeplugin-fileshare']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-fileupload']) {
+if (isset($_GET['installplugin-fileupload'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>fileupload plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -435,7 +435,7 @@ if ($_GET['installplugin-fileupload']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-fileupload']) {
+if (isset($_GET['removeplugin-fileupload'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>fileupload plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -445,7 +445,7 @@ if ($_GET['removeplugin-fileupload']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-history']) {
+if (isset($_GET['installplugin-history'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>history plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -455,7 +455,7 @@ if ($_GET['installplugin-history']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-history']) {
+if (isset($_GET['removeplugin-history'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>history plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -465,7 +465,7 @@ if ($_GET['removeplugin-history']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-httprpc']) {
+if (isset($_GET['installplugin-httprpc'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>httprpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -475,7 +475,7 @@ if ($_GET['installplugin-httprpc']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-httprpc']) {
+if (isset($_GET['removeplugin-httprpc'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>httprpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -485,7 +485,7 @@ if ($_GET['removeplugin-httprpc']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-ipad']) {
+if (isset($_GET['installplugin-ipad'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>ipad plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -495,7 +495,7 @@ if ($_GET['installplugin-ipad']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-ipad']) {
+if (isset($_GET['removeplugin-ipad'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>ipad plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -505,7 +505,7 @@ if ($_GET['removeplugin-ipad']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-loginmgr']) {
+if (isset($_GET['installplugin-loginmgr'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>loginmgr plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -515,7 +515,7 @@ if ($_GET['installplugin-loginmgr']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-loginmgr']) {
+if (isset($_GET['removeplugin-loginmgr'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>loginmgr plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -525,7 +525,7 @@ if ($_GET['removeplugin-loginmgr']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-logoff']) {
+if (isset($_GET['installplugin-logoff'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>logoff plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -535,7 +535,7 @@ if ($_GET['installplugin-logoff']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-logoff']) {
+if (isset($_GET['removeplugin-logoff'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>logoff plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -545,7 +545,7 @@ if ($_GET['removeplugin-logoff']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-lookat']) {
+if (isset($_GET['installplugin-lookat'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>lookat plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -555,7 +555,7 @@ if ($_GET['installplugin-lookat']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-lookat']) {
+if (isset($_GET['removeplugin-lookat'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>lookat plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -565,7 +565,7 @@ if ($_GET['removeplugin-lookat']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-mediainfo']) {
+if (isset($_GET['installplugin-mediainfo'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>mediainfo plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -575,7 +575,7 @@ if ($_GET['installplugin-mediainfo']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-mediainfo']) {
+if (isset($_GET['removeplugin-mediainfo'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>mediainfo plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -585,7 +585,7 @@ if ($_GET['removeplugin-mediainfo']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-mobile']) {
+if (isset($_GET['installplugin-mobile'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>mobile plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -595,7 +595,7 @@ if ($_GET['installplugin-mobile']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-mobile']) {
+if (isset($_GET['removeplugin-mobile'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>mobile plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -605,7 +605,7 @@ if ($_GET['removeplugin-mobile']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-noty']) {
+if (isset($_GET['installplugin-noty'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>noty plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -615,7 +615,7 @@ if ($_GET['installplugin-noty']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-noty']) {
+if (isset($_GET['removeplugin-noty'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>noty plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -625,7 +625,7 @@ if ($_GET['removeplugin-noty']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-pausewebui']) {
+if (isset($_GET['installplugin-pausewebui'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>pausewebui plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -635,7 +635,7 @@ if ($_GET['installplugin-pausewebui']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-pausewebui']) {
+if (isset($_GET['removeplugin-pausewebui'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>pausewebui plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -645,7 +645,7 @@ if ($_GET['removeplugin-pausewebui']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-ratio']) {
+if (isset($_GET['installplugin-ratio'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>ratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -655,7 +655,7 @@ if ($_GET['installplugin-ratio']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-ratio']) {
+if (isset($_GET['removeplugin-ratio'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>ratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -665,7 +665,7 @@ if ($_GET['removeplugin-ratio']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-ratiocolor']) {
+if (isset($_GET['installplugin-ratiocolor'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>ratiocolor plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -675,7 +675,7 @@ if ($_GET['installplugin-ratiocolor']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-ratiocolor']) {
+if (isset($_GET['removeplugin-ratiocolor'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>ratiocolor plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -685,7 +685,7 @@ if ($_GET['removeplugin-ratiocolor']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-retrackers']) {
+if (isset($_GET['installplugin-retrackers'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>retrackers plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -695,7 +695,7 @@ if ($_GET['installplugin-retrackers']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-retrackers']) {
+if (isset($_GET['removeplugin-retrackers'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>retrackers plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -705,7 +705,7 @@ if ($_GET['removeplugin-retrackers']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-rpc']) {
+if (isset($_GET['installplugin-rpc'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>rpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -715,7 +715,7 @@ if ($_GET['installplugin-rpc']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-rpc']) {
+if (isset($_GET['removeplugin-rpc'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>rpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -725,7 +725,7 @@ if ($_GET['removeplugin-rpc']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-rss']) {
+if (isset($_GET['installplugin-rss'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>rss plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -735,7 +735,7 @@ if ($_GET['installplugin-rss']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-rss']) {
+if (isset($_GET['removeplugin-rss'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>rss plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -745,7 +745,7 @@ if ($_GET['removeplugin-rss']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-rssurlrewrite']) {
+if (isset($_GET['installplugin-rssurlrewrite'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>rssurlrewrite plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -755,7 +755,7 @@ if ($_GET['installplugin-rssurlrewrite']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-rssurlrewrite']) {
+if (isset($_GET['removeplugin-rssurlrewrite'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>rssurlrewrite plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -765,7 +765,7 @@ if ($_GET['removeplugin-rssurlrewrite']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-rutracker_check']) {
+if (isset($_GET['installplugin-rutracker_check'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>rutracker_check plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -775,7 +775,7 @@ if ($_GET['installplugin-rutracker_check']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-rutracker_check']) {
+if (isset($_GET['removeplugin-rutracker_check'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>rutracker_check plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -785,7 +785,7 @@ if ($_GET['removeplugin-rutracker_check']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-scheduler']) {
+if (isset($_GET['installplugin-scheduler'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>scheduler plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -795,7 +795,7 @@ if ($_GET['installplugin-scheduler']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-scheduler']) {
+if (isset($_GET['removeplugin-scheduler'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>scheduler plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -805,7 +805,7 @@ if ($_GET['removeplugin-scheduler']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-screenshots']) {
+if (isset($_GET['installplugin-screenshots'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>screenshots plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -815,7 +815,7 @@ if ($_GET['installplugin-screenshots']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-screenshots']) {
+if (isset($_GET['removeplugin-screenshots'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>screenshots plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -825,7 +825,7 @@ if ($_GET['removeplugin-screenshots']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-seedingtime']) {
+if (isset($_GET['installplugin-seedingtime'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>seedingtime plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -835,7 +835,7 @@ if ($_GET['installplugin-seedingtime']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-seedingtime']) {
+if (isset($_GET['removeplugin-seedingtime)'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>seedingtime plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -845,7 +845,7 @@ if ($_GET['removeplugin-seedingtime']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-show_peers_like_wtorrent']) {
+if (isset($_GET['installplugin-show_peers_like_wtorrent'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>show_peers_like_wtorrent plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -855,7 +855,7 @@ if ($_GET['installplugin-show_peers_like_wtorrent']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-show_peers_like_wtorrent']) {
+if (isset($_GET['removeplugin-show_peers_like_wtorrent'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>show_peers_like_wtorrent plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -865,7 +865,7 @@ if ($_GET['removeplugin-show_peers_like_wtorrent']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-source']) {
+if (isset($_GET['installplugin-source'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>source plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -875,7 +875,7 @@ if ($_GET['installplugin-source']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-source']) {
+if (isset($_GET['removeplugin-source'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>source plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -885,7 +885,7 @@ if ($_GET['removeplugin-source']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-stream']) {
+if (isset($_GET['installplugin-stream'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>stream plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -895,7 +895,7 @@ if ($_GET['installplugin-stream']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-stream']) {
+if (isset($_GET['removeplugin-stream'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>stream plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -905,7 +905,7 @@ if ($_GET['removeplugin-stream']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-theme']) {
+if (isset($_GET['installplugin-theme'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>theme plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -915,7 +915,7 @@ if ($_GET['installplugin-theme']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-theme']) {
+if (isset($_GET['removeplugin-theme'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>theme plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -925,7 +925,7 @@ if ($_GET['removeplugin-theme']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-throttle']) {
+if (isset($_GET['installplugin-throttle'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>throttle plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -935,7 +935,7 @@ if ($_GET['installplugin-throttle']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-throttle']) {
+if (isset($_GET['removeplugin-throttle'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>throttle plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -945,7 +945,7 @@ if ($_GET['removeplugin-throttle']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-tracklabels']) {
+if (isset($_GET['installplugin-tracklabels'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>tracklabels plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -955,7 +955,7 @@ if ($_GET['installplugin-tracklabels']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-tracklabels']) {
+if (isset($_GET['removeplugin-tracklabels'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>tracklabels plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -965,7 +965,7 @@ if ($_GET['removeplugin-tracklabels']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-trafic']) {
+if (isset($_GET['installplugin-trafic'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>trafic plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -975,7 +975,7 @@ if ($_GET['installplugin-trafic']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-trafic']) {
+if (isset($_GET['removeplugin-trafic'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>trafic plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -985,7 +985,7 @@ if ($_GET['removeplugin-trafic']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-unpack']) {
+if (isset($_GET['installplugin-unpack'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>unpack plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -995,7 +995,7 @@ if ($_GET['installplugin-unpack']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-unpack']) {
+if (isset($_GET['removeplugin-unpack'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>unpack plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -1005,7 +1005,7 @@ if ($_GET['removeplugin-unpack']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['installplugin-xmpp']) {
+if (isset($_GET['installplugin-xmpp'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>xmpp plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -1015,7 +1015,7 @@ if ($_GET['installplugin-xmpp']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removeplugin-xmpp']) {
+if (isset($_GET['removeplugin-xmpp'])) {
         //header('Location: /');
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>xmpp plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
@@ -1026,3 +1026,4 @@ if ($_GET['removeplugin-xmpp']) {
         $newURL = $myURL;
 }
 ?>
+

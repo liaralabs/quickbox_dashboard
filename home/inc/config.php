@@ -3,7 +3,7 @@ session_destroy();
 include '/srv/rutorrent/php/util.php';
 include 'widgets/class.php';
 $interface = "eth0";
-$version = "qb-version";
+$version = "2.3.0";
 error_reporting(E_ALL);
 $master = shell_exec('cat /etc/apache2/master.txt');
 $username = getUser();

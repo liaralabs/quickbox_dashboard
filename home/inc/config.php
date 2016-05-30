@@ -5,7 +5,7 @@ include 'widgets/class.php';
 $interface = "eth0";
 $version = "2.3.0";
 error_reporting(E_ALL);
-$master = shell_exec('cat /etc/apache2/master.txt');
+$master = file_get_contents('cat /etc/apache2/master.txt');
 $username = getUser();
 
 define('HTTP_HOST', preg_replace('~^www\.~i', '', $_SERVER['HTTP_HOST']));

@@ -4,7 +4,7 @@ if (isset($_GET['installplugin-getdir'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>getdir plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>getdir plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-getdir");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-getdir");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -14,7 +14,7 @@ if (isset($_GET['removeplugin-getdir'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>getdir plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>getdir plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-getdir");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-getdir");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -24,7 +24,7 @@ if (isset($_GET['installplugin-task'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>task plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>task plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-task");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-task");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -34,7 +34,7 @@ if (isset($_GET['removeplugin-task'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>task plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>task plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-task");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-task");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -44,7 +44,7 @@ if (isset($_GET['installplugin-autodl'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>autodl-irssi plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>autodl-irssi plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-autodl");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-autodl");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -54,7 +54,7 @@ if (isset($_GET['removeplugin-autodl'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>autodl-irssi plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>autodl-irssi plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-autodl");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-autodl");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -64,7 +64,7 @@ if (isset($_GET['installplugin-autotools'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>autotools plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>autotools plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-autotools");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-autotools");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -74,7 +74,7 @@ if (isset($_GET['removeplugin-autotools'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>autotools plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>autotools plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-autotools");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-autotools");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -84,7 +84,7 @@ if (isset($_GET['installplugin-checkport'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>checkport plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>checkport plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-checkport");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-checkport");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -94,7 +94,7 @@ if (isset($_GET['removeplugin-checkport'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>checkport plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>checkport plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-checkport");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-checkport");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -104,7 +104,7 @@ if (isset($_GET['installplugin-chunks'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>chunks plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>chunks plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-chunks");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-chunks");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -114,7 +114,7 @@ if (isset($_GET['removeplugin-chunks'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>chunks plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>chunks plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-chunks");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-chunks");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -124,7 +124,7 @@ if (isset($_GET['installplugin-cookies'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>cookies plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>cookies plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-cookies");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-cookies");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -134,7 +134,7 @@ if (isset($_GET['removeplugin-cookies'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>cookies plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>cookies plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-cookies");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-cookies");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -144,7 +144,7 @@ if (isset($_GET['installplugin-cpuload'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>cpuload plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>cpuload plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-cpuload");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-cpuload");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -154,7 +154,7 @@ if (isset($_GET['removeplugin-cpuload'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>cpuload plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>cpuload plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-cpuload");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-cpuload");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -164,7 +164,7 @@ if (isset($_GET['installplugin-create'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>create plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>create plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-create");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-create");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -174,7 +174,7 @@ if (isset($_GET['removeplugin-create'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>create plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>create plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-create");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-create");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -184,7 +184,7 @@ if (isset($_GET['installplugin-data'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>data plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>data plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-data");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-data");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -194,7 +194,7 @@ if (isset($_GET['removeplugin-data'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>data plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>data plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-data");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-data");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -204,7 +204,7 @@ if (isset($_GET['installplugin-datadir'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>datadir plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>datadir plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-datadir");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-datadir");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -214,7 +214,7 @@ if (isset($_GET['removeplugin-datadir'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>datadir plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>datadir plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-datadir");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-datadir");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -224,7 +224,7 @@ if (isset($_GET['installplugin-diskspace'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-diskspace");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-diskspace");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -234,7 +234,7 @@ if (isset($_GET['removeplugin-diskspace'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-diskspace");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-diskspace");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -247,7 +247,7 @@ if (isset($_GET['installplugin-diskspaceh'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-diskspace");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-diskspace");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -257,7 +257,7 @@ if (isset($_GET['removeplugin-diskspaceh'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-diskspace");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-diskspace");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -270,7 +270,7 @@ if (isset($_GET['installplugin-edit'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>edit plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>edit plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-edit");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-edit");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -280,7 +280,7 @@ if (isset($_GET['removeplugin-edit'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>edit plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>edit plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-edit");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-edit");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -290,7 +290,7 @@ if (isset($_GET['installplugin-erasedata'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>erasedata plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>erasedata plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-erasedata");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-erasedata");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -300,7 +300,7 @@ if (isset($_GET['removeplugin-erasedata'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>erasedata plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>erasedata plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-erasedata");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-erasedata");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -310,7 +310,7 @@ if (isset($_GET['installplugin-extratio'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>extratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>extratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-extratio");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-extratio");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -320,7 +320,7 @@ if (isset($_GET['removeplugin-extratio'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>extratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>extratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-extratio");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-extratio");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -330,7 +330,7 @@ if (isset($_GET['installplugin-extsearch'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>extsearch plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>extsearch plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-extsearch");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-extsearch");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -340,7 +340,7 @@ if (isset($_GET['removeplugin-extsearch'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>extsearch plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>extsearch plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-extsearch");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-extsearch");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -350,7 +350,7 @@ if (isset($_GET['installplugin-feeds'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>feeds plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>feeds plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-feeds");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-feeds");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -360,7 +360,7 @@ if (isset($_GET['removeplugin-feeds'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>feeds plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>feeds plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-feeds");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-feeds");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -370,7 +370,7 @@ if (isset($_GET['installplugin-filedrop'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>filedrop plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>filedrop plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-filedrop");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-filedrop");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -380,7 +380,7 @@ if (isset($_GET['removeplugin-filedrop'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>filedrop plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>filedrop plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-filedrop");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-filedrop");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -390,7 +390,7 @@ if (isset($_GET['installplugin-filemanager'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>filemanager plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>filemanager plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-filemanager");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-filemanager");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -400,7 +400,7 @@ if (isset($_GET['removeplugin-filemanager'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>filemanager plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>filemanager plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-filemanager");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-filemanager");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -410,7 +410,7 @@ if (isset($_GET['installplugin-fileshare'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>fileshare plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>fileshare plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-fileshare");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-fileshare");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -420,7 +420,7 @@ if (isset($_GET['removeplugin-fileshare'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>fileshare plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>fileshare plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-fileshare");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-fileshare");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -430,7 +430,7 @@ if (isset($_GET['installplugin-fileupload'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>fileupload plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>fileupload plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-fileupload");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-fileupload");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -440,7 +440,7 @@ if (isset($_GET['removeplugin-fileupload'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>fileupload plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>fileupload plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-fileupload");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-fileupload");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -450,7 +450,7 @@ if (isset($_GET['installplugin-history'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>history plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>history plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-history");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-history");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -460,7 +460,7 @@ if (isset($_GET['removeplugin-history'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>history plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>history plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-history");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-history");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -470,7 +470,7 @@ if (isset($_GET['installplugin-httprpc'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>httprpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>httprpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-httprpc");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-httprpc");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -480,7 +480,7 @@ if (isset($_GET['removeplugin-httprpc'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>httprpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>httprpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-httprpc");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-httprpc");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -490,7 +490,7 @@ if (isset($_GET['installplugin-ipad'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>ipad plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>ipad plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-ipad");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-ipad");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -500,7 +500,7 @@ if (isset($_GET['removeplugin-ipad'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>ipad plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>ipad plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-ipad");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-ipad");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -510,7 +510,7 @@ if (isset($_GET['installplugin-loginmgr'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>loginmgr plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>loginmgr plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-loginmgr");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-loginmgr");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -520,7 +520,7 @@ if (isset($_GET['removeplugin-loginmgr'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>loginmgr plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>loginmgr plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-loginmgr");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-loginmgr");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -530,7 +530,7 @@ if (isset($_GET['installplugin-logoff'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>logoff plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>logoff plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-logoff");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-logoff");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -540,7 +540,7 @@ if (isset($_GET['removeplugin-logoff'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>logoff plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>logoff plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-logoff");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-logoff");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -550,7 +550,7 @@ if (isset($_GET['installplugin-lookat'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>lookat plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>lookat plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-lookat");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-lookat");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -560,7 +560,7 @@ if (isset($_GET['removeplugin-lookat'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>lookat plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>lookat plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-lookat");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-lookat");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -570,7 +570,7 @@ if (isset($_GET['installplugin-mediainfo'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>mediainfo plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>mediainfo plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-mediainfo");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-mediainfo");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -580,7 +580,7 @@ if (isset($_GET['removeplugin-mediainfo'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>mediainfo plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>mediainfo plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-mediainfo");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-mediainfo");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -590,7 +590,7 @@ if (isset($_GET['installplugin-mobile'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>mobile plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>mobile plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-mobile");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-mobile");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -600,7 +600,7 @@ if (isset($_GET['removeplugin-mobile'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>mobile plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>mobile plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-mobile");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-mobile");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -610,7 +610,7 @@ if (isset($_GET['installplugin-noty'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>noty plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>noty plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-noty");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-noty");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -620,7 +620,7 @@ if (isset($_GET['removeplugin-noty'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>noty plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>noty plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-noty");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-noty");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -630,7 +630,7 @@ if (isset($_GET['installplugin-pausewebui'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>pausewebui plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>pausewebui plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-pausewebui");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-pausewebui");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -640,7 +640,7 @@ if (isset($_GET['removeplugin-pausewebui'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>pausewebui plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>pausewebui plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-pausewebui");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-pausewebui");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -650,7 +650,7 @@ if (isset($_GET['installplugin-ratio'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>ratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>ratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-ratio");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-ratio");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -660,7 +660,7 @@ if (isset($_GET['removeplugin-ratio'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>ratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>ratio plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-ratio");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-ratio");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -670,7 +670,7 @@ if (isset($_GET['installplugin-ratiocolor'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>ratiocolor plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>ratiocolor plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-ratiocolor");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-ratiocolor");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -680,7 +680,7 @@ if (isset($_GET['removeplugin-ratiocolor'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>ratiocolor plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>ratiocolor plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-ratiocolor");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-ratiocolor");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -690,7 +690,7 @@ if (isset($_GET['installplugin-retrackers'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>retrackers plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>retrackers plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-retrackers");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-retrackers");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -700,7 +700,7 @@ if (isset($_GET['removeplugin-retrackers'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>retrackers plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>retrackers plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-retrackers");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-retrackers");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -710,7 +710,7 @@ if (isset($_GET['installplugin-rpc'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>rpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>rpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-rpc");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-rpc");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -720,7 +720,7 @@ if (isset($_GET['removeplugin-rpc'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>rpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>rpc plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-rpc");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-rpc");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -730,7 +730,7 @@ if (isset($_GET['installplugin-rss'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>rss plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>rss plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-rss");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-rss");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -740,7 +740,7 @@ if (isset($_GET['removeplugin-rss'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>rss plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>rss plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-rss");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-rss");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -750,7 +750,7 @@ if (isset($_GET['installplugin-rssurlrewrite'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>rssurlrewrite plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>rssurlrewrite plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-rssurlrewrite");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-rssurlrewrite");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -760,7 +760,7 @@ if (isset($_GET['removeplugin-rssurlrewrite'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>rssurlrewrite plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>rssurlrewrite plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-rssurlrewrite");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-rssurlrewrite");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -770,7 +770,7 @@ if (isset($_GET['installplugin-rutracker_check'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>rutracker_check plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>rutracker_check plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-rutracker_check");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-rutracker_check");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -780,7 +780,7 @@ if (isset($_GET['removeplugin-rutracker_check'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>rutracker_check plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>rutracker_check plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-rutracker_check");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-rutracker_check");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -790,7 +790,7 @@ if (isset($_GET['installplugin-scheduler'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>scheduler plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>scheduler plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-scheduler");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-scheduler");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -800,7 +800,7 @@ if (isset($_GET['removeplugin-scheduler'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>scheduler plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>scheduler plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-scheduler");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-scheduler");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -810,7 +810,7 @@ if (isset($_GET['installplugin-screenshots'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>screenshots plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>screenshots plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-screenshots");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-screenshots");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -820,7 +820,7 @@ if (isset($_GET['removeplugin-screenshots'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>screenshots plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>screenshots plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-screenshots");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-screenshots");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -830,7 +830,7 @@ if (isset($_GET['installplugin-seedingtime'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>seedingtime plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>seedingtime plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-seedingtime");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-seedingtime");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -840,7 +840,7 @@ if (isset($_GET['removeplugin-seedingtime)'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>seedingtime plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>seedingtime plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-seedingtime");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-seedingtime");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -850,7 +850,7 @@ if (isset($_GET['installplugin-show_peers_like_wtorrent'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>show_peers_like_wtorrent plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>show_peers_like_wtorrent plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-show_peers_like_wtorrent");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-show_peers_like_wtorrent");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -860,7 +860,7 @@ if (isset($_GET['removeplugin-show_peers_like_wtorrent'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>show_peers_like_wtorrent plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>show_peers_like_wtorrent plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-show_peers_like_wtorrent");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-show_peers_like_wtorrent");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -870,7 +870,7 @@ if (isset($_GET['installplugin-source'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>source plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>source plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-source");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-source");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -880,7 +880,7 @@ if (isset($_GET['removeplugin-source'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>source plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>source plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-source");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-source");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -890,7 +890,7 @@ if (isset($_GET['installplugin-stream'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>stream plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>stream plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-stream");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-stream");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -900,7 +900,7 @@ if (isset($_GET['removeplugin-stream'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>stream plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>stream plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-stream");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-stream");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -910,7 +910,7 @@ if (isset($_GET['installplugin-theme'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>theme plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>theme plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-theme");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-theme");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -920,7 +920,7 @@ if (isset($_GET['removeplugin-theme'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>theme plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>theme plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-theme");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-theme");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -930,7 +930,7 @@ if (isset($_GET['installplugin-throttle'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>throttle plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>throttle plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-throttle");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-throttle");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -940,7 +940,7 @@ if (isset($_GET['removeplugin-throttle'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>throttle plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>throttle plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-throttle");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-throttle");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -950,7 +950,7 @@ if (isset($_GET['installplugin-tracklabels'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>tracklabels plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>tracklabels plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-tracklabels");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-tracklabels");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -960,7 +960,7 @@ if (isset($_GET['removeplugin-tracklabels'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>tracklabels plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>tracklabels plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-tracklabels");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-tracklabels");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -970,7 +970,7 @@ if (isset($_GET['installplugin-trafic'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>trafic plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>trafic plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-trafic");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-trafic");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -980,7 +980,7 @@ if (isset($_GET['removeplugin-trafic'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>trafic plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>trafic plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-trafic");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-trafic");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -990,7 +990,7 @@ if (isset($_GET['installplugin-unpack'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>unpack plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>unpack plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-unpack");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-unpack");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -1000,7 +1000,7 @@ if (isset($_GET['removeplugin-unpack'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>unpack plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>unpack plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-unpack");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-unpack");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -1010,7 +1010,7 @@ if (isset($_GET['installplugin-xmpp'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have installed the <b>xmpp plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have installed the <b>xmpp plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/installplugin-xmpp");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-xmpp");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -1020,10 +1020,9 @@ if (isset($_GET['removeplugin-xmpp'])) {
         header('Refresh: 5; /');
         writeMsg("Hello <b>$username</b>: I have removed the <b>xmpp plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
         $message = "Hello <b>$username</b>: I have removed the <b>xmpp plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/removeplugin-xmpp");
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-xmpp");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
 ?>
-

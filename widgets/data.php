@@ -1,5 +1,5 @@
 <?php
-$interface = file_get_contents('cat /srv/rutorrent/home/db/interface.db');
+$interface = file_get_contents('cat /srv/rutorrent/home/db/interface.txt');
 session_start();
 $rx[] = @file_get_contents("/sys/class/net/$interface/statistics/rx_bytes");
 $tx[] = @file_get_contents("/sys/class/net/$interface/statistics/tx_bytes");
@@ -25,5 +25,5 @@ if (count($_SESSION['rx'])>60)
 
 // # json_encode didnt work, if you found a workarround pls write m
 //echo json_encode($data, JSON_FORCE_OBJECT);
-echo '{"label":"${interface}","data":['.implode($_SESSION['rx'], ",").']}';
+echo '{"label":"$interface","data":['.implode($_SESSION['rx'], ",").']}';
 ?>

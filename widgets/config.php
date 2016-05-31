@@ -2,7 +2,7 @@
     error_reporting(E_ALL | E_NOTICE);
     $locale = 'en_US.UTF-8';
     $language = 'en';
-    $interface = file_get_contents('cat /srv/rutorrent/home/db/interface.txt');
+    $interface = INETFACE;
 
     // list of network interfaces monitored by vnStat
     $iface_list = array('$interface');
@@ -12,7 +12,7 @@
     // if there's no name set for an interface then the interface identifier
     // will be displayed instead
     //
-    $iface_title['$interface'] = 'External';
+    $iface_title['INETFACE'] = 'External';
     //$iface_title['lo'] = 'Internal';
 
     //

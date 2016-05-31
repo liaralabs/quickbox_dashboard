@@ -1,5 +1,5 @@
 <?php
-$interface = "eth0";
+$interface = file_get_contents('cat /srv/rutorrent/home/db/interface.db');
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 $data['rec'] = exec("cat /sys/class/net/{$interface}/statistics/rx_bytes");

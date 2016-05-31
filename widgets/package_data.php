@@ -1,6 +1,6 @@
 <?php
 
-if ($_GET['installpackage-btsync']) {
+if (isset($_GET['installpackage-btsync'])) {
         //header('Location: /');
         header('Refresh: 15; /');
         writeMsg("Hello <b>$username</b>: I am completing the installation of the <b>BTSync</b> package. Your browser will refresh once more when the installation has fully completed, this may take upwards of 15 seconds ... <br>");
@@ -10,7 +10,7 @@ if ($_GET['installpackage-btsync']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removepackage-btsync']) {
+if (isset($_GET['removepackage-btsync'])) {
         //header('Location: /');
         header('Refresh: 15; /');
         writeMsg("Hello <b>$username</b>: I am completing the removal of the <b>BTSync</b> package. Your browser will refresh once more when the uninstall has fully completed, this may take upwards of 15 seconds ... <br>");
@@ -21,7 +21,7 @@ if ($_GET['removepackage-btsync']) {
         $newURL = $myURL;
 }
 
-if ($_GET['installpackage-csf']) {
+if (isset($_GET['installpackage-csf'])) {
         //header('Location: /');
         header('Refresh: 15; /');
         writeMsg("Hello <b>$username</b>: I am completing the installation of the <b>Config Server Firewall (CSF)</b> package. Your browser will refresh once more when the installation has fully completed, this may take upwards of 15 seconds ... <br>");
@@ -31,7 +31,7 @@ if ($_GET['installpackage-csf']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removepackage-csf']) {
+if (isset($_GET['removepackage-csf'])) {
         //header('Location: /');
         header('Refresh: 15; /');
         writeMsg("Hello <b>$username</b>: I am completing the removal of the <b>Config Server Firewall (CSF)</b> package. Your browser will refresh once more when the uninstall has fully completed, this may take upwards of 15 seconds ... <br>");
@@ -42,7 +42,7 @@ if ($_GET['removepackage-csf']) {
         $newURL = $myURL;
 }
 
-if ($_GET['installpackage-plex']) {
+if (isset($_GET['installpackage-plex'])) {
         //header('Location: /');
         header('Refresh: 15; /');
         writeMsg("Hello <b>$username</b>: I am completing the installation of the <b>Plex Media Server</b> package. Your browser will refresh once more when the installation has fully completed, this may take upwards of 15 seconds ... <br>");
@@ -52,7 +52,7 @@ if ($_GET['installpackage-plex']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removepackage-plex']) {
+if (isset($_GET['removepackage-plex'])) {
         //header('Location: /');
         header('Refresh: 15; /');
         writeMsg("Hello <b>$username</b>: I am completing the removal of the <b>Plex Media Server</b> package. Your browser will refresh once more when the uninstall has fully completed, this may take upwards of 15 seconds ... <br>");
@@ -63,7 +63,7 @@ if ($_GET['removepackage-plex']) {
         $newURL = $myURL;
 }
 
-if ($_GET['installpackage-rapidleech']) {
+if (isset($_GET['installpackage-rapidleech'])) {
         //header('Location: /');
         header('Refresh: 15; /');
         writeMsg("Hello <b>$username</b>: I am completing the installation of the <b>Rapidleech</b> package. Your browser will refresh once more when the installation has fully completed, this may take upwards of 15 seconds ... <br>");
@@ -73,7 +73,7 @@ if ($_GET['installpackage-rapidleech']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removepackage-rapidleech']) {
+if (isset($_GET['removepackage-rapidleech'])) {
         //header('Location: /');
         header('Refresh: 15; /');
         writeMsg("Hello <b>$username</b>: I am completing the removal of the <b>Rapidleech</b> package. Your browser will refresh once more when the uninstall has fully completed, this may take upwards of 15 seconds ... <br>");
@@ -84,7 +84,7 @@ if ($_GET['removepackage-rapidleech']) {
         $newURL = $myURL;
 }
 
-if ($_GET['installpackage-sickrage']) {
+if (isset($_GET['installpackage-sickrage'])) {
         //header('Location: /');
         header('Refresh: 15; /');
         writeMsg("Hello <b>$username</b>: I am completing the installation of the <b>SickRage</b> package. Your browser will refresh once more when the installation has fully completed, this may take upwards of 15 seconds ... <br>");
@@ -94,7 +94,7 @@ if ($_GET['installpackage-sickrage']) {
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
 }
-if ($_GET['removepackage-sickrage']) {
+if (isset($_GET['removepackage-sickrage'])) {
         //header('Location: /');
         header('Refresh: 15; /');
         writeMsg("Hello <b>$username</b>: I am completing the removal of the <b>SickRage</b> package. Your browser will refresh once more when the uninstall has fully completed, this may take upwards of 15 seconds ... <br>");

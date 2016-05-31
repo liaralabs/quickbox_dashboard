@@ -4,7 +4,7 @@ include '/srv/rutorrent/php/util.php';
 include 'widgets/class.php';
 $version = "2.3.0";
 error_reporting(E_ALL);
-$master = file_get_contents('cat /srv/rutorrent/home/db/master.txt');
+$master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $username = getUser();
 
 define('HTTP_HOST', preg_replace('~^www\.~i', '', $_SERVER['HTTP_HOST']));

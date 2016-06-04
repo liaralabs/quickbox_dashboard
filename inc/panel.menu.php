@@ -254,9 +254,17 @@
 
                 echo "<li>";
                 if (file_exists('/srv/rutorrent/plugins/diskspace/plugin.info')) {
-                  echo "<a href=\"?removeplugin-diskspace=true\">diskspace <span class=\"tooltips text-inverted fa fa-question-circle\" data-toggle=\"tooltip\" title=\"This plugin adds an easy to read disk meter to the bottom bar.\" data-placement=\"right\"></span> <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
+                  echo "<a href=\"?removeplugin-diskspace=true\">diskspace <span class=\"tooltips text-inverted fa fa-question-circle\" data-toggle=\"tooltip\" title=\"This plugin adds an easy to read disk meter to the bottom bar for /(root) mounted installs..\" data-placement=\"right\"></span> <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
                 } else {
-                  echo "<a href=\"?installplugin-diskspace=true\">diskspace <span class=\"tooltips text-inverted fa fa-question-circle\" data-toggle=\"tooltip\" title=\"This plugin adds an easy to read disk meter to the bottom bar.\" data-placement=\"right\"></span> <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
+                  echo "<a href=\"?installplugin-diskspace=true\">diskspace <span class=\"tooltips text-inverted fa fa-question-circle\" data-toggle=\"tooltip\" title=\"This plugin adds an easy to read disk meter to the bottom bar for /(root) mounted installs..\" data-placement=\"right\"></span> <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
+                }
+                echo "</li>";
+
+                echo "<li>";
+                if (file_exists('/srv/rutorrent/plugins/diskspaceh/plugin.info')) {
+                  echo "<a href=\"?removeplugin-diskspaceh=true\">diskspace<span style="color:green">H</span> <span class=\"tooltips text-inverted fa fa-question-circle\" data-toggle=\"tooltip\" title=\"This plugin adds an easy to read disk meter to the bottom bar for /home mounted installs.\" data-placement=\"right\"></span> <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
+                } else {
+                  echo "<a href=\"?installplugin-diskspaceh=true\">diskspace<span style="color:green">H</span> <span class=\"tooltips text-inverted fa fa-question-circle\" data-toggle=\"tooltip\" title=\"This plugin adds an easy to read disk meter to the bottom bar for /home mounted installs.\" data-placement=\"right\"></span> <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
                 }
                 echo "</li>";
 

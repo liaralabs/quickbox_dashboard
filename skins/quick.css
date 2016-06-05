@@ -1,8 +1,8 @@
 /*!
  * Quick Box UI
- * Last compiled on Friday, January 22nd, 2016
+ * Last compiled on Friday, June 6th, 2016
  */
- 
+
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300);
 /*!@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800);*/
 /*!
@@ -1593,17 +1593,18 @@ kbd kbd {
   box-shadow: none;
 }
 pre {
+  background-color: transparent;
+  border: 0 solid #cccccc;
+  border-radius: 0;
+  color: #fff;
   display: block;
-  padding: 8px;
-  margin: 0 0 8.5px;
-  font-size: 11px;
-  line-height: 1.42857143;
+  font-size: 12px;
+  line-height: 1.42857;
+  margin: 0;
+  padding: 0;
   word-break: break-all;
   word-wrap: break-word;
-  color: #333333;
-  background-color: #f5f5f5;
-  border: 1px solid #cccccc;
-  border-radius: 2px;
+  margin-top: -15px;
 }
 pre code {
   padding: 0;
@@ -14713,7 +14714,7 @@ padding: 6px;
 }
 
 .plgin-center-switch {
-  margin-right: 5px; 
+  margin-right: 5px;
   margin-top: 2px;
 }
 
@@ -14722,4 +14723,3 @@ padding: 6px;
   border-top: 1px solid #3a3a3a;
   margin-top: 15px
 }
-

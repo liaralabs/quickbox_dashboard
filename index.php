@@ -70,7 +70,7 @@
                   <h4 class="panel-title">System Response</h4>
                 </div>
                 <div class="panel-body inverse">
-                  <pre><span id="sshoutput"></span></pre>
+                  <pre class="ps-container"><span id="sshoutput"></span></pre>
                   <!--
                   <//?php
                   //$output = readMsg();

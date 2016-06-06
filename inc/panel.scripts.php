@@ -130,14 +130,14 @@ $(document).ready(function() {
   'use strict';
 
   // BTSyncInstall
-  $('#btsyncInstall').click(function(){
-    $.gritter.add({
-      title: 'Installing BTSync',
-      text: 'Please wait while Bittorrent Sync is being installed on your system.',
-      class_name: 'with-icon check-circle success',
-      sticky: true
-    });
-  });
+  //$('#btsyncInstall').click(function(){
+  //  $.gritter.add({
+  //    title: 'Installing BTSync',
+  //    text: 'Please wait while Bittorrent Sync is being installed on your system.',
+  //    class_name: 'with-icon check-circle success',
+  //    sticky: true
+  //  });
+  //});
   // BTSyncRemove
   $('#btsyncRemove').click(function(){
     $.gritter.add({
@@ -148,14 +148,14 @@ $(document).ready(function() {
     });
   });
   // CSFInstall
-  $('#csfInstall').click(function(){
-    $.gritter.add({
-      title: 'Installing CSF',
-      text: 'Please wait while Config Server Firewall is being installed on your system. This may take up to 5 minutes to complete.',
-      class_name: 'with-icon check-circle success',
-      sticky: true
-    });
-  });
+  //$('#csfInstall').click(function(){
+  //  $.gritter.add({
+  //    title: 'Installing CSF',
+  //    text: 'Please wait while Config Server Firewall is being installed on your system. This may take up to 5 minutes to complete.',
+  //    class_name: 'with-icon check-circle success',
+  //    sticky: true
+  //  });
+  //});
   // csfRemove
   $('#csfRemove').click(function(){
     $.gritter.add({
@@ -166,23 +166,23 @@ $(document).ready(function() {
     });
   });
   // CleanMemCache
-  $('#cleanmem').click(function(){
-    $.gritter.add({
-      title: 'Cleaning Memory Cache',
-      text: 'Please wait while your Physical Memory Cache is being flushed on your system.',
-      class_name: 'with-icon check-circle success',
-      sticky: true
-    });
-  });
+  //$('#cleanmem').click(function(){
+  //  $.gritter.add({
+  //    title: 'Cleaning Memory Cache',
+  //    text: 'Please wait while your Physical Memory Cache is being flushed on your system.',
+  //    class_name: 'with-icon check-circle success',
+  //    sticky: true
+  //  });
+  //});
   // PlexInstall
-  $('#plexInstall').click(function(){
-    $.gritter.add({
-      title: 'Installing Plex',
-      text: 'Please wait while Plex Media Server is being installed on your system.',
-      class_name: 'with-icon check-circle success',
-      sticky: true
-    });
-  });
+  //$('#plexInstall').click(function(){
+  //  $.gritter.add({
+  //    title: 'Installing Plex',
+  //    text: 'Please wait while Plex Media Server is being installed on your system.',
+  //    class_name: 'with-icon check-circle success',
+  //    sticky: true
+  //  });
+  //});
   // PlexRemove
   $('#plexRemove').click(function(){
     $.gritter.add({
@@ -193,14 +193,14 @@ $(document).ready(function() {
     });
   });
   // RapidleechInstall
-  $('#rapidleechInstall').click(function(){
-    $.gritter.add({
-      title: 'Installing Rapidleech',
-      text: 'Please wait while Rapidleech is being installed on your system.',
-      class_name: 'with-icon check-circle success',
-      sticky: true
-    });
-  });
+  //$('#rapidleechInstall').click(function(){
+  //  $.gritter.add({
+  //    title: 'Installing Rapidleech',
+  //    text: 'Please wait while Rapidleech is being installed on your system.',
+  //    class_name: 'with-icon check-circle success',
+  //    sticky: true
+  //  });
+  //});
   // RapidleechRemove
   $('#rapidleechRemove').click(function(){
     $.gritter.add({
@@ -211,14 +211,14 @@ $(document).ready(function() {
     });
   });
   // SickRageInstall
-  $('#sickrageInstall').click(function(){
-    $.gritter.add({
-      title: 'Installing SickRage',
-      text: 'Please wait while SickRage is being installed on your system.',
-      class_name: 'with-icon check-circle success',
-      sticky: true
-    });
-  });
+  //$('#sickrageInstall').click(function(){
+  //  $.gritter.add({
+  //    title: 'Installing SickRage',
+  //    text: 'Please wait while SickRage is being installed on your system.',
+  //    class_name: 'with-icon check-circle success',
+  //    sticky: true
+  //  });
+  //});
   // SickRageRemove
   $('#sickrageRemove').click(function(){
     $.gritter.add({

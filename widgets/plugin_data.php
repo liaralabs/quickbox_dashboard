@@ -1,8 +1,10 @@
 <?php
 
 $plugins = array(
-        'getdir',
-        'task',
+        '_getdir',
+        '_noty',
+        '_noty2',
+        '_task',
         'autodl',
         'autotools',
         'check_port',

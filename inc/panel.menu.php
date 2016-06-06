@@ -181,10 +181,10 @@
                 echo "</li>";
 
                 echo "<li>";
-                if (file_exists('/srv/rutorrent/plugins/autodl-irssi/plugin.info')) {
-                  echo "<a href=\"?removeplugin-autodl=true\">autodl-irssi <span class=\"tooltips text-inverted fa fa-question-circle\" data-toggle=\"tooltip\" title=\"GUI for autodl-irssi-community\" data-placement=\"right\"></span> <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
+                if (file_exists('/srv/rutorrent/plugins/autodl_irssi/plugin.info')) {
+                  echo "<a href=\"?removeplugin-autodl_irssi=true\">autodl_irssi <span class=\"tooltips text-inverted fa fa-question-circle\" data-toggle=\"tooltip\" title=\"GUI for autodl-irssi-community\" data-placement=\"right\"></span> <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
                 } else {
-                  echo "<a href=\"?installplugin-autodl=true\">autodl-irssi <span class=\"tooltips text-inverted fa fa-question-circle\" data-toggle=\"tooltip\" title=\"GUI for autodl-irssi-community\" data-placement=\"right\"></span> <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
+                  echo "<a href=\"?installplugin-autodl_irssi=true\">autodl_irssi <span class=\"tooltips text-inverted fa fa-question-circle\" data-toggle=\"tooltip\" title=\"GUI for autodl-irssi-community\" data-placement=\"right\"></span> <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
                 }
                 echo "</li>";
 

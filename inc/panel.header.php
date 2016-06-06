@@ -127,6 +127,14 @@
   }
   ramstats();
 
+  function msgoutput() {
+    $.ajax({url: "db/output.log", cache:false, success: function (result) {
+      $('#sshoutput').html(result);
+      setTimeout(function(){msgoutput()}, 1000);
+    }});
+  }
+  msgoutput();
+
   });
   //success: function (result)
 </script>

@@ -70,16 +70,19 @@
                   <h4 class="panel-title">System Response</h4>
                 </div>
                 <div class="panel-body inverse">
-                  <?php
-                  $output = readMsg();
-                  if (isset($output)) {
-                      $data = $output;
-                      //unlink('servermessage');
-                      echo $data;
-                  } else {
-                      echo "<br>";
+                  <pre class="ps-container"><span id="sshoutput"></span></pre>
+                  <!--
+                  <//?php
+                  //$output = readMsg();
+                  //if (isset($output)) {
+                  //    $data = $output;
+                  //    //unlink('servermessage');
+                  //    echo $data;
+                  //} else {
+                  //    echo "<br>";
                   }
                   ?>
+                  -->
                 </div>
               </div>
             </div><!-- col-sm-12 -->

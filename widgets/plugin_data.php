@@ -245,9 +245,9 @@ if (isset($_GET['removeplugin-diskspace'])) {
 if (isset($_GET['installplugin-diskspaceh'])) {
         //header('Location: /');
         header('Refresh: 5; /');
-        writeMsg("Hello <b>$username</b>: I have installed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
-        $message = "Hello <b>$username</b>: I have installed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-diskspace");
+        writeMsg("Hello <b>$username</b>: I have installed the <b>diskspaceH plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
+        $message = "Hello <b>$username</b>: I have installed the <b>diskspaceH plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/install/installplugin-diskspaceh");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;
@@ -255,9 +255,9 @@ if (isset($_GET['installplugin-diskspaceh'])) {
 if (isset($_GET['removeplugin-diskspaceh'])) {
         //header('Location: /');
         header('Refresh: 5; /');
-        writeMsg("Hello <b>$username</b>: I have removed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
-        $message = "Hello <b>$username</b>: I have removed the <b>diskspace plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
-        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-diskspace");
+        writeMsg("Hello <b>$username</b>: I have removed the <b>diskspaceH plugin</b> for ruTorrent. Your browser will refresh now ... <br>");
+        $message = "Hello <b>$username</b>: I have removed the <b>diskspaceH plugin</b> for ruTorrent. Your browser will refresh now ... <br>";
+        shell_exec("sudo -u root /usr/local/bin/quickbox/plugin/remove/removeplugin-diskspaceh");
         $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
         $myUrl .= '://'.$_SERVER['HTTP_HOST'];
         $newURL = $myURL;

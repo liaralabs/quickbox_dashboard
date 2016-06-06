@@ -5,7 +5,7 @@
     $interface = INETFACE;
 
     // list of network interfaces monitored by vnStat
-    $iface_list = array('$interface');
+    $iface_list = array('INETFACE');
 
     //
     // optional names for interfaces

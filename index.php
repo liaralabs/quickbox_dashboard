@@ -9,88 +9,65 @@
       <h2><i class="fa fa-home"></i> Dashboard</h2>
     </div>-->
     <div class="contentpanel">
-      <div class="row">
-        <div class="col-sm-12 col-md-8 dash-left">
-          <div class="col-sm-12 col-md-7">
-            <div class="panel panel-default list-announcement">
-              <div class="panel-heading">
-                <h4 class="panel-title">Service Status</h4>
-              </div>
-              <div class="panel-body">
-                <ul class="list-unstyled mb20">
-                  <li>
-                    <?php echo "$rval"; ?>
-                  </li>
-                  <li>
-                    <?php echo "$ival"; ?>
-                  </li>
-                  <!-- <//?php
-                  if ($username == "$master"){
-                  echo "<li>";
-                    echo "$bval";
-                  echo "</li>";
-                  } ?>
-                  -->
-                </ul>
-              </div>
-              <div class="panel-footer"></div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-5">
-            <div class="panel panel-default list-announcement">
-              <div class="panel-heading">
-                <h4 class="panel-title">Service Controller</h4>
-              </div>
-              <div class="panel-body">
-                <ul class="list-unstyled mb20">
-                  <li>
-                    <?php echo "$cbodyr"; ?>
-                  </li>
-                  <li>
-                    <?php echo "$cbodyi"; ?>
-                  </li>
-                  <!-- <//?php
-                  if ($username == "$master"){
-                  echo "<li>";
-                    echo "$cbodyb";
-                  echo "</li>";
-                  } ?>
-                  -->
-                </ul>
-              </div>
-              <div class="panel-footer"></div>
-            </div>
-          </div>
-        </div><!-- col-md-8 -->
-        <div class="col-sm-12 col-md-4 dash-right">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="panel panel-danger panel-weather">
-                <div class="panel-heading">
-                  <h4 class="panel-title">System Response</h4>
-                </div>
-                <div class="panel-body inverse">
-                  <pre class="ps-container"><span id="sshoutput"></span></pre>
-                  <!--
-                  <//?php
-                  //$output = readMsg();
-                  //if (isset($output)) {
-                  //    $data = $output;
-                  //    //unlink('servermessage');
-                  //    echo $data;
-                  //} else {
-                  //    echo "<br>";
-                  }
-                  ?>
-                  -->
-                </div>
-              </div>
-            </div><!-- col-sm-12 -->
-          </div><!-- row -->
-        </div><!-- col-md-4 -->
-      </div><!-- row -->
+
       <div class="row">
         <div class="col-sm-12 col-md-8">
+
+            <div class="row">
+
+              <div class="col-sm-12 col-md-7">
+                <div class="panel panel-default list-announcement">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">Service Status</h4>
+                  </div>
+                  <div class="panel-body">
+                    <ul class="list-unstyled mb20">
+                      <li>
+                        <?php echo "$rval"; ?>
+                      </li>
+                      <li>
+                        <?php echo "$ival"; ?>
+                      </li>
+                      <!-- <//?php
+                      if ($username == "$master"){
+                      echo "<li>";
+                        echo "$bval";
+                      echo "</li>";
+                      } ?>
+                      -->
+                    </ul>
+                  </div>
+              <div class="panel-footer"></div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-5">
+                <div class="panel panel-default list-announcement">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">Service Controller</h4>
+                  </div>
+                  <div class="panel-body">
+                    <ul class="list-unstyled mb20">
+                      <li>
+                        <?php echo "$cbodyr"; ?>
+                      </li>
+                      <li>
+                        <?php echo "$cbodyi"; ?>
+                      </li>
+                      <!-- <//?php
+                      if ($username == "$master"){
+                      echo "<li>";
+                        echo "$cbodyb";
+                      echo "</li>";
+                      } ?>
+                      -->
+                    </ul>
+                  </div>
+                  <div class="panel-footer"></div>
+                </div>
+              </div>
+
+            </div>
+
             <div class="panel panel-inverse">
               <ul class="panel-options">
                 <li><a class="panel-minimize"><i class="fa fa-chevron-down"></i></a></li>

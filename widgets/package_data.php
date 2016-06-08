@@ -8,16 +8,16 @@ $packages = array(
         'sickrage'
 );
 
-foreach ($packages as $package) {
-if (isset($_GET['installpackage-'.$package.''])) {
-        header('Location: /');
-        shell_exec("sudo /usr/local/bin/quickbox/package/install/installpackage-$package");
+foreach ($packages as $ipackage) {
+if (isset($_GET['installpackage-'.$ipackage.''])) {
+        header('Location: //');
+        shell_exec("sudo /usr/local/bin/quickbox/package/install/installpackage-$ipackage");
 }}
 
-foreach ($packages as $package) {
-if (isset($_GET['removepackage-'.$package.''])) {
+foreach ($packages as $rpackage) {
+if (isset($_GET['removepackage-'.$rpackage.''])) {
         header('Location: /');
-        shell_exec("sudo /usr/local/bin/quickbox/package/remove/removepackage-$package");
+        shell_exec("sudo /usr/local/bin/quickbox/package/remove/removepackage-$rpackage");
 }}
 
 ?>

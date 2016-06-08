@@ -15,10 +15,15 @@
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu pull-right">
-                <li><a href="https://plaza.quickbox.io/c/quickbox-support"><i class="fa fa-warning text-warning"></i> Report an issue</a></li>
+                <li><a href="https://plaza.quickbox.io/c/quickbox-support" target="_blank"><i class="fa fa-warning text-warning"></i> Report an issue</a></li>
                 <div class="usermenu-div"></div>
-                <li><span style="font-size:10px;">You are running QuickBox <b><?php echo "$version"; ?></b></span></li>
-                <li><span style="font-size:10px;">courtesy of <b><a href="https://swizards.net" target="_blank" rel="noindex,nofollow">swizards.net</a></b></li>
+                <li><pre style="font-size:10px; color: #aaa">Installed Version :: v<?php echo "$version"; ?></pre></li>
+                <li><pre style="font-size:10px; color: #ccc">Current Version   :: <span id="version-result"></span></pre></li>
+                <?php if ("<span id=\"version-result\"></span>" > ['.$version.']) {
+                    echo "<div class=\"usermenu-div\"></div><li><a class=\"\" href=\"?updateQuickBox=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" style=\"\"><i class=\"fa fa-bell text-success\"></i> update available !</a></li>"; }
+                  ?>
+                  </span></li>
+                <!--li><span style="font-size:10px;">courtesy of <b><a href="https://swizards.net" target="_blank" rel="noindex,nofollow">swizards.net</a></b></li-->
               </ul>
             </div>
           </li>

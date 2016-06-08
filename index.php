@@ -17,10 +17,14 @@
 
               <div class="col-sm-12 col-md-7">
                 <div class="panel panel-default list-announcement">
-                  <div class="panel-heading">
+                  <ul class="panel-options">
+                    <li><a class="panel-minimize" style="color:#222"><i class="fa fa-chevron-down"></i></a></li>
+                    <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
+                  </ul>
+                  <div class="panel-heading min">
                     <h4 class="panel-title">Service Status</h4>
                   </div>
-                  <div class="panel-body">
+                  <div class="panel-body" style="display:none;">
                     <ul class="list-unstyled mb20">
                       <li>
                         <?php echo "$rval"; ?>
@@ -42,10 +46,14 @@
               </div>
               <div class="col-sm-12 col-md-5">
                 <div class="panel panel-default list-announcement">
-                  <div class="panel-heading">
+                  <ul class="panel-options">
+                    <li><a class="panel-minimize" style="color:#222"><i class="fa fa-chevron-down"></i></a></li>
+                    <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
+                  </ul>
+                  <div class="panel-heading min">
                     <h4 class="panel-title">Service Controller</h4>
                   </div>
-                  <div class="panel-body">
+                  <div class="panel-body" style="display:none;">
                     <ul class="list-unstyled mb20">
                       <li>
                         <?php echo "$cbodyr"; ?>
@@ -71,7 +79,7 @@
             <div class="panel panel-inverse">
               <ul class="panel-options">
                 <li><a class="panel-minimize"><i class="fa fa-chevron-down"></i></a></li>
-                <li><a class="panel-remove"><i class="fa fa-remove text-danger"></i></a></li>
+                <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
               </ul>
               <div class="panel-heading">
                 <h4 class="panel-title">Bandwidth Data</h4>
@@ -134,7 +142,7 @@
               <div class="panel panel-inverse">
                 <ul class="panel-options">
                   <li><a class="panel-minimize"><i class="fa fa-chevron-down"></i></a></li>
-                  <li><a class="panel-remove"><i class="fa fa-remove text-danger"></i></a></li>
+                  <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
                 </ul>
                 <div class="panel-heading">
                   <h4 class="panel-title">Your Disk Status</h4>
@@ -148,7 +156,7 @@
               <div class="panel panel-inverse">
                 <ul class="panel-options">
                   <li><a class="panel-minimize"><i class="fa fa-chevron-down"></i></a></li>
-                  <li><a class="panel-remove"><i class="fa fa-remove text-danger"></i></a></li>
+                  <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
                 </ul>
                 <div class="panel-heading">
                   <h4 class="panel-title">System RAM Status</h4>
@@ -162,7 +170,7 @@
               <div class="panel panel-inverse">
                 <ul class="panel-options">
                   <li><a class="panel-minimize"><i class="fa fa-chevron-down"></i></a></li>
-                  <li><a class="panel-remove"><i class="fa fa-remove text-danger"></i></a></li>
+                  <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
                 </ul>
                 <div class="panel-heading">
                   <h4 class="panel-title">CPU Status</h4>

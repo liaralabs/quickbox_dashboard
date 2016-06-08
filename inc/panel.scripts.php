@@ -98,8 +98,8 @@
       <div class="modal-header" style="background:#111;border:0!important">
         <h4 class="modal-title" id="sysResponse" style="color:#fff">System Response</h4>
       </div>
-      <div class="modal-body ps-container" style="background:#111; max-height:600px">
-        <pre style="color: rgb(83, 223, 131) ! important;"><span id="sshoutput"></span></pre>
+      <div class="modal-body" style="background:#111; max-height:600px; overflow:auto;">
+        <pre style="color: rgb(83, 223, 131) !important;"><span id="sshoutput"></span></pre>
       </div>
       <div class="modal-footer" style="background:#111;border:0!important">
         <a href="?clean_log=true" class="btn btn-xs btn-danger">Close & Refresh</a>

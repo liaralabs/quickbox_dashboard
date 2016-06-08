@@ -25,11 +25,11 @@
   <script type="text/javascript" src="lib/flot/jquery.flot.resize.js"></script>
   <script type="text/javascript" src="lib/flot/jquery.flot.canvas.js"></script>
 
-  <!-- THIS IS HERE FOR THE FUTURE USE OF API
+  <!-- THIS IS HERE FOR USE OF VERSION PULLING -->
   <script src="https://rawgit.com/hippich/bower-semver/master/semver.min.js"></script>
   <script>
-  var gitHubPath = 'Swizards/QuickBox';  // quickbox repo
-  var url = 'https://api.github.com/repos/' + gitHubPath + '/tags';
+  var gitHubPath = 'QuickBox/QuickBox';  // quickbox repo
+  var url = 'https://api.github.com/repos/' + gitHubPath + '/releases';
 
   $.get(url).done(function (data) {
     var versions = data.sort(function (v1, v2) {
@@ -38,7 +38,7 @@
     $('#version-result').html(versions[0].name);
   });
   </script>
-  -->
+
   <script id="source" language="javascript" type="text/javascript">
   $(document).ready(function() {
       var options = {

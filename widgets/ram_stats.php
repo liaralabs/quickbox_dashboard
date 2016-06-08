@@ -352,6 +352,6 @@ else
       <h4 class="nomargin"><?php echo $memTotal;?>
           <?php
           if ($username == "$master"){
-              echo "<a href=\"?clean_mem=true\" id=\"cleanmem\" style=\"margin: 0 auto\"> <button class=\"btn btn-xs btn-default pull-right\">Clear Memory Cache</button></a>";
+              echo "<a href=\"?clean_mem=true\" id=\"cleanmem\" data-toggle=\"modal\" data-target=\"#sysResponse\" style=\"margin: 0 auto\"> <button class=\"btn btn-xs btn-default pull-right\">Clear Memory Cache</button></a>";
           } ?>
       </h4>

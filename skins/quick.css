@@ -1596,7 +1596,7 @@ pre {
   background-color: transparent;
   border: 0 solid #cccccc;
   border-radius: 0;
-  color: #fff;
+  color: #333;
   display: block;
   font-size: 12px;
   line-height: 1.42857;
@@ -1604,7 +1604,7 @@ pre {
   padding: 0;
   word-break: break-all;
   word-wrap: break-word;
-  margin-top: -15px;
+  /*margin-top: -15px;*/
 }
 pre code {
   padding: 0;

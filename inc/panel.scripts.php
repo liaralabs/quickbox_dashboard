@@ -91,8 +91,25 @@
   </div><!-- modal-dialog -->
 </div><!-- modal -->
 
+<!-- SYSTEM RESPONSE MODAL -->
+<div class="modal bounceIn animated" id="sysResponse" tabindex="-1" role="dialog" aria-labelledby="sysResponse" aria-hidden="true">
+  <div class="modal-dialog" style="width: 600px">
+    <div class="modal-content" style="background:#111;border:2px solid #111">
+      <div class="modal-header" style="background:#111;border:0!important">
+        <h4 class="modal-title" id="sysResponse" style="color:#fff">System Response</h4>
+      </div>
+      <div class="modal-body ps-container" style="background:#111; max-height:600px">
+        <pre style="color: rgb(83, 223, 131) ! important;"><span id="sshoutput"></span></pre>
+      </div>
+      <div class="modal-footer" style="background:#111;border:0!important">
+        <a href="?clean_log=true" class="btn btn-xs btn-danger">Close & Refresh</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 
-<script src="js/script.js"></script>
+
+<!--script src="js/script.js"></script-->
 <script src="lib/jquery-ui/jquery-ui.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="lib/jquery-toggles/toggles.js"></script>
@@ -129,15 +146,6 @@ $(document).ready(function() {
 
   'use strict';
 
-  // BTSyncInstall
-  //$('#btsyncInstall').click(function(){
-  //  $.gritter.add({
-  //    title: 'Installing BTSync',
-  //    text: 'Please wait while Bittorrent Sync is being installed on your system.',
-  //    class_name: 'with-icon check-circle success',
-  //    sticky: true
-  //  });
-  //});
   // BTSyncRemove
   $('#btsyncRemove').click(function(){
     $.gritter.add({
@@ -147,15 +155,7 @@ $(document).ready(function() {
       sticky: true
     });
   });
-  // CSFInstall
-  //$('#csfInstall').click(function(){
-  //  $.gritter.add({
-  //    title: 'Installing CSF',
-  //    text: 'Please wait while Config Server Firewall is being installed on your system. This may take up to 5 minutes to complete.',
-  //    class_name: 'with-icon check-circle success',
-  //    sticky: true
-  //  });
-  //});
+
   // csfRemove
   $('#csfRemove').click(function(){
     $.gritter.add({
@@ -165,24 +165,7 @@ $(document).ready(function() {
       sticky: true
     });
   });
-  // CleanMemCache
-  //$('#cleanmem').click(function(){
-  //  $.gritter.add({
-  //    title: 'Cleaning Memory Cache',
-  //    text: 'Please wait while your Physical Memory Cache is being flushed on your system.',
-  //    class_name: 'with-icon check-circle success',
-  //    sticky: true
-  //  });
-  //});
-  // PlexInstall
-  //$('#plexInstall').click(function(){
-  //  $.gritter.add({
-  //    title: 'Installing Plex',
-  //    text: 'Please wait while Plex Media Server is being installed on your system.',
-  //    class_name: 'with-icon check-circle success',
-  //    sticky: true
-  //  });
-  //});
+
   // PlexRemove
   $('#plexRemove').click(function(){
     $.gritter.add({
@@ -192,15 +175,7 @@ $(document).ready(function() {
       sticky: true
     });
   });
-  // RapidleechInstall
-  //$('#rapidleechInstall').click(function(){
-  //  $.gritter.add({
-  //    title: 'Installing Rapidleech',
-  //    text: 'Please wait while Rapidleech is being installed on your system.',
-  //    class_name: 'with-icon check-circle success',
-  //    sticky: true
-  //  });
-  //});
+
   // RapidleechRemove
   $('#rapidleechRemove').click(function(){
     $.gritter.add({
@@ -210,15 +185,7 @@ $(document).ready(function() {
       sticky: true
     });
   });
-  // SickRageInstall
-  //$('#sickrageInstall').click(function(){
-  //  $.gritter.add({
-  //    title: 'Installing SickRage',
-  //    text: 'Please wait while SickRage is being installed on your system.',
-  //    class_name: 'with-icon check-circle success',
-  //    sticky: true
-  //  });
-  //});
+
   // SickRageRemove
   $('#sickrageRemove').click(function(){
     $.gritter.add({
@@ -229,5 +196,13 @@ $(document).ready(function() {
     });
   });
 
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  $('#sysResponse').on('hidden.bs.modal', function () {
+    location.reload();
+  });
 });
 </script>

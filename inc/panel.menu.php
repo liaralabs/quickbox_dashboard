@@ -19,7 +19,7 @@
                 <div class="usermenu-div"></div>
                 <li><pre style="font-size:10px; color: #aaa">Installed Version :: v<?php echo "$version"; ?></pre></li>
                 <li><pre style="font-size:10px; color: #ccc">Current Version   :: <span id="version-result"></span></pre></li>
-                <?php if ("<span id=\"version-result\"></span>" > ['.$version.']) {
+                <?php if ("<span id=\"version-result\"></span>" > $version) {
                     echo "<div class=\"usermenu-div\"></div><li><a class=\"\" href=\"?updateQuickBox=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" style=\"\"><i class=\"fa fa-bell text-success\"></i> update available !</a></li>"; }
                   ?>
                   </span></li>

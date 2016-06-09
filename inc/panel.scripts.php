@@ -94,14 +94,14 @@
 <!-- SYSTEM RESPONSE MODAL -->
 <div class="modal bounceIn animated" id="sysResponse" tabindex="-1" role="dialog" aria-labelledby="sysResponse" aria-hidden="true">
   <div class="modal-dialog" style="width: 600px">
-    <div class="modal-content" style="background:#111;border:2px solid #111">
-      <div class="modal-header" style="background:#111;border:0!important">
-        <h4 class="modal-title" id="sysResponse" style="color:#fff">System Response</h4>
+    <div class="modal-content" style="background:rgba(0, 0, 0, 0.6);border:2px solid rgba(0, 0, 0, 0.2)">
+      <div class="modal-header" style="background:rgba(0, 0, 0, 0.4);border:0!important">
+        <h4 class="modal-title" style="color:#fff">System Response</h4>
       </div>
-      <div class="modal-body" style="background:#111; max-height:600px; overflow:auto;">
-        <pre style="color: rgb(83, 223, 131) !important;"><span id="sshoutput"></span></pre>
+      <div class="modal-body ps-container" style="background:rgba(0, 0, 0, 0.4); max-height:600px;">
+        <pre style="color: rgb(83, 223, 131) !important;" class="sysout ps-child"><span id="sshoutput"></span></pre>
       </div>
-      <div class="modal-footer" style="background:#111;border:0!important">
+      <div class="modal-footer" style="background:rgba(0, 0, 0, 0.4);border:0!important">
         <a href="?clean_log=true" class="btn btn-xs btn-danger">Close & Refresh</a>
       </div>
     </div><!-- modal-content -->
@@ -122,10 +122,15 @@ $(function() {
   $('.leftpanel').perfectScrollbar();
   $('.leftpanel').perfectScrollbar({ wheelSpeed: 1, wheelPropagation: true, minScrollbarLength: 20 });
   $('.leftpanel').perfectScrollbar('update');
-  //$('.leftpanel').perfectScrollbar('destroy');
   $('.body').perfectScrollbar();
   $('.body').perfectScrollbar({ wheelSpeed: 1, wheelPropagation: true, minScrollbarLength: 20 });
   $('.body').perfectScrollbar('update');
+  $('.modal-body').perfectScrollbar();
+  $('.modal-body').perfectScrollbar({ wheelSpeed: 1, wheelPropagation: true, minScrollbarLength: 20 });
+  $('.modal-body').perfectScrollbar('update');
+  $('.sysout').perfectScrollbar();
+  $('.sysout').perfectScrollbar({ wheelSpeed: 1, wheelPropagation: true, minScrollbarLength: 20 });
+  $('.sysout').perfectScrollbar('update');
 });
 </script>
 <script>

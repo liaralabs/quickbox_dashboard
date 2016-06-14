@@ -5,7 +5,7 @@ $plugins = array(
         '_noty',
         '_noty2',
         '_task',
-        'autodl_irssi',
+        'autodl-irssi',
         'autotools',
         'check_port',
         'chunks',

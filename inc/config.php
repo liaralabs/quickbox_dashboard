@@ -250,7 +250,7 @@ function readMsg() {
 
 $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
 $btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
-$rapidleechURL = "http://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
+$rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
 $sickrageURL = "http://" . $_SERVER['HTTP_HOST'] . ":8081";
 
 $reload='';

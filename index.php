@@ -21,7 +21,7 @@
                     <li><a class="panel-minimize" style="color:#222"><i class="fa fa-chevron-down"></i></a></li>
                     <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
                   </ul>
-                  <div class="panel-heading min">
+                  <div class="panel-heading">
                     <h4 class="panel-title">Service Status</h4>
                   </div>
                   <div class="panel-body" style="display:none;">
@@ -50,7 +50,7 @@
                     <li><a class="panel-minimize" style="color:#222"><i class="fa fa-chevron-down"></i></a></li>
                     <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
                   </ul>
-                  <div class="panel-heading min">
+                  <div class="panel-heading">
                     <h4 class="panel-title">Service Controller</h4>
                   </div>
                   <div class="panel-body" style="display:none;">

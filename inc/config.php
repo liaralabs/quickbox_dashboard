@@ -327,7 +327,7 @@ if (file_exists('/home/'.$username.'/.startup')) {
     $cbodyi .= "iRSSi-AutoDL ". $irssi;
   $deluged = isEnabled("DELUGED_CLIENT=yes", $username);
     $cbodyd .= "Deluged ". $deluged;
-  $delugedweb = isEnabled("DELUGE-WEB_CLIENT=yes", $username);
+  $delugedweb = isEnabled("DELUGEWEB_CLIENT=yes", $username);
     $cbodydw .= "Deluged-Web ". $delugedweb;
   $btsync = isEnabled("BTSYNC=yes", $username);
     $cbodyb .= "BTSync ". $btsync;
@@ -342,7 +342,7 @@ case 66:
   $name = $_GET['servicestart'];
   $thisname=str_replace(['yes', 'no', '!!~!!'], ['!!~!!', 'yes', 'no'], $name);
     if (file_exists('/home/'.$username.'/.startup')) {
-    if ($name == "BTSYNC=yes") { $servicename = "btsync"; } else { $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output); }
+    if ($name == "BTSYNC=yes") { $servicename = "btsync"; } elseif ($name == "DELUGEWEB_CLIENT=yes") { $servicename = "deluge-web"; } else { $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output); }
 writeMsg("Hey <b>$username</b>: Im going to enable <b>$servicename</b> ... Please allow 5 minutes for it to start ... </a><br>");
 $message = "Hey <b>$username</b>: Im going to enable <b>$servicename</b> ... Please allow 5 minutes for it to start ... </a><br>";
     shell_exec("sudo sed -i 's/$thisname/$name/g' /home/$username/.startup");
@@ -360,7 +360,7 @@ case 77:
   $name = $_GET['serviceend'];
   $thisname=str_replace(['yes', 'no', '!!~!!'], ['!!~!!', 'yes', 'no'], $name);
     if (file_exists('/home/'.$username.'/.startup')) {
-    if ($name == "BTSYNC=yes") { $servicename = "btsync"; } else { $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
+    if ($name == "BTSYNC=yes") { $servicename = "btsync"; } elseif ($name == "DELUGEWEB_CLIENT=yes") { $servicename = "deluge-web"; } else { $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
     if (strpos($servicename,'rtorrent') !== false) { $servicename="main"; } }
 writeMsg("Hello <b>$username</b>: Im going to disable <b>$servicename</b> ... </a><br>");
 $message = "Hello <b>$username</b>: Im going to disable <b>$servicename</b> ... </a><br>";

@@ -13,6 +13,12 @@ if (file_exists($dconf)) {
     $dwssl = search($dconf_data, '"https": ', ',');
 }
 
+function search($data, $find, $end) {
+    $pos1 = strpos($data, $find) + strlen($find);
+    $pos2 = strpos($data, $end, $pos1);
+    return substr($data, $pos1, $pos2 - $pos1);
+}
+
 define('HTTP_HOST', preg_replace('~^www\.~i', '', $_SERVER['HTTP_HOST']));
 
 $panel = array(

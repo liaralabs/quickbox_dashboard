@@ -36,6 +36,24 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- DELUGE UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="delugeRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="DelugeRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="DelugeRemovalConfirm">Uninstall BTSync?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall Deluge from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings... this action is irreversable. <br/><br/>You may reinstall Deluge at any time, however, your storage path and linked folder settings will be reset to default.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-deluge=true" id="delugeRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- PLEX UNINSTALL MODAL -->
 <div class="modal bounceIn animated" id="plexRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="PlexRemovalConfirm" aria-hidden="true">
   <div class="modal-dialog">
@@ -166,6 +184,16 @@ $(document).ready(function() {
     $.gritter.add({
       title: 'Uninstalling CSF',
       text: 'Please wait while Config Server Firewall is being uninstalled from your system.',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+
+  // BTSyncRemove
+  $('#delugeRemove').click(function(){
+    $.gritter.add({
+      title: 'Uninstalling Deluge',
+      text: 'Please wait while Deluge is being uninstalled from your system.',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });

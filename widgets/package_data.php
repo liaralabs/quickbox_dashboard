@@ -3,6 +3,7 @@
 $packages = array(
         'btsync',
         'csf',
+        'deluge',
         'plex',
         'rapidleech',
         'sickrage'

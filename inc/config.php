@@ -6,6 +6,12 @@ $version = "v2.3.5";
 error_reporting(E_ALL);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $username = getUser();
+$dconf = '/home/'.$username.'/.config/deluge/web.conf';
+if (file_exists($dconf)) {
+    $dconf_data = file_get_contents($dconf);
+    $dwport = search($dconf_data, '"port": ', ',');
+    $dwssl = search($dconf_data, '"https": ', ',');
+}
 
 define('HTTP_HOST', preg_replace('~^www\.~i', '', $_SERVER['HTTP_HOST']));
 
@@ -215,6 +221,8 @@ function processExists($processName, $username) {
 $rtorrent = processExists("\"main|rtorrent\"",$username);
 $irssi = processExists("irssi",$username);
 $btsync = processExists("btsync",btsync);
+$deluged = processExists("deluged",$username);
+$delugedweb = processExists("deluge-web",$username);
 $plex = processExists("Plex",$username);
 $sickrage = processExists("sickrage",$username);
 
@@ -252,6 +260,12 @@ $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
 $btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
 $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
 $sickrageURL = "http://" . $_SERVER['HTTP_HOST'] . ":8081";
+if ($dwssl == "true") {
+$dwURL = "https://" . $_SERVER['HTTP_HOST'] . ":$dwport";
+}
+if ($dwssl == "false") {
+$dwURL = "http://" . $_SERVER['HTTP_HOST'] . ":$dwport";
+}
 
 $reload='';
 $service='';
@@ -261,6 +275,14 @@ if ($rtorrent == "1") { $rval = "RTorrent <span class=\"label label-success pull
 
 if ($irssi == "1") { $ival = "iRSSi-Autodl <span class=\"label label-success pull-right\">Enabled</span>";
 } else { $ival = "iRSSi-Autodl <span class=\"label label-danger pull-right\">Disabled</span>";
+}
+
+if ($deluged == "1") { $dval = "Deluged <span class=\"label label-success pull-right\">Enabled</span>";
+} else { $dval = "Deluged <span class=\"label label-danger pull-right\">Disabled</span>";
+}
+
+if ($delugedweb == "1") { $dwval = "Deluge Web <span class=\"label label-success pull-right\">Enabled</span>";
+} else { $dwval = "Deluge Web <span class=\"label label-danger pull-right\">Disabled</span>";
 }
 
 if ($btsync == "1") { $bval = "BTSync <span class=\"label label-success pull-right\">Enabled</span>";
@@ -297,6 +319,10 @@ if (file_exists('/home/'.$username.'/.startup')) {
     $cbodyr .= "RTorrent ". $rtorrent;
   $irssi = isEnabled("IRSSI_CLIENT=yes", $username);
     $cbodyi .= "iRSSi-AutoDL ". $irssi;
+  $deluged = isEnabled("DELUGED_CLIENT=yes", $username);
+    $cbodyd .= "Deluged ". $deluged;
+  $delugedweb = isEnabled("DELUGE-WEB_CLIENT=yes", $username);
+    $cbodydw .= "Deluged-Web ". $delugedweb;
   $btsync = isEnabled("BTSYNC=yes", $username);
     $cbodyb .= "BTSync ". $btsync;
   } else {

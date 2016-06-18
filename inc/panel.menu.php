@@ -59,6 +59,7 @@
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li class="active"><a href="index.php"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
             <li><a href="/rutorrent" target="_blank"><i class="fa fa-share"></i> <span>ruTorrent</span></a></li>
+            <?php if (processExists("deluge-web",$username)) { echo "<li><a href=\"$dwURL\" target=\"_blank\"><i class=\"fa fa-umbrella\"></i> <span>Deluge Web</span></a></li>"; } ?>
             <?php if (file_exists('/install/.btsync.lock') && ($username == "$master")) { echo "<li><a href=\"$btsyncURL\" target=\"_blank\"><i class=\"fa fa-retweet\"></i> <span>BTSync</span></a></li>"; } ?>
             <?php if (file_exists('/install/.plex.lock') && ($username == "$master")) { echo "<li><a href=\"$plexURL\" target=\"_blank\"><i class=\"fa fa-play\"></i> <span>Plex</span></a></li>"; } ?>
             <?php if (file_exists('/install/.rapidleech.lock') && ($username == "$master")) { echo "<li><a href=\"$rapidleechURL\" target=\"_blank\"><i class=\"fa fa-share-alt\"></i> <span>Rapidleech</span></a></li>"; } ?>

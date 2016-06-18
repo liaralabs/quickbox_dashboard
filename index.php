@@ -32,6 +32,16 @@
                       <li>
                         <?php echo "$ival"; ?>
                       </li>
+                      <?php
+                        if (file_exists('/install/.deluge.lock'))
+                         {
+                          echo "<li>";
+                            echo "$dval";
+                          echo "</li>";
+                          echo "<li>";
+                            echo "$dwval";
+                          echo "</li>";
+                        } ?>
                       <!-- <//?php
                       if ($username == "$master"){
                       echo "<li>";
@@ -61,6 +71,16 @@
                       <li>
                         <?php echo "$cbodyi"; ?>
                       </li>
+                      <?php
+                        if (file_exists('/install/.deluge.lock'))
+                         {
+                          echo "<li>";
+                            echo "$cbodyd";
+                          echo "</li>";
+                          echo "<li>";
+                            echo "$cbodydw";
+                          echo "</li>";
+                        } ?>
                       <!-- <//?php
                       if ($username == "$master"){
                       echo "<li>";

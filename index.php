@@ -103,6 +103,7 @@
                 </div><!-- col-sm-12 -->
               </div>
             </div>
+            <//?php if ($username == "$master") { ?>
             <div class="panel-group" id="accordion">
               <div class="panel" style="background:transparent">
                 <div class="panel-heading" style="background:transparent">
@@ -114,14 +115,12 @@
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse">
                   <div class="panel-body">
-                    <?php
-                    if ($username == "$master"){
-                      echo "<div class=\"row\"><div id=\"bw_tables\" style=\"padding:0;margin:0;\"></div></div>";
-                    } ?>
+                    <div class="row"><div id="bw_tables" style="padding:0;margin:0;"></div></div>
                   </div>
                 </div>
               </div>
             </div>
+            <//?php } ?>
         </div>
 
         <div class="col-sm-12 col-md-4 dash-right">

@@ -59,6 +59,7 @@
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li class="active"><a href="index.php"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
             <li><a href="/rutorrent" target="_blank"><i class="fa fa-share"></i> <span>ruTorrent</span></a></li>
+            <?php if (processExists("deluge-web",$username)) { echo "<li><a href=\"$dwURL\" target=\"_blank\"><i class=\"fa fa-umbrella\"></i> <span>Deluge Web</span></a></li>"; } ?>
             <?php if (file_exists('/install/.btsync.lock') && ($username == "$master")) { echo "<li><a href=\"$btsyncURL\" target=\"_blank\"><i class=\"fa fa-retweet\"></i> <span>BTSync</span></a></li>"; } ?>
             <?php if (file_exists('/install/.plex.lock') && ($username == "$master")) { echo "<li><a href=\"$plexURL\" target=\"_blank\"><i class=\"fa fa-play\"></i> <span>Plex</span></a></li>"; } ?>
             <?php if (file_exists('/install/.rapidleech.lock') && ($username == "$master")) { echo "<li><a href=\"$rapidleechURL\" target=\"_blank\"><i class=\"fa fa-share-alt\"></i> <span>Rapidleech</span></a></li>"; } ?>
@@ -77,7 +78,13 @@
               echo "<ul class=\"children\">";
                 echo "<li class=\"info-quote\"><p class=\"info-quote\">Easily install and uninstall any software package simply by clicking on the software package name</p></li>";
                 echo "<li class=\"warning-quote\"><p class=\"warning-quote\">Please be advised that these options are not the same as enabling and disabling a software package. These options are designed to either install or uninstall.</p></li>";
-
+                echo "<li>";
+                if (file_exists("/install/.deluge.lock")) {
+                  echo "<a href=\"javascript:void()\" data-toggle=\"modal\" data-target=\"#delugeRemovalConfirm\">Deluge  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
+                } else {
+                  echo "<a href=\"?installpackage-deluge=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" id=\"delugeInstall\">Deluge  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
+                }
+                echo "</li>";
                 echo "<li>";
                 if (file_exists("/install/.btsync.lock")) {
                   echo "<a href=\"javascript:void()\" data-toggle=\"modal\" data-target=\"#btsyncRemovalConfirm\">BTSync  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";

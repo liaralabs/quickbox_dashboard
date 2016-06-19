@@ -42,7 +42,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="DelugeRemovalConfirm">Uninstall BTSync?</h4>
+        <h4 class="modal-title" id="DelugeRemovalConfirm">Uninstall Deluge?</h4>
       </div>
       <div class="modal-body">
         You are about to uninstall Deluge from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings... this action is irreversable. <br/><br/>You may reinstall Deluge at any time, however, your storage path and linked folder settings will be reset to default.

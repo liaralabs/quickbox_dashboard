@@ -95,6 +95,14 @@
   }
   sload();
 
+  function servstatus() {
+    $.ajax({url: "widgets/service_status.php", cache:true, success: function (result) {
+      $('#servstat').html(result);
+      setTimeout(function(){servstatus()}, 1000);
+    }});
+  }
+  servstatus();
+
   function bwtables() {
     $.ajax({url: "widgets/bw_tables.php", cache:false, success: function (result) {
       $('#bw_tables').html(result);

@@ -1,6 +1,5 @@
 <?php include("../inc/config.php"); ?>
 
-                  <div class="panel-body">
                     <ul class="list-unstyled mb20">
                       <?php
                       if (file_exists('/install/.rtorrent.lock')) {
@@ -18,4 +17,3 @@
                       }
                       ?>
                     </ul>
-                  </div>

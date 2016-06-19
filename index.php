@@ -24,7 +24,9 @@
                   <div class="panel-heading">
                     <h4 class="panel-title">Service Status</h4>
                   </div>
-                  <div id="servstat"></div>
+                  <div class="panel-body">
+                    <div id="servstat"></div>
+                  </div>
                   <div class="panel-footer"></div>
                 </div>
               </div>

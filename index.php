@@ -26,19 +26,21 @@
                   </div>
                   <div class="panel-body" style="display:none;">
                     <ul class="list-unstyled mb20">
-                      <li>
-                        <?php echo "$rval"; ?>
-                      </li>
-                      <li>
-                        <?php echo "$ival"; ?>
-                      </li>
-                      <!-- <//?php
-                      if ($username == "$master"){
-                      echo "<li>";
-                        echo "$bval";
-                      echo "</li>";
-                      } ?>
-                      -->
+                      <?php
+                      if (file_exists('/install/.rtorrent.lock')) {
+                        echo "<li>"; echo "$rval"; echo "</li>";
+                      }
+                      if (file_exists('/install/.autodlirssi.lock')) {
+                        echo "<li>"; echo "$ival"; echo "</li>";
+                      }
+                      if (file_exists('/install/.deluge.lock')) {
+                        echo "<li>"; echo "$dval"; echo "</li>";
+                        echo "<li>"; echo "$dwval"; echo "</li>";
+                      }
+                      if ($username == "$master" && file_exists('/install/.btsync.lock')) {
+                        echo "<li>"; echo "$bval"; echo "</li>";
+                      }
+                      ?>
                     </ul>
                   </div>
               <div class="panel-footer"></div>
@@ -55,19 +57,21 @@
                   </div>
                   <div class="panel-body" style="display:none;">
                     <ul class="list-unstyled mb20">
-                      <li>
-                        <?php echo "$cbodyr"; ?>
-                      </li>
-                      <li>
-                        <?php echo "$cbodyi"; ?>
-                      </li>
-                      <!-- <//?php
-                      if ($username == "$master"){
-                      echo "<li>";
-                        echo "$cbodyb";
-                      echo "</li>";
-                      } ?>
-                      -->
+                      <?php
+                      if (file_exists('/install/.rtorrent.lock')) {
+                        echo "<li>"; echo "$cbodyr"; echo "</li>";
+                      }
+                      if (file_exists('/install/.autodlirssi.lock')) {
+                        echo "<li>"; echo "$cbodyi"; echo "</li>";
+                      }
+                      if (file_exists('/install/.deluge.lock')) {
+                        echo "<li>"; echo "$cbodyd"; echo "</li>";
+                        echo "<li>"; echo "$cbodydw"; echo "</li>";
+                      }
+                      if ($username == "$master" && file_exists('/install/.btsync.lock')) {
+                        echo "<li>"; echo "$cbodyb"; echo "</li>";
+                      }
+                      ?>
                     </ul>
                   </div>
                   <div class="panel-footer"></div>

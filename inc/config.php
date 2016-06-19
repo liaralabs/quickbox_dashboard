@@ -2,7 +2,7 @@
 session_destroy();
 include '/srv/rutorrent/php/util.php';
 include 'widgets/class.php';
-$version = "v2.3.5";
+$version = "v2.3.6";
 error_reporting(E_ALL);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $username = getUser();
@@ -242,26 +242,6 @@ function isEnabled($search, $username){
   }
 }
 
-function writeMsg($message) {
-  $file = $GLOBALS['MSGFILE'];
-  $Handle = fopen("/tmp/" . $file, 'w');
-  fwrite($Handle, $message);
-  fclose($Handle);
-}
-
-function readMsg() {
-  $file = $GLOBALS['MSGFILE'];
-  $Handle = fopen("/tmp/" . $file, 'r');
-  $output = fgets($Handle);
-  fclose($Handle);
-  if (isset($output)) {
-    $data = $output;
-    echo $data;
-  } else {
-    echo "error";
-  }
-}
-
 $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
 $btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
 $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
@@ -320,7 +300,6 @@ $location = "/home";
 switch (intval($_GET['id'])) {
 case 0:
 if (file_exists('/home/'.$username.'/.startup')) {
-  $cbodyhello .= 'Hey <b>' . $username . '</b>: Please click switch On/Off Once and wait atleast 90 seconds for the changes to take affect ... <br><br><br>';
   $rtorrent = isEnabled("RTORRENT_CLIENT=yes", $username);
     $cbodyr .= "RTorrent ". $rtorrent;
   $irssi = isEnabled("IRSSI_CLIENT=yes", $username);
@@ -331,10 +310,7 @@ if (file_exists('/home/'.$username.'/.startup')) {
     $cbodydw .= "Deluged-Web ". $delugedweb;
   $btsync = isEnabled("BTSYNC=yes", $username);
     $cbodyb .= "BTSync ". $btsync;
-  } else {
-    $cbodyerr .= "error locating start up script .. feel free to open a issue at the quickbox repo";
-}
-
+} else {}
 break;
 
 /* start services */
@@ -342,16 +318,16 @@ case 66:
   $name = $_GET['servicestart'];
   $thisname=str_replace(['yes', 'no', '!!~!!'], ['!!~!!', 'yes', 'no'], $name);
     if (file_exists('/home/'.$username.'/.startup')) {
-    if ($name == "BTSYNC=yes") { $servicename = "btsync"; } elseif ($name == "DELUGEWEB_CLIENT=yes") { $servicename = "deluge-web"; } else { $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output); }
-writeMsg("Hey <b>$username</b>: Im going to enable <b>$servicename</b> ... Please allow 5 minutes for it to start ... </a><br>");
-$message = "Hey <b>$username</b>: Im going to enable <b>$servicename</b> ... Please allow 5 minutes for it to start ... </a><br>";
+      if ($name == "BTSYNC=yes") {
+        $servicename = "btsync";
+      } elseif ($name == "DELUGEWEB_CLIENT=yes") {
+        $servicename = "deluge-web";
+      } else {
+        $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
+      }
     shell_exec("sudo sed -i 's/$thisname/$name/g' /home/$username/.startup");
-  $output = substr($thisname, 0, strpos(strtolower($thisname), '_'));
-//writeMsg("Starting: <b> " . $servicename . "</b>");
-  } else {
-writeMsg("error locating .startup .. feel free to open a issue at the quickbox repo");
-$message = "error locating .startup .. feel free to open a issue at the quickbox repo";
-  }
+    $output = substr($thisname, 0, strpos(strtolower($thisname), '_'));
+    } else {}
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
 break;
 
@@ -360,16 +336,17 @@ case 77:
   $name = $_GET['serviceend'];
   $thisname=str_replace(['yes', 'no', '!!~!!'], ['!!~!!', 'yes', 'no'], $name);
     if (file_exists('/home/'.$username.'/.startup')) {
-    if ($name == "BTSYNC=yes") { $servicename = "btsync"; } elseif ($name == "DELUGEWEB_CLIENT=yes") { $servicename = "deluge-web"; } else { $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
-    if (strpos($servicename,'rtorrent') !== false) { $servicename="main"; } }
-writeMsg("Hello <b>$username</b>: Im going to disable <b>$servicename</b> ... </a><br>");
-$message = "Hello <b>$username</b>: Im going to disable <b>$servicename</b> ... </a><br>";
-    shell_exec("sudo sed -i 's/$name/$thisname/g' /home/$username/.startup");
-    shell_exec("sudo -u $username pkill -9 $servicename");
-  } else {
-writeMsg("error locating .startup .. feel free to open an issue at the quickbox repo");
-$message = "error locating .startup .. feel free to open an issue at the quickbox repo";
-  }
+      if ($name == "BTSYNC=yes") {
+        $servicename = "btsync";
+      } elseif ($name == "DELUGEWEB_CLIENT=yes") {
+        $servicename = "deluge-web";
+      } else {
+        $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
+        if (strpos($servicename,'rtorrent') !== false) { $servicename="main"; }
+      }
+      shell_exec("sudo sed -i 's/$name/$thisname/g' /home/$username/.startup");
+      shell_exec("sudo -u $username pkill -9 $servicename");
+    } else {}
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
 break;
 

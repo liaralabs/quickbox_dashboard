@@ -45,7 +45,7 @@
         <h4 class="modal-title" id="DelugeRemovalConfirm">Uninstall Deluge?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Deluge from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings for all users... this action is irreversable. <br/><br/>You may reinstall Deluge at any time, however, your storage path and linked folder settings will be reset to default.
+        You are about to uninstall Deluge from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings for <strong>all users</strong>... this action is irreversable. <br/><br/>You may reinstall Deluge at any time, however, your storage path and linked folder settings will be reset to default.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

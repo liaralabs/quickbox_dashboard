@@ -242,26 +242,6 @@ function isEnabled($search, $username){
   }
 }
 
-function writeMsg($message) {
-  $file = $GLOBALS['MSGFILE'];
-  $Handle = fopen("/tmp/" . $file, 'w');
-  fwrite($Handle, $message);
-  fclose($Handle);
-}
-
-function readMsg() {
-  $file = $GLOBALS['MSGFILE'];
-  $Handle = fopen("/tmp/" . $file, 'r');
-  $output = fgets($Handle);
-  fclose($Handle);
-  if (isset($output)) {
-    $data = $output;
-    echo $data;
-  } else {
-    echo "error";
-  }
-}
-
 $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
 $btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
 $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";

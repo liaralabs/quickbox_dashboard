@@ -68,6 +68,9 @@
               <a href=""><i class="fa fa-download"></i> <span>Downloads</span></a>
               <ul class="children">
                 <li><a href="/<?php echo "$username"; ?>.downloads" target="_blank">ruTorrent</a></a></li>
+                <?php if (processExists("deluge-web",$username)) { ?>
+                <li><a href="/<?php echo "$username"; ?>.deluge.downloads" target="_blank">Deluge-Web</a></li>
+                <?php } ?>
               </ul>
             </li>
             <li><a href="?reload=true"><i class="fa fa-refresh"></i> <span>Reload Services</span></a></li>

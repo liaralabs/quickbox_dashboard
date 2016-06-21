@@ -321,3 +321,61 @@ $(document).ready(function() {
   });
 });
 </script>
+
+<script src="lib/datatables/jquery.dataTables.js"></script>
+<script src="lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+<script src="lib/select2/select2.js"></script>
+
+<script>
+$(document).ready(function() {
+
+  'use strict';
+
+  $('#dataTable1').DataTable();
+
+  var exRowTable = $('#exRowTable').DataTable({
+    responsive: true,
+    'fnDrawCallback': function(oSettings) {
+      $('#exRowTable_paginate ul').addClass('pagination-active-success');
+    },
+    'ajax': 'ajax/objects.txt',
+    'columns': [{
+      'class': 'details-control',
+      'orderable': false,
+      'data': null,
+      'defaultContent': ''
+    },
+    { 'data': 'name' },
+    { 'data': 'details' },
+    { 'data': 'availability' }
+    ],
+    'order': [[1, 'asc']]
+  });
+
+  // Add event listener for opening and closing details
+  $('#exRowTable tbody').on('click', 'td.details-control', function () {
+    var tr = $(this).closest('tr');
+    var row = exRowTable.row( tr );
+
+    if ( row.child.isShown() ) {
+      // This row is already open - close it
+      row.child.hide();
+      tr.removeClass('shown');
+    } else {
+      // Open this row
+      row.child( format(row.data()) ).show();
+      tr.addClass('shown');
+    }
+  });
+
+  function format (d) {
+    // `d` is the original data object for the row
+    return '<h4>'+d.name+'<small>'+d.details+'</small></h4>'+
+    '<p class="nomargin">Nothing to see here.</p>';
+  }
+
+  // Select2
+  $('select').select2({ minimumResultsForSearch: Infinity });
+
+});
+</script>

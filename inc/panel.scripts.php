@@ -135,7 +135,7 @@
         <h4 class="modal-title" id="quasselRemovalConfirm">Uninstall Quassel?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Quassel from your system.<br/><br/> This will completely Quassel and all settings/stored backlogs from your system.
+        You are about to uninstall Quassel from your system.<br/><br/> This will completely remove Quassel and all settings/stored backlogs from your system.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -291,7 +291,7 @@ $(document).ready(function() {
       sticky: true
     });
   });
-  // x2goRemove
+  // QuasselRemove
   $('#quasselRemove').click(function(){
   $.gritter.add({
     title: 'Uninstalling Quassel-Core',

@@ -58,25 +58,25 @@
           <h5 class="sidebar-title">Main Menu</h5>
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li class="active"><a href="index.php"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-            <li><a href="/rutorrent" target="_blank"><i class="fa fa-share"></i> <span>ruTorrent</span></a></li>
+            <li><a class="grayscale" href="/rutorrent" target="_blank"><img src="img/brands/rtorrent.png" class="brand-ico"> <span>ruTorrent</span></a></li>
             <?php if (processExists("deluge-web",$username)) { ?>
-              <li><a href="<?php echo "$dwURL"; ?>" target="_blank"><i class="fa fa-umbrella"></i> <span>Deluge Web</span></a></li>
+              <li><a class="grayscale" href="<?php echo "$dwURL"; ?>" target="_blank"><img src="img/brands/deluge.png" class="brand-ico"> <span>Deluge Web</span></a></li>
             <?php } ?>
             <?php if ($username == "$master") { ?>
               <?php if (file_exists('/install/.btsync.lock')) { ?>
-                <li><a href="<?php echo "$btsynURL"; ?>" target="_blank"><i class="fa fa-retweet"></i> <span>BTSync</span></a></li>
+                <li><a class="grayscale" href="<?php echo "$btsynURL"; ?>" target="_blank"><img src="img/brands/btsync.png" class="brand-ico"> <span>BTSync</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.plex.lock')) { ?>
-                <li><a href="<?php echo "$plexURL"; ?>" target="_blank"><i class="fa fa-play"></i> <span>Plex</span></a></li>
+                <li><a class="grayscale" href="<?php echo "$plexURL"; ?>" target="_blank"><img src="img/brands/plex.png" class="brand-ico"> <span>Plex</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.rapidleech.lock')) { ?>
-                <li><a href="<?php echo "$rapidleechURL"; ?>" target="_blank"><i class="fa fa-share-alt"></i> <span>Rapidleech</span></a></li>
+                <li><a class="grayscale" href="<?php echo "$rapidleechURL"; ?>" target="_blank"><img src="img/brands/rapidleech.png" class="brand-ico"> <span>Rapidleech</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.sickrage.lock')) { ?>
-                <li><a href="<?php echo "$sickrageURL"; ?>" target="_blank"><i class="fa fa-television"></i> <span>SickRage</span></a></li>
+                <li><a class="grayscale" href="<?php echo "$sickrageURL"; ?>" target="_blank"><img src="img/brands/sickrage.png" class="brand-ico"> <span>SickRage</span></a></li>
               <?php } ?>
               <?php if (processExists("mono",$username) && file_exists('/install/.sonarr.lock')) { ?>
-                <li><a href="<?php echo "$sonarrURL"; ?>" target="_blank"><i class="fa fa-play"></i> <span>Sonarr</span></a></li>
+                <li><a class="grayscale" href="<?php echo "$sonarrURL"; ?>" target="_blank"><img src="img/brands/sonarr.png" class="brand-ico"> <span>Sonarr</span></a></li>
               <?php } ?>
             <?php } ?>
             <li class="nav-parent">

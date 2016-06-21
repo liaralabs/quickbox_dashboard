@@ -15,5 +15,8 @@
                       if ($username == "$master" && file_exists('/install/.btsync.lock')) {
                         echo "<li>"; echo "$bval"; echo "</li>";
                       }
+                      if ($username == "$master" && file_exists('/install/.sonarr.lock')) {
+                        echo "<li>"; echo "$sval"; echo "</li>";
+                      }
                       ?>
                     </ul>

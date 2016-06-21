@@ -8,7 +8,8 @@ $packages = array(
         'rapidleech',
         'sickrage',
         'sonarr',
-        'x2go'
+        'x2go',
+        'quassel'
 );
 
 foreach ($packages as $ipackage) {

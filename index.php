@@ -55,6 +55,9 @@
                       if ($username == "$master" && file_exists('/install/.btsync.lock')) {
                         echo "<li>"; echo "$cbodyb"; echo "</li>";
                       }
+                      if ($username == "$master" && file_exists('/install/.sonarr.lock')) {
+                        echo "<li>"; echo "$cbodys"; echo "</li>";
+                      }
                       ?>
                     </ul>
                   </div>

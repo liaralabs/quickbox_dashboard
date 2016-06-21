@@ -71,10 +71,10 @@
                 <li><a class="panel-minimize"><i class="fa fa-chevron-down"></i></a></li>
                 <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
               </ul>
-              <div class="panel-heading">
+              <div class="panel-heading min">
                 <h4 class="panel-title">Package Management Center</h4>
               </div>
-              <div class="panel-body text-center" style="padding:0">
+              <div class="panel-body text-center" style="padding:0; display:none">
                 <div class="alert alert-danger">
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                   <strong>Heads Up!</strong> Please be advised that these options are not the same as enabling and disabling a software package. These options are designed to either install or uninstall.
@@ -149,7 +149,7 @@
                         <?php if (file_exists("/install/.sickrage.lock")) { ?>
                           <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#sickrageRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
                         <?php } else { ?>
-                          <td style="vertical-align: middle; text-align: center"><<a href="?installpackage-sickrage=true" data-toggle="modal" data-target="#sysResponse" id="sickrageInstall" class="btn btn-xs btn-info">Install</a></td>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-sickrage=true" data-toggle="modal" data-target="#sysResponse" id="sickrageInstall" class="btn btn-xs btn-info">Install</a></td>
                         <?php } ?>
                       </tr>
                       <tr>

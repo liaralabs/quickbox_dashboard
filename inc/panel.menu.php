@@ -137,6 +137,12 @@
                   <a href="?installpackage-sonarr=true" data-toggle="modal" data-target="#sysResponse" id="sonarrInstall">Sonarr <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
                 <?php } ?>
                 </li>
+                <?php if (file_exists("/install/.x2go.lock")) { ?>
+                  <a href=\"javascript:void()\" data-toggle=\"modal\" data-target=\"#x2goRemovalConfirm\">x2go  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
+                <?php } else { ?>
+                  <a href=\"?installpackage-x2go=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" id=\"x2goInstall\">x2go  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
+                <?php } ?>
+                echo "</li>";
               </ul>
             </li>
             <?php } ?>

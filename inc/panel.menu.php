@@ -75,7 +75,7 @@
               <?php if (file_exists('/install/.sickrage.lock')) { ?>
                 <li><a href="<?php echo "$sickrageURL"; ?>" target="_blank"><i class="fa fa-television"></i> <span>SickRage</span></a></li>
               <?php } ?>
-              <?php if (file_exists('/install/.sonarr.lock')) { ?>
+              <?php if (processExists("mono",$username) && file_exists('/install/.sonarr.lock')) { ?>
                 <li><a href="<?php echo "$sonarrURL"; ?>" target="_blank"><i class="fa fa-play"></i> <span>Sonarr</span></a></li>
               <?php } ?>
             <?php } ?>

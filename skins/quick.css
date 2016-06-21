@@ -14739,7 +14739,6 @@ padding: 6px;
   border-top: 1px solid #3a3a3a;
   margin-top: 15px
 }
-<<<<<<< HEAD
 
 a.grayscale {
     filter: grayscale(100%); /* Current draft standard */
@@ -14786,5 +14785,3 @@ img.grayscale:hover {
   width: 21px;
   border-radius: 50%;
 }
-=======
->>>>>>> master

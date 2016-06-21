@@ -7,7 +7,9 @@ $packages = array(
         'plex',
         'rapidleech',
         'sickrage',
-        'sonarr'
+        'sonarr',
+        'x2go',
+        'quassel'
 );
 
 foreach ($packages as $ipackage) {

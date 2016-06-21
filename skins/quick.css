@@ -2738,12 +2738,19 @@ fieldset[disabled] .checkbox label {
   padding-left: 0;
   padding-right: 0;
 }
-.input-sm {
+/*.input-sm {
   height: 32px;
   padding: 5px 8px;
   font-size: 11px;
   line-height: 1.5;
   border-radius: 2px;
+}*/
+.input-sm {
+  border-radius: 2px;
+  font-size: 11px !important;
+  height: 24px !important;
+  line-height: 1.1;
+  padding: 2px 8px !important;
 }
 select.input-sm {
   height: 32px;
@@ -4798,7 +4805,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   position: relative;
   float: left;
   padding: 10px 12px;
-  line-height: 1.42857143;
+  /*line-height: 1.42857143;*/
+  line-height: 14px;
   text-decoration: none;
   color: #505b72;
   background-color: #d8dce3;
@@ -5114,10 +5122,12 @@ a.thumbnail.active {
   color: #696c74;
 }
 .alert {
-  padding: 15px;
-  margin-bottom: 17px;
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: 0;
+  font-size: 12px;
+  margin-bottom: 0;
+  padding: 7px;
+  text-align: left;
 }
 .alert h4 {
   margin-top: 0;
@@ -7080,7 +7090,7 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #259dab;
+  background-color: #4daf7c;
   border-color: transparent;
 }
 .btn-success .badge {
@@ -9140,8 +9150,23 @@ ul.wysihtml5-toolbar a.btn.wysihtml5-command-active {
   left: -6px;
 }
 /***** DATA TABLES *****/
+#dataTable1_length {
+  font-size: 12px;
+  margin-top: 10px;
+}
+#dataTable1_filter {
+  font-size: 12px;
+  margin-top: 18px;
+}
+#dataTable1_info {
+  font-size: 11px;
+  margin: 17px 0;
+}
+#dataTable1_paginate {
+  /*display: none;*/
+}
 .table.dataTable {
-  margin-bottom: 20px !important;
+  margin-bottom: -2px !important;
   margin-top: 0 !important;
 }
 .table.dataTable thead .sorting:after,
@@ -9189,8 +9214,7 @@ ul.wysihtml5-toolbar a.btn.wysihtml5-command-active {
   padding: 10px 12px;
 }
 .dataTables_paginate .pagination > .paginate_button > a {
-  padding-left: 14px;
-  padding-right: 14px;
+  padding: 5px 7px 4px;
 }
 .dataTables_paginate .pagination > .paginate_button.next,
 .dataTables_paginate .pagination > .paginate_button.previous {
@@ -9200,7 +9224,7 @@ ul.wysihtml5-toolbar a.btn.wysihtml5-command-active {
 }
 .dataTables_paginate .pagination > .paginate_button.next > a,
 .dataTables_paginate .pagination > .paginate_button.previous > a {
-  padding: 10px 15px 9px;
+  padding: 5px 7px 4px;
 }
 /***** SUMMERNOTE *****/
 .note-toolbar {
@@ -14719,6 +14743,14 @@ li p.info-quote {
 li.warning-quote {
   border: 0 !important;
 }
+p.info-quote {
+  background-color: rgba(103, 128, 159, 0.1);
+  border-left: 6px solid #4b77be;
+  color: #333;
+  font-size: 12px;
+  padding: 6px;
+  text-align: left;
+}
 li p.warning-quote {
 background-color: rgba(214, 69, 65, 0.1);
 border-left: 6px solid #d9534f;
@@ -14727,6 +14759,14 @@ font-size: 12px;
 margin-left: -21px;
 margin-top: -7px;
 padding: 6px;
+}
+p.warning-quote {
+  background-color: rgba(214, 69, 65, 0.1);
+  border-left: 6px solid #d9534f;
+  color: #333;
+  font-size: 12px;
+  padding: 6px;
+  text-align: left;
 }
 
 .plgin-center-switch {

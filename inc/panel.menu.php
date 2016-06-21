@@ -91,68 +91,6 @@
             <li><a href="?reload=true"><i class="fa fa-refresh"></i> <span>Reload Services</span></a></li>
             <?php if ($username == "$master") { ?>
             <li><a href="/<?php echo "$username"; ?>.console"><i class="fa fa-keyboard-o"></i> <span>Web Console</span></a></li>
-            <li class="nav-parent"> <a href=""><i class="fa fa-cubes"></i> <span>Packages</span></a>
-              <ul class="children">
-                <li class="info-quote"><p class="info-quote">Easily install and uninstall any software package simply by clicking on the software package name</p></li>
-                <li class="warning-quote"><p class="warning-quote">Please be advised that these options are not the same as enabling and disabling a software package. These options are designed to either install or uninstall.</p></li>
-                <li>
-                <?php if (file_exists("/install/.btsync.lock")) { ?>
-                  <a href="javascript:void()" data-toggle="modal" data-target="#btsyncRemovalConfirm">BTSync <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
-                <?php } else { ?>
-                  <a href="?installpackage-btsync=true" data-toggle="modal" data-target="#sysResponse" id="btsyncInstall">BTSync <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
-                <?php } ?>
-                </li>
-                <li>
-                <?php if (file_exists("/install/.deluge.lock")) { ?>
-                  <a href="javascript:void()" data-toggle="modal" data-target="#delugeRemovalConfirm">Deluge <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
-                <?php } else { ?>
-                  <a href="?installpackage-deluge=true" data-toggle="modal" data-target="#sysResponse" id="delugeInstall">Deluge <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
-                <?php } ?>
-                </li>
-                <li>
-                <?php if (file_exists("/install/.plex.lock")) { ?>
-                  <a href="javascript:void()" data-toggle="modal" data-target="#plexRemovalConfirm">Plex Media Server <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
-                <?php } else { ?>
-                  <a href="?installpackage-plex=true" data-toggle="modal" data-target="#sysResponse" id="plexInstall">Plex Media Server <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
-                <?php } ?>
-                </li>
-                <li>
-                <?php if (file_exists("/install/.rapidleech.lock")) { ?>
-                  <a href="javascript:void()" data-toggle="modal" data-target="#rapidleechRemovalConfirm">Rapidleech <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
-                <?php } else { ?>
-                  <a href="?installpackage-rapidleech=true" data-toggle="modal" data-target="#sysResponse" id="rapidleechInstall">Rapidleech <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
-                <?php } ?>
-                </li>
-                <li>
-                <?php if (file_exists("/install/.sickrage.lock")) { ?>
-                  <a href="javascript:void()" data-toggle="modal" data-target="#sickrageRemovalConfirm">SickRage <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
-                <?php } else { ?>
-                  <a href="?installpackage-sickrage=true" data-toggle="modal" data-target="#sysResponse" id="sickrageInstall">SickRage <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
-                <?php } ?>
-                </li>
-                <li>
-                <?php if (file_exists("/install/.sonarr.lock")) { ?>
-                  <a href="javascript:void()" data-toggle="modal" data-target="#sonarrRemovalConfirm">Sonarr <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
-                <?php } else { ?>
-                  <a href="?installpackage-sonarr=true" data-toggle="modal" data-target="#sysResponse" id="sonarrInstall">Sonarr <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
-                <?php } ?>
-                </li>
-                <li>
-                <?php if (file_exists("/install/.quassel.lock")) { ?>
-                  <a href="javascript:void()" data-toggle="modal" data-target="#quasselRemovalConfirm">Quassel <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
-                <?php } else { ?>
-                  <a href="?installpackage-quassel=true" data-toggle="modal" data-target="#sysResponse" id="quasselInstall">Quassel <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
-                <?php } ?>
-                </li>
-                <li>
-                <?php if (file_exists("/install/.x2go.lock")) { ?>
-                  <a href="javascript:void()" data-toggle="modal" data-target="#x2goRemovalConfirm">x2go  <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
-                <?php } else { ?>
-                  <a href="?installpackage-x2go=true" data-toggle="modal" data-target="#sysResponse" id="x2goInstall">x2go  <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
-                <?php } ?>
-                </li>
-              </ul>
-            </li>
             <?php } ?>
           </ul>
         </div><!-- tab pane -->

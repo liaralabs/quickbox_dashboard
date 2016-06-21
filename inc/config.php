@@ -231,7 +231,7 @@ $irssi = processExists("irssi",$username);
 $plex = processExists("Plex",$username);
 $rtorrent = processExists("\"main|rtorrent\"",$username);
 $sickrage = processExists("sickrage",$username);
-$sonarr = processExists("/usr/bin/mono NzbDrone.exe",$username);
+$sonarr = processExists("mono",$username);
 
 function isEnabled($search, $username){
   $string = file_get_contents('/home/'.$username.'/.startup');

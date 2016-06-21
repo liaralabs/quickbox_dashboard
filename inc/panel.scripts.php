@@ -126,7 +126,42 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
-
+<!-- QUASSEL UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="quasselRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="quasselRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="quasselRemovalConfirm">Uninstall Quassel?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall Quassel from your system.<br/><br/> This will completely remove Quassel and all settings/stored backlogs from your system.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-quassel=true" id="quasselRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+<!-- X2GO UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="x2goRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="x2goRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="x2goRemovalConfirm">Uninstall x2go?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall x2go from your system.<br/><br/> This will completely remove x2goserver and xfce4 desktop environment from your system.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-x2go=true" id="x2goRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- SYSTEM RESPONSE MODAL -->
 <div class="modal bounceIn animated" id="sysResponse" tabindex="-1" role="dialog" aria-labelledby="sysResponse" aria-hidden="true">
   <div class="modal-dialog" style="width: 600px">
@@ -256,6 +291,25 @@ $(document).ready(function() {
       sticky: true
     });
   });
+  // QuasselRemove
+  $('#quasselRemove').click(function(){
+  $.gritter.add({
+    title: 'Uninstalling Quassel-Core',
+    text: 'Please wait while quassel is being uninstalled from your system.',
+    class_name: 'with-icon times-circle danger',
+    sticky: true
+  });
+});
+
+  // x2goRemove
+  $('#x2goRemove').click(function(){
+  $.gritter.add({
+    title: 'Uninstalling x2go',
+    text: 'Please wait while x2go is being uninstalled from your system.',
+    class_name: 'with-icon times-circle danger',
+    sticky: true
+  });
+});
 
 });
 </script>

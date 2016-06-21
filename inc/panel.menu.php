@@ -59,107 +59,134 @@
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li class="active"><a href="index.php"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
             <li><a href="/rutorrent" target="_blank"><i class="fa fa-share"></i> <span>ruTorrent</span></a></li>
-            <?php if (processExists("deluge-web",$username)) { echo "<li><a href=\"$dwURL\" target=\"_blank\"><i class=\"fa fa-umbrella\"></i> <span>Deluge Web</span></a></li>"; } ?>
-            <?php if (file_exists('/install/.btsync.lock') && ($username == "$master")) { echo "<li><a href=\"$btsyncURL\" target=\"_blank\"><i class=\"fa fa-retweet\"></i> <span>BTSync</span></a></li>"; } ?>
-            <?php if (file_exists('/install/.plex.lock') && ($username == "$master")) { echo "<li><a href=\"$plexURL\" target=\"_blank\"><i class=\"fa fa-play\"></i> <span>Plex</span></a></li>"; } ?>
-            <?php if (file_exists('/install/.rapidleech.lock') && ($username == "$master")) { echo "<li><a href=\"$rapidleechURL\" target=\"_blank\"><i class=\"fa fa-share-alt\"></i> <span>Rapidleech</span></a></li>"; } ?>
-            <?php if (file_exists('/install/.sickrage.lock') && ($username == "$master")) { echo "<li><a href=\"$sickrageURL\" target=\"_blank\"><i class=\"fa fa-television\"></i> <span>SickRage</span></a></li>"; } ?>
+            <?php if (processExists("deluge-web",$username)) { ?>
+              <li><a href="<?php echo "$dwURL"; ?>" target="_blank"><i class="fa fa-umbrella"></i> <span>Deluge Web</span></a></li>
+            <?php } ?>
+            <?php if ($username == "$master") { ?>
+              <?php if (file_exists('/install/.btsync.lock')) { ?>
+                <li><a href="<?php echo "$btsynURL"; ?>" target="_blank"><i class="fa fa-retweet"></i> <span>BTSync</span></a></li>
+              <?php } ?>
+              <?php if (file_exists('/install/.plex.lock')) { ?>
+                <li><a href="<?php echo "$plexURL"; ?>" target="_blank"><i class="fa fa-play"></i> <span>Plex</span></a></li>
+              <?php } ?>
+              <?php if (file_exists('/install/.rapidleech.lock')) { ?>
+                <li><a href="<?php echo "$rapidleechURL"; ?>" target="_blank"><i class="fa fa-share-alt"></i> <span>Rapidleech</span></a></li>
+              <?php } ?>
+              <?php if (file_exists('/install/.sickrage.lock')) { ?>
+                <li><a href="<?php echo "$sickrageURL"; ?>" target="_blank"><i class="fa fa-television"></i> <span>SickRage</span></a></li>
+              <?php } ?>
+              <?php if (file_exists('/install/.sonarr.lock')) { ?>
+                <li><a href="<?php echo "$sonarrURL"; ?>" target="_blank"><i class="fa fa-play"></i> <span>Sonarr</span></a></li>
+              <?php } ?>
+            <?php } ?>
             <li class="nav-parent">
               <a href=""><i class="fa fa-download"></i> <span>Downloads</span></a>
               <ul class="children">
                 <li><a href="/<?php echo "$username"; ?>.downloads" target="_blank">ruTorrent</a></a></li>
                 <?php if (processExists("deluge-web",$username)) { ?>
-                <li><a href="/<?php echo "$username"; ?>.deluge.downloads" target="_blank">Deluge-Web</a></li>
+                  <li><a href="/<?php echo "$username"; ?>.deluge.downloads" target="_blank">Deluge-Web</a></li>
                 <?php } ?>
               </ul>
             </li>
             <li><a href="?reload=true"><i class="fa fa-refresh"></i> <span>Reload Services</span></a></li>
-            <?php
-            if ($username == "$master"){
-            echo "<li><a href=\"/$username.console\"><i class=\"fa fa-keyboard-o\"></i> <span>Web Console</span></a></li>";
-            echo "<li class=\"nav-parent\"> <a href=\"\"><i class=\"fa fa-cubes\"></i> <span>Packages</span></a>";
-              echo "<ul class=\"children\">";
-                echo "<li class=\"info-quote\"><p class=\"info-quote\">Easily install and uninstall any software package simply by clicking on the software package name</p></li>";
-                echo "<li class=\"warning-quote\"><p class=\"warning-quote\">Please be advised that these options are not the same as enabling and disabling a software package. These options are designed to either install or uninstall.</p></li>";
-                echo "<li>";
-                if (file_exists("/install/.deluge.lock")) {
-                  echo "<a href=\"javascript:void()\" data-toggle=\"modal\" data-target=\"#delugeRemovalConfirm\">Deluge  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
-                } else {
-                  echo "<a href=\"?installpackage-deluge=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" id=\"delugeInstall\">Deluge  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
-                }
-                echo "</li>";
-                echo "<li>";
-                if (file_exists("/install/.btsync.lock")) {
-                  echo "<a href=\"javascript:void()\" data-toggle=\"modal\" data-target=\"#btsyncRemovalConfirm\">BTSync  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
-                } else {
-                  echo "<a href=\"?installpackage-btsync=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" id=\"btsyncInstall\">BTSync  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
-                }
-                echo "</li>";
-                //echo "<li>";
-                //if (file_exists("/install/.csf.lock")) {
-                //  echo "<a href=\"javascript:void()\" data-toggle=\"modal\" data-target=\"#csfRemovalConfirm\">CSF  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
-                //} else {
-                //  echo "<a href=\"?installpackage-csf=true\" id=\"csfInstall\">CSF  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
-                //}
-                //echo "</li>";
-                echo "<li>";
-                if (file_exists('/install/.plex.lock')) {
-                  echo "<a href=\"javascript:void()\" data-toggle=\"modal\" data-target=\"#plexRemovalConfirm\">Plex Media Server  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
-                } else {
-                  echo "<a href=\"?installpackage-plex=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" id=\"plexInstall\">Plex Media Server  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
-                }
-                echo "</li>";
-                echo "<li>";
-                if (file_exists("/install/.rapidleech.lock")) {
-                  echo "<a href=\"javascript:void()\" data-toggle=\"modal\" data-target=\"#rapidleechRemovalConfirm\">Rapidleech <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
-                } else {
-                  echo "<a href=\"?installpackage-rapidleech=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" id=\"rapidleechInstall\">Rapidleech  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
-                }
-                echo "</li>";
-                echo "<li>";
-                if (file_exists("/install/.sickrage.lock")) {
-                  echo "<a href=\"javascript:void()\" data-toggle=\"modal\" data-target=\"#sickrageRemovalConfirm\">SickRage <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
-                } else {
-                  echo "<a href=\"?installpackage-sickrage=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" id=\"sickrageInstall\">SickRage  <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
-                }
-                echo "</li>";
-
-              echo "</ul>";
-            echo "</li>";
-            } ?>
+            <?php if ($username == "$master") { ?>
+            <li><a href="/<?php echo "$username"; ?>.console"><i class="fa fa-keyboard-o"></i> <span>Web Console</span></a></li>
+            <li class="nav-parent"> <a href=""><i class="fa fa-cubes"></i> <span>Packages</span></a>
+              <ul class="children">
+                <li class="info-quote"><p class="info-quote">Easily install and uninstall any software package simply by clicking on the software package name</p></li>
+                <li class="warning-quote"><p class="warning-quote">Please be advised that these options are not the same as enabling and disabling a software package. These options are designed to either install or uninstall.</p></li>
+                <li>
+                <?php if (file_exists("/install/.btsync.lock")) { ?>
+                  <a href="javascript:void()" data-toggle="modal" data-target="#btsyncRemovalConfirm">BTSync <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
+                <?php } else { ?>
+                  <a href="?installpackage-btsync=true" data-toggle="modal" data-target="#sysResponse" id="btsyncInstall">BTSync <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
+                <?php } ?>
+                </li>
+                <li>
+                <?php if (file_exists("/install/.deluge.lock")) { ?>
+                  <a href="javascript:void()" data-toggle="modal" data-target="#delugeRemovalConfirm">Deluge <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
+                <?php } else { ?>
+                  <a href="?installpackage-deluge=true" data-toggle="modal" data-target="#sysResponse" id="delugeInstall">Deluge <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
+                <?php } ?>
+                </li>
+                <li>
+                <?php if (file_exists("/install/.plex.lock")) { ?>
+                  <a href="javascript:void()" data-toggle="modal" data-target="#plexRemovalConfirm">Plex Media Server <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
+                <?php } else { ?>
+                  <a href="?installpackage-plex=true" data-toggle="modal" data-target="#sysResponse" id="plexInstall">Plex Media Server <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
+                <?php } ?>
+                </li>
+                <li>
+                <?php if (file_exists("/install/.rapidleech.lock")) { ?>
+                  <a href="javascript:void()" data-toggle="modal" data-target="#rapidleechRemovalConfirm">Rapidleech <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
+                <?php } else { ?>
+                  <a href="?installpackage-rapidleech=true" data-toggle="modal" data-target="#sysResponse" id="rapidleechInstall">Rapidleech <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
+                <?php } ?>
+                </li>
+                <li>
+                <?php if (file_exists("/install/.sickrage.lock")) { ?>
+                  <a href="javascript:void()" data-toggle="modal" data-target="#sickrageRemovalConfirm">SickRage <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
+                <?php } else { ?>
+                  <a href="?installpackage-sickrage=true" data-toggle="modal" data-target="#sysResponse" id="sickrageInstall">SickRage <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
+                <?php } ?>
+                </li>
+                <li>
+                <?php if (file_exists("/install/.sonarr.lock")) { ?>
+                  <a href="javascript:void()" data-toggle="modal" data-target="#sonarrRemovalConfirm">Sonarr <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
+                <?php } else { ?>
+                  <a href="?installpackage-sonarr=true" data-toggle="modal" data-target="#sysResponse" id="sonarrInstall">Sonarr <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
+                <?php } ?>
+                </li>
+              </ul>
+            </li>
+            <?php } ?>
           </ul>
         </div><!-- tab pane -->
 
         <!-- ######################## HELP MENU TAB ##################### -->
         <div class="tab-pane" id="help">
           <h5 class="sidebar-title">Quick System Tips</h5>
-          <?php
-          if ($username == "$master"){
-          echo "<ul class=\"nav nav-pills nav-stacked nav-quirk nav-mail\">";
-            echo "<li style=\"padding: 7px\"><span style=\"font-size: 12px; color:#eee\">disktest</span><br/>";
-            echo "<small>Type this command to perform a quick r/w test of your disk.</small></li>";
-            echo "<li style=\"padding: 7px\"><span style=\"font-size: 12px; color:#eee\">fixhome</span><br/>";
-            echo "<small>Type this command to quickly adjusts /home directory permissions.</small></li>";
-          echo "</ul>";
-          echo "<h5 class=\"sidebar-title\">Admin Commands</h5>";
-          echo "<ul class=\"nav nav-pills nav-stacked nav-quirk nav-mail\">";
-            echo "<li style=\"padding: 7px\"><span style=\"font-size: 12px; color:#eee\">setdisk</span><br/>";
-            echo "<small>Type this command in ssh to allocate the amount of disk space you would like to give to a user.</small></li>";
-            echo "<li style=\"padding: 7px\"><span style=\"font-size: 12px; color:#eee\">createSeedboxUser</span><br/>";
-            echo "<small>Type this command in ssh to create a new seedbox user on your server.</small></li>";
-            echo "<li style=\"padding: 7px\"><span style=\"font-size: 12px; color:#eee\">deleteSeedboxUser</span><br/>";
-            echo "<small>Type this command in ssh to delete a seedbox user on your server. You will need to enter the users account name, you will be prompted.</small></li>";
-            echo "<li style=\"padding: 7px\"><span style=\"font-size: 12px; color:#eee\">changeUserpass</span><br/>";
-            echo "<small>Typing this command in ssh allows you to change a disired users password.</small></li>";
-            echo "<li style=\"padding: 7px\"><span style=\"font-size: 12px; color:#eee\">sudo -u [username] reload</span><br/>";
-            echo "<small>Type this command in ssh to reload all services on a specific users seedbox. These services include rTorrent and IRSSI only.</small></li>";
-            echo "<li style=\"padding: 7px\"><span style=\"font-size: 12px; color:#eee\">upgradeBTSync</span><br/>";
-            echo "<small>Type this command in ssh to upgrade BTSync to newest version when available.</small></li>";
-            echo "<li style=\"padding: 7px\"><span style=\"font-size: 12px; color:#eee\">clean_mem</span><br/>";
-            echo "<small>Use the above command as root if/when you decide to clear your systems Physical Memory Cache</small></li>";
-          echo "</ul>";
-          echo "<h5 class=\"sidebar-title\">Essential User Commands</h5>";
-          } ?>
+          <?php if ($username == "$master") { ?>
+          <ul class="nav nav-pills nav-stacked nav-quirk nav-mail">
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">disktest</span><br/>
+              <small>Type this command to perform a quick r/w test of your disk.</small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">fixhome</span><br/>
+              <small>Type this command to quickly adjusts /home directory permissions.</small>
+            </li>
+          </ul>
+          <h5 class="sidebar-title">Admin Commands</h5>
+          <ul class="nav nav-pills nav-stacked nav-quirk nav-mail">
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">setdisk</span><br/>
+              <small>Type this command in ssh to allocate the amount of disk space you would like to give to a user.</small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">createSeedboxUser</span><br/>
+              <small>Type this command in ssh to create a new seedbox user on your server.</small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">deleteSeedboxUser</span><br/>
+              <small>Type this command in ssh to delete a seedbox user on your server. You will need to enter the users account name, you will be prompted.</small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">changeUserpass</span><br/>
+              <small>Typing this command in ssh allows you to change a disired users password.</small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">sudo -u [username] reload</span><br/>
+              <small>Type this command in ssh to reload all services on a specific users seedbox. These services include rTorrent and IRSSI only.</small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">showspace</span><br/>
+              <small>Use the above command as root to show the amount of disk space currently used by each user</small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradeBTSync</span><br/>
+              <small>Type this command in ssh to upgrade BTSync to newest version when available.</small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradePlex</span><br/>
+              <small>Type this command in ssh to upgrade Plex to newest version when available.</small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">clean_mem</span><br/>
+              <small>Use the above command as root if/when you decide to clear your systems Physical Memory Cache</small>
+            </li>
+          </ul>
+          <?php } ?>
+          <h5 class="sidebar-title">Essential User Commands</h5>
           <ul class="nav nav-pills nav-stacked nav-quirk nav-mail">
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">reload</span><br/>
             <small>allows user to reload their services (rtorrent and irssi)</small></li>

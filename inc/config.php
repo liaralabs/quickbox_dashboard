@@ -224,13 +224,14 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$rtorrent = processExists("\"main|rtorrent\"",$username);
-$irssi = processExists("irssi",$username);
 $btsync = processExists("btsync",btsync);
 $deluged = processExists("deluged",$username);
 $delugedweb = processExists("deluge-web",$username);
+$irssi = processExists("irssi",$username);
 $plex = processExists("Plex",$username);
+$rtorrent = processExists("\"main|rtorrent\"",$username);
 $sickrage = processExists("sickrage",$username);
+$sonarr = processExists("/usr/bin/mono NzbDrone.exe",$username);
 
 function isEnabled($search, $username){
   $string = file_get_contents('/home/'.$username.'/.startup');
@@ -242,16 +243,17 @@ function isEnabled($search, $username){
   }
 }
 
-$plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
-$btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
-$rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
-$sickrageURL = "http://" . $_SERVER['HTTP_HOST'] . ":8081";
 if ($dwssl == "true") {
 $dwURL = "https://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 }
 if ($dwssl == "false") {
 $dwURL = "http://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 }
+$btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
+$plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
+$rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
+$sickrageURL = "http://" . $_SERVER['HTTP_HOST'] . ":8081";
+$sonarrURL = "http://" . $_SERVER['HTTP_HOST'] . ":8989";
 
 $reload='';
 $service='';
@@ -273,6 +275,10 @@ if ($delugedweb == "1") { $dwval = "Deluge Web <span class=\"label label-success
 
 if ($btsync == "1") { $bval = "BTSync <span class=\"label label-success pull-right\">Enabled</span>";
 } else { $bval = "BTSync <span class=\"label label-danger pull-right\">Disabled</span>";
+}
+
+if ($sonarr == "1") { $sval = "Sonarr <span class=\"label label-success pull-right\">Enabled</span>";
+} else { $sval = "Sonarr <span class=\"label label-danger pull-right\">Disabled</span>";
 }
 
 if ($_GET['serviceend']) {
@@ -310,6 +316,8 @@ if (file_exists('/home/'.$username.'/.startup')) {
     $cbodydw .= "Deluged-Web ". $delugedweb;
   $btsync = isEnabled("BTSYNC=yes", $username);
     $cbodyb .= "BTSync ". $btsync;
+  $sonarr = isEnabled("SONARR=yes", $username);
+    $cbodys .= "Sonarr ". $sonarr;
 } else {}
 break;
 
@@ -322,6 +330,8 @@ case 66:
         $servicename = "btsync";
       } elseif ($name == "DELUGEWEB_CLIENT=yes") {
         $servicename = "deluge-web";
+      } elseif ($name == "SONARR=yes") {
+        $servicename = "sonarr";
       } else {
         $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
       }
@@ -340,6 +350,8 @@ case 77:
         $servicename = "btsync";
       } elseif ($name == "DELUGEWEB_CLIENT=yes") {
         $servicename = "deluge-web";
+      } elseif ($name == "SONARR=yes") {
+        $servicename = "sonarr";
       } else {
         $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
         if (strpos($servicename,'rtorrent') !== false) { $servicename="main"; }

@@ -108,6 +108,24 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- SONARR UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="sonarrRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="SonarrRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="SonarrRemovalConfirm">Uninstall Sonarr-NzbDrone?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall Sonarr from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversable. <br/><br/>You may reinstall Sonarr-NzbDrone at any time, however, your configuration settings will be reset to default.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-sonarr=true" id="sonarrRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 
 <!-- SYSTEM RESPONSE MODAL -->
 <div class="modal bounceIn animated" id="sysResponse" tabindex="-1" role="dialog" aria-labelledby="sysResponse" aria-hidden="true">
@@ -224,6 +242,16 @@ $(document).ready(function() {
     $.gritter.add({
       title: 'Uninstalling SickRage',
       text: 'Please wait while SickRage is being uninstalled from your system.',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+
+  // SonarrRemove
+  $('#sonarrRemove').click(function(){
+    $.gritter.add({
+      title: 'Uninstalling Sonarr',
+      text: 'Please wait while Sonarr-NzbDrone is being uninstalled from your system.',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });

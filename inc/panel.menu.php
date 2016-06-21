@@ -138,9 +138,9 @@
                 <?php } ?>
                 </li>
                 <?php if (file_exists("/install/.quassel.lock")) { ?>
-                  <a href=\"javascript:void()\" data-toggle="modal" data-target="#quasselRemovalConfirm">x2go  <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
+                  <a href="javascript:void()" data-toggle="modal" data-target="#quasselRemovalConfirm">Quassel <span class="pull-right plgin-center-switch"><img src="img/switch-installed.png"></span></a>
                 <?php } else { ?>
-                  <a href="?installpackage-quassel=true" data-toggle="modal" data-target="#sysResponse" id="quasselInstall">x2go  <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
+                  <a href="?installpackage-quassel=true" data-toggle="modal" data-target="#sysResponse" id="quasselInstall">Quassel <span class="pull-right plgin-center-switch"><img src="img/switch-notinstalled.png"></span></a>
                 <?php } ?>
                 </li>
                 <?php if (file_exists("/install/.x2go.lock")) { ?>

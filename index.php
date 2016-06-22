@@ -66,6 +66,7 @@
               </div>
 
             </div>
+            <?php if ($username == "$master") { ?>
             <div class="panel panel-inverse">
               <ul class="panel-options">
                 <li><a class="panel-minimize"><i class="fa fa-chevron-down"></i></a></li>
@@ -175,6 +176,7 @@
                 </div>
               </div>
             </div><!-- package center panel -->
+            <?php } ?>
 
             <div class="panel panel-inverse">
               <ul class="panel-options">

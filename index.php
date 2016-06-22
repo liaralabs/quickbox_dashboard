@@ -132,7 +132,7 @@
                         <?php if (file_exists("/install/.quassel.lock")) { ?>
                           <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#quasselRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
                         <?php } else { ?>
-                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-quassel=true" data-toggle="modal" data-target="#sysResponse" id="quasselInstall" class="btn btn-xs btn-info">Install</a></td>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-quassel=true" data-toggle="modal" data-target="#sysResponse" id="quasselInstall" class="btn btn-xs btn-danger disabled">In Beta</a></td>
                         <?php } ?>
                       </tr>
                       <tr>

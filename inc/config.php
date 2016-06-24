@@ -335,7 +335,7 @@ case 66:
       } else {
         $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
       }
-    shell_exec("printf "%s\n" ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
+    shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
     $output = substr($thisname, 0, strpos(strtolower($thisname), '_'));
     } else {}
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
@@ -356,7 +356,7 @@ case 77:
         $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
         if (strpos($servicename,'rtorrent') !== false) { $servicename="main"; }
       }
-      shell_exec("printf "%s\n" ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
+      shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
       shell_exec("sudo -u $username pkill -9 $servicename");
     } else {}
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');

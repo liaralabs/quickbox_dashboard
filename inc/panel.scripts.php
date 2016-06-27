@@ -144,6 +144,24 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- QUOTA UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="quotaRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="quotaRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="quotaRemovalConfirm">Uninstall Quassel?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall quotas from your system.<br/><br/> This will completely remove user quotas and any settings associated with them.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-quota=true" id="quotaRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- X2GO UNINSTALL MODAL -->
 <div class="modal bounceIn animated" id="x2goRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="x2goRemovalConfirm" aria-hidden="true">
   <div class="modal-dialog">
@@ -300,6 +318,15 @@ $(document).ready(function() {
     sticky: true
   });
 });
+// QuasselRemove
+  $('#quotaRemove').click(function(){
+    $.gritter.add({
+      title: 'Uninstalling user quotas',
+      text: 'Please wait while quotas are uninstalled from your system.',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
 
   // x2goRemove
   $('#x2goRemove').click(function(){

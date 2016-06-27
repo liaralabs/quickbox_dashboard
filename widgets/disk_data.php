@@ -44,7 +44,7 @@ $web_path = substr($php_self, 0, strrpos($php_self, '/')+1);
 $time = microtime(); $time = explode(" ", $time);
 $time = $time[1] + $time[0]; $start = $time;
 
-if (file_exists('/usr/sbin/repquota')) {
+if (file_exists('/install/.quota.lock')) {
       $dftotal = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf \$4/1024/1024}'");
       $dffree = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf (\$4-\$3)/1024/1024}'");
       $dfused = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf \$3/1024/1024}'");

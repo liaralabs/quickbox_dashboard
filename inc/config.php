@@ -339,8 +339,15 @@ case 66:
         shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
         $output = substr($thisname, 0, strpos(strtolower($thisname), '_'));
       } else {
-        shell_exec("sudo systemctl enable $servicename@$username");
-        shell_exec("sudo systemctl start $servicename@$username");
+        if ($servicename = "btsync"){
+          shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
+          shell_exec("sudo systemctl enable $servicename");
+          shell_exec("sudo systemctl start $servicename");
+        } else {
+          shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
+          shell_exec("sudo systemctl enable $servicename@$username");
+          shell_exec("sudo systemctl start $servicename@$username");
+        }
       }
     } else {}
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
@@ -365,8 +372,15 @@ case 77:
         shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
         shell_exec("sudo -u $username pkill -9 $servicename");
       } else {
-        shell_exec("sudo systemctl stop $servicename@$username");
-        shell_exec("sudo systemctl disable $servicename@$username");
+        if ($servicename = "btsync"){
+          shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
+          shell_exec("sudo systemctl enable $servicename");
+          shell_exec("sudo systemctl start $servicename");
+        } else {
+          shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
+          shell_exec("sudo systemctl stop $servicename@$username");
+          shell_exec("sudo systemctl disable $servicename@$username");
+        }
       }
 
     } else {}

@@ -9,7 +9,7 @@ $packages = array(
         'sickrage',
         'sonarr',
         'x2go',
-        'quota'
+        'quota',
         'quassel'
 );
 

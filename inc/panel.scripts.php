@@ -209,9 +209,9 @@
         Take your pick between updates.<br/><br/>Select to update your dashboard on the Stable branches (fully tested) or opt to hop on our Testing branches. <br/><br/>You may run the update interchangeably and swap back to a stable branch and visa versa.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?updatetestingQuickBox=true" id="testingVersion" class="btn btn-warning" data-toggle="modal" data-target="#sysResponse">TESTING</a>
-        <a href="?updateQuickBox=true" id="stableVersion" class="btn btn-primary" data-toggle="modal" data-target="#sysResponse">STABLE</a>
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        <a href="?updatetestingQuickBox=true" class="btn btn-primary" data-toggle="modal" data-target="#sysResponse" data-dismiss="modal" aria-label="Close">TESTING</a>
+        <a href="?updateQuickBox=true" class="btn btn-success" data-toggle="modal" data-target="#sysResponse" data-dismiss="modal" aria-label="Close">STABLE</a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->

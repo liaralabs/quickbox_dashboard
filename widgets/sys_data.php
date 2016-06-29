@@ -13,4 +13,9 @@ if (isset($_GET['updateQuickBox'])) {
         header('Location: //');
         shell_exec("sudo /usr/local/bin/quickbox/system/updateQuickBox");
 }
+
+if (isset($_GET['updatetestingQuickBox'])) {
+        header('Location: //');
+        shell_exec("sudo /usr/local/bin/quickbox/system/updatetestingQuickBox");
+}
 ?>

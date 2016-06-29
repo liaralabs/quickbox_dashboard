@@ -197,6 +197,25 @@
   </div><!-- modal-dialog -->
 </div><!-- modal -->
 
+<!-- VERSION UPDATE CHECK MODAL -->
+<div class="modal bounceIn animated" id="versionChecker" tabindex="-1" role="dialog" aria-labelledby="VersionChecker" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="VersionChecker">Select Your Update Branch</h4>
+      </div>
+      <div class="modal-body">
+        Take your pick between updates.<br/><br/>Select to update your dashboard on the Stable branches (fully tested) or opt to hop on our Testing branches. <br/><br/>You may run the update interchangeably and swap back to a stable branch and visa versa.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?updatetestingQuickBox=true" id="testingVersion" class="btn btn-warning" data-toggle="modal" data-target="#sysResponse">TESTING</a>
+        <a href="?updateQuickBox=true" id="stableVersion" class="btn btn-primary" data-toggle="modal" data-target="#sysResponse">STABLE</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 
 <!--script src="js/script.js"></script-->
 <script src="lib/jquery-ui/jquery-ui.js"></script>
@@ -249,7 +268,6 @@ $(document).ready(function() {
       sticky: true
     });
   });
-
   // csfRemove
   $('#csfRemove').click(function(){
     $.gritter.add({
@@ -259,7 +277,6 @@ $(document).ready(function() {
       sticky: true
     });
   });
-
   // BTSyncRemove
   $('#delugeRemove').click(function(){
     $.gritter.add({
@@ -269,7 +286,6 @@ $(document).ready(function() {
       sticky: true
     });
   });
-
   // PlexRemove
   $('#plexRemove').click(function(){
     $.gritter.add({
@@ -279,7 +295,6 @@ $(document).ready(function() {
       sticky: true
     });
   });
-
   // RapidleechRemove
   $('#rapidleechRemove').click(function(){
     $.gritter.add({
@@ -289,7 +304,6 @@ $(document).ready(function() {
       sticky: true
     });
   });
-
   // SickRageRemove
   $('#sickrageRemove').click(function(){
     $.gritter.add({
@@ -299,7 +313,6 @@ $(document).ready(function() {
       sticky: true
     });
   });
-
   // SonarrRemove
   $('#sonarrRemove').click(function(){
     $.gritter.add({
@@ -318,7 +331,7 @@ $(document).ready(function() {
     sticky: true
   });
 });
-// QuasselRemove
+// QuotaRemove
   $('#quotaRemove').click(function(){
     $.gritter.add({
       title: 'Uninstalling user quotas',
@@ -327,7 +340,6 @@ $(document).ready(function() {
       sticky: true
     });
   });
-
   // x2goRemove
   $('#x2goRemove').click(function(){
   $.gritter.add({

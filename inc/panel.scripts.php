@@ -187,7 +187,7 @@
       <div class="modal-header" style="background:rgba(0, 0, 0, 0.4);border:0!important">
         <h4 class="modal-title" style="color:#fff">System Response</h4>
       </div>
-      <div class="modal-body ps-container" style="background:rgba(0, 0, 0, 0.4); max-height:600px;">
+      <div class="modal-body ps-container" style="background:rgba(0, 0, 0, 0.4); max-height:600px;" id="sysPre">
         <pre style="color: rgb(83, 223, 131) !important;" class="sysout ps-child"><span id="sshoutput"></span></pre>
       </div>
       <div class="modal-footer" style="background:rgba(0, 0, 0, 0.4);border:0!important">

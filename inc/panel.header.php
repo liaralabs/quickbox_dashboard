@@ -218,4 +218,11 @@ function displayData(dataJSON) {
   <script src="../lib/respond/respond.src.js"></script>
   <![endif]-->
 
+  <style>
+  #sysPre{
+    max-height : 600px;
+    overflow-y: scroll;
+  }
+  </style>
+  
 </head>

@@ -4,12 +4,8 @@
   <li><a href="https://quickbox.io/donate" target="_blank"><i class="fa fa-heart text-danger"></i> Donate </a></li>
   <div class="usermenu-div"></div>
   <li style="border-bottom:1px solid #3a3a3a"><pre style="font-size:10px; color: #aaa; padding-bottom:4px">QuickBox Version :: <?php echo "$version"; ?></pre></li>
-  <!--li><pre style="font-size:10px; color: #ccc">Current Version   :: <?php echo "$current_vs"; ?></pre></li-->
-  <?php if ($username == "$master"){
-    //if ($current_vs > $version){
-      echo "<li><a href=\"?updateQuickBox=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" style=\"\"><i class=\"fa fa-bell text-success\"></i> Check for updates </a></li>";
-    //}
-  }
-  ?>
+  <?php if ($username == "$master") { ?>
+    <li><a href="javascript:void()" data-toggle="modal" data-target="#versionChecker" style=""><i class="fa fa-bell text-success"></i> Check for updates </a></li>
+  <?php } ?>
   </span></li>
 </ul>

@@ -2,7 +2,7 @@
 session_destroy();
 include '/srv/rutorrent/php/util.php';
 include 'widgets/class.php';
-$version = "v2.3.7";
+$version = "v2.4.0-beta";
 error_reporting(E_ALL);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $username = getUser();

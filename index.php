@@ -136,6 +136,15 @@
                         <?php } ?>
                       </tr>
                       <tr>
+                        <td>Quotas</td>
+                        <td>This feature of Linux allows the system administrator to allocate a maximum amount of disk space a user or group may use.</td>
+                        <?php if (file_exists("/install/.quota.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#quotaRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-quota=true" data-toggle="modal" data-target="#sysResponse" id="quotaInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
                         <td>Rapidleech</td>
                         <td>Rapid Leech is a free server transfer script for use on various popular upload/download sites such as uploaded.net, Rapidshare.com and more than 120 others.</td>
                         <?php if (file_exists("/install/.rapidleech.lock")) { ?>

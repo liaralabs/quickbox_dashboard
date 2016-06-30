@@ -141,6 +141,10 @@
       $('#sshoutput').html(result);
       setTimeout(function(){msgoutput()}, 1000);
     }});
+    jQuery( function(){
+      var pre = jQuery("#sysPre");
+      pre.scrollTop( pre.prop("scrollHeight") );
+    });
   }
   msgoutput();
 
@@ -214,4 +218,11 @@ function displayData(dataJSON) {
   <script src="../lib/respond/respond.src.js"></script>
   <![endif]-->
 
+  <style>
+  #sysPre{
+    max-height : 600px;
+    overflow-y: scroll;
+  }
+  </style>
+  
 </head>

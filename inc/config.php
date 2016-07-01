@@ -13,6 +13,15 @@ if (file_exists($dconf)) {
     $dwssl = search($dconf_data, '"https": ', ',');
 }
 
+//Permissions for znc.conf default to 600. We must alter permissions
+$zconf = '/home/znc/.znc/configs/znc.conf';
+if (file_exists($zconf)) {
+    $zconf_data = file_get_contents($zconf);
+    $zport = search($zconf_data, 'Port = ', "\n");
+    $zssl = search($zconf_data, 'SSL = ', "\n");
+}
+
+
 function search($data, $find, $end) {
     $pos1 = strpos($data, $find) + strlen($find);
     $pos2 = strpos($data, $end, $pos1);
@@ -217,7 +226,7 @@ $MSGFILE = session_id();
 
 function processExists($processName, $username) {
   $exists= false;
-  exec("ps axo user:20,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm|grep $username | grep -iE $processName | grep -v grep", $pids);
+  exec("ps axo user:20,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm,cmd|grep $username | grep -iE $processName | grep -v grep", $pids);
   if (count($pids) > 0) {
     $exists = true;
   }
@@ -231,7 +240,9 @@ $irssi = processExists("irssi",$username);
 $plex = processExists("Plex",$username);
 $rtorrent = processExists("\"main|rtorrent\"",$username);
 $sickrage = processExists("sickrage",$username);
-$sonarr = processExists("mono",$username);
+$sonarr = processExists("nzbdrone",$username);
+$jackett = processExists("jackett",$username);
+$couchpotato = processExists("couchpotato",$username);
 
 function isEnabled($search, $username){
   $string = file_get_contents('/home/'.$username.'/.startup');
@@ -243,12 +254,21 @@ function isEnabled($search, $username){
   }
 }
 
+if ($zssl == "true") {
+$zncURL = "https://" . $_SERVER['HTTP_HOST'] . ":$zport";
+}
+if ($zssl == "false") {
+$zncURL = "http://" . $_SERVER['HTTP_HOST'] . ":$zport";
+}
+
 if ($dwssl == "true") {
 $dwURL = "https://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 }
 if ($dwssl == "false") {
 $dwURL = "http://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 }
+$jackettURL = "http://" . $_SERVER['HTTP_HOST'] . ":9117";
+$cpURL = "http://" . $_SERVER['HTTP_HOST'] . ":5050";
 $btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
 $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
 $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";

@@ -36,6 +36,24 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- COUCHPOTATO UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="couchpotatoRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="CouchPotatoRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="CouchPotatoRemovalConfirm">Uninstall CouchPotato?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall CouchPotato from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversable. <br/><br/>You may reinstall CouchPotato at any time, however, your settings will be reset to default.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-couchpotato=true" id="couchpotatoRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- DELUGE UNINSTALL MODAL -->
 <div class="modal bounceIn animated" id="delugeRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="DelugeRemovalConfirm" aria-hidden="true">
   <div class="modal-dialog">
@@ -50,6 +68,24 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <a href="?removepackage-deluge=true" id="delugeRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+<!-- Jackett UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="jackettRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="JackettRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="JackettRemovalConfirm">Uninstall Jackett?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall Jackett from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversable. <br/><br/>You may reinstall Jackett at any time, however, your settings will be reset to default.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-jackett=true" id="jackettRemove" class="btn btn-primary">I understand, do it!</a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -180,6 +216,24 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- ZNC UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="zncRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="ZNCRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="ZNCRemovalConfirm">Uninstall ZNC?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall ZNC from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversable. <br/><br/>You may reinstall CouchPotato at any time, however, your settings will be reset to default.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-znc=true" id="zncRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- SYSTEM RESPONSE MODAL -->
 <div class="modal bounceIn animated" id="sysResponse" tabindex="-1" role="dialog" aria-labelledby="sysResponse" aria-hidden="true">
   <div class="modal-dialog" style="width: 600px">
@@ -277,11 +331,29 @@ $(document).ready(function() {
       sticky: true
     });
   });
-  // BTSyncRemove
+  // CouchPotatoRemove
+  $('#couchpotatoRemove').click(function(){
+    $.gritter.add({
+      title: 'Uninstalling CouchPotato',
+      text: 'Please wait while CouchPotato is being uninstalled from your system.',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+  // DelugeRemove
   $('#delugeRemove').click(function(){
     $.gritter.add({
       title: 'Uninstalling Deluge',
       text: 'Please wait while Deluge is being uninstalled from your system.',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+  // JackettRemove
+  $('#jackettRemove').click(function(){
+    $.gritter.add({
+      title: 'Uninstalling Jackett',
+      text: 'Please wait while Jackett is being uninstalled from your system.',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -342,13 +414,23 @@ $(document).ready(function() {
   });
   // x2goRemove
   $('#x2goRemove').click(function(){
-  $.gritter.add({
-    title: 'Uninstalling x2go',
-    text: 'Please wait while x2go is being uninstalled from your system.',
-    class_name: 'with-icon times-circle danger',
-    sticky: true
+    $.gritter.add({
+      title: 'Uninstalling x2go',
+      text: 'Please wait while x2go is being uninstalled from your system.',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
   });
-});
+
+  // ZNCRemove
+  $('#zncRemove').click(function(){
+    $.gritter.add({
+      title: 'Uninstalling ZNC',
+      text: 'Please wait while ZNC is being uninstalled from your system.',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
 
 });
 </script>

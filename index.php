@@ -129,7 +129,7 @@
                       <tr>
                         <td>Jackett</td>
                         <td>API Support for your favorite private trackers.</td>
-                        <?php if (file_exists("/install/.deluge.lock")) { ?>
+                        <?php if (file_exists("/install/.jackett.lock")) { ?>
                           <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#jackettRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
                         <?php } else { ?>
                           <td style="vertical-align: middle; text-align: center"><a href="?installpackage-jackett=true" data-toggle="modal" data-target="#sysResponse" id="jackettInstall" class="btn btn-xs btn-info">Install</a></td>

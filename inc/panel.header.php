@@ -140,6 +140,10 @@
       $('#sshoutput').html(result);
       setTimeout(function(){msgoutput()}, 1000);
     }});
+    jQuery( function(){
+      var pre = jQuery("#sysPre");
+      pre.scrollTop( pre.prop("scrollHeight") );
+    });
   }
   msgoutput();
 

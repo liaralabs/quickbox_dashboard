@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="lib/animate.css/animate.css">
   <link rel="stylesheet" href="lib/font-awesome/font-awesome.css">
   <link rel="stylesheet" href="lib/ionicons/css/ionicons.css">
+  <link rel="stylesheet" href="lib/select2/select2.css">
   <link rel="stylesheet" href="skins/quick.css">
   <!-- JAVASCRIPT -->
   <script src="lib/modernizr/modernizr.js"></script>

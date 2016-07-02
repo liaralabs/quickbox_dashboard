@@ -2,7 +2,7 @@
 session_destroy();
 include '/srv/rutorrent/php/util.php';
 include 'widgets/class.php';
-$version = "v2.3.6";
+$version = "v2.3.7";
 error_reporting(E_ALL);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $username = getUser();
@@ -335,7 +335,7 @@ case 66:
       } else {
         $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
       }
-    shell_exec("sudo sed -i 's/$thisname/$name/g' /home/$username/.startup");
+    shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
     $output = substr($thisname, 0, strpos(strtolower($thisname), '_'));
     } else {}
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
@@ -356,7 +356,7 @@ case 77:
         $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
         if (strpos($servicename,'rtorrent') !== false) { $servicename="main"; }
       }
-      shell_exec("sudo sed -i 's/$name/$thisname/g' /home/$username/.startup");
+      shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
       shell_exec("sudo -u $username pkill -9 $servicename");
     } else {}
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');

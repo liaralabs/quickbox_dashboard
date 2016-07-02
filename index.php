@@ -66,6 +66,117 @@
               </div>
 
             </div>
+            <?php if ($username == "$master") { ?>
+            <div class="panel panel-inverse">
+              <ul class="panel-options">
+                <li><a class="panel-minimize"><i class="fa fa-chevron-down"></i></a></li>
+                <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
+              </ul>
+              <div class="panel-heading min">
+                <h4 class="panel-title">Package Management Center</h4>
+              </div>
+              <div class="panel-body text-center" style="padding:0; display:none">
+                <div class="alert alert-danger">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <strong>Heads Up!</strong> Please be advised that these options are not the same as enabling and disabling a software package. These options are designed to either install or uninstall.
+                </div>
+                <div class="table-responsive ps-container">
+                  <table id="dataTable1" class="table table-bordered table-striped-col" style="font-size: 12px">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Details</th>
+                        <th>Availability</th>
+                      </tr>
+                    </thead>
+
+                    <tfoot>
+                      <tr>
+                        <th>Name</th>
+                        <th>Details</th>
+                        <th>Availability</th>
+                      </tr>
+                    </tfoot>
+
+                    <tbody>
+                      <tr>
+                        <td>BTSync</td>
+                        <td>BitTorrent Sync by BitTorrent, Inc is a proprietary peer-to-peer file synchronization tool.</td>
+                        <?php if (file_exists("/install/.btsync.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#btsyncRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-btsync=true" data-toggle="modal" data-target="#sysResponse" id="btsyncInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
+                        <td>Deluge</td>
+                        <td>Deluge is a lightweight, Free Software, cross-platform BitTorrent client.</td>
+                        <?php if (file_exists("/install/.deluge.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#delugeRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-deluge=true" data-toggle="modal" data-target="#sysResponse" id="delugeInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
+                        <td>Plex</td>
+                        <td>Plex let's you stream your content to any Plex enabled device.</td>
+                        <?php if (file_exists("/install/.plex.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#plexRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-plex=true" data-toggle="modal" data-target="#sysResponse" id="plexInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
+                        <td>Quassel</td>
+                        <td>Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt4 framework.</td>
+                        <?php if (file_exists("/install/.quassel.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#quasselRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-quassel=true" data-toggle="modal" data-target="#sysResponse" id="quasselInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
+                        <td>Rapidleech</td>
+                        <td>Rapid Leech is a free server transfer script for use on various popular upload/download sites such as uploaded.net, Rapidshare.com and more than 120 others.</td>
+                        <?php if (file_exists("/install/.rapidleech.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#rapidleechRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-rapidleech=true" data-toggle="modal" data-target="#sysResponse" id="rapidleechInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
+                        <td>SickRage</td>
+                        <td>Video File Manager for TV Shows, It watches for new episodes of your favorite shows and when they are posted it does its magic.</td>
+                        <?php if (file_exists("/install/.sickrage.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#sickrageRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-sickrage=true" data-toggle="modal" data-target="#sysResponse" id="sickrageInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
+                        <td>Sonarr</td>
+                        <td>Sonarr is a tv series management tool which will work with both torrents and usenet.</td>
+                        <?php if (file_exists("/install/.sonarr.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#sonarrRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-sonarr=true" data-toggle="modal" data-target="#sysResponse" id="sonarrInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
+                        <td>x2Go</td>
+                        <td>X2Go is an open source remote desktop software for Linux that uses the NX technology protocol.</td>
+                        <?php if (file_exists("/install/.x2go.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#x2goRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-x2go=true" data-toggle="modal" data-target="#sysResponse" id="x2goInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div><!-- package center panel -->
+            <?php } ?>
 
             <div class="panel panel-inverse">
               <ul class="panel-options">

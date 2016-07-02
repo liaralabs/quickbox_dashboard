@@ -11,6 +11,8 @@ function processExists($processName, $username) {
   }
   return $exists;
 }
+$deluged = processExists("deluged",$username);
+$delugedweb = processExists("deluge-web",$username);
 $rtorrent = processExists("\"main|rtorrent\"",$username);
 
 //Unit Conversion
@@ -36,6 +38,7 @@ $location = "/home";
 $base = 1024;
 $si_prefix = array( 'b', 'k', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB' );
 $torrents = shell_exec("ls /home/".$username."/.sessions/*.torrent|wc -l");
+$dtorrents = shell_exec("ls /home/".$username."/.config/deluge/state/*.torrent|wc -l");
 $php_self = $_SERVER['PHP_SELF'];
 $web_path = substr($php_self, 0, strrpos($php_self, '/')+1);
 $time = microtime(); $time = explode(" ", $time);
@@ -101,6 +104,10 @@ if (file_exists('/home/'.$username.'/.sessions/rtorrent.lock')) {
                   <hr />
                   <h4>Torrents in rtorrent</h4>
                   <p class="nomargin">There are <b><?php echo "$rtorrents"; ?></b> torrents loaded.</p>
+                  <?php if (file_exists('/install/.deluge.lock')) { ?>
+                  <h4>Torrents in deluge</h4>
+                  <p class="nomargin">There are <b><?php echo "$dtorrents"; ?></b> torrents loaded.</p>
+                  <?php } ?>
 
 
 <script type="text/javascript">

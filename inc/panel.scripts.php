@@ -108,7 +108,60 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
-
+<!-- SONARR UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="sonarrRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="SonarrRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="SonarrRemovalConfirm">Uninstall Sonarr-NzbDrone?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall Sonarr from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversable. <br/><br/>You may reinstall Sonarr-NzbDrone at any time, however, your configuration settings will be reset to default.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-sonarr=true" id="sonarrRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+<!-- QUASSEL UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="quasselRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="quasselRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="quasselRemovalConfirm">Uninstall Quassel?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall Quassel from your system.<br/><br/> This will completely remove Quassel and all settings/stored backlogs from your system.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-quassel=true" id="quasselRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+<!-- X2GO UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="x2goRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="x2goRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="x2goRemovalConfirm">Uninstall x2go?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall x2go from your system.<br/><br/> This will completely remove x2goserver and xfce4 desktop environment from your system.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-x2go=true" id="x2goRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- SYSTEM RESPONSE MODAL -->
 <div class="modal bounceIn animated" id="sysResponse" tabindex="-1" role="dialog" aria-labelledby="sysResponse" aria-hidden="true">
   <div class="modal-dialog" style="width: 600px">
@@ -229,6 +282,35 @@ $(document).ready(function() {
     });
   });
 
+  // SonarrRemove
+  $('#sonarrRemove').click(function(){
+    $.gritter.add({
+      title: 'Uninstalling Sonarr',
+      text: 'Please wait while Sonarr-NzbDrone is being uninstalled from your system.',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+  // QuasselRemove
+  $('#quasselRemove').click(function(){
+  $.gritter.add({
+    title: 'Uninstalling Quassel-Core',
+    text: 'Please wait while quassel is being uninstalled from your system.',
+    class_name: 'with-icon times-circle danger',
+    sticky: true
+  });
+});
+
+  // x2goRemove
+  $('#x2goRemove').click(function(){
+  $.gritter.add({
+    title: 'Uninstalling x2go',
+    text: 'Please wait while x2go is being uninstalled from your system.',
+    class_name: 'with-icon times-circle danger',
+    sticky: true
+  });
+});
+
 });
 </script>
 
@@ -237,5 +319,63 @@ $(document).ready(function() {
   $('#sysResponse').on('hidden.bs.modal', function () {
     location.reload();
   });
+});
+</script>
+
+<script src="lib/datatables/jquery.dataTables.js"></script>
+<script src="lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+<script src="lib/select2/select2.js"></script>
+
+<script>
+$(document).ready(function() {
+
+  'use strict';
+
+  $('#dataTable1').DataTable();
+
+  var exRowTable = $('#exRowTable').DataTable({
+    responsive: true,
+    'fnDrawCallback': function(oSettings) {
+      $('#exRowTable_paginate ul').addClass('pagination-active-success');
+    },
+    'ajax': 'ajax/objects.txt',
+    'columns': [{
+      'class': 'details-control',
+      'orderable': false,
+      'data': null,
+      'defaultContent': ''
+    },
+    { 'data': 'name' },
+    { 'data': 'details' },
+    { 'data': 'availability' }
+    ],
+    'order': [[1, 'asc']]
+  });
+
+  // Add event listener for opening and closing details
+  $('#exRowTable tbody').on('click', 'td.details-control', function () {
+    var tr = $(this).closest('tr');
+    var row = exRowTable.row( tr );
+
+    if ( row.child.isShown() ) {
+      // This row is already open - close it
+      row.child.hide();
+      tr.removeClass('shown');
+    } else {
+      // Open this row
+      row.child( format(row.data()) ).show();
+      tr.addClass('shown');
+    }
+  });
+
+  function format (d) {
+    // `d` is the original data object for the row
+    return '<h4>'+d.name+'<small>'+d.details+'</small></h4>'+
+    '<p class="nomargin">Nothing to see here.</p>';
+  }
+
+  // Select2
+  $('select').select2({ minimumResultsForSearch: Infinity });
+
 });
 </script>

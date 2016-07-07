@@ -78,7 +78,7 @@
               <ul class="children">
                 <li><a href="/<?php echo "$username"; ?>.rtorrent.downloads" target="_blank">ruTorrent</a></a></li>
                 <?php if (processExists("deluge-web",$username)) { ?>
-                  <li><a href="/<?php echo "$username"; ?>.deluge.downloads" target="_blank">Deluge-Web</a></li>
+                  <li><a href="/<?php echo "$username"; ?>.deluge.downloads" target="_blank">Deluge</a></li>
                 <?php } ?>
               </ul>
             </li>

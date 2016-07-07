@@ -204,7 +204,7 @@
                         <?php if (file_exists("/install/.znc.lock")) { ?>
                           <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#zncRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
                         <?php } else { ?>
-                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-znc=true" data-toggle="modal" data-target="#sysResponse" id="zncInstall" class="btn btn-xs btn-info">Install</a></td>
+                          <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="Access this feature from ssh by typing QBPM" data-placement="top" class="btn btn-xs btn-danger disabled tooltips">QBPM Only</button></td>
                         <?php } ?>
                       </tr>
                     </tbody>

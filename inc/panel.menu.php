@@ -57,17 +57,26 @@
               <?php if (file_exists('/install/.rapidleech.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$rapidleechURL"; ?>" target="_blank"><img src="img/brands/rapidleech.png" class="brand-ico"> <span>Rapidleech</span></a></li>
               <?php } ?>
+              <?php if (file_exists('/install/.couchpotato.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$cpURL"; ?>" target="_blank"><img src="img/brands/couchpotato.png" class="brand-ico"> <span>CouchPotato</span></a></li>
+              <?php } ?>
               <?php if (file_exists('/install/.sickrage.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sickrageURL"; ?>" target="_blank"><img src="img/brands/sickrage.png" class="brand-ico"> <span>SickRage</span></a></li>
               <?php } ?>
-              <?php if (processExists("mono",$username) && file_exists('/install/.sonarr.lock')) { ?>
+              <?php if (processExists("nzbdrone",$username) && file_exists('/install/.sonarr.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sonarrURL"; ?>" target="_blank"><img src="img/brands/sonarr.png" class="brand-ico"> <span>Sonarr</span></a></li>
+              <?php } ?>
+              <?php if (file_exists('/install/.jackett.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$jackettURL"; ?>" target="_blank"><img src="img/brands/jackett.png" class="brand-ico"> <span>Jackett</span></a></li>
+              <?php } ?>
+              <?php if (file_exists('/install/.znc.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$zncURL"; ?>" target="_blank"><img src="img/brands/znc.png" class="brand-ico"> <span>ZNC</span></a></li>
               <?php } ?>
             <?php } ?>
             <li class="nav-parent">
               <a href=""><i class="fa fa-download"></i> <span>Downloads</span></a>
               <ul class="children">
-                <li><a href="/<?php echo "$username"; ?>.downloads" target="_blank">ruTorrent</a></a></li>
+                <li><a href="/<?php echo "$username"; ?>.rtorrent.downloads" target="_blank">ruTorrent</a></a></li>
                 <?php if (processExists("deluge-web",$username)) { ?>
                   <li><a href="/<?php echo "$username"; ?>.deluge.downloads" target="_blank">Deluge-Web</a></li>
                 <?php } ?>

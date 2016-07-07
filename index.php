@@ -109,12 +109,30 @@
                         <?php } ?>
                       </tr>
                       <tr>
+                        <td>CouchPotato</td>
+                        <td>Download movies automatically, easily and in the best quality as soon as they are released, via usenet or torrents.</td>
+                        <?php if (file_exists("/install/.couchpotato.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#couchpotatoRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-couchpotato=true" data-toggle="modal" data-target="#sysResponse" id="couchpotatoInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
                         <td>Deluge</td>
                         <td>Deluge is a lightweight, Free Software, cross-platform BitTorrent client.</td>
                         <?php if (file_exists("/install/.deluge.lock")) { ?>
                           <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#delugeRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
                         <?php } else { ?>
                           <td style="vertical-align: middle; text-align: center"><a href="?installpackage-deluge=true" data-toggle="modal" data-target="#sysResponse" id="delugeInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
+                        <td>Jackett</td>
+                        <td>API Support for your favorite private trackers.</td>
+                        <?php if (file_exists("/install/.jackett.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#jackettRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-jackett=true" data-toggle="modal" data-target="#sysResponse" id="jackettInstall" class="btn btn-xs btn-info">Install</a></td>
                         <?php } ?>
                       </tr>
                       <tr>
@@ -178,6 +196,15 @@
                           <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#x2goRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
                         <?php } else { ?>
                           <td style="vertical-align: middle; text-align: center"><a href="?installpackage-x2go=true" data-toggle="modal" data-target="#sysResponse" id="x2goInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
+                        <td>ZNC</td>
+                        <td>ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels.</td>
+                        <?php if (file_exists("/install/.znc.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#zncRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="Access this feature from ssh by typing QBPM" data-placement="top" class="btn btn-xs btn-danger disabled tooltips">QBPM Only</button></td>
                         <?php } ?>
                       </tr>
                     </tbody>

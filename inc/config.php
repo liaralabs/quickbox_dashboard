@@ -2,7 +2,7 @@
 session_destroy();
 include '/srv/rutorrent/php/util.php';
 include 'widgets/class.php';
-$version = "v2.3.7";
+$version = "v2.4.0-beta";
 error_reporting(E_ALL);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $username = getUser();
@@ -12,6 +12,14 @@ if (file_exists($dconf)) {
     $dwport = search($dconf_data, '"port": ', ',');
     $dwssl = search($dconf_data, '"https": ', ',');
 }
+
+$zconf = '/srv/rutorrent/home/db/znc.txt';
+if (file_exists($zconf)) {
+    $zconf_data = file_get_contents($zconf);
+    $zport = search($zconf_data, 'Port = ', "\n");
+    $zssl = search($zconf_data, 'SSL = ', "\n");
+}
+
 
 function search($data, $find, $end) {
     $pos1 = strpos($data, $find) + strlen($find);
@@ -217,7 +225,7 @@ $MSGFILE = session_id();
 
 function processExists($processName, $username) {
   $exists= false;
-  exec("ps axo user:20,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm|grep $username | grep -iE $processName | grep -v grep", $pids);
+  exec("ps axo user:20,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm,cmd|grep $username | grep -iE $processName | grep -v grep", $pids);
   if (count($pids) > 0) {
     $exists = true;
   }
@@ -231,7 +239,9 @@ $irssi = processExists("irssi",$username);
 $plex = processExists("Plex",$username);
 $rtorrent = processExists("\"main|rtorrent\"",$username);
 $sickrage = processExists("sickrage",$username);
-$sonarr = processExists("mono",$username);
+$sonarr = processExists("nzbdrone",$username);
+$jackett = processExists("jackett",$username);
+$couchpotato = processExists("couchpotato",$username);
 
 function isEnabled($search, $username){
   $string = file_get_contents('/home/'.$username.'/.startup');
@@ -243,12 +253,21 @@ function isEnabled($search, $username){
   }
 }
 
+if ($zssl == "true") {
+$zncURL = "https://" . $_SERVER['HTTP_HOST'] . ":$zport";
+}
+if ($zssl == "false") {
+$zncURL = "http://" . $_SERVER['HTTP_HOST'] . ":$zport";
+}
+
 if ($dwssl == "true") {
 $dwURL = "https://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 }
 if ($dwssl == "false") {
 $dwURL = "http://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 }
+$jackettURL = "http://" . $_SERVER['HTTP_HOST'] . ":9117";
+$cpURL = "http://" . $_SERVER['HTTP_HOST'] . ":5050";
 $btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
 $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
 $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
@@ -335,8 +354,20 @@ case 66:
       } else {
         $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
       }
-    shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
-    $output = substr($thisname, 0, strpos(strtolower($thisname), '_'));
+      if (file_exists('/install/.cron.lock')) {
+        shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
+        $output = substr($thisname, 0, strpos(strtolower($thisname), '_'));
+      } else {
+        if ($servicename == "btsync"){
+          shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
+          shell_exec("sudo systemctl enable $servicename");
+          shell_exec("sudo systemctl start $servicename");
+        } else {
+          shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
+          shell_exec("sudo systemctl enable $servicename@$username");
+          shell_exec("sudo systemctl start $servicename@$username");
+        }
+      }
     } else {}
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
 break;
@@ -354,10 +385,23 @@ case 77:
         $servicename = "sonarr";
       } else {
         $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
-        if (strpos($servicename,'rtorrent') !== false) { $servicename="main"; }
       }
-      shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
-      shell_exec("sudo -u $username pkill -9 $servicename");
+      if (file_exists('/install/.cron.lock')) {
+        if (strpos($servicename,'rtorrent') !== false) { $servicename="main"; }
+        shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
+        shell_exec("sudo -u $username pkill -9 $servicename");
+      } else {
+        if ($servicename == "btsync"){
+          shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
+          shell_exec("sudo systemctl stop $servicename");
+          shell_exec("sudo systemctl disable $servicename");
+        } else {
+          shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
+          shell_exec("sudo systemctl stop $servicename@$username");
+          shell_exec("sudo systemctl disable $servicename@$username");
+        }
+      }
+
     } else {}
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
 break;

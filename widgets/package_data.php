@@ -3,14 +3,17 @@
 $packages = array(
         'btsync',
         'csf',
+        'couchpotato',
         'deluge',
+        'jackett',
         'plex',
         'rapidleech',
         'sickrage',
         'sonarr',
         'x2go',
         'quota',
-        'quassel'
+        'quassel',
+        'znc'
 );
 
 foreach ($packages as $ipackage) {

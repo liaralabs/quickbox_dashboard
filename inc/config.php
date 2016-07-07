@@ -13,8 +13,7 @@ if (file_exists($dconf)) {
     $dwssl = search($dconf_data, '"https": ', ',');
 }
 
-//Permissions for znc.conf default to 600. We must alter permissions
-$zconf = '/home/znc/.znc/configs/znc.conf';
+$zconf = '/srv/rutorrent/home/db/znc.txt';
 if (file_exists($zconf)) {
     $zconf_data = file_get_contents($zconf);
     $zport = search($zconf_data, 'Port = ', "\n");

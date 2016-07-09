@@ -300,11 +300,13 @@ $(function() {
   // Toggles
   $('.toggle-en').toggles({
     on: true,
-    height: 26
+    height: 26,
+    width: 100
   });
   $('.toggle-dis').toggles({
     on: false,
-    height: 26
+    height: 26,
+    width: 100
   });
 });
 </script>

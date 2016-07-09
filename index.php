@@ -15,57 +15,36 @@
 
             <div class="row">
 
-              <div class="col-sm-12 col-md-7">
+              <div class="col-sm-12 col-sm-6 col-md-6" >
                 <div class="panel panel-default list-announcement">
                   <ul class="panel-options">
-                    <li><a class="panel-minimize" style="color:#222"><i class="fa fa-chevron-down"></i></a></li>
-                    <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
+                    <li><a class="panel-minimize"><i class="fa fa-chevron-down text-info"></i></a></li>
                   </ul>
                   <div class="panel-heading">
-                    <h4 class="panel-title">Service Status</h4>
+                    <h4 class="panel-title">Restart Services</h4>
                   </div>
                   <div class="panel-body">
-                    <div id="servstat"></div>
+                    <?php include("widgets/service_restart.php") ?>
                   </div>
                   <div class="panel-footer"></div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-5">
+              <div class="col-sm-12 col-sm-6 col-md-6">
                 <div class="panel panel-default list-announcement">
                   <ul class="panel-options">
-                    <li><a class="panel-minimize" style="color:#222"><i class="fa fa-chevron-down"></i></a></li>
-                    <li><a class="panel-remove"><i class="fa fa-close text-danger"></i></a></li>
+                    <li><a class="panel-minimize"><i class="fa fa-chevron-down text-info"></i></a></li>
                   </ul>
                   <div class="panel-heading">
-                    <h4 class="panel-title">Service Controller</h4>
+                    <h4 class="panel-title">Enable/Disable Services</h4>
                   </div>
                   <div class="panel-body">
-                    <ul class="list-unstyled mb20">
-                      <?php
-                      if (file_exists('/install/.rtorrent.lock')) {
-                        echo "<li>"; echo "$cbodyr"; echo "</li>";
-                      }
-                      if (file_exists('/install/.autodlirssi.lock')) {
-                        echo "<li>"; echo "$cbodyi"; echo "</li>";
-                      }
-                      if (file_exists('/install/.deluge.lock')) {
-                        echo "<li>"; echo "$cbodyd"; echo "</li>";
-                        echo "<li>"; echo "$cbodydw"; echo "</li>";
-                      }
-                      if ($username == "$master" && file_exists('/install/.btsync.lock')) {
-                        echo "<li>"; echo "$cbodyb"; echo "</li>";
-                      }
-                      if ($username == "$master" && file_exists('/install/.sonarr.lock')) {
-                        echo "<li>"; echo "$cbodys"; echo "</li>";
-                      }
-                      ?>
-                    </ul>
+                    <?php include("widgets/service_enable-disable.php") ?>
                   </div>
                   <div class="panel-footer"></div>
                 </div>
               </div>
-
             </div>
+
             <?php if ($username == "$master") { ?>
             <div class="panel panel-inverse">
               <ul class="panel-options">

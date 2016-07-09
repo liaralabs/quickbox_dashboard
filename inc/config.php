@@ -2,7 +2,7 @@
 session_destroy();
 include '/srv/rutorrent/php/util.php';
 include 'widgets/class.php';
-$version = "v2.4.0";
+$version = "v2.4.1";
 error_reporting(E_ALL);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $username = getUser();
@@ -236,20 +236,21 @@ $btsync = processExists("btsync",btsync);
 $deluged = processExists("deluged",$username);
 $delugedweb = processExists("deluge-web",$username);
 $irssi = processExists("irssi",$username);
-$plex = processExists("Plex",$username);
-$rtorrent = processExists("\"main|rtorrent\"",$username);
+$plex = processExists("Plex",plex);
+$rtorrent = processExists("rtorrent",$username);
 $sickrage = processExists("sickrage",$username);
 $sonarr = processExists("nzbdrone",$username);
 $jackett = processExists("jackett",$username);
 $couchpotato = processExists("couchpotato",$username);
+$quassel = processExists("quassel",$username);
+$znc = processExists("znc",$username);
 
-function isEnabled($search, $username){
-  $string = file_get_contents('/home/'.$username.'/.startup');
-  $service = $search;
-  if(preg_match("/\b".$search."\b/", $string)){
-    return " <div class=\"toggle-wrapper pull-right\"><div class=\"toggle-en toggle-light primary\" onclick=\"location.href='?id=77&serviceend=$service'\"></div></div>";
+function isEnabled($process, $username){
+  $service = $process;
+  if(file_exists('/etc/systemd/system/multi-user.target.wants/'.$process.'@'.$username.'.service') || file_exists('/etc/systemd/system/multi-user.target.wants/'.$process.'.service')){
+    return " <div class=\"toggle-wrapper pull-right\"> <div class=\"toggle-en toggle-light primary\" onclick=\"location.href='?id=77&servicedisable=$service'\"></div></div>";
   } else {
-    return " <div class=\"toggle-wrapper pull-right\"><div class=\"toggle-dis toggle-light primary\" onclick=\"location.href='?id=66&servicestart=$service'\"></div></div>";
+    return " <div class=\"toggle-wrapper pull-right\"> <div class=\"toggle-dis toggle-light primary\" onclick=\"location.href='?id=66&serviceenable=$service'\"></div></div>";
   }
 }
 
@@ -276,45 +277,64 @@ $sonarrURL = "http://" . $_SERVER['HTTP_HOST'] . ":8989";
 
 $reload='';
 $service='';
-if ($rtorrent == "1") { $rval = "RTorrent <span class=\"label label-success pull-right\">Enabled</span>";
-} else { $rval = "RTorrent <span class=\"label label-danger pull-right\">Disabled</span>";
+if ($rtorrent == "1") { $rval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $rval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
 }
 
-if ($irssi == "1") { $ival = "iRSSi-Autodl <span class=\"label label-success pull-right\">Enabled</span>";
-} else { $ival = "iRSSi-Autodl <span class=\"label label-danger pull-right\">Disabled</span>";
+if ($irssi == "1") { $ival = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $ival = "<span class=\"badge badge-service-disabled pull-right\"></span>";
 }
 
-if ($deluged == "1") { $dval = "Deluged <span class=\"label label-success pull-right\">Enabled</span>";
-} else { $dval = "Deluged <span class=\"label label-danger pull-right\">Disabled</span>";
+if ($deluged == "1") { $dval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $dval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
 }
 
-if ($delugedweb == "1") { $dwval = "Deluge Web <span class=\"label label-success pull-right\">Enabled</span>";
-} else { $dwval = "Deluge Web <span class=\"label label-danger pull-right\">Disabled</span>";
+if ($delugedweb == "1") { $dwval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $dwval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
 }
 
-if ($btsync == "1") { $bval = "BTSync <span class=\"label label-success pull-right\">Enabled</span>";
-} else { $bval = "BTSync <span class=\"label label-danger pull-right\">Disabled</span>";
+if ($btsync == "1") { $bval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $bval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
 }
 
-if ($sonarr == "1") { $sval = "Sonarr <span class=\"label label-success pull-right\">Enabled</span>";
-} else { $sval = "Sonarr <span class=\"label label-danger pull-right\">Disabled</span>";
+if ($couchpotato == "1") { $cpval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $cpval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
 }
 
-if ($_GET['serviceend']) {
-        $thisname = $_GET['serviceend'];
-        $thisname = str_replace(['yes', 'no', '!!~!!'], ['!!~!!', 'yes', 'no'], $thisname);
+if ($jackett == "1") { $jval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $jval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
 }
-if ($_GET['servicestart']) {
-        $thisname=str_replace(['yes', 'no', '!!~!!'], ['!!~!!', 'yes', 'no'], $thisname);
-        $thisname = $_GET['servicestart'];
+
+if ($plex == "1") { $pval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $pval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
 }
-if ($_GET['reload']) {
-        shell_exec("sudo -u " . $username . " /usr/bin/reload");
-        $myUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && !in_array(strtolower($_SERVER['HTTPS']),array('off','no'))) ? 'https' : 'http';
-        $myUrl .= '://'.$_SERVER['HTTP_HOST'];
-        $newURL = $myURL;
-        header('Location: /');
+
+if ($quassel == "1") { $qval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $qval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
 }
+
+if (file_exists('/install/.rapidleech.lock')) { $rlval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $rlval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+}
+
+if ($sickrage == "1") { $srval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $srval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+}
+
+if ($sonarr == "1") { $sval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $sval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+}
+
+if ($x2go == "1") { $xval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $xval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+}
+
+if ($znc == "1") { $zval = "<span class=\"badge badge-service-running pull-right\"></span>";
+} else { $zval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+}
+
+
+
 include 'widgets/plugin_data.php';
 include 'widgets/package_data.php';
 include 'widgets/sys_data.php';
@@ -324,85 +344,82 @@ $location = "/home";
 /* check for services */
 switch (intval($_GET['id'])) {
 case 0:
-if (file_exists('/home/'.$username.'/.startup')) {
-  $rtorrent = isEnabled("RTORRENT_CLIENT=yes", $username);
+  $rtorrent = isEnabled("rtorrent", $username);
     $cbodyr .= "RTorrent ". $rtorrent;
-  $irssi = isEnabled("IRSSI_CLIENT=yes", $username);
+  $irssi = isEnabled("irssi", $username);
     $cbodyi .= "iRSSi-AutoDL ". $irssi;
-  $deluged = isEnabled("DELUGED_CLIENT=yes", $username);
-    $cbodyd .= "Deluged ". $deluged;
-  $delugedweb = isEnabled("DELUGEWEB_CLIENT=yes", $username);
-    $cbodydw .= "Deluged-Web ". $delugedweb;
-  $btsync = isEnabled("BTSYNC=yes", $username);
+  $deluged = isEnabled("deluged", $username);
+    $cbodyd .= "DelugeD ". $deluged;
+  $delugedweb = isEnabled("deluge-web", $username);
+    $cbodydw .= "Deluge Web ". $delugedweb;
+  $btsync = isEnabled("btsync", btsync);
     $cbodyb .= "BTSync ". $btsync;
-  $sonarr = isEnabled("SONARR=yes", $username);
+  $couchpotato = isEnabled("couchpotato", $username);
+    $cbodycp .= "CouchPotato ". $couchpotato;
+  $jackett = isEnabled("jackett", $username);
+    $cbodyj .= "Jackett ". $jackett;
+  $plex = isEnabled("plex", $username);
+    $cbodyp .= "Plex ". $plex;
+  $quassel = isEnabled("quassel", $username);
+    $cbodyq .= "Quassel ". $quassel;
+  $rapidleech = isEnabled("rapidleech", $username);
+    $cbodyrl .= "Rapidleech ". $rapidleech;
+  $sickrage = isEnabled("sickrage", $username);
+    $cbodysr .= "SickRage ". $sickrage;
+  $sonarr = isEnabled("sonarr", $username);
     $cbodys .= "Sonarr ". $sonarr;
-} else {}
+  $x2go = isEnabled("x2go", $username);
+    $cbodyx .= "X2Go ". $x2go;
+  $znc = isEnabled("znc", $username);
+    $cbodyz .= "ZNC ". $znc;
+
 break;
 
-/* start services */
+/* enable & start services */
 case 66:
-  $name = $_GET['servicestart'];
-  $thisname=str_replace(['yes', 'no', '!!~!!'], ['!!~!!', 'yes', 'no'], $name);
-    if (file_exists('/home/'.$username.'/.startup')) {
-      if ($name == "BTSYNC=yes") {
-        $servicename = "btsync";
-      } elseif ($name == "DELUGEWEB_CLIENT=yes") {
-        $servicename = "deluge-web";
-      } elseif ($name == "SONARR=yes") {
-        $servicename = "sonarr";
-      } else {
-        $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
-      }
-      if (file_exists('/install/.cron.lock')) {
-        shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
-        $output = substr($thisname, 0, strpos(strtolower($thisname), '_'));
-      } else {
-        if ($servicename == "btsync"){
-          shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
-          shell_exec("sudo systemctl enable $servicename");
-          shell_exec("sudo systemctl start $servicename");
-        } else {
-          shell_exec("printf '%s\n' ',s/$thisname/$name/g' wq | ed -s /home/$username/.startup");
-          shell_exec("sudo systemctl enable $servicename@$username");
-          shell_exec("sudo systemctl start $servicename@$username");
-        }
-      }
-    } else {}
+  $process = $_GET['serviceenable'];
+    if ($process == "btsync"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl start $process");
+    } else {
+      shell_exec("sudo systemctl enable $process@$username");
+      shell_exec("sudo systemctl start $process@$username");
+    }
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
 break;
 
-/* disable services */
+/* disable & stop services */
 case 77:
-  $name = $_GET['serviceend'];
-  $thisname=str_replace(['yes', 'no', '!!~!!'], ['!!~!!', 'yes', 'no'], $name);
-    if (file_exists('/home/'.$username.'/.startup')) {
-      if ($name == "BTSYNC=yes") {
-        $servicename = "btsync";
-      } elseif ($name == "DELUGEWEB_CLIENT=yes") {
-        $servicename = "deluge-web";
-      } elseif ($name == "SONARR=yes") {
-        $servicename = "sonarr";
-      } else {
-        $output = substr($thisname, 0, strpos(strtolower($thisname), '_')); $servicename = strtolower($output);
-      }
-      if (file_exists('/install/.cron.lock')) {
-        if (strpos($servicename,'rtorrent') !== false) { $servicename="main"; }
-        shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
-        shell_exec("sudo -u $username pkill -9 $servicename");
-      } else {
-        if ($servicename == "btsync"){
-          shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
-          shell_exec("sudo systemctl stop $servicename");
-          shell_exec("sudo systemctl disable $servicename");
-        } else {
-          shell_exec("printf '%s\n' ',s/$name/$thisname/g' wq | ed -s /home/$username/.startup");
-          shell_exec("sudo systemctl stop $servicename@$username");
-          shell_exec("sudo systemctl disable $servicename@$username");
-        }
-      }
+  $process = $_GET['servicedisable'];
+    if ($process == "btsync"){
+      shell_exec("sudo systemctl stop $process");
+      shell_exec("sudo systemctl disable $process");
+    } else {
+      shell_exec("sudo systemctl stop $process@$username");
+      shell_exec("sudo systemctl disable $process@$username");
+    }
+  header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
+break;
 
-    } else {}
+/* restart services */
+case 88:
+  $process = $_GET['servicestart'];
+    if ($service == "btsync"){
+      shell_exec("sudo systemctl restart $process");
+    } else {
+      shell_exec("sudo systemctl restart $process@$username");
+    }
+  header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
+break;
+
+/* stop services */
+case 99:
+  $process = $_GET['serviceend'];
+    if ($process == "btsync"){
+      shell_exec("sudo pkill $process");
+    } else {
+      shell_exec("sudo pkill -u $username $process");
+    }
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
 break;
 

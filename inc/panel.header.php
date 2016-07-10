@@ -136,6 +136,14 @@
   }
   ramstats();
 
+  function servstat() {
+    $.ajax({url: "widgets/service_restart.php", cache:false, success: function (result) {
+      $('#servstart').html(result);
+      setTimeout(function(){servstat()}, 1000);
+    }});
+  }
+  servstat();
+
   function msgoutput() {
     $.ajax({url: "db/output.log", cache:false, success: function (result) {
       $('#sshoutput').html(result);

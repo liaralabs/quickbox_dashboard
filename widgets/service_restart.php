@@ -4,23 +4,23 @@
 
               <ul class="list-unstyled">
                 <?php if (file_exists("/install/.rtorrent.lock")) { ?>
-                <li>RTorrent <a href="javascript:;" onclick="location.href='?id=88&servicestart=rtorrent'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <li><?php echo "$rval"; ?> RTorrent <a href="javascript:;" onclick="location.href='?id=88&servicestart=rtorrent'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
                 <?php if (file_exists("/install/.autodlirssi.lock")) { ?>
-                <li>iRSSi-AutoDL <a href="javascript:;" onclick="location.href='?id=88&servicestart=irssi'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <li><?php echo "$ival"; ?> iRSSi-AutoDL <a href="javascript:;" onclick="location.href='?id=88&servicestart=irssi'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
                 <?php if (file_exists("/install/.deluge.lock")) { ?>
-                <li>DelugeD <a href="javascript:;" onclick="location.href='?id=88&servicestart=deluged'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
-                <li>Deluge Web<a href="javascript:;" onclick="location.href='?id=88&servicestart=delugeweb'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <li><?php echo "$dval"; ?> DelugeD <a href="javascript:;" onclick="location.href='?id=88&servicestart=deluged'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <li><?php echo "$dwval"; ?> Deluge Web<a href="javascript:;" onclick="location.href='?id=88&servicestart=delugeweb'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
                 <?php if (file_exists("/install/.btsync.lock")) { ?>
-                <li>BTSync <a href="javascript:;" onclick="location.href='?id=88&servicestart=btsync'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <li><?php echo "$bval"; ?> BTSync <a href="javascript:;" onclick="location.href='?id=88&servicestart=btsync'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
                 <?php if (file_exists("/install/.couchpotato.lock")) { ?>
-                <li>CouchPotato <a href="javascript:;" onclick="location.href='?id=88&servicestart=couchpotato'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <li><?php echo "$cpval"; ?> CouchPotato <a href="javascript:;" onclick="location.href='?id=88&servicestart=couchpotato'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
                 <?php if (file_exists("/install/.jackett.lock")) { ?>
-                <li>Jackett <a href="javascript:;" onclick="location.href='?id=88&servicestart=jackett'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <li><?php echo "$jval"; ?> Jackett <a href="javascript:;" onclick="location.href='?id=88&servicestart=jackett'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
                 <!--
                 <?php if (file_exists("/install/.plex.lock")) { ?>
@@ -38,10 +38,10 @@
                 <?php } ?>
                 -->
                 <?php if (file_exists("/install/.sickrage.lock")) { ?>
-                <li>SickRage <a href="javascript:;" onclick="location.href='?id=88&servicestart=sickrage'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <li><?php echo "$srval"; ?> SickRage <a href="javascript:;" onclick="location.href='?id=88&servicestart=sickrage'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
                 <?php if (file_exists("/install/.sonarr.lock")) { ?>
-                <li>Sonarr <a href="javascript:;" onclick="location.href='?id=88&servicestart=sonarr'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <li><?php echo "$sval"; ?> Sonarr <a href="javascript:;" onclick="location.href='?id=88&servicestart=sonarr'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
                 <!--
                 <?php if (file_exists("/install/.znc.lock")) { ?>

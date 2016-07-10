@@ -5,7 +5,7 @@ include 'widgets/class.php';
 $version = "v2.4.1";
 error_reporting(E_ALL);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
-$master=preg_replace('/\s+/', '', $master); 
+$master=preg_replace('/\s+/', '', $master);
 $username = getUser();
 $dconf = '/home/'.$username.'/.config/deluge/web.conf';
 if (file_exists($dconf)) {
@@ -278,60 +278,60 @@ $sonarrURL = "http://" . $_SERVER['HTTP_HOST'] . ":8989";
 
 $reload='';
 $service='';
-if ($rtorrent == "1") { $rval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $rval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($rtorrent == "1") { $rval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $rval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($irssi == "1") { $ival = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $ival = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($irssi == "1") { $ival = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $ival = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($deluged == "1") { $dval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $dval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($deluged == "1") { $dval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $dval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($delugedweb == "1") { $dwval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $dwval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($delugedweb == "1") { $dwval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $dwval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($btsync == "1") { $bval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $bval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($btsync == "1") { $bval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $bval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($couchpotato == "1") { $cpval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $cpval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($couchpotato == "1") { $cpval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $cpval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($jackett == "1") { $jval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $jval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($jackett == "1") { $jval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $jval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($plex == "1") { $pval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $pval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($plex == "1") { $pval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $pval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($quassel == "1") { $qval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $qval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($quassel == "1") { $qval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $qval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if (file_exists('/install/.rapidleech.lock')) { $rlval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $rlval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if (file_exists('/install/.rapidleech.lock')) { $rlval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $rlval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($sickrage == "1") { $srval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $srval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($sickrage == "1") { $srval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $srval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($sonarr == "1") { $sval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $sval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($sonarr == "1") { $sval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $sval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($x2go == "1") { $xval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $xval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($x2go == "1") { $xval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $xval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($znc == "1") { $zval = "<span class=\"badge badge-service-running pull-right\"></span>";
-} else { $zval = "<span class=\"badge badge-service-disabled pull-right\"></span>";
+if ($znc == "1") { $zval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $zval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
 

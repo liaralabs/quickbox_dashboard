@@ -284,9 +284,9 @@ $(function() {
   $('.leftpanel').perfectScrollbar();
   $('.leftpanel').perfectScrollbar({ wheelSpeed: 1, wheelPropagation: true, minScrollbarLength: 20 });
   $('.leftpanel').perfectScrollbar('update');
-  $('.body').perfectScrollbar();
-  $('.body').perfectScrollbar({ wheelSpeed: 1, wheelPropagation: true, minScrollbarLength: 20 });
-  $('.body').perfectScrollbar('update');
+  //$('.body').perfectScrollbar();
+  //$('.body').perfectScrollbar({ wheelSpeed: 1, wheelPropagation: true, swipePropagation: true, minScrollbarLength: 20 });
+  //$('.body').perfectScrollbar('update');
   $('.modal-body').perfectScrollbar();
   $('.modal-body').perfectScrollbar({ wheelSpeed: 1, wheelPropagation: true, minScrollbarLength: 20 });
   $('.modal-body').perfectScrollbar('update');

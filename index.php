@@ -24,7 +24,7 @@
                     <h4 class="panel-title">Restart Services</h4>
                   </div>
                   <div class="panel-body">
-                    <?php include("widgets/service_restart.php") ?>
+                    <span id="servstart"></span>
                   </div>
                   <div class="panel-footer"></div>
                 </div>

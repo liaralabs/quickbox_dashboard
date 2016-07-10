@@ -5,6 +5,7 @@ include 'widgets/class.php';
 $version = "v2.4.1";
 error_reporting(E_ALL);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
+$master=preg_replace('/\s+/', '', $master); 
 $username = getUser();
 $dconf = '/home/'.$username.'/.config/deluge/web.conf';
 if (file_exists($dconf)) {

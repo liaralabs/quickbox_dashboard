@@ -84,7 +84,7 @@
             </li>
             <!--li><a href="?reload=true"><i class="fa fa-refresh"></i> <span>Reload Services</span></a></li-->
             <?php if ($username == "$master") { ?>
-            <li><a href="<?php echo "$consoleURL"; ?>"><i class="fa fa-keyboard-o"></i> <span>Web Console</span></a></li>
+            <li><a href="<?php echo "$consoleURL"; ?>" target="_blank"><i class="fa fa-keyboard-o"></i> <span>Web Console</span></a></li>
             <?php } ?>
           </ul>
         </div><!-- tab pane -->

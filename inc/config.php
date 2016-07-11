@@ -244,6 +244,7 @@ $sonarr = processExists("nzbdrone",$username);
 $jackett = processExists("jackett",$username);
 $couchpotato = processExists("couchpotato",$username);
 $quassel = processExists("quassel",$username);
+$shellinabox = processExists("shellinabox",shellinabox);
 $znc = processExists("znc",$username);
 
 function isEnabled($process, $username){
@@ -275,6 +276,7 @@ $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
 $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
 $sickrageURL = "http://" . $_SERVER['HTTP_HOST'] . ":8081";
 $sonarrURL = "http://" . $_SERVER['HTTP_HOST'] . ":8989";
+$consoleURL = "https://" . $_SERVER['HTTP_HOST'] . ":4224";
 
 $reload='';
 $service='';

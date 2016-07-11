@@ -14,6 +14,9 @@
                   echo "<li>"; echo "$cbodyd"; echo "</li>";
                   echo "<li>"; echo "$cbodydw"; echo "</li>";
                 }
+                if ($username == "$master") {
+                  echo "<li>"; echo "$wcbodyb"; echo "</li>";
+                }
                 if ($username == "$master" && file_exists('/install/.btsync.lock')) {
                   echo "<li>"; echo "$cbodyb"; echo "</li>";
                 }

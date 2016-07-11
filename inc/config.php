@@ -420,9 +420,10 @@ break;
 /* restart services */
 case 88:
   $process = $_GET['servicestart'];
-    if ($service == "btsync"){
+    if ($process == "btsync"){
       shell_exec("sudo systemctl restart $process");
-    } elseif ($service == "shellinabox"){
+    } elseif ($process == "shellinabox"){
+      shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
     } else {
       shell_exec("sudo systemctl restart $process@$username");

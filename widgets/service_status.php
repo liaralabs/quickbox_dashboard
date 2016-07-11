@@ -13,6 +13,9 @@
                         echo "<li>"; echo "$dval"; echo "</li>";
                         echo "<li>"; echo "$dwval"; echo "</li>";
                       }
+                      if ($username == "$master") {
+                        echo "<li>"; echo "$wcval"; echo "</li>";
+                      }
                       if ($username == "$master" && file_exists('/install/.btsync.lock')) {
                         echo "<li>"; echo "$bval"; echo "</li>";
                       }

@@ -13,6 +13,8 @@
                 <li><?php echo "$dval"; ?> DelugeD <a href="javascript:;" onclick="location.href='?id=88&servicestart=deluged'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <li><?php echo "$dwval"; ?> Deluge Web<a href="javascript:;" onclick="location.href='?id=88&servicestart=delugeweb'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
+                <?php if ($username == "$master") { ?>
+                <li><?php echo "$wcval"; ?> Web Console <a href="javascript:;" onclick="location.href='?id=88&servicestart=shellinabox'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php if (file_exists("/install/.btsync.lock")) { ?>
                 <li><?php echo "$bval"; ?> BTSync <a href="javascript:;" onclick="location.href='?id=88&servicestart=btsync'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
@@ -48,4 +50,5 @@
                 <li>ZNC <a href="javascript:;" onclick="location.href='?id=88&servicestart=znc'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
                 -->
+                <?php } ?>
               </ul>

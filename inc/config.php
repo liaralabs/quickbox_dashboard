@@ -390,6 +390,9 @@ case 66:
     if ($process == "btsync"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
+    } elseif ($process == "shellinabox"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl start $process");
     } else {
       shell_exec("sudo systemctl enable $process@$username");
       shell_exec("sudo systemctl start $process@$username");
@@ -403,6 +406,10 @@ case 77:
     if ($process == "btsync"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
+    } elseif ($process == "shellinabox"){
+      shell_exec("sudo systemctl stop $process");
+      shell_exec("sudo systemctl disable $process");
+      shell_exec("sudo pkill -f $process");
     } else {
       shell_exec("sudo systemctl stop $process@$username");
       shell_exec("sudo systemctl disable $process@$username");
@@ -414,6 +421,8 @@ break;
 case 88:
   $process = $_GET['servicestart'];
     if ($service == "btsync"){
+      shell_exec("sudo systemctl restart $process");
+    } elseif ($service == "shellinabox"){
       shell_exec("sudo systemctl restart $process");
     } else {
       shell_exec("sudo systemctl restart $process@$username");

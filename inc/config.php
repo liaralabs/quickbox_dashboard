@@ -359,6 +359,8 @@ case 0:
     $cbodyd .= "DelugeD ". $deluged;
   $delugedweb = isEnabled("deluge-web", $username);
     $cbodydw .= "Deluge Web ". $delugedweb;
+  $shellinabox = isEnabled("shellinabox", shellinabox);
+    $wcbodyb .= "Web Console ". $shellinabox;
   $btsync = isEnabled("btsync", btsync);
     $cbodyb .= "BTSync ". $btsync;
   $couchpotato = isEnabled("couchpotato", $username);

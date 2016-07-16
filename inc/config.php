@@ -2,7 +2,7 @@
 session_destroy();
 include '/srv/rutorrent/php/util.php';
 include 'widgets/class.php';
-$version = "v2.4.1";
+$version = "v2.4.2";
 error_reporting(E_ALL);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $master=preg_replace('/\s+/', '', $master);
@@ -238,6 +238,8 @@ $deluged = processExists("deluged",$username);
 $delugedweb = processExists("deluge-web",$username);
 $irssi = processExists("irssi",$username);
 $plex = processExists("Plex",plex);
+$plexpy = processExists("plexpy",plexpy);
+$plexrequests = processExists("Plex",$username);
 $rtorrent = processExists("rtorrent",$username);
 $sickrage = processExists("sickrage",$username);
 $sonarr = processExists("nzbdrone",$username);
@@ -269,14 +271,16 @@ $dwURL = "https://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 if ($dwssl == "false") {
 $dwURL = "http://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 }
+$plexpyURL = "http://" . $_SERVER['HTTP_HOST'] . ":8181";
+$plexrequestsURL = "http://" . $_SERVER['HTTP_HOST'] . ":3000";
 $jackettURL = "http://" . $_SERVER['HTTP_HOST'] . ":9117";
 $cpURL = "http://" . $_SERVER['HTTP_HOST'] . ":5050";
 $btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
-$plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
+$plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
 $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
 $sickrageURL = "http://" . $_SERVER['HTTP_HOST'] . ":8081";
 $sonarrURL = "http://" . $_SERVER['HTTP_HOST'] . ":8989";
-$consoleURL = "https://" . $_SERVER['HTTP_HOST'] . ":4224";
+#$consoleURL = "https://" . $_SERVER['HTTP_HOST'] . ":4224";
 
 $reload='';
 $service='';
@@ -314,6 +318,14 @@ if ($jackett == "1") { $jval = "<span class=\"badge badge-service-running-dot\">
 
 if ($plex == "1") { $pval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $pval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
+}
+
+if ($plexpy == "1") { $ppval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $ppval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
+}
+
+if ($plexrequests == "1") { $prval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $prval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
 if ($quassel == "1") { $qval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
@@ -359,16 +371,20 @@ case 0:
     $cbodyd .= "DelugeD ". $deluged;
   $delugedweb = isEnabled("deluge-web", $username);
     $cbodydw .= "Deluge Web ". $delugedweb;
-  $shellinabox = isEnabled("shellinabox", shellinabox);
+  $shellinabox = isEnabled("shellinabox",shellinabox);
     $wcbodyb .= "Web Console ". $shellinabox;
-  $btsync = isEnabled("btsync", btsync);
+  $btsync = isEnabled("btsync",btsync);
     $cbodyb .= "BTSync ". $btsync;
   $couchpotato = isEnabled("couchpotato", $username);
     $cbodycp .= "CouchPotato ". $couchpotato;
   $jackett = isEnabled("jackett", $username);
     $cbodyj .= "Jackett ". $jackett;
-  $plex = isEnabled("plex", $username);
+  $plex = isEnabled("plexmediaserver",plex);
     $cbodyp .= "Plex ". $plex;
+  $plexpy = isEnabled("plexpy",plexpy);
+    $cbodypp .= "PlexPy ". $plexpy;
+  $plexrequests = isEnabled("plexrequests", $username);
+    $cbodypr .= "Plex Requests ". $plexrequests;
   $quassel = isEnabled("quassel", $username);
     $cbodyq .= "Quassel ". $quassel;
   $rapidleech = isEnabled("rapidleech", $username);
@@ -393,6 +409,15 @@ case 66:
     } elseif ($process == "shellinabox"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
+    } elseif ($process == "plexmediaserver"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl start $process");
+    } elseif ($process == "plexpy"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl start $process");
+    } elseif ($process == "plexrequests"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl start $process");
     } else {
       shell_exec("sudo systemctl enable $process@$username");
       shell_exec("sudo systemctl start $process@$username");
@@ -406,7 +431,20 @@ case 77:
     if ($process == "btsync"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
+      shell_exec("sudo pkill -f $process");
     } elseif ($process == "shellinabox"){
+      shell_exec("sudo systemctl stop $process");
+      shell_exec("sudo systemctl disable $process");
+      shell_exec("sudo pkill -f $process");
+    } elseif ($process == "plexmediaserver"){
+      shell_exec("sudo systemctl stop $process");
+      shell_exec("sudo systemctl disable $process");
+      shell_exec("sudo pkill -f $process");
+    } elseif ($process == "plexpy"){
+      shell_exec("sudo systemctl stop $process");
+      shell_exec("sudo systemctl disable $process");
+      shell_exec("sudo pkill -f $process");
+    } elseif ($process == "plexrequests"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
       shell_exec("sudo pkill -f $process");
@@ -421,8 +459,18 @@ break;
 case 88:
   $process = $_GET['servicestart'];
     if ($process == "btsync"){
+      shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
     } elseif ($process == "shellinabox"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl restart $process");
+    } elseif ($process == "plexmediaserver"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl restart $process");
+    } elseif ($process == "plexpy"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl restart $process");
+    } elseif ($process == "plexrequests"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
     } else {

@@ -26,9 +26,15 @@
                 if ($username == "$master" && file_exists('/install/.jackett.lock')) {
                   echo "<li>"; echo "$cbodyj"; echo "</li>";
                 }
-                //if ($username == "$master" && file_exists('/install/.plex.lock')) {
-                //  echo "<li>"; echo "$cbodyp"; echo "</li>";
-                //}
+                if ($username == "$master" && file_exists('/install/.plex.lock')) {
+                  echo "<li>"; echo "$cbodyp"; echo "</li>";
+                }
+                if ($username == "$master" && file_exists('/install/.plexpy.lock')) {
+                  echo "<li>"; echo "$cbodypp"; echo "</li>";
+                }
+                if ($username == "$master" && file_exists('/install/.plexrequests.lock')) {
+                  echo "<li>"; echo "$cbodypr"; echo "</li>";
+                }
                 //if ($username == "$master" && file_exists('/install/.quassel.lock')) {
                 //  echo "<li>"; echo "$cbodyq"; echo "</li>";
                 //}

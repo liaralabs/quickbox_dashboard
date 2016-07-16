@@ -108,6 +108,42 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- PLEXPY UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="plexpyRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="PlexPyRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="PlexPyRemovalConfirm">Uninstall PlexPy?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall PlexPy from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversable. <br/><br/>You may reinstall PlexPy at any time, however, your settings will be reset to default.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-plexpy=true" id="plexpyRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+<!-- PLEX REQUESTS UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="plexrequestsRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="PlexRequestsRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="PlexRequestsRemovalConfirm">Uninstall Plex Requests.NET?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall Plex Requests from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversable. <br/><br/>You may reinstall Plex Requests at any time, however, your library settings and requests will be reset.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-plexrequests=true" id="plexrequestsRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- RAPIDLEECH UNINSTALL MODAL -->
 <div class="modal bounceIn animated" id="rapidleechRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="RapidleechRemovalConfirm" aria-hidden="true">
   <div class="modal-dialog">

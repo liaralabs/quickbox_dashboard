@@ -124,6 +124,24 @@
                         <?php } ?>
                       </tr>
                       <tr>
+                        <td>PlexPy</td>
+                        <td>A python based web application for monitoring, analytics and notifications for Plex Media Server</td>
+                        <?php if (file_exists("/install/.plexpy.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#plexpyRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-plexpy=true" data-toggle="modal" data-target="#sysResponse" id="plexpyInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
+                        <td>Plex Requests.NET</td>
+                        <td>Plex Requests offers a beautiful and easy to use interface for items users wish to be added to the library. Integrates with CouchPotato, SickRage and Sonarr.</td>
+                        <?php if (file_exists("/install/.plexrequests.lock")) { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#plexrequestsRemovalConfirm" class="btn btn-xs btn-success">Installed</a></td>
+                        <?php } else { ?>
+                          <td style="vertical-align: middle; text-align: center"><a href="?installpackage-plexrequests=true" data-toggle="modal" data-target="#sysResponse" id="plexrequestsInstall" class="btn btn-xs btn-info">Install</a></td>
+                        <?php } ?>
+                      </tr>
+                      <tr>
                         <td>Quassel</td>
                         <td>Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt4 framework.</td>
                         <?php if (file_exists("/install/.quassel.lock")) { ?>

@@ -115,7 +115,7 @@
   function diskstats() {
     $.ajax({url: "widgets/disk_data.php", cache:false, success: function (result) {
       $('#disk_data').html(result);
-      setTimeout(function(){diskstats()}, 1000);
+      setTimeout(function(){diskstats()}, 15000);
     }});
   }
   diskstats();
@@ -139,7 +139,7 @@
   function servstat() {
     $.ajax({url: "widgets/service_restart.php", cache:false, success: function (result) {
       $('#servstart').html(result);
-      setTimeout(function(){servstat()}, 1000);
+      setTimeout(function(){servstat()}, 15000);
     }});
   }
   servstat();
@@ -232,5 +232,5 @@ function displayData(dataJSON) {
     overflow-y: scroll;
   }
   </style>
-  
+
 </head>

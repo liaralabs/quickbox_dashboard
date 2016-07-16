@@ -24,11 +24,15 @@
                 <?php if (file_exists("/install/.jackett.lock")) { ?>
                 <li><?php echo "$jval"; ?> Jackett <a href="javascript:;" onclick="location.href='?id=88&servicestart=jackett'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
-                <!--
                 <?php if (file_exists("/install/.plex.lock")) { ?>
-                <li>Plex <a href="javascript:;" onclick="location.href='?id=88&servicestart=plex'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <li><?php echo "$pval"; ?> Plex <a href="javascript:;" onclick="location.href='?id=88&servicestart=plex'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
-                -->
+                <?php if (file_exists("/install/.plexpy.lock")) { ?>
+                <li><?php echo "$ppval"; ?> PlexPy <a href="javascript:;" onclick="location.href='?id=88&servicestart=plexpy'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <?php } ?>
+                <?php if (file_exists("/install/.plexrequests.lock")) { ?>
+                <li><?php echo "$prval"; ?> Plex Requests <a href="javascript:;" onclick="location.href='?id=88&servicestart=plexrequests'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <?php } ?>
                 <!--
                 <?php if (file_exists("/install/.quassel.lock")) { ?>
                 <li>Quassel <a href="javascript:;" onclick="location.href='?id=88&servicestart=quassel'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>

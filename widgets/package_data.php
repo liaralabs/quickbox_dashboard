@@ -7,6 +7,8 @@ $packages = array(
         'deluge',
         'jackett',
         'plex',
+        'plexpy',
+        'plexrequests',
         'rapidleech',
         'sickrage',
         'sonarr',

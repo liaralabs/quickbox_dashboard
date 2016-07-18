@@ -10,7 +10,7 @@ $L['months'] = 'Mois';
 $L['Summary'] = 'Sommaire';
 $L['Top 10 days'] = 'Les 10 meilleurs jours';
 $L['Last 24 hours'] = 'Dernières 24 heures';
-$L['Last 30 days'] = 'Derniers 30 jours';
+$L['Last 30 days'] = 'Les 30 derniers jours';
 $L['Last 12 months'] = 'Les 12 derniers mois';
 
 // traffic table columns
@@ -21,8 +21,8 @@ $L['Total'] = 'Total';
 // summary rows
 $L['This hour'] = 'Cette heure';
 $L['This day'] = 'Aujourd\' hui';
-$L['This month'] = 'Ce mois';
-$L['All time'] = 'Tout temps';
+$L['This month'] = 'Ce mois-ci';
+$L['All time'] = 'Au total';
 
 // graph text
 $L['Traffic data for'] = 'Traffic de donnée pour :';

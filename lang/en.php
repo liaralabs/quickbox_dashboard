@@ -145,9 +145,9 @@ $L['SIZE'] = 'Size';
 $L['DISK_SPACE'] = 'Disk Space';
 $L['PERCENTAGE_TXT'] = 'You have used "$perused" of your total disk space';
 $L['RTORRENTS_TITLE'] = 'Torrents in rtorrent';
-$L['RT_TXT'] = 'There are !x torrents loaded.';
+$L['RT_TXT'] = 'There are "$rtorrents" torrents loaded.';
 $L['DTORRENTS_TITLE'] = 'Torrents in deluge';
-$L['D_TXT'] = 'There are !x torrents loaded.';
+$L['D_TXT'] = 'There are "$dtorrents" torrents loaded.';
 
 
 ////////////////////////////////////////

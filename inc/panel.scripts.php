@@ -287,7 +287,7 @@
   </div><!-- modal-dialog -->
 </div><!-- modal -->
 
-<!-- VERSION UPDATE CHECK MODAL -->
+<!-- VERSION UPDATE CHECK MODAL >
 <div class="modal bounceIn animated" id="versionChecker" tabindex="-1" role="dialog" aria-labelledby="VersionChecker" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -303,8 +303,8 @@
         <a href="?updatetestingQuickBox=true" class="btn btn-primary" data-toggle="modal" data-target="#sysResponse" data-dismiss="modal" aria-label="Close">TESTING</a>
         <a href="?updateQuickBox=true" class="btn btn-success" data-toggle="modal" data-target="#sysResponse" data-dismiss="modal" aria-label="Close">STABLE</a>
       </div>
-    </div><!-- modal-content -->
-  </div><!-- modal-dialog -->
+    </div><!-- modal-content ->
+  </div><!-- modal-dialog ->
 </div><!-- modal -->
 
 <!--script src="js/script.js"></script-->

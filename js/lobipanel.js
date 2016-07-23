@@ -1530,7 +1530,7 @@ $(function(){
         bodyHeight: 'auto',
         //This will enable tooltips on panel controls
         tooltips: true,
-        toggleIcon: 'glyphicon glyphicon-cog',
+        toggleIcon: 'fa fa-cog',
         expandAnimation: 100,
         collapseAnimation: 100,
         state: 'pinned', // pinned, unpinned, collapsed, minimized, fullscreen,
@@ -1569,4 +1569,3 @@ $(function(){
 
     $('.lobipanel').lobiPanel();
 });
-

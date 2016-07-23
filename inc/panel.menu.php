@@ -13,9 +13,14 @@
         <ul class="headermenu">
           <?php if ($username == "$master") { ?>
           <li class="lang-menu">
-          <?php foreach ($language as $lang) {
-            echo "<a href=\"?langSelect-$lang=true\" class=\"tooltips\" data-toggle=\"tooltip\" title=\"$lang\" data-placement=\"bottom\"><img class=\"lang-flag\" src=\"lang/flag_$lang.png\" /></a>";
-          } ?>
+          <?php
+          $language = array();
+          $language[] = array('file' => 'lang_de', 'title' =>'German Coming Soon!');
+          $language[] = array('file' => 'lang_en', 'title' =>'English');
+          $language[] = array('file' => 'lang_fr', 'title' =>'French');
+          foreach($language as $lang) { ?>
+            <a href='?langSelect-<?php echo $lang['file'] ?>=true' class='tooltips' data-toggle='tooltip' title='<?php echo $lang['title'] ?>' data-placement='bottom'><img class='lang-flag' src='lang/flag_<?php echo $lang['file'] ?>.png' /></a>
+          <?php } ?>
           </li>
           <?php } ?>
           <li>

@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="lib/ionicons/css/ionicons.css">
   <link rel="stylesheet" href="lib/select2/select2.css">
   <link rel="stylesheet" href="skins/quick.css">
+  <link rel="stylesheet" href="skins/lobipanel.css"/>
   <!-- JAVASCRIPT -->
   <script src="lib/modernizr/modernizr.js"></script>
   <script src="lib/jquery/jquery.js"></script>
@@ -25,33 +26,18 @@
   <script type="text/javascript" src="lib/flot/jquery.flot.time.js"></script>
   <script type="text/javascript" src="lib/flot/jquery.flot.resize.js"></script>
   <script type="text/javascript" src="lib/flot/jquery.flot.canvas.js"></script>
-
-  <!-- THIS IS HERE FOR USE OF VERSION PULLING -->
-  <script src="https://rawgit.com/hippich/bower-semver/master/semver.min.js"></script>
-  <script>
-  var gitHubPath = 'QuickBox/QuickBox';  // quickbox repo
-  var url = 'https://api.github.com/repos/' + gitHubPath + '/releases';
-
-  $.get(url).done(function (data) {
-    var versions = data.sort(function (v1, v2) {
-      return semver.compare(v2.name, v1.name)
-    });
-    $('#version-result').html(versions[0].name);
-  });
-  </script>
-
   <script id="source" language="javascript" type="text/javascript">
   $(document).ready(function() {
       var options = {
           lines: {
             show: true,
             fill: true,
-            fillColor: { colors: [{ opacity: 0.05 }, { opacity: 1}] }
+            fillColor: { colors: [{ opacity: 0.02 }, { opacity: 1}] }
           },
           border: { show: false },
-          points: { show: false },
+          points: { show: true },
           xaxis: { mode: "time" },
-          colors: ["#F5D76E"],
+          colors: ["#10D2E5"],
           shadowSize: 0
       };
       var data = [];
@@ -96,13 +82,13 @@
   }
   sload();
 
-  function servstatus() {
-    $.ajax({url: "widgets/service_status.php", cache:true, success: function (result) {
-      $('#servstat').html(result);
-      setTimeout(function(){servstatus()}, 1000);
-    }});
-  }
-  servstatus();
+  //function servstatus() {
+  //  $.ajax({url: "widgets/service_status.php", cache:true, success: function (result) {
+  //    $('#servstat').html(result);
+  //    setTimeout(function(){servstatus()}, 1000);
+  //  }});
+  //}
+  //servstatus();
 
   function bwtables() {
     $.ajax({url: "widgets/bw_tables.php", cache:false, success: function (result) {
@@ -136,13 +122,13 @@
   }
   ramstats();
 
-  function servstat() {
-    $.ajax({url: "widgets/service_restart.php", cache:false, success: function (result) {
-      $('#servstart').html(result);
-      setTimeout(function(){servstat()}, 15000);
-    }});
-  }
-  servstat();
+  //function servstat() {
+  //  $.ajax({url: "widgets/service_restart.php", cache:false, success: function (result) {
+  //    $('#servstart').html(result);
+  //    setTimeout(function(){servstat()}, 1000);
+  //  }});
+  //}
+  //servstat();
 
   function msgoutput() {
     $.ajax({url: "db/output.log", cache:false, success: function (result) {

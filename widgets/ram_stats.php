@@ -1,5 +1,7 @@
 <?php
 
+include ("../inc/localize.php");
+
 $time_start = microtime_float();
 
 function memory_usage()
@@ -263,8 +265,8 @@ else
         <!-- PHSYSICAL MEMORY USAGE -->
         <div class="col-sm-12">
           <!--div class="vertical-container"-->
-            <p style="font-size:10px">Physical Memory Usage: <?php echo "$memPercent"; ?>%<br/>
-              used: <font color='#CC0000'><?php echo "$mu"; ?></font>  | idle: <font color='#CC0000'><?php echo "$mf"; ?></font>
+            <p style="font-size:10px"><?php echo T('PHYSICAL_MEMORY_TITLE'); ?>: <?php echo "$memPercent"; ?>%<br/>
+              <?php echo T('PHYSICAL_MEMORY_USED_TXT'); ?>: <font color='#CC0000'><?php echo "$mu"; ?></font>  | <?php echo T('PHYSICAL_MEMORY_IDLE_TXT'); ?>: <font color='#CC0000'><?php echo "$mf"; ?></font>
             </p>
             <div class="progress progress-striped">
               <?php
@@ -273,7 +275,7 @@ else
                 if ($memPercent > "90") { $ramcolor="progress-bar-danger"; }
               ?>
               <div style="width:<?php echo "$memPercent"; ?>%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo "$memPercent"; ?>" role="progressbar" class="progress-bar <?php echo $ramcolor ?>">
-                <span class="sr-only"><?php echo "$memPercent"; ?>% Used</span>
+                <span class="sr-only"><?php echo "$memPercent"; ?>% <?php echo T('USED'); ?></span>
               </div>
             </div>
           <!--/div-->
@@ -287,8 +289,8 @@ else
         <!-- CACHED MEMORY USAGE -->
         <div class="col-sm-12" style="padding-top:10px">
           <!--div class="vertical-container"-->
-            <p style="font-size:10px">Cached Memory Usage: <?php echo "$memCachedPercent"; ?>%<br/>
-              Cache memory is at <?php echo "$mc"; ?> usage | Buffers are at <?php echo "$mb"; ?></p>
+            <p style="font-size:10px"><?php echo T('CACHED_MEMORY_TITLE'); ?>: <?php echo "$memCachedPercent"; ?>%<br/>
+              <?php echo T('CACHED_MEMORY_USAGE_TXT'); ?> <?php echo "$mc"; ?> | <?php echo T('CACHED_MEMORY_BUFFERS_TXT'); ?> <?php echo "$mb"; ?></p>
             <div class="progress progress-striped">
               <?php
                 if ($memCachedPercent < "70") { $ramcolor="progress-bar-success"; }
@@ -296,7 +298,7 @@ else
                 if ($memCachedPercent > "90") { $ramcolor="progress-bar-danger"; }
               ?>
               <div style="width:<?php echo "$memCachedPercent"; ?>%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo "$memCachedPercent"; ?>" role="progressbar" class="progress-bar <?php echo $ramcolor ?>">
-                <span class="sr-only"><?php echo "$memCachedPercent"; ?>% Used</span>
+                <span class="sr-only"><?php echo "$memCachedPercent"; ?>% <?php echo T('USED'); ?></span>
               </div>
             </div>
           <!--/div-->
@@ -304,8 +306,8 @@ else
         <!-- REAL MEMORY USAGE -->
         <div class="col-sm-12" style="padding-top:10px">
           <!--div class="vertical-container"-->
-            <p style="font-size:10px">Real Memory Usage: <?php echo "$memRealPercent"; ?>%<br/>
-              Real memory usage <?php echo "$memRealUsed"; ?> | Real memory free <?php echo "$memRealFree"; ?></p>
+            <p style="font-size:10px"><?php echo T('REAL_MEMORY_TITLE'); ?>: <?php echo "$memRealPercent"; ?>%<br/>
+              <?php echo T('REAL_MEMORY_USAGE_TXT'); ?> <?php echo "$memRealUsed"; ?> | <?php echo T('REAL_MEMORY_FREE_TXT'); ?> <?php echo "$memRealFree"; ?></p>
             <div class="progress progress-striped">
               <?php
                 if ($memRealPercent < "70") { $ramcolor="progress-bar-success"; }
@@ -313,7 +315,7 @@ else
                 if ($memRealPercent > "90") { $ramcolor="progress-bar-danger"; }
               ?>
               <div style="width:<?php echo "$memRealPercent"; ?>%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo "$memRealPercent"; ?>" role="progressbar" class="progress-bar <?php echo $ramcolor ?>">
-                <span class="sr-only"><?php echo "$memRealPercent"; ?>% Used</span>
+                <span class="sr-only"><?php echo "$memRealPercent"; ?>% <?php echo T('USED'); ?></span>
               </div>
             </div>
           <!--/div-->
@@ -328,8 +330,8 @@ else
         <!-- SWAP USAGE -->
         <div class="col-sm-12" style="padding-top:10px">
           <!--div class="vertical-container"-->
-            <p style="font-size:10px">Swap Usage: <?php echo "$swapPercent"; ?>%<br/>
-              SWAP Area: total <?php echo $st;?> | used <?php echo "$su"; ?> | idle <?php echo "$sf"; ?></p>
+            <p style="font-size:10px"><?php echo T('SWAP_TITLE'); ?>: <?php echo "$swapPercent"; ?>%<br/>
+              <?php echo T('SWAP_TOTAL_TXT'); ?>: <?php echo T('TOTAL_L'); ?> <?php echo $st;?> | <?php echo T('USED_L'); ?> <?php echo "$su"; ?> | <?php echo T('IDLE_L'); ?> <?php echo "$sf"; ?></p>
             <div class="progress progress-striped">
               <?php
                 if ($swapPercent < "70") { $ramcolor="progress-bar-success"; }
@@ -337,7 +339,7 @@ else
                 if ($swapPercent > "90") { $ramcolor="progress-bar-danger"; }
               ?>
               <div style="width:<?php echo "$swapPercent"; ?>%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo "$swapPercent"; ?>" role="progressbar" class="progress-bar <?php echo $ramcolor ?>">
-                <span class="sr-only"><?php echo "$swapPercent"; ?>% Used</span>
+                <span class="sr-only"><?php echo "$swapPercent"; ?>% <?php echo T('USED'); ?></span>
               </div>
             </div>
           <!--/div-->
@@ -348,10 +350,10 @@ else
 
       </div>
       <hr />
-      <h3>Total System RAM</h3>
+      <h3><?php echo T('TOTAL_RAM'); ?></h3>
       <h4 class="nomargin"><?php echo $memTotal;?>
           <?php
           if ($username == "$master"){
-              echo "<a href=\"?clean_mem=true\" id=\"cleanmem\" data-toggle=\"modal\" data-target=\"#sysResponse\" style=\"margin: 0 auto\"> <button class=\"btn btn-xs btn-default pull-right\">Clear Memory Cache</button></a>";
+              echo "<a href=\"?clean_mem=true\" id=\"cleanmem\" data-toggle=\"modal\" data-target=\"#sysResponse\" style=\"margin: 0 auto\"> <button class=\"btn btn-xs btn-default pull-right\">T('CLEAR_CACHE')</button></a>";
           } ?>
       </h4>

@@ -1,5 +1,7 @@
 <?php
 
+include ("../inc/localize.php");
+
 // Information obtained depending on the system CPU
 switch(PHP_OS)
 {

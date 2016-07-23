@@ -1,12 +1,23 @@
 <?php
 session_destroy();
 include '/srv/rutorrent/php/util.php';
-include 'widgets/class.php';
-$version = "v2.4.2";
-error_reporting(E_ALL);
+include ('../widgets/class.php');
+$version = "v2.4.3";
+error_reporting(E_WARNING);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $master=preg_replace('/\s+/', '', $master);
 $username = getUser();
+
+require_once ($_SERVER['DOCUMENT_ROOT'].'/inc/localize.php');
+
+// Network Interface
+$interface = INETFACE;
+$iface_list = array('INETFACE');
+$iface_title['INETFACE'] = 'External';
+$vnstat_bin = '/usr/bin/vnstat';
+$data_dir = './dumps';
+$byte_notation = null;
+
 $dconf = '/home/'.$username.'/.config/deluge/web.conf';
 if (file_exists($dconf)) {
     $dconf_data = file_get_contents($dconf);
@@ -252,9 +263,9 @@ $znc = processExists("znc",$username);
 function isEnabled($process, $username){
   $service = $process;
   if(file_exists('/etc/systemd/system/multi-user.target.wants/'.$process.'@'.$username.'.service') || file_exists('/etc/systemd/system/multi-user.target.wants/'.$process.'.service')){
-    return " <div class=\"toggle-wrapper pull-right\"> <div class=\"toggle-en toggle-light primary\" onclick=\"location.href='?id=77&servicedisable=$service'\"></div></div>";
+    return " <div class=\"toggle-wrapper text-center\"> <div class=\"toggle-en toggle-light primary\" onclick=\"location.href='?id=77&servicedisable=$service'\"></div></div>";
   } else {
-    return " <div class=\"toggle-wrapper pull-right\"> <div class=\"toggle-dis toggle-light primary\" onclick=\"location.href='?id=66&serviceenable=$service'\"></div></div>";
+    return " <div class=\"toggle-wrapper text-center\"> <div class=\"toggle-dis toggle-light primary\" onclick=\"location.href='?id=66&serviceenable=$service'\"></div></div>";
   }
 }
 
@@ -354,9 +365,10 @@ if ($znc == "1") { $zval = "<span class=\"badge badge-service-running-dot\"></sp
 
 
 
-include 'widgets/plugin_data.php';
-include 'widgets/package_data.php';
-include 'widgets/sys_data.php';
+include ($_SERVER['DOCUMENT_ROOT'].'/widgets/lang_select.php');
+include ($_SERVER['DOCUMENT_ROOT'].'/widgets/plugin_data.php');
+include ($_SERVER['DOCUMENT_ROOT'].'/widgets/package_data.php');
+include ($_SERVER['DOCUMENT_ROOT'].'/widgets/sys_data.php');
 $base = 1024;
 $location = "/home";
 
@@ -364,39 +376,39 @@ $location = "/home";
 switch (intval($_GET['id'])) {
 case 0:
   $rtorrent = isEnabled("rtorrent", $username);
-    $cbodyr .= "RTorrent ". $rtorrent;
+    $cbodyr .= $rtorrent;
   $irssi = isEnabled("irssi", $username);
-    $cbodyi .= "iRSSi-AutoDL ". $irssi;
+    $cbodyi .= $irssi;
   $deluged = isEnabled("deluged", $username);
-    $cbodyd .= "DelugeD ". $deluged;
+    $cbodyd .= $deluged;
   $delugedweb = isEnabled("deluge-web", $username);
-    $cbodydw .= "Deluge Web ". $delugedweb;
+    $cbodydw .= $delugedweb;
   $shellinabox = isEnabled("shellinabox",shellinabox);
-    $wcbodyb .= "Web Console ". $shellinabox;
+    $wcbodyb .= $shellinabox;
   $btsync = isEnabled("btsync",btsync);
-    $cbodyb .= "BTSync ". $btsync;
+    $cbodyb .= $btsync;
   $couchpotato = isEnabled("couchpotato", $username);
-    $cbodycp .= "CouchPotato ". $couchpotato;
+    $cbodycp .= $couchpotato;
   $jackett = isEnabled("jackett", $username);
-    $cbodyj .= "Jackett ". $jackett;
+    $cbodyj .= $jackett;
   $plex = isEnabled("plexmediaserver",plex);
-    $cbodyp .= "Plex ". $plex;
+    $cbodyp .= $plex;
   $plexpy = isEnabled("plexpy",plexpy);
-    $cbodypp .= "PlexPy ". $plexpy;
+    $cbodypp .= $plexpy;
   $plexrequests = isEnabled("plexrequests", $username);
-    $cbodypr .= "Plex Requests ". $plexrequests;
+    $cbodypr .= $plexrequests;
   $quassel = isEnabled("quassel", $username);
-    $cbodyq .= "Quassel ". $quassel;
+    $cbodyq .= $quassel;
   $rapidleech = isEnabled("rapidleech", $username);
-    $cbodyrl .= "Rapidleech ". $rapidleech;
+    $cbodyrl .= $rapidleech;
   $sickrage = isEnabled("sickrage", $username);
-    $cbodysr .= "SickRage ". $sickrage;
+    $cbodysr .= $sickrage;
   $sonarr = isEnabled("sonarr", $username);
-    $cbodys .= "Sonarr ". $sonarr;
+    $cbodys .= $sonarr;
   $x2go = isEnabled("x2go", $username);
-    $cbodyx .= "X2Go ". $x2go;
+    $cbodyx .= $x2go;
   $znc = isEnabled("znc", $username);
-    $cbodyz .= "ZNC ". $znc;
+    $cbodyz .= $znc;
 
 break;
 

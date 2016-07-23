@@ -309,11 +309,58 @@
 
 <!--script src="js/script.js"></script-->
 <script src="lib/jquery-ui/jquery-ui.js"></script>
+<script src="lib/jquery.ui.touch-punch.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="lib/jquery-toggles/toggles.js"></script>
 <script src="lib/jquery-knob/jquery.knob.js"></script>
 <script src="lib/jquery.gritter/jquery.gritter.js"></script>
 <script src="js/quick.js"></script>
+<script src="js/lobipanel.js"></script>
+<script>
+  $(function(){
+    //$('.lobipanel').lobiPanel();
+    $('.panel').lobiPanel({
+      reload: {
+        icon: 'fa fa-refresh'
+      },
+      unpin: {
+        icon: 'fa fa-arrows'
+      },
+      minimize: {
+        icon: 'fa fa-chevron-up',
+        icon2: 'fa fa-chevron-down'
+      },
+      close: {
+        icon: 'fa fa-times-circle'
+      },
+      expand: {
+        icon: 'fa fa-expand',
+        icon2: 'fa fa-compress'
+      },
+      dropdown: {
+        icon: 'fa fa-cog'
+      },
+      close: false,
+      save: true,
+      sortable: true,
+      draggable: true,
+      reload: false,
+      resize: true,
+      editTitle: false,
+      expand: false
+    });
+  });
+</script>
+
+<script>
+  $(function(){
+    $('#rutorrent').on('loaded.lobiPanel', function (ev, lobiPanel) {
+      var $body = lobiPanel.$el.find('.panel-body');
+      $body.html('<div>' + $body.html() + '</div>');
+  });
+});
+</script>
+
 <script src="js/jquery.scrollbar.js"></script>
 <script>
 $(function() {
@@ -337,12 +384,18 @@ $(function() {
   $('.toggle-en').toggles({
     on: true,
     height: 26,
-    width: 100
+    width: 100,
+    text: {
+      on: "<?php echo T('ENABLED') ?>"
+    }
   });
   $('.toggle-dis').toggles({
     on: false,
     height: 26,
-    width: 100
+    width: 100,
+    text: {
+      off: "<?php echo T('DISABLED') ?>"
+    }
   });
 });
 </script>

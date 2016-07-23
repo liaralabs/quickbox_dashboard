@@ -1,5 +1,11 @@
 <?php
 
+/*******************************************************************************
+*                                                                              *
+*                               English	                                       *
+*                                                                              *
+*******************************************************************************/
+
 ////////////////////////////////////////
 //DASHBOARD MENU
 ///////////////////////////////////////
@@ -11,9 +17,12 @@ $L['WEB_CONSOLE'] = 'Web Console';
 
 // plugin menu tab
 $L['PLUGIN_MENU'] = 'Plugin Menu';
+$L['RPLUGIN_MENU'] = 'ruTorrent Plugin Menu';
 $L['PMENU_NOTICE_TXT'] = 'Easily install and uninstall ruTorrent plugins simply by clicking on the plugin name';
+$L['PLUGINS'] = 'Plugins';
 
 // quick help menu tab
+$L['HELP_COMMANDS'] = 'Help Commands & More';
 $L['QUICK_SYSTEM_TIPS'] = 'Quick System Tips';
 $L['DISKTEST_TXT'] = 'Type this command to perform a quick r/w test of your disk.';
 $L['FIXHOME_TXT'] = 'Type this command to quickly adjusts /home directory permissions.';
@@ -39,11 +48,17 @@ $L['SCREEN_IRSSI_TXT'] = 'allows user to restart/remount irssi from SSH';
 //DASHBOARD WIDGET TITLES
 ///////////////////////////////////////
 
+// services status widget
+$L['SERVICE_CONTROL_CENTER'] = 'Service Control Center';
+
+// services status widget
+$L['SERVICE_STATUS'] = 'Service Status';
+
 // restart services widget
 $L['RESTART_SERVICES'] = 'Restart Services';
 
 // service controller widget
-$L['ENABLE_DISABLE_SERVICES'] = 'Enable/Disable Services';
+$L['ENABLE_DISABLE_SERVICES'] = 'Enable/Disable';
 
 // package management center widget
 $L['PACKAGE_MANAGEMENT_CENTER'] = 'Package Management Center';
@@ -96,6 +111,7 @@ $L['ZNC'] = 'ZNC is an IRC network bouncer or BNC. It can detach the client from
 $L['INSTALL'] = 'Install';
 $L['INSTALLED'] = 'Installed';
 $L['QBPM'] = 'QBPM Only';
+$L['QBPM_TOOLTIP'] = 'Access this feature from ssh by typing QBPM';
 
 ////////////////////////////////////////
 //BANDWIDTH & DATA TABLES
@@ -143,11 +159,12 @@ $L['FREE'] = 'Free';
 $L['USED'] = 'Used';
 $L['SIZE'] = 'Size';
 $L['DISK_SPACE'] = 'Disk Space';
-$L['PERCENTAGE_TXT'] = 'You have used "$perused" of your total disk space';
+$L['PERCENTAGE_TXT_1'] = 'You have used';
+$L['PERCENTAGE_TXT_2'] = 'of your total disk space';
 $L['RTORRENTS_TITLE'] = 'Torrents in rtorrent';
-$L['RT_TXT'] = 'There are "$rtorrents" torrents loaded.';
 $L['DTORRENTS_TITLE'] = 'Torrents in deluge';
-$L['D_TXT'] = 'There are "$dtorrents" torrents loaded.';
+$L['TORRENTS_LOADED_1'] = 'There are';
+$L['TORRENTS_LOADED_2'] = 'torrents loaded';
 
 
 ////////////////////////////////////////
@@ -205,7 +222,45 @@ $L['SL_TXT'] = 'This is your servers current load average';
 $L['UPTIME'] = 'Uptime';
 
 
+////////////////////////////////////////
+//SERVICE TOGGLES
+///////////////////////////////////////
+
+$L['ENABLED'] = 'Enabled';
+$L['DISABLED'] = 'Disabled';
 
 
+////////////////////////////////////////
+//STATUS BUTTONS
+///////////////////////////////////////
+
+$L['REFRESH'] = 'Refresh';
+
+
+////////////////////////////////////////
+//ADDITIONAL DICTIONARY
+///////////////////////////////////////
+
+$L['IDLE'] = 'Idle';
+$L['TOTAL'] = 'Total';
+$L['USED'] = 'Used';
+
+$L['DAYS_L'] = 'days';
+$L['HOURS_L'] = 'hrs';
+$L['MINUTES_L'] = 'min';
+$L['SECONDS_L'] = 'sec';
+$L['IDLE_L'] = 'idle';
+$L['TOTAL_L'] = 'total';
+$L['USED_L'] = 'used';
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
 // SAMPLE
 // $L['SAMPLE'] = 'Sample';
+////////////////////////////////////////////////////////////////////////////
+
+
+?>

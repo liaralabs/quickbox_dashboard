@@ -11,11 +11,13 @@
       <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
       <div class="header-right">
         <ul class="headermenu">
+          <?php if ($username == "$master") { ?>
           <li class="lang-menu">
           <?php foreach ($language as $lang) {
             echo "<a href=\"?langSelect-$lang=true\" class=\"tooltips\" data-toggle=\"tooltip\" title=\"$lang\" data-placement=\"bottom\"><img class=\"lang-flag\" src=\"lang/flag_$lang.png\" /></a>";
           } ?>
           </li>
+          <?php } ?>
           <li>
             <div class="btn-group">
               <button type="button" class="btn btn-logged" data-toggle="dropdown">

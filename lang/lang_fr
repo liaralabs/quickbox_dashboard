@@ -2,7 +2,7 @@
 
 /*******************************************************************************
 *                                                                              *
-*                               Francais	                                   *
+*                               Français	                                   *
 *                                                                              *
 *******************************************************************************/
 
@@ -17,12 +17,12 @@ $L['WEB_CONSOLE'] = 'Console Web';
 
 // plugin menu tab
 $L['PLUGIN_MENU'] = 'Menu Plugins';
-$L['RPLUGIN_MENU'] = 'ruTorrent Plugin Menu';
+$L['RPLUGIN_MENU'] = 'Menu Plugins ruTorrent';
 $L['PMENU_NOTICE_TXT'] = 'Installez et désinstallez facilement les plugins ruTorrent en cliquant simplement sur le nom du plugin';
 $L['PLUGINS'] = 'Plugins';
 
 // quick help menu tab
-$L['HELP_COMMANDS'] = 'Help Commands & More';
+$L['HELP_COMMANDS'] = 'Commandes d\'aide et plus';
 $L['QUICK_SYSTEM_TIPS'] = 'Astuces';
 $L['DISKTEST_TXT'] = 'Tapez cette commande pour effectuer un rapide test de lecture/écriture sur votre disque.';
 $L['FIXHOME_TXT'] = 'Tapez cette commande pour ajuster rapidement les permissions du dossier /home.';
@@ -49,10 +49,10 @@ $L['SCREEN_IRSSI_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter IRSSI
 ///////////////////////////////////////
 
 // services status widget
-$L['SERVICE_CONTROL_CENTER'] = 'Service Control Center';
+$L['SERVICE_CONTROL_CENTER'] = 'Centre de contrôle des services';
 
 // services status widget
-$L['SERVICE_STATUS'] = 'Service Status';
+$L['SERVICE_STATUS'] = 'Statut des services';
 
 // restart services widget
 $L['RESTART_SERVICES'] = 'Redémarrer mes Services';
@@ -111,7 +111,7 @@ $L['ZNC'] = 'ZNC est un bouncer IRC sous licence GPL. Celui-ci sera connecté en
 $L['INSTALL'] = 'Installer';
 $L['INSTALLED'] = 'Installé';
 $L['QBPM'] = 'QBPM requis';
-$L['QBPM_TOOLTIP'] = 'Access this feature from ssh by typing QBPM';
+$L['QBPM_TOOLTIP'] = 'Accedez à cette fonctionnalité en SSH simplement en tapant "QBPM"';
 
 ////////////////////////////////////////
 //BANDWIDTH & DATA TABLES
@@ -126,8 +126,8 @@ $L['VIEW_ADDITIONAL_BANDWIDTH_DETAILS'] = 'Voir les détails additionnels';
 // main table headers
 $L['Summary'] = 'Sommaire';
 $L['Top 10 days'] = 'Les 10 meilleurs jours';
-$L['Last 24 hours'] = 'Dernières 24 heures';
-$L['Last 30 days'] = 'Derniers 30 jours';
+$L['Last 24 hours'] = 'Les dernières 24 heures';
+$L['Last 30 days'] = 'Les 30 derniers jours';
 $L['Last 12 months'] = 'Les 12 derniers mois';
 
 // traffic table columns
@@ -155,15 +155,15 @@ $L['datefmt_top'] = '%d %B %Y';
 //DISK STATUS WIDGET
 ///////////////////////////////////////
 
-$L['FREE'] = 'Libre';
-$L['USED'] = 'Utilisé';
-$L['SIZE'] = 'Taille';
+$L['DISK_FREE'] = 'Libre';
+$L['DISK_USED'] = 'Utilisé';
+$L['DISK_SIZE'] = 'Taille';
 $L['DISK_SPACE'] = 'Espace Disque';
 $L['PERCENTAGE_TXT'] = 'Vous avez utilisé "$perused" de votre espace disque total';
 $L['RTORRENTS_TITLE'] = 'Torrents dans rTorrent';
 $L['DTORRENTS_TITLE'] = 'Torrents dans Deluge';
 $L['PERCENTAGE_TXT_1'] = 'Vous avez utilisé';
-$L['PERCENTAGE_TXT_2'] = 'de votre espace disque total';
+$L['PERCENTAGE_TXT_2'] = '% de votre espace disque total';
 $L['TORRENTS_LOADED_1'] = 'Il y a';
 $L['TORRENTS_LOADED_2'] = 'torrents chargés';
 
@@ -227,32 +227,32 @@ $L['UPTIME'] = 'Uptime';
 //SERVICE TOGGLES
 ///////////////////////////////////////
 
-$L['ENABLED'] = 'Enabled';
-$L['DISABLED'] = 'Disabled';
+$L['ENABLED'] = 'Activé';
+$L['DISABLED'] = 'Désinstallé';
 
 
 ////////////////////////////////////////
 //STATUS BUTTONS
 ///////////////////////////////////////
 
-$L['REFRESH'] = 'Refresh';
+$L['REFRESH'] = 'Rafraîchir';
 
 
 ////////////////////////////////////////
 //ADDITIONAL DICTIONARY
 ///////////////////////////////////////
 
-$L['IDLE'] = 'Idle';
+$L['IDLE'] = 'Libre';
 $L['TOTAL'] = 'Total';
-$L['USED'] = 'Used';
+$L['USED'] = 'Utilisé';
 
-$L['DAYS_L'] = 'days';
+$L['DAYS_L'] = 'jours';
 $L['HOURS_L'] = 'hrs';
 $L['MINUTES_L'] = 'min';
 $L['SECONDS_L'] = 'sec';
-$L['IDLE_L'] = 'idle';
+$L['IDLE_L'] = 'libre';
 $L['TOTAL_L'] = 'total';
-$L['USED_L'] = 'used';
+$L['USED_L'] = 'utilisé';
 
 
 

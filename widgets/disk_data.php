@@ -1,6 +1,7 @@
 <?php
-include '/srv/rutorrent/php/util.php';
-include 'class.php';
+include ("/srv/rutorrent/php/util.php");
+include ($_SERVER['DOCUMENT_ROOT'].'/widgets/class.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/inc/localize.php');
 
 $username = getUser();
 function processExists($processName, $username) {
@@ -13,7 +14,7 @@ function processExists($processName, $username) {
 }
 $deluged = processExists("deluged",$username);
 $delugedweb = processExists("deluge-web",$username);
-$rtorrent = processExists("\"main|rtorrent\"",$username);
+$rtorrent = processExists("rtorrent",$username);
 
 //Unit Conversion
 function formatsize($size) {
@@ -45,31 +46,31 @@ $time = microtime(); $time = explode(" ", $time);
 $time = $time[1] + $time[0]; $start = $time;
 
 if (file_exists('/install/.quota.lock')) {
-      $dftotal = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf \$4/1024/1024}'");
-      $dffree = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf (\$4-\$3)/1024/1024}'");
-      $dfused = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf \$3/1024/1024}'");
-      $perused = sprintf('%1.0f', $dfused / $dftotal * 100);
+  $dftotal = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf \$4/1024/1024}'");
+  $dffree = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf (\$4-\$3)/1024/1024}'");
+  $dfused = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf \$3/1024/1024}'");
+  $perused = sprintf('%1.0f', $dfused / $dftotal * 100);
 
-  } else {
+} else {
 
-      $bytesfree = disk_free_space('/home');
-      $class = min((int)log($bytesfree,$base),count($si_prefix) - 1); $bytestotal = disk_total_space($location);
-      $class = min((int)log($bytesfree,$base),count($si_prefix) - 1); $bytesused = $bytestotal - $bytesfree;
-        try {
-          $diskStatus = new DiskStatus('/home');
-          $freeSpace = $diskStatus->freeSpace();
-          $totalSpace = $diskStatus->totalSpace();
-          $barWidth = ($diskStatus->usedSpace()/500) * 500;
-        } catch (Exception $e) {
-          $spacebodyerr .= 'Error ('.$e-getMessage().')';
-        exit();
-          }
-          //hard disk
-          $dftotal = round(@disk_total_space(".")/(1024*1024*1024),3); //Total
-          $dffree = round(@disk_free_space(".")/(1024*1024*1024),3); //Available
-          $dfused = $dftotal-$dffree; //used
-          $perused = (floatval($dftotal)!=0)?round($dfused/$dftotal*100,2):0;
-          //$perused = sprintf('%1.0f', $bytesused / $bytestotal * 100);
+  $bytesfree = disk_free_space('/home');
+  $class = min((int)log($bytesfree,$base),count($si_prefix) - 1); $bytestotal = disk_total_space($location);
+  $class = min((int)log($bytesfree,$base),count($si_prefix) - 1); $bytesused = $bytestotal - $bytesfree;
+  try {
+    $diskStatus = new DiskStatus('/home');
+    $freeSpace = $diskStatus->freeSpace();
+    $totalSpace = $diskStatus->totalSpace();
+    $barWidth = ($diskStatus->usedSpace()/500) * 500;
+  } catch (Exception $e) {
+    $spacebodyerr .= 'Error ('.$e-getMessage().')';
+    exit();
+  }
+  //hard disk
+  $dftotal = round(@disk_total_space(".")/(1024*1024*1024),3); //Total
+  $dffree = round(@disk_free_space(".")/(1024*1024*1024),3); //Available
+  $dfused = $dftotal-$dffree; //used
+  $perused = (floatval($dftotal)!=0)?round($dfused/$dftotal*100,2):0;
+  //$perused = sprintf('%1.0f', $bytesused / $bytestotal * 100);
 }
 
 if (file_exists('/home/'.$username.'/.sessions/rtorrent.lock')) {
@@ -78,13 +79,13 @@ if (file_exists('/home/'.$username.'/.sessions/rtorrent.lock')) {
 
 ?>
 
-                  <p class="nomargin">Free: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo "$dffree"; ?> <b>GB</b></span></p>
-                  <p class="nomargin">Used: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo "$dfused"; ?> <b>GB</b></span></p>
-                  <p class="nomargin">Size: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo "$dftotal"; ?> <b>GB</b></span></p>
+                  <p class="nomargin"><?php echo T('FREE'); ?>: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo "$dffree"; ?> <b>GB</b></span></p>
+                  <p class="nomargin"><?php echo T('USED'); ?>: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo "$dfused"; ?> <b>GB</b></span></p>
+                  <p class="nomargin"><?php echo T('SIZE'); ?>: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo "$dftotal"; ?> <b>GB</b></span></p>
                   <div class="row">
                     <div class="col-sm-8">
                       <!--h4 class="panel-title text-success">Disk Space</h4-->
-                      <h3>Disk Space</h3>
+                      <h3><?php echo T('DISK_SPACE'); ?></h3>
                       <div class="progress">
                         <?php
                           if ($perused < "70") { $diskcolor="progress-bar-success"; }
@@ -92,21 +93,23 @@ if (file_exists('/home/'.$username.'/.sessions/rtorrent.lock')) {
                           if ($perused > "90") { $diskcolor="progress-bar-danger"; }
                         ?>
                         <div style="width:<?php echo "$perused"; ?>%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo "$perused"; ?>" role="progressbar" class="progress-bar <?php echo $diskcolor ?>">
-                          <span class="sr-only"><?php echo "$perused"; ?>% Used</span>
+                          <span class="sr-only"><?php echo "$perused"; ?>% <?php echo T('USED'); ?></span>
                         </div>
                       </div>
-                      <p style="font-size:10px">You have used <?php echo "$perused"; ?>% of your total disk space</p>
+                      <p style="font-size:10px"><?php echo T('PERCENTAGE_TXT_1'); ?> <?php echo "$perused" ?> <?php echo T('PERCENTAGE_TXT_2'); ?></p>
                     </div>
                     <div class="col-sm-4 text-right">
                       <i class="fa fa-hdd-o" style="font-size: 90px; color: #e7e9ee"></i>
                     </div>
                   </div>
                   <hr />
-                  <h4>Torrents in rtorrent</h4>
-                  <p class="nomargin">There are <b><?php echo "$rtorrents"; ?></b> torrents loaded.</p>
-                  <?php if (file_exists('/install/.deluge.lock')) { ?>
-                  <h4>Torrents in deluge</h4>
-                  <p class="nomargin">There are <b><?php echo "$dtorrents"; ?></b> torrents loaded.</p>
+                  <?php if (processExists("rtorrent",$username) && file_exists('/home/'.$username.'/.sessions/rtorrent.lock')) { ?>
+                  <h4><?php echo T('RTORRENTS_TITLE'); ?></h4>
+                  <p class="nomargin"><?php echo T('TORRENTS_LOADED_1'); ?> <b><?php echo "$rtorrents"; ?></b> <?php echo T('TORRENTS_LOADED_2'); ?></p>
+                  <?php } ?>
+                  <?php if (processExists("deluged",$username || "deluge-web", $username) && file_exists('/install/.deluge.lock')) { ?>
+                  <h4><?php echo T('DTORRENTS_TITLE'); ?></h4>
+                  <p class="nomargin"><?php echo T('TORRENTS_LOADED_1'); ?> <b><?php echo "$dtorrents"; ?></b> <?php echo T('TORRENTS_LOADED_2'); ?></p>
                   <?php } ?>
 
 

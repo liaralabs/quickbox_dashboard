@@ -1,5 +1,7 @@
 <?php
 
+include ("../inc/localize.php");
+
 define('HTTP_HOST', preg_replace('~^www\.~i', '', $_SERVER['HTTP_HOST']));
 
 $time_start = microtime_float();
@@ -129,7 +131,7 @@ function GetWMI($wmi,$strClass, $strValue = array()) {
             if ($cpuperused > "90") { $cpudialcolor="dial-danger"; }
           ?>
           <input type="text" value="<?php echo "$cpuperused"; ?>%" class="<?php echo $cpudialcolor ?>">
-          <h4><?php echo "$cpuperused"; ?>% used</h4>
+          <h4><?php echo "$cpuperused"; ?>% <?php echo T('USED'); ?></h4>
         </div>
         <div class="col-sm-6 text-center">
           <?php
@@ -138,7 +140,7 @@ function GetWMI($wmi,$strClass, $strValue = array()) {
             if ($cpuperidle < "10") { $cpudialcolor="dial-danger"; }
           ?>
           <input type="text" value="<?php echo "$cpuperidle"; ?>%" class="<?php echo $cpudialcolor ?>">
-          <h4><?php echo "$cpuperidle"; ?>% idle</h4>
+          <h4><?php echo "$cpuperidle"; ?>% <?php echo T('IDLE'); ?></h4>
         </div>
       </div>
 

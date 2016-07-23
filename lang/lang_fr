@@ -1,5 +1,11 @@
 <?php
 
+/*******************************************************************************
+*                                                                              *
+*                               Francais	                                   *
+*                                                                              *
+*******************************************************************************/
+
 ////////////////////////////////////////
 //DASHBOARD MENU
 ///////////////////////////////////////
@@ -11,9 +17,12 @@ $L['WEB_CONSOLE'] = 'Console Web';
 
 // plugin menu tab
 $L['PLUGIN_MENU'] = 'Menu Plugins';
+$L['RPLUGIN_MENU'] = 'ruTorrent Plugin Menu';
 $L['PMENU_NOTICE_TXT'] = 'Installez et désinstallez facilement les plugins ruTorrent en cliquant simplement sur le nom du plugin';
+$L['PLUGINS'] = 'Plugins';
 
 // quick help menu tab
+$L['HELP_COMMANDS'] = 'Help Commands & More';
 $L['QUICK_SYSTEM_TIPS'] = 'Astuces';
 $L['DISKTEST_TXT'] = 'Tapez cette commande pour effectuer un rapide test de lecture/écriture sur votre disque.';
 $L['FIXHOME_TXT'] = 'Tapez cette commande pour ajuster rapidement les permissions du dossier /home.';
@@ -38,6 +47,12 @@ $L['SCREEN_IRSSI_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter IRSSI
 ////////////////////////////////////////
 //DASHBOARD WIDGET TITLES
 ///////////////////////////////////////
+
+// services status widget
+$L['SERVICE_CONTROL_CENTER'] = 'Service Control Center';
+
+// services status widget
+$L['SERVICE_STATUS'] = 'Service Status';
 
 // restart services widget
 $L['RESTART_SERVICES'] = 'Redémarrer mes Services';
@@ -96,6 +111,7 @@ $L['ZNC'] = 'ZNC est un bouncer IRC sous licence GPL. Celui-ci sera connecté en
 $L['INSTALL'] = 'Installer';
 $L['INSTALLED'] = 'Installé';
 $L['QBPM'] = 'QBPM requis';
+$L['QBPM_TOOLTIP'] = 'Access this feature from ssh by typing QBPM';
 
 ////////////////////////////////////////
 //BANDWIDTH & DATA TABLES
@@ -145,9 +161,11 @@ $L['SIZE'] = 'Taille';
 $L['DISK_SPACE'] = 'Espace Disque';
 $L['PERCENTAGE_TXT'] = 'Vous avez utilisé "$perused" de votre espace disque total';
 $L['RTORRENTS_TITLE'] = 'Torrents dans rTorrent';
-$L['RT_TXT'] = 'Il y a !x torrents chargés.';
 $L['DTORRENTS_TITLE'] = 'Torrents dans Deluge';
-$L['D_TXT'] = 'Il y a !x torrents chargés.';
+$L['PERCENTAGE_TXT_1'] = 'Vous avez utilisé';
+$L['PERCENTAGE_TXT_2'] = 'de votre espace disque total';
+$L['TORRENTS_LOADED_1'] = 'Il y a';
+$L['TORRENTS_LOADED_2'] = 'torrents chargés';
 
 
 ////////////////////////////////////////
@@ -205,7 +223,45 @@ $L['SL_TXT'] = 'Ceci est la moyenne de charge de votre serveur';
 $L['UPTIME'] = 'Uptime';
 
 
+////////////////////////////////////////
+//SERVICE TOGGLES
+///////////////////////////////////////
+
+$L['ENABLED'] = 'Enabled';
+$L['DISABLED'] = 'Disabled';
 
 
+////////////////////////////////////////
+//STATUS BUTTONS
+///////////////////////////////////////
+
+$L['REFRESH'] = 'Refresh';
+
+
+////////////////////////////////////////
+//ADDITIONAL DICTIONARY
+///////////////////////////////////////
+
+$L['IDLE'] = 'Idle';
+$L['TOTAL'] = 'Total';
+$L['USED'] = 'Used';
+
+$L['DAYS_L'] = 'days';
+$L['HOURS_L'] = 'hrs';
+$L['MINUTES_L'] = 'min';
+$L['SECONDS_L'] = 'sec';
+$L['IDLE_L'] = 'idle';
+$L['TOTAL_L'] = 'total';
+$L['USED_L'] = 'used';
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
 // SAMPLE
 // $L['SAMPLE'] = 'Sample';
+////////////////////////////////////////////////////////////////////////////
+
+
+?>

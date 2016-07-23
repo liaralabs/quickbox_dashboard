@@ -1,7 +1,15 @@
 <?php
-require 'config.php';
-require 'localize.php';
-require 'vnstat.php';
+
+// Network Interface
+$interface = INETFACE;
+$iface_list = array('INETFACE');
+$iface_title['INETFACE'] = 'External';
+$vnstat_bin = '/usr/bin/vnstat';
+$data_dir = './dumps';
+$byte_notation = null;
+
+require ('../inc/localize.php');
+require ('vnstat.php');
 
 validate_input();
 

@@ -11,6 +11,11 @@
       <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
       <div class="header-right">
         <ul class="headermenu">
+          <li class="lang-menu">
+          <?php foreach ($language as $lang) {
+            echo "<a href=\"?langSelect-$lang=true\" class=\"tooltips\" data-toggle=\"tooltip\" title=\"$lang\" data-placement=\"bottom\"><img class=\"lang-flag\" src=\"lang/flag_$lang.png\" /></a>";
+          } ?>
+          </li>
           <li>
             <div class="btn-group">
               <button type="button" class="btn btn-logged" data-toggle="dropdown">
@@ -29,26 +34,26 @@
   <div class="leftpanel ps-container">
     <div class="leftpanelinner">
       <ul class="nav nav-tabs nav-justified nav-sidebar">
-        <li class="tooltips active" data-toggle="tooltip" title="Main Menu" data-placement="bottom"><a data-toggle="tab" data-target="#mainmenu"><i class="tooltips fa fa-ellipsis-h"></i></a></li>
-        <?php
-        if ($username == "$master"){
-          echo "<li class=\"tooltips\" data-toggle=\"tooltip\" title=\"ruTorrent Plugins Menu\" data-placement=\"bottom\"><a data-toggle=\"tab\" data-target=\"#plugins\"><i class=\"tooltips fa fa-puzzle-piece\"></i></a></li>";
-        }
-        ?>
-        <li class="tooltips" data-toggle="tooltip" title="Help Commands & More" data-placement="bottom"><a data-toggle="tab" data-target="#help"><i class="tooltips fa fa-question-circle"></i></a></li>
+        <li class="tooltips active" data-toggle="tooltip" title="<?php echo T('MAIN_MENU'); ?>" data-placement="bottom"><a data-toggle="tab" data-target="#mainmenu"><i class="tooltips fa fa-ellipsis-h"></i></a></li>
+        <?php if ($username == "$master"){ ?>
+          <li class="tooltips" data-toggle="tooltip" title="<?php echo T('RPLUGIN_MENU'); ?>" data-placement="bottom"><a data-toggle="tab" data-target="#plugins"><i class="tooltips fa fa-puzzle-piece"></i></a></li>
+        <?php } ?>
+        <li class="tooltips" data-toggle="tooltip" title="<?php echo T('HELP_COMMANDS'); ?>" data-placement="bottom"><a data-toggle="tab" data-target="#help"><i class="tooltips fa fa-question-circle"></i></a></li>
       </ul>
       <div class="tab-content">
         <!-- ################# MAIN MENU ################### -->
         <div class="tab-pane active" id="mainmenu">
-          <h5 class="sidebar-title">Main Menu</h5>
+          <h5 class="sidebar-title"><?php echo T('MAIN_MENU'); ?></h5>
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <!--li class="active"><a href="index.php"><i class="fa fa-home"></i> <span>Dashboard</span></a></li-->
-            <li><a class="grayscale" href="/rutorrent" target="_blank"><img src="img/brands/rtorrent.png" class="brand-ico"> <span>ruTorrent</span></a></li>
+            <?php if (processExists("rtorrent",$username) && file_exists('/home/'.$username.'/.sessions/rtorrent.lock')) { ?>
+              <li><a class="grayscale" href="/rutorrent" target="_blank"><img src="img/brands/rtorrent.png" class="brand-ico"> <span>ruTorrent</span></a></li>
+            <?php } ?>
             <?php if (processExists("deluge-web",$username) && file_exists('/install/.deluge.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$dwURL"; ?>" target="_blank"><img src="img/brands/deluge.png" class="brand-ico"> <span>Deluge Web</span></a></li>
             <?php } ?>
             <?php if ($username == "$master") { ?>
-              <?php if (file_exists('/install/.btsync.lock')) { ?>
+              <?php if (processExists("btsync",btsync) && file_exists('/install/.btsync.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$btsyncURL"; ?>" target="_blank"><img src="img/brands/btsync.png" class="brand-ico"> <span>BTSync</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.plex.lock')) { ?>
@@ -80,7 +85,7 @@
               <?php } ?>
             <?php } ?>
             <li class="nav-parent">
-              <a href=""><i class="fa fa-download"></i> <span>Downloads</span></a>
+              <a href=""><i class="fa fa-download"></i> <span><?php echo T('DOWNLOADS'); ?></span></a>
               <ul class="children">
                 <li><a href="/<?php echo "$username"; ?>.rtorrent.downloads" target="_blank">ruTorrent</a></a></li>
                 <?php if (processExists("deluge-web",$username)) { ?>
@@ -88,75 +93,72 @@
                 <?php } ?>
               </ul>
             </li>
-            <!--li><a href="?reload=true"><i class="fa fa-refresh"></i> <span>Reload Services</span></a></li-->
             <?php if (processExists("shellinabox",shellinabox) && ($username == "$master")) { ?>
-            <li><a href="/<?php echo "$username"; ?>.console" target="_blank"><i class="fa fa-keyboard-o"></i> <span>Web Console</span></a></li>
+            <li><a href="/<?php echo "$username"; ?>.console" target="_blank"><i class="fa fa-keyboard-o"></i> <span><?php echo T('WEB_CONSOLE'); ?></span></a></li>
             <?php } ?>
           </ul>
         </div><!-- tab pane -->
 
         <!-- ######################## HELP MENU TAB ##################### -->
         <div class="tab-pane" id="help">
-          <h5 class="sidebar-title">Quick System Tips</h5>
+          <h5 class="sidebar-title"><?php echo T('QUICK_SYSTEM_TIPS'); ?></h5>
           <?php if ($username == "$master") { ?>
           <ul class="nav nav-pills nav-stacked nav-quirk nav-mail">
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">disktest</span><br/>
-              <small>Type this command to perform a quick r/w test of your disk.</small>
+              <small><?php echo T('DISKTEST_TXT'); ?></small>
             </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">fixhome</span><br/>
-              <small>Type this command to quickly adjusts /home directory permissions.</small>
+              <small><?php echo T('FIXHOME_TXT'); ?></small>
             </li>
           </ul>
-          <h5 class="sidebar-title">Admin Commands</h5>
+          <h5 class="sidebar-title"><?php echo T('ADMIN_COMMANDS'); ?></h5>
           <ul class="nav nav-pills nav-stacked nav-quirk nav-mail">
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">setdisk</span><br/>
-              <small>Type this command in ssh to allocate the amount of disk space you would like to give to a user.</small>
+              <small><?php echo T('SETDISK_TXT'); ?></small>
             </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">createSeedboxUser</span><br/>
-              <small>Type this command in ssh to create a new seedbox user on your server.</small>
+              <small><?php echo T('CREATESEEDBOXUSER_TXT'); ?></small>
             </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">deleteSeedboxUser</span><br/>
-              <small>Type this command in ssh to delete a seedbox user on your server. You will need to enter the users account name, you will be prompted.</small>
+              <small><?php echo T('DELETESEEDBOXUSER_TXT'); ?></small>
             </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">changeUserpass</span><br/>
-              <small>Typing this command in ssh allows you to change a disired users password.</small>
-            </li>
-            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">sudo -u [username] reload</span><br/>
-              <small>Type this command in ssh to reload all services on a specific users seedbox. These services include rTorrent and IRSSI only.</small>
+              <small><?php echo T('CHANGEUSERPASS_TXT'); ?></small>
             </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">showspace</span><br/>
-              <small>Use the above command as root to show the amount of disk space currently used by each user</small>
+              <small><?php echo T('SHOWSPACE_TXT'); ?></small>
             </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradeBTSync</span><br/>
-              <small>Type this command in ssh to upgrade BTSync to newest version when available.</small>
+              <small><?php echo T('UPGRADEBTSYNC_TXT'); ?></small>
             </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradePlex</span><br/>
-              <small>Type this command in ssh to upgrade Plex to newest version when available.</small>
+              <small><?php echo T('UPGRADEPLEX_TXT'); ?></small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradeDeluge</span><br/>
+              <small><?php echo T('UPGRADEDELUGE_TXT'); ?></small>
             </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">clean_mem</span><br/>
-              <small>Use the above command as root if/when you decide to clear your systems Physical Memory Cache</small>
+              <small><?php echo T('CLEAN_MEM_TXT'); ?></small>
             </li>
           </ul>
           <?php } ?>
-          <h5 class="sidebar-title">Essential User Commands</h5>
+          <h5 class="sidebar-title"><?php echo T('ESSENTIAL_USER_COMMANDS'); ?></h5>
           <ul class="nav nav-pills nav-stacked nav-quirk nav-mail">
-            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">reload</span><br/>
-            <small>allows user to reload their services (rtorrent and irssi)</small></li>
-            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">screen -fa -dmS rtorrent rtorrent</span><br/>
-            <small>allows user to restart/remount rtorrent from SSH</small></li>
-            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">screen -fa -dmS irssi irssi</span><br/>
-            <small>allows user to restart/remount irssi from SSH</small></li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">systemctl restart rtorrent@<?php echo $username ?>.service</span><br/>
+            <small><?php echo T('SCREEN_RTORRNENT_TXT'); ?></small></li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">systemctl restart irssi@<?php echo $username ?>.service</span><br/>
+            <small><?php echo T('SCREEN_IRSSI_TXT'); ?></small></li>
           </ul>
         </div><!-- tab-pane -->
 
         <!-- ######################## RUTORRENT PLUGINS TAB ##################### -->
         <div class="tab-pane" id="plugins">
-          <h5 class="sidebar-title">Plugin Menu</h5>
+          <h5 class="sidebar-title"><?php echo T('PLUGIN_MENU'); ?></h5>
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li class="nav-parent nav-active">
-              <a href=""><i class="fa fa-puzzle-piece"></i> <span>Plugins</span></a>
+              <a href=""><i class="fa fa-puzzle-piece"></i> <span><?php echo T('PLUGINS'); ?></span></a>
               <ul class="children">
-                <li class="info-quote"><p class="info-quote">Easily install and uninstall ruTorrent plugins simply by clicking on the plugin name</p></li>
+                <li class="info-quote"><p class="info-quote"><?php echo T('PMENU_NOTICE_TXT'); ?></p></li>
                 <?php
                 foreach ($plugins as $plugin) {
                 echo "<li>";

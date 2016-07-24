@@ -172,19 +172,19 @@ $L['TORRENTS_LOADED_2'] = 'torrents';
 ///////////////////////////////////////
 
 // physical memory
-$L['PHYSICAL_MEMORY_TITLE'] = 'Fysisk Hukommelses Forbrug';
+$L['PHYSICAL_MEMORY_TITLE'] = 'Fysisk Hukommelsesforbrug';
 $L['PHYSICAL_MEMORY_USED_TXT'] = 'brugt';
 $L['PHYSICAL_MEMORY_IDLE_TXT'] = 'ledig';
 
 //cached memory
-$L['CACHED_MEMORY_TITLE'] = 'Cached Hukommelses Forbrug';
-$L['CACHED_MEMORY_USAGE_TXT'] = 'Cache hukommelses forbrug ligger på';
-$L['CACHED_MEMORY_BUFFERS_TXT'] = 'Buffers liggers på';
+$L['CACHED_MEMORY_TITLE'] = 'Cached Hukommelsesforbrug';
+$L['CACHED_MEMORY_USAGE_TXT'] = 'Cache hukommelsesforbrug ligger på';
+$L['CACHED_MEMORY_BUFFERS_TXT'] = 'Buffers ligger på';
 
 // real memory
-$L['REAL_MEMORY_TITLE'] = 'Reelt Hukommelses Forbrug';
-$L['REAL_MEMORY_USAGE_TXT'] = 'Reelt hukommelses forbrug';
-$L['REAL_MEMORY_FREE_TXT'] = 'Reelt hukommelse ledig';
+$L['REAL_MEMORY_TITLE'] = 'Aktuel Hukommelsesforbrug';
+$L['REAL_MEMORY_USAGE_TXT'] = 'Aktuel hukommelsesforbrug ligger på';
+$L['REAL_MEMORY_FREE_TXT'] = 'Aktuel hukommelse ledig';
 
 // swap usage
 $L['SWAP_TITLE'] = 'Swap Forbrug';
@@ -196,7 +196,7 @@ $L['SWAP_IDLE_TXT'] = 'ledig';
 $L['TOTAL_RAM'] = 'Total System RAM';
 
 // clean mem button
-$L['CLEAR_CACHE'] = 'Ryd Hukommelses Cache';
+$L['CLEAR_CACHE'] = 'Ryd Hukommelsescache';
 
 
 ////////////////////////////////////////

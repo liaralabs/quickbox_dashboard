@@ -101,7 +101,7 @@ if (file_exists('/home/'.$username.'/.sessions/rtorrent.lock')) {
                           <span class="sr-only"><?php echo "$perused"; ?>% <?php echo T('USED'); ?></span>
                         </div>
                       </div>
-                      <p style="font-size:10px"><?php echo T('PERCENTAGE_TXT_1'); ?> <?php echo "$perused" ?> <?php echo T('PERCENTAGE_TXT_2'); ?></p>
+                      <p style="font-size:10px"><?php echo T('PERCENTAGE_TXT_1'); ?> <?php echo "$perused" ?>% <?php echo T('PERCENTAGE_TXT_2'); ?></p>
                     </div>
                     <div class="col-sm-4 text-right">
                       <i class="fa fa-hdd-o" style="font-size: 90px; color: #e7e9ee"></i>

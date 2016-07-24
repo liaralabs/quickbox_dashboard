@@ -97,14 +97,14 @@ $L['COUCHPOTATO'] = 'Hent film automatisk, nemt og i den bedste kvalitet, så sn
 $L['DELUGE'] = 'Deluge en gratis letvægts cross-platform BitTorrent klient.';
 $L['JACKETT'] = 'API support til dine favorit private trackere.';
 $L['PLEX'] = 'Plex lader dig streame dit indhold til enhver Plex enhed.';
-$L['PLEX_REQUESTS'] = 'Plex Requests offers a beautiful and easy to use interface for items users wish to be added to the library. Integrates with CouchPotato, SickRage and Sonarr.';
-$L['PLEXPY'] = 'A python based web application for monitoring, analytics and notifications for Plex Media Server';
-$L['QUASSEL'] = 'Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt4 framework.';
-$L['QUOTAS'] = 'This feature of Linux allows the system administrator to allocate a maximum amount of disk space a user or group may use.';
-$L['RAPIDLEECH'] = 'Rapid Leech is a free server transfer script for use on various popular upload/download sites such as uploaded.net, Rapidshare.com and more than 120 others.';
-$L['SICKRAGE'] = 'Video File Manager for TV Shows, It watches for new episodes of your favorite shows and when they are posted it does its magic.';
-$L['SONARR'] = 'Sonarr is a tv series management tool which will work with both torrents and usenet.';
-$L['X2GO'] = 'X2Go is an open source remote desktop software for Linux that uses the NX technology protocol.';
+$L['PLEX_REQUESTS'] = 'Plex Requests tilbyder et smuk og let anvendeligt interface, således brugere nemt kan tilføje "Ønsker" til Plex-biblioteket. Integrerer med CouchPotato, SickRage and Sonarr.';
+$L['PLEXPY'] = 'En python baseret webapplikation til at monitorere, analysere og få notifikationer omkring din Plex Media Server.';
+$L['QUASSEL'] = 'Quassel IRC er en moderne, cross-platform, distribueret IRC klient baseret på Qt4 framework.';
+$L['QUOTAS'] = 'Denne feature fra Linux tillader administratore at tildele den mængde disk plads en bruger eller gruppe kan tilgå.';
+$L['RAPIDLEECH'] = 'Rapid Leech er et gratis server overførsels script op mod forskellige populære upload-/downloadsider som fx. uploaded.net, Rapidshare.com og mere end 120 andre.';
+$L['SICKRAGE'] = 'SickRage håndterer nemt dine tv-serier, den holder automatisk øje med nye afsnit af din favorit serie.';
+$L['SONARR'] = 'Sonarr håndterer dine tv-serier og virker med både torrents og usenet.';
+$L['X2GO'] = 'X2Go er et open source fjernskrivebords-software til Linux som benytter sig af NX tech. protokollen.';
 $L['ZNC'] = 'ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels.';
 
 // package management center buttons
@@ -121,25 +121,25 @@ $L['QBPM_TOOLTIP'] = 'Adgang til denne feature fås via SSH og kommandoen QBPM';
 $L['NETWORK'] = 'Netværk';
 $L['UPLOAD'] = 'Upload';
 $L['DOWNLOAD'] = 'Download';
-$L['VIEW_ADDITIONAL_BANDWIDTH_DETAILS'] = 'View Additional Bandwidth Details';
+$L['VIEW_ADDITIONAL_BANDWIDTH_DETAILS'] = 'Vis yderligere båndbreddedetaljer';
 
 // main table headers
 $L['Summary'] = 'Summary';
-$L['Top 10 days'] = 'Top 10 days';
-$L['Last 24 hours'] = 'Last 24 hours';
-$L['Last 30 days'] = 'Last 30 days';
-$L['Last 12 months'] = 'Last 12 months';
+$L['Top 10 days'] = 'Top 10 dage';
+$L['Last 24 hours'] = 'Seneste 24 timer';
+$L['Last 30 days'] = 'Seneste 30 dage';
+$L['Last 12 months'] = 'Seneste 12 måneder';
 
 // traffic table columns
-$L['In'] = 'In';
-$L['Out'] = 'Out';
+$L['In'] = 'Ind';
+$L['Out'] = 'Ud';
 $L['Total'] = 'Total';
 
 // summary rows
-$L['This hour'] = 'This hour';
-$L['This day'] = 'This day';
-$L['This month'] = 'This month';
-$L['All time'] = 'All time';
+$L['This hour'] = 'Denne time';
+$L['This day'] = 'Denne dag';
+$L['This month'] = 'Denne måned';
+$L['All time'] = 'Totalt';
 
 // date formats
 $L['datefmt_days'] = '%d %B';

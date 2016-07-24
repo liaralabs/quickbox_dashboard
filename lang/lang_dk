@@ -124,7 +124,7 @@ $L['DOWNLOAD'] = 'Download';
 $L['VIEW_ADDITIONAL_BANDWIDTH_DETAILS'] = 'Vis yderligere båndbreddedetaljer';
 
 // main table headers
-$L['Summary'] = 'Summary';
+$L['Summary'] = 'Oversigt';
 $L['Top 10 days'] = 'Top 10 dage';
 $L['Last 24 hours'] = 'Seneste 24 timer';
 $L['Last 30 days'] = 'Seneste 30 dage';

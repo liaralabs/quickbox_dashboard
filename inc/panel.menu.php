@@ -16,6 +16,7 @@
           <?php
           $language = array();
           $language[] = array('file' => 'lang_de', 'title' =>'German Coming Soon!');
+          $language[] = array('file' => 'lang_dk', 'title' =>'Danish');
           $language[] = array('file' => 'lang_en', 'title' =>'English');
           $language[] = array('file' => 'lang_fr', 'title' =>'French');
           foreach($language as $lang) { ?>

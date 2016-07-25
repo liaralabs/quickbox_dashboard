@@ -1,0 +1,266 @@
+<?php
+
+/*******************************************************************************
+*                                                                              *
+*                               Danish	                                       *
+*                                                                              *
+*******************************************************************************/
+
+////////////////////////////////////////
+//DASHBOARD MENU
+///////////////////////////////////////
+
+// main menu tab
+$L['MAIN_MENU'] = 'Hovedmenu';
+$L['DOWNLOADS'] = 'Downloads';
+$L['WEB_CONSOLE'] = 'Webkonsol';
+
+// plugin menu tab
+$L['PLUGIN_MENU'] = 'Pluginmenu';
+$L['RPLUGIN_MENU'] = 'ruTorrent Pluginmenu';
+$L['PMENU_NOTICE_TXT'] = 'Nemt at installere og afinstallere ruTorrent plugins blot ved at klikke på pluginnavnet';
+$L['PLUGINS'] = 'Plugins';
+
+// quick help menu tab
+$L['HELP_COMMANDS'] = 'Hjælpekommandoer & Mere';
+$L['QUICK_SYSTEM_TIPS'] = 'Hurtige System Tips';
+$L['DISKTEST_TXT'] = 'Skriv denne kommando for at udføre en hurtig s/l test af din disk.';
+$L['FIXHOME_TXT'] = 'Skriv denne kommando for hutigt at tilrette /home rettigheder.';
+// admin commands section
+$L['ADMIN_COMMANDS'] = 'Admin Kommandoer';
+$L['SETDISK_TXT'] = 'Skriv denne kommando i ssh for at allokere den mængde diskplads du ønsker at tildele til en bruger.';
+$L['CREATESEEDBOXUSER_TXT'] = 'Skriv denne kommando i ssh for at oprette en ny seedboxbruger på din server.';
+$L['DELETESEEDBOXUSER_TXT'] = 'Skriv denne kommando i ssh for at slette en seedboxbruger på din server. Du skal indtaste brugerens kontonavn.';
+$L['CHANGEUSERPASS_TXT'] = 'Skriv denne kommando i ssh for at ændre en brugers agdgangskode.';
+$L['SHOWSPACE_TXT'] = 'Skriv denne kommando i ssh (root) for at vise hver brugers nuværende diskforbrug.';
+$L['UPGRADEBTSYNC_TXT'] = 'Skriv denne kommando i ssh for at opgradere BTSync til nyeste version.';
+$L['UPGRADEPLEX_TXT'] = 'Skriv denne kommando i ssh for at opgradere Plex til nyeste version.';
+$L['UPGRADEDELUGE_TXT'] = 'Skriv denne kommando i ssh for at opgradere Deluge til nyeste version.';
+$L['CLEAN_MEM_TXT'] = 'Skriv denne kommando i ssh (root) for at nulstille systemets fysiske Hukommelsescache.';
+// essential user commands section
+$L['ESSENTIAL_USER_COMMANDS'] = 'Vigtige Brugerkommandoer';
+$L['RELOAD_TXT'] = 'tillader en bruger at genstarte services (rtorrent and irssi)';
+$L['SCREEN_RTORRNENT_TXT'] = 'tillader en bruger at genstarte/genforbinde rtorrent via SSH';
+$L['SCREEN_IRSSI_TXT'] = 'tillader en bruger at genstarte/genforbinde irssi via SSH';
+
+
+////////////////////////////////////////
+//DASHBOARD WIDGET TITLES
+///////////////////////////////////////
+
+// services status widget
+$L['SERVICE_CONTROL_CENTER'] = 'Servicekontrol';
+
+// services status widget
+$L['SERVICE_STATUS'] = 'Service Status';
+
+// restart services widget
+$L['RESTART_SERVICES'] = 'Genstart Services';
+
+// service controller widget
+$L['ENABLE_DISABLE_SERVICES'] = 'Aktiver/Deaktiver';
+
+// package management center widget
+$L['PACKAGE_MANAGEMENT_CENTER'] = 'Pakkeadministration';
+
+// bandwidth data widget
+$L['BANDWIDTH_DATA'] = 'Båndbredde Data';
+
+// disk status widget
+$L['YOUR_DISK_STATUS'] = 'Din Disk Status';
+
+// memory status widget
+$L['SYSTEM_RAM_STATUS'] = 'System RAM Status';
+
+// cpu status widget
+$L['CPU_STATUS'] = 'CPU Status';
+
+// server load widget
+$L['SERVER_LOAD'] = 'Server Belastning';
+
+
+////////////////////////////////////////
+//PACKAGE MANAGEMENT CENTER
+///////////////////////////////////////
+
+// package management center notice
+$L['PMC_NOTICE_TXT'] = '<strong>Bemærk!</strong> Disse muligheder er ikke det samme som aktivering og deaktivering af en softwarepakke. Disse muligheder er designet til enten installere eller afinstallere.';
+
+// package management center column headers
+$L['NAME'] = 'Navn';
+$L['DETAILS'] = 'Detaljer';
+$L['AVAILABILITY'] = 'Tilgængelighed';
+
+// packages
+$L['BTSYNC_DETAILS'] = 'BitTorrent Sync by BitTorrent, Inc er et proprietært peer-to-peer-fil synkronisering værktøj.';
+$L['COUCHPOTATO'] = 'Hent film automatisk, nemt og i den bedste kvalitet, så snart de er frigivet via usenet eller torrents.';
+$L['DELUGE'] = 'Deluge en gratis letvægts cross-platform BitTorrent klient.';
+$L['JACKETT'] = 'API support til dine favorit private trackere.';
+$L['PLEX'] = 'Plex lader dig streame dit indhold til enhver Plex enhed.';
+$L['PLEX_REQUESTS'] = 'Plex Requests tilbyder et smuk og let anvendeligt interface, således brugere nemt kan tilføje "Ønsker" til Plex-biblioteket. Integrerer med CouchPotato, SickRage and Sonarr.';
+$L['PLEXPY'] = 'En python baseret webapplikation til at monitorere, analysere og få notifikationer omkring din Plex Media Server.';
+$L['QUASSEL'] = 'Quassel IRC er en moderne, cross-platform, distribueret IRC klient baseret på Qt4 framework.';
+$L['QUOTAS'] = 'Denne feature fra Linux tillader administratore at tildele den mængde disk plads en bruger eller gruppe kan tilgå.';
+$L['RAPIDLEECH'] = 'Rapid Leech er et gratis server overførsels script op mod forskellige populære upload-/downloadsider som fx. uploaded.net, Rapidshare.com og mere end 120 andre.';
+$L['SICKRAGE'] = 'SickRage håndterer nemt dine tv-serier, den holder automatisk øje med nye afsnit af din favorit serie.';
+$L['SONARR'] = 'Sonarr håndterer dine tv-serier og virker med både torrents og usenet.';
+$L['X2GO'] = 'X2Go er et open source fjernskrivebords-software til Linux som benytter sig af NX tech. protokollen.';
+$L['ZNC'] = 'ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels.';
+
+// package management center buttons
+$L['INSTALL'] = 'Install';
+$L['INSTALLED'] = 'Installeret';
+$L['QBPM'] = 'Via QBPM';
+$L['QBPM_TOOLTIP'] = 'Adgang til denne feature fås via SSH og kommandoen QBPM';
+
+////////////////////////////////////////
+//BANDWIDTH & DATA TABLES
+///////////////////////////////////////
+
+// column headers and dropdown toggle button
+$L['NETWORK'] = 'Netværk';
+$L['UPLOAD'] = 'Upload';
+$L['DOWNLOAD'] = 'Download';
+$L['VIEW_ADDITIONAL_BANDWIDTH_DETAILS'] = 'Vis yderligere båndbreddedetaljer';
+
+// main table headers
+$L['Summary'] = 'Oversigt';
+$L['Top 10 days'] = 'Top 10 dage';
+$L['Last 24 hours'] = 'Seneste 24 timer';
+$L['Last 30 days'] = 'Seneste 30 dage';
+$L['Last 12 months'] = 'Seneste 12 måneder';
+
+// traffic table columns
+$L['In'] = 'Ind';
+$L['Out'] = 'Ud';
+$L['Total'] = 'Total';
+
+// summary rows
+$L['This hour'] = 'Denne time';
+$L['This day'] = 'Denne dag';
+$L['This month'] = 'Denne måned';
+$L['All time'] = 'Totalt';
+
+// date formats
+$L['datefmt_days'] = '%d %B';
+$L['datefmt_days_img'] = '%d';
+$L['datefmt_months'] = '%B %Y';
+$L['datefmt_months_img'] = '%b';
+$L['datefmt_hours'] = '%l%p';
+$L['datefmt_hours_img'] = '%l';
+$L['datefmt_top'] = '%d %B %Y';
+
+
+////////////////////////////////////////
+//DISK STATUS WIDGET
+///////////////////////////////////////
+
+$L['FREE'] = 'Ledig';
+$L['USED'] = 'Brugt';
+$L['SIZE'] = 'Størrelse';
+$L['DISK_SPACE'] = 'Disk Plads';
+$L['PERCENTAGE_TXT_1'] = 'Du har brugt';
+$L['PERCENTAGE_TXT_2'] = 'af din totale disk plads';
+$L['RTORRENTS_TITLE'] = 'Torrents i rTorrent';
+$L['DTORRENTS_TITLE'] = 'Torrents i Deluge';
+$L['TORRENTS_LOADED_1'] = 'Der er indlæst';
+$L['TORRENTS_LOADED_2'] = 'torrents';
+
+
+////////////////////////////////////////
+//SYSTEM RAM STATUS WIDGET
+///////////////////////////////////////
+
+// physical memory
+$L['PHYSICAL_MEMORY_TITLE'] = 'Fysisk Hukommelsesforbrug';
+$L['PHYSICAL_MEMORY_USED_TXT'] = 'brugt';
+$L['PHYSICAL_MEMORY_IDLE_TXT'] = 'ledig';
+
+//cached memory
+$L['CACHED_MEMORY_TITLE'] = 'Cached Hukommelsesforbrug';
+$L['CACHED_MEMORY_USAGE_TXT'] = 'Cache hukommelsesforbrug ligger på';
+$L['CACHED_MEMORY_BUFFERS_TXT'] = 'Buffers ligger på';
+
+// real memory
+$L['REAL_MEMORY_TITLE'] = 'Aktuel Hukommelsesforbrug';
+$L['REAL_MEMORY_USAGE_TXT'] = 'Aktuel hukommelsesforbrug ligger på';
+$L['REAL_MEMORY_FREE_TXT'] = 'Aktuel hukommelse ledig';
+
+// swap usage
+$L['SWAP_TITLE'] = 'Swap Forbrug';
+$L['SWAP_TOTAL_TXT'] = 'SWAP Område';
+$L['SWAP_USED_TXT'] = 'brugt';
+$L['SWAP_IDLE_TXT'] = 'ledig';
+
+// total ram
+$L['TOTAL_RAM'] = 'Total System RAM';
+
+// clean mem button
+$L['CLEAR_CACHE'] = 'Ryd Hukommelsescache';
+
+
+////////////////////////////////////////
+//CPU STATUS WIDGET
+///////////////////////////////////////
+
+// used percentage
+$L['CPU_USED'] = 'brugt';
+
+// idle percentage
+$L['CPU_IDLE'] = 'ledig';
+
+// cpu info
+$L['FREQUENCY'] = 'Frekvens:';
+$L['SECONDARY'] = 'Sekundær Cache:';
+
+
+////////////////////////////////////////
+//SERVER LOAD WIDGET
+///////////////////////////////////////
+
+$L['SL_TXT'] = 'Din servers aktuelle belastningsgennemsnit';
+$L['UPTIME'] = 'Oppetid';
+
+
+////////////////////////////////////////
+//SERVICE TOGGLES
+///////////////////////////////////////
+
+$L['ENABLED'] = 'Aktiveret';
+$L['DISABLED'] = 'Deaktiveret';
+
+
+////////////////////////////////////////
+//STATUS BUTTONS
+///////////////////////////////////////
+
+$L['REFRESH'] = 'Opdater';
+
+
+////////////////////////////////////////
+//ADDITIONAL DICTIONARY
+///////////////////////////////////////
+
+$L['IDLE'] = 'Ledig';
+$L['TOTAL'] = 'Total';
+$L['USED'] = 'Brugt';
+
+$L['DAYS_L'] = 'dage';
+$L['HOURS_L'] = 'tim';
+$L['MINUTES_L'] = 'min';
+$L['SECONDS_L'] = 'sek';
+$L['IDLE_L'] = 'ledig';
+$L['TOTAL_L'] = 'total';
+$L['USED_L'] = 'brugt';
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+// SAMPLE
+// $L['SAMPLE'] = 'Sample';
+////////////////////////////////////////////////////////////////////////////
+
+
+?>

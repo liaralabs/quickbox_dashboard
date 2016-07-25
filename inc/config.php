@@ -2,7 +2,7 @@
 session_destroy();
 include '/srv/rutorrent/php/util.php';
 include ('../widgets/class.php');
-$version = "v2.4.3";
+$version = "v2.4.4";
 error_reporting(E_WARNING);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $master=preg_replace('/\s+/', '', $master);
@@ -254,10 +254,12 @@ $plexrequests = processExists("Plex",$username);
 $rtorrent = processExists("rtorrent",$username);
 $sickrage = processExists("sickrage",$username);
 $sonarr = processExists("nzbdrone",$username);
+$syncthing = processExists("syncthing",$username);
 $jackett = processExists("jackett",$username);
 $couchpotato = processExists("couchpotato",$username);
 $quassel = processExists("quassel",$username);
 $shellinabox = processExists("shellinabox",shellinabox);
+$csf = processExists("lfd",root);
 $znc = processExists("znc",$username);
 
 function isEnabled($process, $username){
@@ -286,12 +288,14 @@ $plexpyURL = "http://" . $_SERVER['HTTP_HOST'] . ":8181";
 $plexrequestsURL = "http://" . $_SERVER['HTTP_HOST'] . ":3000";
 $jackettURL = "http://" . $_SERVER['HTTP_HOST'] . ":9117";
 $cpURL = "http://" . $_SERVER['HTTP_HOST'] . ":5050";
+$csfURL = "https://" . $_SERVER['HTTP_HOST'] . ":3443";
 $btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
 $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
 $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
 $sickrageURL = "http://" . $_SERVER['HTTP_HOST'] . ":8081";
 $sonarrURL = "http://" . $_SERVER['HTTP_HOST'] . ":8989";
-#$consoleURL = "https://" . $_SERVER['HTTP_HOST'] . ":4224";
+$syncthingURL = "https://" . $_SERVER['HTTP_HOST'] . ":8384";
+
 
 $reload='';
 $service='';
@@ -314,6 +318,10 @@ if ($delugedweb == "1") { $dwval = "<span class=\"badge badge-service-running-do
 if ($shellinabox == "1") { $wcval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $wcval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
+
+//if ($csf == "1") { $csfval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+//} else { $csfval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
+//}
 
 if ($btsync == "1") { $bval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $bval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
@@ -355,6 +363,10 @@ if ($sonarr == "1") { $sval = "<span class=\"badge badge-service-running-dot\"><
 } else { $sval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
+if ($syncthing == "1") { $stval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $stval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
+}
+
 if ($x2go == "1") { $xval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $xval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
@@ -385,6 +397,8 @@ case 0:
     $cbodydw .= $delugedweb;
   $shellinabox = isEnabled("shellinabox",shellinabox);
     $wcbodyb .= $shellinabox;
+//  $csf = isEnabled("lfd",root);
+//    $cbodycf .= $csf;
   $btsync = isEnabled("btsync",btsync);
     $cbodyb .= $btsync;
   $couchpotato = isEnabled("couchpotato", $username);
@@ -405,6 +419,8 @@ case 0:
     $cbodysr .= $sickrage;
   $sonarr = isEnabled("sonarr", $username);
     $cbodys .= $sonarr;
+  $syncthing = isEnabled("syncthing", $username);
+    $cbodyst .= $syncthing;
   $x2go = isEnabled("x2go", $username);
     $cbodyx .= $x2go;
   $znc = isEnabled("znc", $username);
@@ -421,6 +437,10 @@ case 66:
     } elseif ($process == "shellinabox"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
+    //} elseif ($process == "csf"){
+    //  shell_exec("sudo systemctl enable $process");
+    //  shell_exec("sudo systemctl start $process");
+    //  //shell_exec("sudo csf -e");
     } elseif ($process == "plexmediaserver"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
@@ -448,6 +468,10 @@ case 77:
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
       shell_exec("sudo pkill -f $process");
+    //} elseif ($process == "csf"){
+    //  shell_exec("sudo systemctl stop $process");
+    //  shell_exec("sudo systemctl disable $process");
+    //  //shell_exec("sudo csf -x");
     } elseif ($process == "plexmediaserver"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
@@ -476,6 +500,10 @@ case 88:
     } elseif ($process == "shellinabox"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
+    //} elseif ($process == "csf"){
+    //  shell_exec("sudo systemctl enable $process");
+    //  shell_exec("sudo systemctl restart $process");
+    //  //shell_exec("sudo csf -r");
     } elseif ($process == "plexmediaserver"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
@@ -491,6 +519,7 @@ case 88:
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
 break;
 
+/////////////////////////// UNUSED BLOCK ///////////////////////////
 /* stop services */
 case 99:
   $process = $_GET['serviceend'];
@@ -501,6 +530,7 @@ case 99:
     }
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
 break;
+/////////////////////////// UNUSED BLOCK ///////////////////////////
 
 }
 

@@ -223,14 +223,6 @@
                     </tr>
                   </thead>
 
-                  <tfoot>
-                    <tr>
-                      <th><?php echo T('NAME'); ?></th>
-                      <th><?php echo T('DETAILS'); ?></th>
-                      <th><?php echo T('AVAILABILITY'); ?></th>
-                    </tr>
-                  </tfoot>
-
                   <tbody>
                     <tr>
                       <td>BTSync</td>

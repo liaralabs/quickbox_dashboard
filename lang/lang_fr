@@ -94,7 +94,7 @@ $L['AVAILABILITY'] = 'Disponibilité';
 // packages
 $L['BTSYNC_DETAILS'] = 'BitTorrent Sync par BitTorrent.Inc est un outil propriétaire peer-to-peer de synchronisation de fichiers.';
 $L['COUCHPOTATO'] = 'Téléchargez automatiquement des films, facilement et dans la meilleure qualité dès qu\'ils sont libérés, par l\'intermédiaire d\'Usenet ou de torrents.';
-$L['CSF'] = 'ConfigServer Firewall, also known as CSF, is a firewall configuration script created to provide better security for your server while giving you an easy to use, advanced interface for managing your firewall settings.';
+$L['CSF'] = 'ConfigServer Firewall, connu sous le nom de CSF, est un script de configuration de pare-feu créé pour assurer une meilleure sécurité pour votre serveur tout en vous donnant une interface avancée et facile à utiliser pour gérer vos paramètres de pare-feu.';
 $L['DELUGE'] = 'Deluge est un client BitTorrent léger, gratuit et multi-plateforme.';
 $L['JACKETT'] = 'Support API pour vos trackers privés préférés.';
 $L['PLEX'] = 'Plex vous permet de diffuser votre contenu à tous vos dispositifs Plex activés.';
@@ -105,7 +105,7 @@ $L['QUOTAS'] = 'Cette fonctionnalité de Linux permet à l\'administrateur du sy
 $L['RAPIDLEECH'] = 'Rapid Leech est un script de transfert de serveur gratuit pour une utilisation sur différents sites de Direct Download populaires tels que uploaded.net, rapidshare.com et plus de 120 autres.';
 $L['SICKRAGE'] = 'Gestionnaire de fichiers vidéo pour Séries TV. Il surveille les nouveaux épisodes de vos émissions préférées et quand ils sont postés, sa magie entre en jeu.';
 $L['SONARR'] = 'Sonarr est un outil de gestion de Séries TV qui travaillera avec les torrents et liens Usenet.';
-$L['SYNCTHING'] = 'Open Source Continuous File Synchronization with BitTorrent';
+$L['SYNCTHING'] = 'Syncthing est une application open source vous permettant de synchroniser vos fichiers en continu avec BitTorrent.';
 $L['X2GO'] = 'X2Go est un logiciel de bureau à distance open source pour Linux qui utilise le protocole de technologie NX.';
 $L['ZNC'] = 'ZNC est un bouncer IRC sous licence GPL. Celui-ci sera connecté en permanence à vos salons de discussions et fera office de passerelle entre votre client et vos serveurs IRC.';
 

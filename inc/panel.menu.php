@@ -64,6 +64,9 @@
               <?php if (processExists("btsync",btsync) && file_exists('/install/.btsync.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$btsyncURL"; ?>" target="_blank"><img src="img/brands/btsync.png" class="brand-ico"> <span>BTSync</span></a></li>
               <?php } ?>
+              <?php if (file_exists('/install/.couchpotato.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$cpURL"; ?>" target="_blank"><img src="img/brands/couchpotato.png" class="brand-ico"> <span>CouchPotato</span></a></li>
+              <?php } ?>
               <?php if (file_exists('/install/.plex.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$plexURL"; ?>" target="_blank"><img src="img/brands/plex.png" class="brand-ico"> <span>Plex</span></a></li>
               <?php } ?>
@@ -75,9 +78,6 @@
               <?php } ?>
               <?php if (file_exists('/install/.rapidleech.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$rapidleechURL"; ?>" target="_blank"><img src="img/brands/rapidleech.png" class="brand-ico"> <span>Rapidleech</span></a></li>
-              <?php } ?>
-              <?php if (file_exists('/install/.couchpotato.lock')) { ?>
-                <li><a class="grayscale" href="<?php echo "$cpURL"; ?>" target="_blank"><img src="img/brands/couchpotato.png" class="brand-ico"> <span>CouchPotato</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.sickrage.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sickrageURL"; ?>" target="_blank"><img src="img/brands/sickrage.png" class="brand-ico"> <span>SickRage</span></a></li>

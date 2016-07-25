@@ -49,6 +49,9 @@
                 <?php if (file_exists("/install/.sonarr.lock")) { ?>
                 <li><?php echo "$sval"; ?> Sonarr <a href="javascript:;" onclick="location.href='?id=88&servicestart=sonarr'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
                 <?php } ?>
+                <?php if (file_exists("/install/.syncthing.lock")) { ?>
+                <li><?php echo "$stval"; ?> Syncthing <a href="javascript:;" onclick="location.href='?id=88&servicestart=syncthing'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>
+                <?php } ?>
                 <!--
                 <?php if (file_exists("/install/.znc.lock")) { ?>
                 <li>ZNC <a href="javascript:;" onclick="location.href='?id=88&servicestart=znc'" class="btn btn-sm btn-default pull-right"><i class="fa fa-refresh text-info"></i> Refresh</a></li>

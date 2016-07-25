@@ -67,6 +67,9 @@
               <?php if (file_exists('/install/.couchpotato.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$cpURL"; ?>" target="_blank"><img src="img/brands/couchpotato.png" class="brand-ico"> <span>CouchPotato</span></a></li>
               <?php } ?>
+              <?php if (file_exists('/install/.csf.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$csfURL"; ?>" target="_blank"><img src="img/brands/csf.png" class="brand-ico"> <span>CSF (firewall)</span></a></li>
+              <?php } ?>
               <?php if (file_exists('/install/.plex.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$plexURL"; ?>" target="_blank"><img src="img/brands/plex.png" class="brand-ico"> <span>Plex</span></a></li>
               <?php } ?>
@@ -87,6 +90,9 @@
               <?php } ?>
               <?php if (file_exists('/install/.jackett.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$jackettURL"; ?>" target="_blank"><img src="img/brands/jackett.png" class="brand-ico"> <span>Jackett</span></a></li>
+              <?php } ?>
+              <?php if (file_exists('/install/.syncthing.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$syncthingURL"; ?>" target="_blank"><img src="img/brands/syncthing.png" class="brand-ico"> <span>Syncthing</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.znc.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$zncURL"; ?>" target="_blank"><img src="img/brands/znc.png" class="brand-ico"> <span>ZNC</span></a></li>

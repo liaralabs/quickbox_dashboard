@@ -123,6 +123,16 @@
                       <td class="text-center"><?php echo "$wcbodyb"; ?></td>
                     </tr>
 
+                    <!--
+                    <//?php if (file_exists("/install/.csf.lock")) { ?>
+                    <tr>
+                      <td><//?php echo "$csfval"; ?> CSF (firewall) </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=csf'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <//?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><//?php echo "$cbodycf"; ?></td>
+                    </tr>
+                    <//?php } ?>
+                    -->
+
                     <?php if (file_exists("/install/.btsync.lock")) { ?>
                     <tr>
                       <td><?php echo "$bval"; ?> BTSync </td>
@@ -187,6 +197,14 @@
                     </tr>
                     <?php } ?>
 
+                    <?php if (file_exists("/install/.syncthing.lock")) { ?>
+                    <tr>
+                      <td><?php echo "$stval"; ?> Syncthing </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=syncthing'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><?php echo "$cbodyst"; ?></td>
+                    </tr>
+                    <?php } ?>
+
                     <?php if (file_exists("/install/.sample.lock")) { ?>
                     <tr>
                       <td><?php echo "$val"; ?> SAMPLE </td>
@@ -240,6 +258,15 @@
                         <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#couchpotatoRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
                       <?php } else { ?>
                         <td style="vertical-align: middle; text-align: center"><a href="?installpackage-couchpotato=true" data-toggle="modal" data-target="#sysResponse" id="couchpotatoInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
+                      <?php } ?>
+                    </tr>
+                    <tr>
+                      <td>CSF (Firewall)</td>
+                      <td><?php echo T('CSF'); ?></td>
+                      <?php if (file_exists("/install/.csf.lock")) { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#csfRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
+                      <?php } else { ?>
+                        <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="<?php echo T('QBPM_TOOLTIP'); ?>" data-placement="top" class="btn btn-xs btn-danger disabled tooltips"><?php echo T('QBPM'); ?></button></td>
                       <?php } ?>
                     </tr>
                     <tr>
@@ -332,6 +359,14 @@
                         <td style="vertical-align: middle; text-align: center"><a href="?installpackage-sonarr=true" data-toggle="modal" data-target="#sysResponse" id="sonarrInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
                       <?php } ?>
                     </tr>
+                    <td>Syncthing</td>
+                    <td><?php echo T('SYNCTHING'); ?></td>
+                    <?php if (file_exists("/install/.syncthing.lock")) { ?>
+                      <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#syncthingRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
+                    <?php } else { ?>
+                      <td style="vertical-align: middle; text-align: center"><a href="?installpackage-syncthing=true" data-toggle="modal" data-target="#sysResponse" id="syncthingInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
+                    <?php } ?>
+                  </tr>
                     <tr>
                       <td>x2Go</td>
                       <td><?php echo T('X2GO'); ?></td>

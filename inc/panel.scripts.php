@@ -198,6 +198,24 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- SYNCTHING UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="syncthingRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="SyncthingRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="SyncthingRemovalConfirm">Uninstall Syncthing?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall Syncthing from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversable. <br/><br/>You may reinstall Syncthing at any time, however, your configuration settings will be reset to default.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-syncthing=true" id="syncthingRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- QUASSEL UNINSTALL MODAL -->
 <div class="modal bounceIn animated" id="quasselRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="quasselRemovalConfirm" aria-hidden="true">
   <div class="modal-dialog">
@@ -481,6 +499,15 @@ $(document).ready(function() {
     $.gritter.add({
       title: 'Uninstalling Sonarr',
       text: 'Please wait while Sonarr-NzbDrone is being uninstalled from your system.',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+  // SyncthingRemove
+  $('#synctingRemove').click(function(){
+    $.gritter.add({
+      title: 'Uninstalling Syncthing',
+      text: 'Please wait while Sycthing is being uninstalled from your system.',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });

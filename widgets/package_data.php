@@ -12,6 +12,7 @@ $packages = array(
         'rapidleech',
         'sickrage',
         'sonarr',
+        'syncthing',
         'x2go',
         'quota',
         'quassel',

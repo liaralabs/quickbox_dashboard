@@ -331,7 +331,7 @@ else
         <div class="col-sm-12" style="padding-top:10px">
           <!--div class="vertical-container"-->
             <p style="font-size:10px"><?php echo T('SWAP_TITLE'); ?>: <?php echo "$swapPercent"; ?>%<br/>
-              <?php echo T('SWAP_TOTAL_TXT'); ?>: <?php echo T('TOTAL_L'); ?> <?php echo $st;?> | <?php echo T('USED_L'); ?> <?php echo "$su"; ?> | <?php echo T('IDLE_L'); ?> <?php echo "$sf"; ?></p>
+              <?php echo T('SWAP_TOTAL_TXT'); ?>: <?php echo T('TOTAL_L'); ?> <?php echo $st;?> | <?php echo T('SWAP_USED_TXT'); ?> <?php echo "$su"; ?> | <?php echo T('SWAP_IDLE_TXT'); ?> <?php echo "$sf"; ?></p>
             <div class="progress progress-striped">
               <?php
                 if ($swapPercent < "70") { $ramcolor="progress-bar-success"; }

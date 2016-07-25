@@ -105,6 +105,7 @@ $L['QUOTAS'] = 'This feature of Linux allows the system administrator to allocat
 $L['RAPIDLEECH'] = 'Rapid Leech is a free server transfer script for use on various popular upload/download sites such as uploaded.net, Rapidshare.com and more than 120 others.';
 $L['SICKRAGE'] = 'Video File Manager for TV Shows, It watches for new episodes of your favorite shows and when they are posted it does its magic.';
 $L['SONARR'] = 'Sonarr is a tv series management tool which will work with both torrents and usenet.';
+$L['SYNCTHING'] = 'Open Source Continuous File Synchronization with BitTorrent';
 $L['X2GO'] = 'X2Go is an open source remote desktop software for Linux that uses the NX technology protocol.';
 $L['ZNC'] = 'ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels.';
 

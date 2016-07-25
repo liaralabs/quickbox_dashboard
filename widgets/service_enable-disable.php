@@ -47,6 +47,9 @@
                 if ($username == "$master" && file_exists('/install/.sonarr.lock')) {
                   echo "<li>"; echo "$cbodys"; echo "</li>";
                 }
+                if ($username == "$master" && file_exists('/install/.syncthing.lock')) {
+                  echo "<li>"; echo "$cbodyst"; echo "</li>";
+                }
                 //if ($username == "$master" && file_exists('/install/.x2go.lock')) {
                 //  echo "<li>"; echo "$cbodyx"; echo "</li>";
                 //}

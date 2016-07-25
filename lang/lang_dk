@@ -94,6 +94,7 @@ $L['AVAILABILITY'] = 'Tilgængelighed';
 // packages
 $L['BTSYNC_DETAILS'] = 'BitTorrent Sync by BitTorrent, Inc er et proprietært peer-to-peer-fil synkronisering værktøj.';
 $L['COUCHPOTATO'] = 'Hent film automatisk, nemt og i den bedste kvalitet, så snart de er frigivet via usenet eller torrents.';
+$L['CSF'] = 'ConfigServer Firewall, also known as CSF, is a firewall configuration script created to provide better security for your server while giving you an easy to use, advanced interface for managing your firewall settings.';
 $L['DELUGE'] = 'Deluge en gratis letvægts cross-platform BitTorrent klient.';
 $L['JACKETT'] = 'API support til dine favorit private trackere.';
 $L['PLEX'] = 'Plex lader dig streame dit indhold til enhver Plex enhed.';
@@ -104,6 +105,7 @@ $L['QUOTAS'] = 'Denne feature fra Linux tillader administratore at tildele den m
 $L['RAPIDLEECH'] = 'Rapid Leech er et gratis server overførsels script op mod forskellige populære upload-/downloadsider som fx. uploaded.net, Rapidshare.com og mere end 120 andre.';
 $L['SICKRAGE'] = 'SickRage håndterer nemt dine tv-serier, den holder automatisk øje med nye afsnit af din favorit serie.';
 $L['SONARR'] = 'Sonarr håndterer dine tv-serier og virker med både torrents og usenet.';
+$L['SYNCTHING'] = 'Open Source Continuous File Synchronization with BitTorrent';
 $L['X2GO'] = 'X2Go er et open source fjernskrivebords-software til Linux som benytter sig af NX tech. protokollen.';
 $L['ZNC'] = 'ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels.';
 

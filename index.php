@@ -449,7 +449,7 @@
                   <h4 class="panel-title text-success">Recent Updates <small class="label label-primary" style="font-size:10px; padding-top:0; padding-bottom:0px; top: -2px; position: relative;">QuickBox :: <span style="color: #fff;text-shadow: 0px 0px 6px #fff;"><?php echo "$version"; ?></span></small></h4>
                 </div>
                 <div class="panel-body ps-container" style="max-height: 300px; padding: 0;">
-                  <div class="alert alert-info" style="margin-bottom: 4px; text-align: center" role="alert">
+                  <div class="alert alert-default" style="margin-bottom: 4px; text-align: center" role="alert">
                     <strong>This list updates every 10 minutes</strong>
                   </div>
                   <embed src="https://quickbox.io/widget/feed/qb-project.php" width='100%' height='100%' style="padding-bottom:45px" />

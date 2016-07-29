@@ -50,16 +50,6 @@
               </div>
             </div>
           </div>
-          <!--// EASTER EGG WIDGET! //-->
-          <!--div id="rutorrent" class="panel panel-inverse">
-            <div class="panel-heading">
-              <h4 class="panel-title">ruTorrent</h4>
-            </div>
-            <div class="panel-body" style="height: 400px; overflow: auto; padding: 0;">
-              <embed src="https://192.168.0.8/rutorrent" width=100% height=100% />
-            </div>
-          </div-->
-          <!--<//?php if ($username == "$master") { ?>-->
           <div class="panel panel-inverse">
             <div class="panel-heading">
               <h4 class="panel-title"><?php echo T('VIEW_ADDITIONAL_BANDWIDTH_DETAILS'); ?></h4>
@@ -68,7 +58,6 @@
               <div class="row"><div id="bw_tables" style="padding:0;margin:0;"></div></div>
             </div>
           </div>
-          <!--<//?php } ?>-->
 
           <!--SERVICE CONTROL CENTER-->
           <div class="panel panel-inverse">
@@ -453,6 +442,24 @@
                 </div>
               </div>
             </div><!-- CPU WIDGET -->
+            <?php if ($username == "$master") { ?>
+            <div class="col-sm-12">
+              <div id="project-commits" class="panel panel-inverse">
+                <div class="panel-heading">
+                  <h4 class="panel-title text-success">Recent Updates <small class="label label-primary" style="font-size:10px; padding-top:0; padding-bottom:0px; top: -2px; position: relative;">QuickBox :: <span style="color: #fff;text-shadow: 0px 0px 6px #fff;"><?php echo "$version"; ?></span></small></h4>
+                </div>
+                <div class="panel-body ps-container" style="max-height: 300px; padding: 0;">
+                  <div class="alert alert-info" style="margin-bottom: 4px; text-align: center" role="alert">
+                    <strong>This list updates every 10 minutes</strong>
+                  </div>
+                  <embed src="https://quickbox.io/widget/feed/qb-project.php" width='100%' height='100%' style="padding-bottom:45px" />
+                </div>
+                <div class="panel-footer">
+                <a href="?updateQuickBox=true" data-toggle="modal" data-target="#sysResponse"><button class="btn btn-success btn-quirk btn-block"><i class="fa fa-bell text-success"></i> Run Updater </button></a>
+                </div>
+              </div>
+            </div><!-- QUICKBOX UPDATE WIDGET -->
+            <?php } ?>
           </div><!-- row -->
         </div>
       </div>

@@ -64,19 +64,22 @@ $L['ENABLE_DISABLE_SERVICES'] = 'Aktiver/Deaktiver';
 $L['PACKAGE_MANAGEMENT_CENTER'] = 'Pakkeadministration';
 
 // bandwidth data widget
-$L['BANDWIDTH_DATA'] = 'Båndbredde Data';
+$L['BANDWIDTH_DATA'] = 'Båndbredde';
 
 // disk status widget
-$L['YOUR_DISK_STATUS'] = 'Din Disk Status';
+$L['YOUR_DISK_STATUS'] = 'Disk Status';
 
 // memory status widget
-$L['SYSTEM_RAM_STATUS'] = 'System RAM Status';
+$L['SYSTEM_RAM_STATUS'] = 'RAM Status';
 
 // cpu status widget
 $L['CPU_STATUS'] = 'CPU Status';
 
 // server load widget
-$L['SERVER_LOAD'] = 'Server Belastning';
+$L['SERVER_LOAD'] = 'Serverbelastning';
+
+// recent updates widget
+$L['RECENT_UPDATES'] = 'Seneste opdateringer';
 
 
 ////////////////////////////////////////
@@ -84,7 +87,7 @@ $L['SERVER_LOAD'] = 'Server Belastning';
 ///////////////////////////////////////
 
 // package management center notice
-$L['PMC_NOTICE_TXT'] = '<strong>Bemærk!</strong> Disse muligheder er ikke det samme som aktivering og deaktivering af en softwarepakke. Disse muligheder er designet til enten installere eller afinstallere.';
+$L['PMC_NOTICE_TXT'] = '<strong>Bemærk!</strong> Disse muligheder er ikke det samme som aktivering og deaktivering af en softwarepakke. Disse muligheder er designet til enten at installere eller afinstallere.';
 
 // package management center column headers
 $L['NAME'] = 'Navn';
@@ -105,7 +108,7 @@ $L['RAPIDLEECH'] = 'Rapid Leech er et gratis server overførsels script op mod f
 $L['SICKRAGE'] = 'SickRage håndterer nemt dine tv-serier, den holder automatisk øje med nye afsnit af din favorit serie.';
 $L['SONARR'] = 'Sonarr håndterer dine tv-serier og virker med både torrents og usenet.';
 $L['X2GO'] = 'X2Go er et open source fjernskrivebords-software til Linux som benytter sig af NX tech. protokollen.';
-$L['ZNC'] = 'ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels.';
+$L['ZNC'] = 'ZNC er en IRC bouncer eller BNC. Den kan frigøre ircklienten fra serveren eller kanalen og holde din klient ajour når der igen sker en tilkobling.';
 
 // package management center buttons
 $L['INSTALL'] = 'Install';
@@ -121,7 +124,7 @@ $L['QBPM_TOOLTIP'] = 'Adgang til denne feature fås via SSH og kommandoen QBPM';
 $L['NETWORK'] = 'Netværk';
 $L['UPLOAD'] = 'Upload';
 $L['DOWNLOAD'] = 'Download';
-$L['VIEW_ADDITIONAL_BANDWIDTH_DETAILS'] = 'Vis yderligere båndbreddedetaljer';
+$L['VIEW_ADDITIONAL_BANDWIDTH_DETAILS'] = 'Båndbreddedetaljer';
 
 // main table headers
 $L['Summary'] = 'Oversigt';
@@ -139,7 +142,7 @@ $L['Total'] = 'Total';
 $L['This hour'] = 'Denne time';
 $L['This day'] = 'Denne dag';
 $L['This month'] = 'Denne måned';
-$L['All time'] = 'Totalt';
+$L['All time'] = 'Samlet';
 
 // date formats
 $L['datefmt_days'] = '%d %B';

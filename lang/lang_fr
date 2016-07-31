@@ -229,7 +229,7 @@ $L['UPTIME'] = 'Uptime';
 ///////////////////////////////////////
 
 $L['ENABLED'] = 'Activé';
-$L['DISABLED'] = 'Désinstallé';
+$L['DISABLED'] = 'Désactivé';
 
 
 ////////////////////////////////////////

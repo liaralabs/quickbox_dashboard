@@ -36,6 +36,7 @@ $L['SHOWSPACE_TXT'] = 'Führe den oben genannten Befehl als root aus, um dir den
 $L['UPGRADEBTSYNC_TXT'] = 'Führe diesen Befehl via SSH aus, um BTSync auf die neueste verfügbare Version zu aktualisieren.';
 $L['UPGRADEPLEX_TXT'] = 'Führe diesen Befehl via SSH aus, um Plex auf die neueste verfügbare Version zu aktualisieren.';
 $L['UPGRADEDELUGE_TXT'] = 'Führe diesen Befehl via SSH aus, um Deluge auf die neueste verfügbare Version zu aktualisieren.';
+$L['UPGRADEJACKETT_TXT'] = 'Type this command in ssh to upgrade Jackett to newest version when available.';
 $L['CLEAN_MEM_TXT'] = 'Führe den oben genannten Befehl als root aus, wenn du den physikalischen Cache-Speicher deines Systems löschen möchtest.';
 // essential user commands section
 $L['ESSENTIAL_USER_COMMANDS'] = 'Grundlegende Nutzerbefehle';
@@ -230,6 +231,11 @@ $L['UPTIME'] = 'Betriebszeit';
 
 $L['ENABLED'] = 'Aktiviert';
 $L['DISABLED'] = 'Deaktiviert';
+
+$L['INSTALLED'] = 'Installed';
+$L['UNINSTALLED'] = 'Uninstalled';
+$L['INSTALLING'] = 'Installing';
+$L['UNINSTALLING'] = 'Uninstalling';
 
 
 ////////////////////////////////////////

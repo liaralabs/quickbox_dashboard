@@ -36,6 +36,7 @@ $L['SHOWSPACE_TXT'] = 'Skriv denne kommando i ssh (root) for at vise hver bruger
 $L['UPGRADEBTSYNC_TXT'] = 'Skriv denne kommando i ssh for at opgradere BTSync til nyeste version.';
 $L['UPGRADEPLEX_TXT'] = 'Skriv denne kommando i ssh for at opgradere Plex til nyeste version.';
 $L['UPGRADEDELUGE_TXT'] = 'Skriv denne kommando i ssh for at opgradere Deluge til nyeste version.';
+$L['UPGRADEJACKETT_TXT'] = 'Type this command in ssh to upgrade Jackett to newest version when available.';
 $L['CLEAN_MEM_TXT'] = 'Skriv denne kommando i ssh (root) for at nulstille systemets fysiske Hukommelsescache.';
 // essential user commands section
 $L['ESSENTIAL_USER_COMMANDS'] = 'Vigtige Brugerkommandoer';
@@ -233,6 +234,11 @@ $L['UPTIME'] = 'Oppetid';
 
 $L['ENABLED'] = 'Aktiveret';
 $L['DISABLED'] = 'Deaktiveret';
+
+$L['INSTALLED'] = 'Installed';
+$L['UNINSTALLED'] = 'Uninstalled';
+$L['INSTALLING'] = 'Installing';
+$L['UNINSTALLING'] = 'Uninstalling';
 
 
 ////////////////////////////////////////

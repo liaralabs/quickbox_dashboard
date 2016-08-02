@@ -231,6 +231,11 @@ $L['UPTIME'] = 'Uptime';
 $L['ENABLED'] = 'Enabled';
 $L['DISABLED'] = 'Disabled';
 
+$L['INSTALLED'] = 'Installed';
+$L['UNINSTALLED'] = 'Uninstalled';
+$L['INSTALLING'] = 'Installing';
+$L['UNINSTALLING'] = 'Uninstalling';
+
 
 ////////////////////////////////////////
 //STATUS BUTTONS

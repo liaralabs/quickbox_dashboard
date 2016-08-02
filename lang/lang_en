@@ -36,6 +36,7 @@ $L['SHOWSPACE_TXT'] = 'Use the above command as root to show the amount of disk 
 $L['UPGRADEBTSYNC_TXT'] = 'Type this command in ssh to upgrade BTSync to newest version when available.';
 $L['UPGRADEPLEX_TXT'] = 'Type this command in ssh to upgrade Plex to newest version when available.';
 $L['UPGRADEDELUGE_TXT'] = 'Type this command in ssh to upgrade Deluge to newest version when available.';
+$L['UPGRADEJACKETT_TXT'] = 'Type this command in ssh to upgrade Jackett to newest version when available.';
 $L['CLEAN_MEM_TXT'] = 'Use the above command as root if/when you decide to clear your systems Physical Memory Cache';
 // essential user commands section
 $L['ESSENTIAL_USER_COMMANDS'] = 'Essential User Commands';

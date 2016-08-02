@@ -415,6 +415,24 @@ $(function() {
       off: "<?php echo T('DISABLED') ?>"
     }
   });
+  $('.toggle-pen').toggles({
+    on: true,
+    height: 16,
+    width: 90,
+    text: {
+      on: "<?php echo T('INSTALLED') ?>",
+      off: "<?php echo T('UNINSTALLING') ?>"
+    }
+  });
+  $('.toggle-pdis').toggles({
+    on: false,
+    height: 16,
+    width: 90,
+    text: {
+      off: "<?php echo T('UNINSTALLED') ?>",
+      on: "<?php echo T('INSTALLING') ?>"
+    }
+  });
 });
 </script>
 <script>

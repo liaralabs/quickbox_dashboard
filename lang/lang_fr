@@ -36,7 +36,7 @@ $L['SHOWSPACE_TXT'] = 'Utilisez cette commande en tant que root pour voir l’es
 $L['UPGRADEBTSYNC_TXT'] = 'Tapez cette commande en ssh pour mettre à jour BTSync vers la nouvelle version quand elle sera disponible.';
 $L['UPGRADEPLEX_TXT'] = 'Tapez cette commande en SSH pour mettre à jour Plex vers la nouvelle version quand elle sera disponible.';
 $L['UPGRADEDELUGE_TXT'] = 'Tapez cette commande en SSH pour mettre à jour Deluge vers la nouvelle version quand elle sera disponible.';
-$L['UPGRADEJACKETT_TXT'] = 'Type this command in ssh to upgrade Jackett to newest version when available.';
+$L['UPGRADEJACKETT_TXT'] = 'Tapez cette commande en SSH pour mettre à jour Jackett vers la nouvelle version quand elle sera disponible.';
 $L['CLEAN_MEM_TXT'] = 'Tapez cette commande en tant que root si/quand vous décidez de nettoyer le cache de Mémoire Physique.';
 // essential user commands section
 $L['ESSENTIAL_USER_COMMANDS'] = 'Commandes utilisateur essentielles';
@@ -232,11 +232,10 @@ $L['UPTIME'] = 'Uptime';
 $L['ENABLED'] = 'Activé';
 $L['DISABLED'] = 'Désactivé';
 
-$L['INSTALLED'] = 'Installed';
-$L['UNINSTALLED'] = 'Uninstalled';
-$L['INSTALLING'] = 'Installing';
-$L['UNINSTALLING'] = 'Uninstalling';
-
+$L['INSTALLED'] = 'Installé';
+$L['UNINSTALLED'] = 'Désinstallé';
+$L['INSTALLING'] = 'Installation';
+$L['UNINSTALLING'] = 'Désinstallation';
 
 ////////////////////////////////////////
 //STATUS BUTTONS

@@ -12,16 +12,25 @@
       <div class="header-right">
         <ul class="headermenu">
           <?php if ($username == "$master") { ?>
-          <li class="lang-menu">
-          <?php
-          $language = array();
-          $language[] = array('file' => 'lang_dk', 'title' =>'Danish');
-          $language[] = array('file' => 'lang_en', 'title' =>'English');
-          $language[] = array('file' => 'lang_fr', 'title' =>'French');
-          $language[] = array('file' => 'lang_de', 'title' =>'German');
-          foreach($language as $lang) { ?>
-            <a href='?langSelect-<?php echo $lang['file'] ?>=true' class='tooltips' data-toggle='tooltip' title='<?php echo $lang['title'] ?>' data-placement='bottom'><img class='lang-flag' src='lang/flag_<?php echo $lang['file'] ?>.png' /></a>
-          <?php } ?>
+          <li>
+          <?php $language = array();
+                $language[] = array('file' => 'lang_dk', 'title' =>'Danish');
+                $language[] = array('file' => 'lang_en', 'title' =>'English');
+                $language[] = array('file' => 'lang_fr', 'title' =>'French');
+                $language[] = array('file' => 'lang_de', 'title' =>'German'); { ?>
+            <div class="btn-group">
+              <button type="button" class="btn btn-logged" data-toggle="dropdown">
+                Select Language
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                <li><span style="margin-top:5x"></span></li>
+                <?php foreach($language as $lang) { ?>
+                <li><a href='?langSelect-<?php echo $lang['file'] ?>=true' class='tooltips' data-toggle='tooltip' title='<?php echo $lang['title'] ?>' data-placement='bottom'><img class='lang-flag' src='lang/flag_<?php echo $lang['file'] ?>.png' /><?php echo $lang['title'] ?></a></li>
+                <?php } ?>
+              </ul>
+            </div>
+            <?php } ?>
           </li>
           <?php } ?>
           <li>
@@ -151,6 +160,9 @@
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradeDeluge</span><br/>
               <small><?php echo T('UPGRADEDELUGE_TXT'); ?></small>
             </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradeJackett</span><br/>
+              <small><?php echo T('UPGRADEJACKETT_TXT'); ?></small>
+            </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">clean_mem</span><br/>
               <small><?php echo T('CLEAN_MEM_TXT'); ?></small>
             </li>
@@ -173,17 +185,20 @@
               <a href=""><i class="fa fa-puzzle-piece"></i> <span><?php echo T('PLUGINS'); ?></span></a>
               <ul class="children">
                 <li class="info-quote"><p class="info-quote"><?php echo T('PMENU_NOTICE_TXT'); ?></p></li>
-                <?php
-                foreach ($plugins as $plugin) {
-                echo "<li>";
-                  if (file_exists('/srv/rutorrent/plugins/'.$plugin.'/plugin.info')) {
-                    echo "<a href=\"?removeplugin-$plugin=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" >$plugin <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-installed.png\"></span></a>";
-                  } else {
-                    echo "<a href=\"?installplugin-$plugin=true\" data-toggle=\"modal\" data-target=\"#sysResponse\" >$plugin <span class=\"pull-right plgin-center-switch\"><img src=\"img/switch-notinstalled.png\"></span></a>";
-                  }
-                echo "</li>";
-                }
-                ?>
+                <?php foreach ($plugins as $plugin) { ?>
+                  <li>
+                  <?php if(file_exists('/srv/rutorrent/plugins/'.$plugin.'/plugin.info')) { 
+                    echo "<a href=\"javascript:void()\">$plugin</a> <div class=\"toggle-wrapper pull-right\" style=\"margin-right: -10px; margin-top: 5px;\"> <div class=\"toggle-pen toggle-modern\" onclick=\"location.href='?removeplugin-$plugin=true'\"></div></div>";
+                  } else { 
+                    echo "<a href=\"javascript:void()\">$plugin</a> <div class=\"toggle-wrapper pull-right\" style=\"margin-right: -10px; margin-top: 5px;\"> <div class=\"toggle-pdis toggle-modern\" onclick=\"location.href='?installplugin-$plugin=true'\"></div></div>";
+                  } ?>
+                  </li>
+                <?php } ?>
+
+                <!--div class="toggle-wrapper">
+                  <div class="toggle toggle-modern"></div>
+                </div-->
+
               </ul>
             </li>
           </ul>

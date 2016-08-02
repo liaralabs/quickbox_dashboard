@@ -2308,7 +2308,8 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 10px 15px;
+  /*padding: 10px 15px;*/
+  padding: 5px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ffffff;
@@ -8446,7 +8447,7 @@ a.text-danger:focus {
 .toggle-modern .toggle-on,
 .toggle-modern .toggle-off {
   text-shadow: none;
-  font-weight: bold;
+  font-weight: normal;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -8462,15 +8463,18 @@ a.text-danger:focus {
   border: 3px solid #d0d4e7;
 }
 .toggle-modern .toggle-on.active {
-  background-color: #262b36;
+  /*background-color: #262b36;*/
+  background-color: #2a2a2a;
 }
 .toggle-modern .toggle-on.active + .toggle-blob {
   border: 3px solid #262b36;
 }
 .toggle-modern .toggle-off,
 .toggle-modern .toggle-off.active {
-  color: #fff;
-  background-color: #d0d4e7;
+  /*color: #fff;
+  background-color: #d0d4e7;*/
+  color: #666;
+  background-color: #d8dce3;
   background-image: none;
   text-shadow: none;
   text-indent: 8px !important;
@@ -10242,7 +10246,7 @@ blockquote {
   padding-bottom: 7px;
 }
 .nav-quirk .children > li > a {
-  display: block;
+  display: inline-block;
   font-size: 12px;
   font-weight: 400;
   padding: 5px 0 5px 12px;
@@ -14974,12 +14978,12 @@ li.info-quote {
   border: 0 !important;
 }
 li p.info-quote {
-  background-color: rgba(103, 128, 159, 0.8);
+  background-color: rgba(103, 128, 159, 0.4);
   border-left: 6px solid #9fa8bc;
   color: #fff;
   font-size: 12px;
-  /*margin-left: -21px;*/
-  /*margin-top: -7px;*/
+  margin-left: -21px;
+  margin-top: -7px;
   margin-bottom: 0;
   min-height: 46px;
   padding: 6px;

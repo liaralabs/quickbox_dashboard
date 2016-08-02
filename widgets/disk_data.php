@@ -66,9 +66,9 @@ if (file_exists('/install/.quota.lock')) {
     exit();
   }
   //hard disk
-  $dftotal = round(@disk_total_space(".")/(1024*1024*1024),3); //Total
-  $dffree = round(@disk_free_space(".")/(1024*1024*1024),3); //Available
-  $dfused = $dftotal-$dffree; //used
+  $dftotal = number_format(round(@disk_total_space(".")/(1024*1024*1024),3)); //Total
+  $dffree = number_format(round(@disk_free_space(".")/(1024*1024*1024),3)); //Available
+  $dfused = number_format(round(@disk_total_space(".")/(1024*1024*1024),3)-round(@disk_free_space(".")/(1024*1024*1024),3)); //used
   $perused = (floatval($dftotal)!=0)?round($dfused/$dftotal*100,2):0;
   //$perused = sprintf('%1.0f', $bytesused / $bytestotal * 100);
 }

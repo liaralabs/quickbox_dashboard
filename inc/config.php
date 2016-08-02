@@ -2,7 +2,7 @@
 session_destroy();
 include '/srv/rutorrent/php/util.php';
 include ('../widgets/class.php');
-$version = "v2.4.4";
+$version = "v2.4.5";
 error_reporting(E_WARNING);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $master=preg_replace('/\s+/', '', $master);

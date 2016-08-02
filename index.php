@@ -19,18 +19,20 @@
             <div class="panel-heading">
               <h4 class="panel-title"><?php echo T('BANDWIDTH_DATA'); ?></h4>
             </div>
-            <div class="panel-body text-center" style="padding:0">
-              <div id="mainbw" style="width:100%;height:350px;"></div>
+            <div class="panel-body text-center" style="padding:0 0 0 5px; overflow: hidden !important">
+            	<div style="margin-right: -30px">
+              		<div id="mainbw" style="width:100%;height:350px;"></div>
+              	</div>
             </div>
-            <div class="row panel-footer panel-statistics">
+            <div class="row panel-footer panel-statistics" style="padding:0">
               <div class="col-md-12">
                 <div class="table-responsive">
                   <table class="table table-hover table-bordered nomargin">
                     <thead>
                       <tr>
-                        <th style="width:33%"><?php echo T('NETWORK'); ?></th>
-                        <th style="width:33%"><?php echo T('UPLOAD'); ?></th>
-                        <th style="width:33%"><?php echo T('DOWNLOAD'); ?></th>
+                        <th style="width:33%;padding: 4px 4px 4px 12px"><?php echo T('NETWORK'); ?></th>
+                        <th style="width:33%;padding: 4px 4px 4px 12px"><?php echo T('UPLOAD'); ?></th>
+                        <th style="width:33%;padding: 4px 4px 4px 12px"><?php echo T('DOWNLOAD'); ?></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -38,9 +40,9 @@
                       <?php for ($i = 2; $i < count($strs); $i++ ) : ?>
                       <?php preg_match_all( "/([^\s]+):[\s]{0,}(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/", $strs[$i], $info );?>
                       <tr>
-                        <td style="font-size:14px;font-weight:bold"><?php echo $info[1][0]?></td>
-                        <td style="font-size:14px;"><span class="text-success"><span id="NetOutSpeed<?php echo $i?>">0B/s</span></span></td>
-                        <td style="font-size:14px;"><span class="text-primary"><span id="NetInputSpeed<?php echo $i?>">0B/s</span></span></td>
+                        <td style="font-size:14px;font-weight:bold;padding: 2px 2px 2px 12px"><?php echo $info[1][0]?></td>
+                        <td style="font-size:11px;padding: 2px 2px 2px 12px"><span class="text-success"><span id="NetOutSpeed<?php echo $i?>">0B/s</span></span></td>
+                        <td style="font-size:11px;padding: 2px 2px 2px 12px"><span class="text-primary"><span id="NetInputSpeed<?php echo $i?>">0B/s</span></span></td>
                       </tr>
                       <?php endfor; ?>
                       <?php endif; ?>
@@ -55,7 +57,7 @@
               <h4 class="panel-title"><?php echo T('VIEW_ADDITIONAL_BANDWIDTH_DETAILS'); ?></h4>
             </div>
             <div class="panel-body" style="padding:0">
-              <div class="row"><div id="bw_tables" style="padding:0;margin:0;"></div></div>
+              <div class="row" style="padding: 0; margin: 0"><div id="bw_tables" style="padding:0;margin:0;"></div></div>
             </div>
           </div>
 
@@ -452,7 +454,7 @@
                   <div class="alert alert-default" style="margin-bottom: 4px; text-align: center" role="alert">
                     <strong>This list updates every 10 minutes</strong>
                   </div>
-                  <embed src="https://quickbox.io/widget/feed/qb-project.php" width='100%' height='100%' style="padding-bottom:45px" />
+                  <embed src="https://quickbox.io/widget/feed/qb-project.php" width='100%' height='100%' class="ps-child" style="padding-bottom:45px" />
                 </div>
                 <div class="panel-footer">
                 <a href="?updateQuickBox=true" data-toggle="modal" data-target="#sysResponse"><button class="btn btn-success btn-quirk btn-block"><i class="fa fa-bell text-success"></i> Run Updater </button></a>

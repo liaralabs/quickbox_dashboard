@@ -26,42 +26,86 @@
   <script type="text/javascript" src="lib/flot/jquery.flot.time.js"></script>
   <script type="text/javascript" src="lib/flot/jquery.flot.resize.js"></script>
   <script type="text/javascript" src="lib/flot/jquery.flot.canvas.js"></script>
+  <script type="text/javascript" src="lib/flot-spline/jquery.flot.spline.js"></script>
+  <!--script type="text/javascript" src="lib/flot/jquery.flot.axislabels.js"></script-->
   <script id="source" language="javascript" type="text/javascript">
   $(document).ready(function() {
-      var options = {
-          lines: {
-            show: true,
-            fill: true,
-            fillColor: { colors: [{ opacity: 0.02 }, { opacity: 1}] }
-          },
-          border: { show: false },
-          points: { show: true },
-          xaxis: { mode: "time" },
-          colors: ["#10D2E5"],
-          shadowSize: 0
-      };
+    var options = {
+      series: {
+        lines: {
+          show: false
+        },
+        splines: {
+          show: true,
+          tension: 0.4,
+          lineWidth: 1,
+          fill: 0.4
+        }
+      },
+      points: { show: false },
+      legend: {
+        show: true,
+        labelBoxBorderColor: '#ffffff',
+        position: 'ne',
+        margin: 10
+      },
+      grid: {
+        borderWidth: 0,
+        border: { show: false },
+        color: '#dddddd',
+        labelMargin: 5,
+        backgroundColor: '#ffffff'
+      },
+      xaxis: {
+        mode: "time",
+        font: {
+          size: 9,
+          style: "normal",
+          color: "#999999",
+          weight: "light",
+          family: "open sans",
+          variant: "small-caps"
+        }
+      },
+      yaxis: {
+        tickFormatter: function(val, axis) { return val < axis.max ? val.toFixed(2) : "MB/s"; },
+        font: {
+          size: 11,
+          style: "normal",
+          color: "#999",
+          weight: "light",
+          family: "open sans",
+          variant: "small-caps"
+        }
+      },
+      colors: ["#44BBFF", "#66CC99"],
+      border: { show: false },
+      shadowSize: 0
+    };
+    window.onresize = function(event) {
       var data = [];
       var placeholder = $("#mainbw");
       $.plot(placeholder, data, options);
-      var iteration = 0;
-      function fetchData() {
+        var iteration = 0;
+        function fetchData() {
           ++iteration;
           function onDataReceived(series) {
-              // we get all the data in one go, if we only got partial
-              // data, we could merge it with what we already got
-              data = [ series ];
-              var updateInterval = 30;
-              $.plot($("#mainbw"), data, options);
-              fetchData();
+            // we get all the data in one go, if we only got partial
+            // data, we could merge it with what we already got
+            data = series;
+            var updateInterval = 30;
+            $.plot($("#mainbw"), data, options);
+          fetchData();
           }
           $.ajax({
-              url: "widgets/data.php",
-              method: 'GET',
-              dataType: 'json',
-              success: onDataReceived
+            url: "widgets/data.php",
+            method: 'GET',
+            dataType: 'json',
+            success: onDataReceived
           });
-      }
+        }
       setTimeout(fetchData, 30);
+    }
   });
   </script>
   <script language="javascript" type="text/javascript">
@@ -93,7 +137,7 @@
   function bwtables() {
     $.ajax({url: "widgets/bw_tables.php", cache:false, success: function (result) {
       $('#bw_tables').html(result);
-      setTimeout(function(){bwtables()}, 1000);
+      setTimeout(function(){bwtables()}, 60000);
     }});
   }
   bwtables();
@@ -216,6 +260,11 @@ function displayData(dataJSON) {
   #sysPre{
     max-height : 600px;
     overflow-y: scroll;
+  }
+  .legend > table{
+    background-color: transparent !important;
+    color: #aeaeae !important;
+    font-size: 11px !important;
   }
   </style>
 

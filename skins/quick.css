@@ -8051,7 +8051,7 @@ fieldset[disabled] .btn-info.active {
   border: 0;
   border-radius: 0;
   background-color: #fff;
-  color: #5b6781 !important;
+  color: #4daf7c !important;
 }
 .nav-tabs > li.active:first-child > a {
   border-top-left-radius: 0px;
@@ -9933,7 +9933,7 @@ blockquote {
   color: #909090;
   padding: 12px 14px;
   border-radius: 0;
-  font-weight: 700;
+  font-weight: 300;
   -webkit-transition: all 0.2s ease-out 0s;
   -o-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
@@ -10156,11 +10156,11 @@ blockquote {
   transition: all 0.2s ease-out 0s;
 }
 .nav-quirk > li > a:hover > i {
-  color: #5c97bf;
+  color: #4daf7c;
 }
 .nav-quirk > li > a:hover,
 .nav-quirk > li > a:focus {
-  color: #5c97bf;
+  color: #4daf7c;
   background-color: #2f2f2f;
 }
 .nav-quirk > li + li {

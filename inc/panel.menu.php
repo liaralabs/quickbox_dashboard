@@ -114,6 +114,9 @@
                 <?php if (processExists("deluge-web",$username)) { ?>
                   <li><a href="/<?php echo "$username"; ?>.deluge.downloads" target="_blank">Deluge</a></li>
                 <?php } ?>
+                <?php if (file_exists('/home/'. $username .'/public_html/'. $username .'.zip')) { ?>
+                  <li><a href="/~<?php echo "$username"; ?>/<?php echo "$username"; ?>.zip" target="_blank"> <span>OpenVPN Config</span></a></li>
+                <?php } ?>
               </ul>
             </li>
             <?php if (processExists("shellinabox",shellinabox) && ($username == "$master")) { ?>
@@ -187,18 +190,13 @@
                 <li class="info-quote"><p class="info-quote"><?php echo T('PMENU_NOTICE_TXT'); ?></p></li>
                 <?php foreach ($plugins as $plugin) { ?>
                   <li>
-                  <?php if(file_exists('/srv/rutorrent/plugins/'.$plugin.'/plugin.info')) { 
+                  <?php if(file_exists('/srv/rutorrent/plugins/'.$plugin.'/plugin.info')) {
                     echo "<a href=\"javascript:void()\">$plugin</a> <div class=\"toggle-wrapper pull-right\" style=\"margin-right: -10px; margin-top: 5px;\"> <div class=\"toggle-pen toggle-modern\" onclick=\"location.href='?removeplugin-$plugin=true'\"></div></div>";
-                  } else { 
+                  } else {
                     echo "<a href=\"javascript:void()\">$plugin</a> <div class=\"toggle-wrapper pull-right\" style=\"margin-right: -10px; margin-top: 5px;\"> <div class=\"toggle-pdis toggle-modern\" onclick=\"location.href='?installplugin-$plugin=true'\"></div></div>";
                   } ?>
                   </li>
                 <?php } ?>
-
-                <!--div class="toggle-wrapper">
-                  <div class="toggle toggle-modern"></div>
-                </div-->
-
               </ul>
             </li>
           </ul>

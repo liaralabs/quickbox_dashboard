@@ -151,6 +151,9 @@
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">changeUserpass</span><br/>
               <small><?php echo T('CHANGEUSERPASS_TXT'); ?></small>
             </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">quickVPN</span><br/>
+              <small><?php echo T('QUICKVPN_TXT'); ?></small>
+            </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">showspace</span><br/>
               <small><?php echo T('SHOWSPACE_TXT'); ?></small>
             </li>

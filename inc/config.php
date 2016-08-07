@@ -3,7 +3,7 @@ session_destroy();
 include '/srv/rutorrent/php/util.php';
 include ('../widgets/class.php');
 $version = "v2.4.5";
-error_reporting(E_WARNING);
+error_reporting(E_ERROR);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $master=preg_replace('/\s+/', '', $master);
 $username = getUser();

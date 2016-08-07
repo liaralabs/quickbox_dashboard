@@ -279,6 +279,15 @@
                       <?php } ?>
                     </tr>
                     <tr>
+                      <td>OpenVPN</td>
+                      <td><?php echo T('OVPN'); ?></td>
+                      <?php if (file_exists("/install/.vpn.lock")) { ?>
+                        <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="<?php echo T('OVPN_TOOLTIP_U'); ?>" data-placement="top" class="btn btn-xs btn-success disabled tooltips"><?php echo T('CLI'); ?></button></td>
+                      <?php } else { ?>
+                        <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="<?php echo T('OVPN_TOOLTIP_I'); ?>" data-placement="top" class="btn btn-xs btn-danger disabled tooltips"><?php echo T('CLI'); ?></button></td>
+                      <?php } ?>
+                    </tr>
+                    <tr>
                       <td>Plex</td>
                       <td><?php echo T('PLEX'); ?></td>
                       <?php if (file_exists("/install/.plex.lock")) { ?>

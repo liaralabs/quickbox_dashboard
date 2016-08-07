@@ -44,6 +44,8 @@ $L['RELOAD_TXT'] = 'tillader en bruger at genstarte services (rtorrent and irssi
 $L['SCREEN_RTORRNENT_TXT'] = 'tillader en bruger at genstarte/genforbinde rtorrent via SSH';
 $L['SCREEN_IRSSI_TXT'] = 'tillader en bruger at genstarte/genforbinde irssi via SSH';
 
+$L['LANG_SELECT'] = 'Select Language';
+
 
 ////////////////////////////////////////
 //DASHBOARD WIDGET TITLES

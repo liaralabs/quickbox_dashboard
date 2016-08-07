@@ -44,6 +44,8 @@ $L['RELOAD_TXT'] = 'Ermöglicht es dem Nutzer, seine Dienste neuzustarten (rTorr
 $L['SCREEN_RTORRNENT_TXT'] = 'Ermöglicht es dem Nutzer, rTorrent via SSH neuzustarten oder neu einzubinden.';
 $L['SCREEN_IRSSI_TXT'] = 'Ermöglicht es dem Nutzer, irssi via SSH neuzustarten oder neu einzubinden.';
 
+$L['LANG_SELECT'] = 'Select Language';
+
 
 ////////////////////////////////////////
 //DASHBOARD WIDGET TITLES

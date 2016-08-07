@@ -45,6 +45,8 @@ $L['RELOAD_TXT'] = 'Autorise l’utilisateur à recharger ses services (rTorrent
 $L['SCREEN_RTORRNENT_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter rTorrent en ssh';
 $L['SCREEN_IRSSI_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter IRSSI en ssh';
 
+$L['LANG_SELECT'] = 'Select Language';
+
 
 ////////////////////////////////////////
 //DASHBOARD WIDGET TITLES

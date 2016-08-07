@@ -20,7 +20,7 @@
                 $language[] = array('file' => 'lang_de', 'title' =>'German'); { ?>
             <div class="btn-group">
               <button type="button" class="btn btn-logged" data-toggle="dropdown">
-                Select Language
+                <?php echo T('LANG_SELECT'); ?>
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu pull-right">

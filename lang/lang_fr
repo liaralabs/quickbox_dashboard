@@ -28,11 +28,11 @@ $L['DISKTEST_TXT'] = 'Tapez cette commande pour effectuer un rapide test de lect
 $L['FIXHOME_TXT'] = 'Tapez cette commande pour ajuster rapidement les permissions du dossier /home.';
 // admin commands section
 $L['ADMIN_COMMANDS'] = 'Commandes Administrateur';
-$L['SETDISK_TXT'] = 'Tapez cette commande en ssh pour allouer this command in ssh la quantité d\' espace disque que vous souhaitez donner à un utilisateur.';
+$L['SETDISK_TXT'] = 'Tapez cette commande en SSH pour allouer la quantité d\' espace disque que vous souhaitez donner à un utilisateur.';
 $L['CREATESEEDBOXUSER_TXT'] = 'Tapez cette commande en SSH pour créer un nouvel utilisateur sur votre seedbox.';
 $L['DELETESEEDBOXUSER_TXT'] = 'Tapez cette commande en SSH pour supprimer un utilisateur de votre seedbox. Vous devrez entrer son nom.';
-$L['CHANGEUSERPASS_TXT'] = 'Tapez cette commande en SSH vous permet de changer les mot de passe des utilisateurs..';
-$L['QUICKVPN_TXT'] = 'Tapez cette commande en SSH pour configurer votre propre serveur VPN et en une petite minute, crééez et gérez de nouveaux certificats d'utilisteur pour utiliser le serveur VPN.';
+$L['CHANGEUSERPASS_TXT'] = 'Tapez cette commande en SSH vous permet de changer les mot de passe des utilisateurs.';
+$L['QUICKVPN_TXT'] = 'Tapez cette commande en SSH pour configurer votre propre serveur VPN et en une petite minute, crééez et gérez de nouveaux certificats d\'utilisteur pour utiliser le serveur VPN.';
 $L['SHOWSPACE_TXT'] = 'Utilisez cette commande en tant que root pour voir l’espace disque actuellement utilisé par chaque utilisateur.';
 $L['UPGRADEBTSYNC_TXT'] = 'Tapez cette commande en SSH pour mettre à jour BTSync vers la nouvelle version quand elle sera disponible.';
 $L['UPGRADEPLEX_TXT'] = 'Tapez cette commande en SSH pour mettre à jour Plex vers la nouvelle version quand elle sera disponible.';

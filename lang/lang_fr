@@ -18,7 +18,7 @@ $L['WEB_CONSOLE'] = 'Console Web';
 // plugin menu tab
 $L['PLUGIN_MENU'] = 'Menu Plugins';
 $L['RPLUGIN_MENU'] = 'Menu Plugins ruTorrent';
-$L['PMENU_NOTICE_TXT'] = 'Installez et désinstallez facilement les plugins ruTorrent en cliquant simplement sur le nom du plugin';
+$L['PMENU_NOTICE_TXT'] = 'Installez et désinstallez facilement les plugins ruTorrent en cliquant simplement sur le nom du plugin.';
 $L['PLUGINS'] = 'Plugins';
 
 // quick help menu tab
@@ -29,12 +29,12 @@ $L['FIXHOME_TXT'] = 'Tapez cette commande pour ajuster rapidement les permission
 // admin commands section
 $L['ADMIN_COMMANDS'] = 'Commandes Administrateur';
 $L['SETDISK_TXT'] = 'Tapez cette commande en ssh pour allouer this command in ssh la quantité d\' espace disque que vous souhaitez donner à un utilisateur.';
-$L['CREATESEEDBOXUSER_TXT'] = 'Tapez cette commande en ssh pour créer un nouvel utilisateur sur votre seedbox.';
-$L['DELETESEEDBOXUSER_TXT'] = 'Tapez cette commande en ssh pour supprimer un utilisateur de votre seedbox. Vous devrez entrer son nom.';
-$L['CHANGEUSERPASS_TXT'] = 'Tapez cette commande en ssh vous permet de changer les mot de passe des utilisateurs..';
-$L['QUICKVPN_TXT'] = 'Tapez cette commande en ssh pour configurer votre propre serveur VPN et en une petite minute, crééez et gérez de nouveaux certificats d'utilisteur pour utiliser le serveur VPN.';
+$L['CREATESEEDBOXUSER_TXT'] = 'Tapez cette commande en SSH pour créer un nouvel utilisateur sur votre seedbox.';
+$L['DELETESEEDBOXUSER_TXT'] = 'Tapez cette commande en SSH pour supprimer un utilisateur de votre seedbox. Vous devrez entrer son nom.';
+$L['CHANGEUSERPASS_TXT'] = 'Tapez cette commande en SSH vous permet de changer les mot de passe des utilisateurs..';
+$L['QUICKVPN_TXT'] = 'Tapez cette commande en SSH pour configurer votre propre serveur VPN et en une petite minute, crééez et gérez de nouveaux certificats d'utilisteur pour utiliser le serveur VPN.';
 $L['SHOWSPACE_TXT'] = 'Utilisez cette commande en tant que root pour voir l’espace disque actuellement utilisé par chaque utilisateur.';
-$L['UPGRADEBTSYNC_TXT'] = 'Tapez cette commande en ssh pour mettre à jour BTSync vers la nouvelle version quand elle sera disponible.';
+$L['UPGRADEBTSYNC_TXT'] = 'Tapez cette commande en SSH pour mettre à jour BTSync vers la nouvelle version quand elle sera disponible.';
 $L['UPGRADEPLEX_TXT'] = 'Tapez cette commande en SSH pour mettre à jour Plex vers la nouvelle version quand elle sera disponible.';
 $L['UPGRADEDELUGE_TXT'] = 'Tapez cette commande en SSH pour mettre à jour Deluge vers la nouvelle version quand elle sera disponible.';
 $L['UPGRADEJACKETT_TXT'] = 'Tapez cette commande en SSH pour mettre à jour Jackett vers la nouvelle version quand elle sera disponible.';
@@ -42,10 +42,10 @@ $L['CLEAN_MEM_TXT'] = 'Tapez cette commande en tant que root si/quand vous déci
 // essential user commands section
 $L['ESSENTIAL_USER_COMMANDS'] = 'Commandes utilisateur essentielles';
 $L['RELOAD_TXT'] = 'Autorise l’utilisateur à recharger ses services (rTorrent et IRSSI).';
-$L['SCREEN_RTORRNENT_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter rTorrent en ssh';
-$L['SCREEN_IRSSI_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter IRSSI en ssh';
+$L['SCREEN_RTORRNENT_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter rTorrent en SSH.';
+$L['SCREEN_IRSSI_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter IRSSI en SSH.';
 
-$L['LANG_SELECT'] = 'Select Language';
+$L['LANG_SELECT'] = 'Selectionner Langue';
 
 
 ////////////////////////////////////////
@@ -101,7 +101,7 @@ $L['COUCHPOTATO'] = 'Téléchargez automatiquement des films, facilement et dans
 $L['CSF'] = 'ConfigServer Firewall, connu sous le nom de CSF, est un script de configuration de pare-feu créé pour assurer une meilleure sécurité pour votre serveur tout en vous donnant une interface avancée et facile à utiliser pour gérer vos paramètres de pare-feu.';
 $L['DELUGE'] = 'Deluge est un client BitTorrent léger, gratuit et multi-plateforme.';
 $L['JACKETT'] = 'Support API pour vos trackers privés préférés.';
-$L['OVPN'] = 'VPN basé sur SSL/TLS. Supporté sur Solaris, OpenBSD, FreeBSD, NetBSD, Mac OS X, and Windows 2000/XP+.';
+$L['OVPN'] = 'VPN basé sur SSL/TLS. Supporté sur Solaris, OpenBSD, FreeBSD, NetBSD, Mac OS X, et Windows 2000/XP+.';
 $L['PLEX'] = 'Plex vous permet de diffuser votre contenu à tous vos dispositifs Plex activés.';
 $L['PLEX_REQUESTS'] = 'Plex Requests offre une belle interface pour que vos utilisateurs vous demandent facilement d\'ajouter de nouveaux films à la bibliothèque. S\'intègre avec CouchPotato, SickRage et Sonarr.';
 $L['PLEXPY'] = 'Une application web python conçue pour la surveillance, l\'analyse et les notifications de Plex Media Server';
@@ -118,10 +118,10 @@ $L['ZNC'] = 'ZNC est un bouncer IRC sous licence GPL. Celui-ci sera connecté en
 $L['CLI'] = 'Console Web Seulement';
 $L['INSTALL'] = 'Installer';
 $L['INSTALLED'] = 'Installé';
-$L['OVPN_TOOLTIP_I'] = 'Accédez à cette fonctionnalité depuis votre console web en tapant: quickVPN';
-$L['OVPN_TOOLTIP_U'] = 'Accédez à cette fonctionnalité depuis votre console web en tapant: quickVPN';
+$L['OVPN_TOOLTIP_I'] = 'Accedez à cette fonctionnalité depuis votre console web en tapant: "quickVPN".';
+$L['OVPN_TOOLTIP_U'] = 'Accedez à cette fonctionnalité depuis votre console web en tapant: "quickVPN".';
 $L['QBPM'] = 'QBPM requis';
-$L['QBPM_TOOLTIP'] = 'Accedez à cette fonctionnalité en SSH simplement en tapant "QBPM"';
+$L['QBPM_TOOLTIP'] = 'Accedez à cette fonctionnalité en SSH simplement en tapant "QBPM".';
 
 ////////////////////////////////////////
 //BANDWIDTH & DATA TABLES

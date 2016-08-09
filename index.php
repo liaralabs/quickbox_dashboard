@@ -257,7 +257,7 @@
                       <?php if (file_exists("/install/.csf.lock")) { ?>
                         <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#csfRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
                       <?php } else { ?>
-                        <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="<?php echo T('QBPM_TOOLTIP'); ?>" data-placement="top" class="btn btn-xs btn-danger disabled tooltips"><?php echo T('QBPM'); ?></button></td>
+                        <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="<?php echo T('BOX_TOOLTIP_CSF'); ?>" data-placement="top" class="btn btn-xs btn-danger disabled tooltips"><?php echo T('BOX'); ?></button></td>
                       <?php } ?>
                     </tr>
                     <tr>
@@ -382,7 +382,7 @@
                       <?php if (file_exists("/install/.znc.lock")) { ?>
                         <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#zncRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
                       <?php } else { ?>
-                        <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="<?php echo T('QBPM_TOOLTIP'); ?>" data-placement="top" class="btn btn-xs btn-danger disabled tooltips"><?php echo T('QBPM'); ?></button></td>
+                        <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="<?php echo T('BOX_TOOLTIP_ZNC'); ?>" data-placement="top" class="btn btn-xs btn-danger disabled tooltips"><?php echo T('BOX'); ?></button></td>
                       <?php } ?>
                     </tr>
                   </tbody>

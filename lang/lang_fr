@@ -120,8 +120,8 @@ $L['INSTALL'] = 'Installer';
 $L['INSTALLED'] = 'Installé';
 $L['OVPN_TOOLTIP_I'] = 'Accedez à cette fonctionnalité depuis votre console web en tapant: "quickVPN".';
 $L['OVPN_TOOLTIP_U'] = 'Accedez à cette fonctionnalité depuis votre console web en tapant: "quickVPN".';
-$L['QBPM'] = 'QBPM requis';
-$L['QBPM_TOOLTIP'] = 'Accedez à cette fonctionnalité en SSH simplement en tapant "QBPM".';
+$L['QBPM'] = 'BOX requis';
+$L['QBPM_TOOLTIP'] = 'Accedez à cette fonctionnalité en SSH simplement en tapant "box install <app>".';
 
 ////////////////////////////////////////
 //BANDWIDTH & DATA TABLES

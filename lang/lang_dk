@@ -118,8 +118,10 @@ $L['ZNC'] = 'ZNC er en IRC bouncer eller BNC. Den kan frigøre ircklienten fra s
 // package management center buttons
 $L['INSTALL'] = 'Install';
 $L['INSTALLED'] = 'Installeret';
-$L['QBPM'] = 'Via QBPM';
-$L['QBPM_TOOLTIP'] = 'Adgang til denne feature fås via SSH og kommandoen QBPM';
+$L['OVPN_TOOLTIP_I'] = 'Access this feature from your web-console by typing: "quickVPN"';
+$L['OVPN_TOOLTIP_U'] = 'Access this feature from your web-console by typing: "quickVPN"';
+$L['QBPM'] = 'Via BOX';
+$L['QBPM_TOOLTIP'] = 'Adgang til denne feature fås via SSH og kommandoen "box install <app>"';
 
 ////////////////////////////////////////
 //BANDWIDTH & DATA TABLES

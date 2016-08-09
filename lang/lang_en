@@ -31,7 +31,7 @@ $L['ADMIN_COMMANDS'] = 'Admin Commands';
 $L['SETDISK_TXT'] = 'Type this command in ssh to allocate the amount of disk space you would like to give to a user.';
 $L['CREATESEEDBOXUSER_TXT'] = 'Type this command in ssh to create a new seedbox user on your server.';
 $L['DELETESEEDBOXUSER_TXT'] = 'Type this command in ssh to delete a seedbox user on your server. You will need to enter the users account name, you will be prompted.';
-$L['CHANGEUSERPASS_TXT'] = 'Typing this command in ssh allows you to change a disired users password.';
+$L['CHANGEUSERPASS_TXT'] = 'Typing this command in ssh allows you to change a desired users password.';
 $L['QUICKVPN_TXT'] = 'Type this command in ssh to setup your own VPN server in no more than a minute as well manage and create new user certificates for using the VPN server.';
 $L['SHOWSPACE_TXT'] = 'Use the above command as root to show the amount of disk space currently used by each user.';
 $L['UPGRADEBTSYNC_TXT'] = 'Type this command in ssh to upgrade BTSync to newest version when available.';
@@ -118,10 +118,10 @@ $L['ZNC'] = 'ZNC is an IRC network bouncer or BNC. It can detach the client from
 $L['CLI'] = 'Web Console Only';
 $L['INSTALL'] = 'Install';
 $L['INSTALLED'] = 'Installed';
-$L['OVPN_TOOLTIP_I'] = 'Access this feature from your web-console by typing: quickVPN';
-$L['OVPN_TOOLTIP_U'] = 'Access this feature from your web-console by typing: quickVPN';
-$L['QBPM'] = 'QBPM Only';
-$L['QBPM_TOOLTIP'] = 'Access this feature from ssh by typing: QBPM';
+$L['OVPN_TOOLTIP_I'] = 'Access this feature from your web-console by typing: "quickVPN"';
+$L['OVPN_TOOLTIP_U'] = 'Access this feature from your web-console by typing: "quickVPN"';
+$L['QBPM'] = 'BOX Only';
+$L['QBPM_TOOLTIP'] = 'Access this feature from ssh by typing: "box install <app>"';
 
 ////////////////////////////////////////
 //BANDWIDTH & DATA TABLES

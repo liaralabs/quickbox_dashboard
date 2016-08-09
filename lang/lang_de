@@ -115,8 +115,10 @@ $L['ZNC'] = 'ZNC ist ein IRC-Netzwerk Bouncer oder BNC. Er kann den Clienten vom
 // package management center buttons
 $L['INSTALL'] = 'Installieren';
 $L['INSTALLED'] = 'Installiert';
-$L['QBPM'] = 'Nur QBPM';
-$L['QBPM_TOOLTIP'] = 'Greife per SSH auf das Feature mit dem Befehl QBPM zu';
+$L['OVPN_TOOLTIP_I'] = 'Access this feature from your web-console by typing: "quickVPN"';
+$L['OVPN_TOOLTIP_U'] = 'Access this feature from your web-console by typing: "quickVPN"';
+$L['QBPM'] = 'Nur BOX';
+$L['QBPM_TOOLTIP'] = 'Greife per SSH auf das Feature mit dem Befehl "box install <app>" zu';
 
 ////////////////////////////////////////
 //BANDWIDTH & DATA TABLES

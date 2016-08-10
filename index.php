@@ -20,9 +20,9 @@
               <h4 class="panel-title"><?php echo T('BANDWIDTH_DATA'); ?></h4>
             </div>
             <div class="panel-body text-center" style="padding:0 0 0 5px; overflow: hidden !important">
-            	<div style="margin-right: -30px">
-              		<div id="mainbw" style="width:100%;height:350px;"></div>
-              	</div>
+              <div style="margin-right: -30px">
+                  <div id="mainbw" style="width:100%;height:350px;"></div>
+                </div>
             </div>
             <div class="row panel-footer panel-statistics" style="padding:0">
               <div class="col-md-12">
@@ -443,8 +443,11 @@
                 <div class="panel-heading">
                   <h4 class="panel-title"><?php echo T('CPU_STATUS'); ?></h4>
                 </div>
-                <div class="panel-body">
-                  <div id="metercpu"></div>
+                <div class="panel-body" style="overflow:hidden">
+                  <div style="padding:0;margin:-15px -30 -15px -15px">
+                    <div id="flot-placeholder1" style="width:100%;height:200px;"></div>
+                    <!--div id="metercpu"></div-->
+                  </div>
                   <hr />
                   <span class="nomargin" style="font-size:14px">
                     <?php echo $sysInfo['cpu']['model'];?><br/>

@@ -150,14 +150,6 @@
   }
   diskstats();
 
-  function cpustats() {
-    $.ajax({url: "widgets/cpu_meter.php", cache:false, success: function (result) {
-      $('#metercpu').html(result);
-      setTimeout(function(){cpustats()}, 1000);
-    }});
-  }
-  cpustats();
-
   function ramstats() {
     $.ajax({url: "widgets/ram_stats.php", cache:false, success: function (result) {
       $('#meterram').html(result);
@@ -250,6 +242,142 @@ function displayData(dataJSON) {
 }
 </script>
 
+<script>
+var cpu = [];
+var dataset;
+var totalPoints = 100;
+var updateInterval = 1000;
+var now = new Date().getTime();
+
+var options = {
+  series: {
+    lines: {
+      show: true,
+      lineWidth: 1.5,
+      fill: 0.4
+    },
+    //bars: {
+      //show: true,
+      //barWidth : 800,
+      //tension: 0.2,
+      //lineWidth: 0.5,
+      //fill: 0.4
+    //}
+  },
+  points: { show: false },
+  legend: {
+    show: true,
+    noColumns: 0,
+    labelBoxBorderColor: '#ffffff',
+    position: 'ne',
+    //margin: 10
+  },
+  grid: {
+    borderWidth: 0,
+    border: { show: false },
+    color: '#dddddd',
+    labelMargin: 5,
+    backgroundColor: '#ffffff'
+  },
+  xaxis: {
+    mode: "time",
+    tickSize: [60, "second"],
+    tickFormatter: function (v, axis) {
+      var date = new Date(v);
+      if (date.getSeconds() % 20 == 0) {
+        var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+        return hours + ":" + minutes + ":" + seconds;
+      } else {
+        return "";
+      }
+    },
+    axisLabel: "Time",
+    axisLabelUseCanvas: true,
+    //axisLabelFontSizePixels: 8,
+    //axisLabelFontFamily: 'open sans',
+    axisLabelPadding: 1,
+    font: {
+      size: 9,
+      style: "normal",
+      color: "#999999",
+      weight: "light",
+      family: "open sans",
+      variant: "small-caps"
+    }
+  },
+  yaxes: [
+    {
+      min: 0,
+      max: 100,
+      tickSize: 5,
+      tickFormatter: function (v, axis) {
+        if (v % 10 == 0) {
+          return v + "%";
+        } else {
+          return "";
+        }
+      },
+      axisLabel: "CPU loading",
+      axisLabelUseCanvas: true,
+      axisLabelFontSizePixels: 6,
+      //axisLabelFontSizePixels: 8,
+      //axisLabelFontFamily: 'open sans',
+      axisLabelPadding: 1,
+      font: {
+        size: 9,
+        style: "normal",
+        color: "#999999",
+        weight: "light",
+        family: "open sans",
+        variant: "small-caps"
+      }
+    }
+  ],
+  border: { show: false },
+  shadowSize: 0
+};
+function initData() {
+  for (var i = 0; i < totalPoints; i++) {
+    var temp = [now += updateInterval, 0];
+    cpu.push(temp)
+  }
+}
+function GetData() {
+  $.ajaxSetup({ cache: false });
+
+  $.ajax({
+    url: "widgets/cpu.php",
+    dataType: 'json',
+    success: update,
+    error: function () {
+      setTimeout(GetData, updateInterval);
+    }
+  });
+}
+var temp;
+function update(_data) {
+    cpu.shift();
+    now += updateInterval
+    temp = [now, _data.cpu];
+    cpu.push(temp);
+    dataset = [
+      { label: "CPU:" + _data.cpu + "%", data: cpu, lines: { fill: 0.2, lineWidth: 1.5 }, color: "#B0A4BE" }
+    ];
+    $.plot($("#flot-placeholder1"), dataset, options);
+    setTimeout(GetData, updateInterval);
+}
+$(document).ready(function () {
+  initData();
+  dataset = [        
+    { label: "CPU", data: cpu, lines:{fill:0.2, lineWidth:1}, color: "#B0A4BE" }
+  ];
+  $.plot($("#flot-placeholder1"), dataset, options);
+  setTimeout(GetData, updateInterval);
+});
+</script>
+
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="../lib/html5shiv/html5shiv.js"></script>
@@ -263,7 +391,7 @@ function displayData(dataJSON) {
   }
   .legend > table{
     background-color: transparent !important;
-    color: #aeaeae !important;
+    color: #acacac !important;
     font-size: 11px !important;
   }
   </style>

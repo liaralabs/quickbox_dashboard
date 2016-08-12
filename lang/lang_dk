@@ -32,11 +32,12 @@ $L['SETDISK_TXT'] = 'Skriv denne kommando i ssh for at allokere den mængde disk
 $L['CREATESEEDBOXUSER_TXT'] = 'Skriv denne kommando i ssh for at oprette en ny seedboxbruger på din server.';
 $L['DELETESEEDBOXUSER_TXT'] = 'Skriv denne kommando i ssh for at slette en seedboxbruger på din server. Du skal indtaste brugerens kontonavn.';
 $L['CHANGEUSERPASS_TXT'] = 'Skriv denne kommando i ssh for at ændre en brugers agdgangskode.';
+$L['QUICKVPN_TXT'] = 'Skriv denne kommando i ssh for at installere din egen VPN server på omkirng et minut samt administrere og oprette en nye brugercertifikater til brug på serveren.';
 $L['SHOWSPACE_TXT'] = 'Skriv denne kommando i ssh (root) for at vise hver brugers nuværende diskforbrug.';
 $L['UPGRADEBTSYNC_TXT'] = 'Skriv denne kommando i ssh for at opgradere BTSync til nyeste version.';
 $L['UPGRADEPLEX_TXT'] = 'Skriv denne kommando i ssh for at opgradere Plex til nyeste version.';
 $L['UPGRADEDELUGE_TXT'] = 'Skriv denne kommando i ssh for at opgradere Deluge til nyeste version.';
-$L['UPGRADEJACKETT_TXT'] = 'Type this command in ssh to upgrade Jackett to newest version when available.';
+$L['UPGRADEJACKETT_TXT'] = 'Skriv denne kommando for at opgradere Jackett til nyeste version.';
 $L['CLEAN_MEM_TXT'] = 'Skriv denne kommando i ssh (root) for at nulstille systemets fysiske Hukommelsescache.';
 // essential user commands section
 $L['ESSENTIAL_USER_COMMANDS'] = 'Vigtige Brugerkommandoer';
@@ -44,7 +45,7 @@ $L['RELOAD_TXT'] = 'tillader en bruger at genstarte services (rtorrent and irssi
 $L['SCREEN_RTORRNENT_TXT'] = 'tillader en bruger at genstarte/genforbinde rtorrent via SSH';
 $L['SCREEN_IRSSI_TXT'] = 'tillader en bruger at genstarte/genforbinde irssi via SSH';
 
-$L['LANG_SELECT'] = 'Select Language';
+$L['LANG_SELECT'] = 'Vælg sprog';
 
 
 ////////////////////////////////////////
@@ -82,7 +83,7 @@ $L['CPU_STATUS'] = 'CPU Status';
 $L['SERVER_LOAD'] = 'Serverbelastning';
 
 // recent updates widget
-$L['RECENT_UPDATES'] = 'Seneste opdateringer';
+$L['RECENT_UPDATES'] = 'Opdateringer';
 
 
 ////////////////////////////////////////
@@ -103,6 +104,7 @@ $L['COUCHPOTATO'] = 'Hent film automatisk, nemt og i den bedste kvalitet, så sn
 $L['CSF'] = 'ConfigServer Firewall, also known as CSF, is a firewall configuration script created to provide better security for your server while giving you an easy to use, advanced interface for managing your firewall settings.';
 $L['DELUGE'] = 'Deluge en gratis letvægts cross-platform BitTorrent klient.';
 $L['JACKETT'] = 'API support til dine favorit private trackere.';
+$L['OVPN'] = 'SSL/TLS baseret user-space VPN. Supporterer Linux, Solaris, OpenBSD, FreeBSD, NetBSD, Mac OS X, and Windows 2000/XP+.';
 $L['PLEX'] = 'Plex lader dig streame dit indhold til enhver Plex enhed.';
 $L['PLEX_REQUESTS'] = 'Plex Requests tilbyder et smuk og let anvendeligt interface, således brugere nemt kan tilføje "Ønsker" til Plex-biblioteket. Integrerer med CouchPotato, SickRage and Sonarr.';
 $L['PLEXPY'] = 'En python baseret webapplikation til at monitorere, analysere og få notifikationer omkring din Plex Media Server.';
@@ -116,14 +118,15 @@ $L['X2GO'] = 'X2Go er et open source fjernskrivebords-software til Linux som ben
 $L['ZNC'] = 'ZNC er en IRC bouncer eller BNC. Den kan frigøre ircklienten fra serveren eller kanalen og holde din klient ajour når der igen sker en tilkobling.';
 
 // package management center buttons
+$L['CLI'] = 'Kun Webkonsol';
 $L['INSTALL'] = 'Install';
 $L['INSTALLED'] = 'Installeret';
-$L['OVPN_TOOLTIP_I'] = 'Access this feature from your web-console by typing: quickVPN';
-$L['OVPN_TOOLTIP_U'] = 'Access this feature from your web-console by typing: quickVPN';
-$L['BOX'] = 'Via BOX';
-$L['BOX_TOOLTIP'] = 'Adgang til denne feature fås via SSH og kommandoen:  box install <app>';
-$L['BOX_TOOLTIP_CSF'] = 'Adgang til denne feature fås via SSH og kommandoen:  box install csf';
-$L['BOX_TOOLTIP_ZNC'] = 'Adgang til denne feature fås via SSH og kommandoen:  box install znc';
+$L['OVPN_TOOLTIP_I'] = 'Adgang til denne feature fås via webkonsollen ved at skrive: quickVPN';
+$L['OVPN_TOOLTIP_U'] = 'Adgang til denne feature fås via webkonsollen ved at skrive: quickVPN';
+$L['BOX'] = 'Kun BOX';
+$L['BOX_TOOLTIP'] = 'Adgang til denne feature fås via ssh ved at skrive:  box install <app>';
+$L['BOX_TOOLTIP_CSF'] = 'Adgang til denne feature fås via ssh ved at skrive:  box install csf';
+$L['BOX_TOOLTIP_ZNC'] = 'Adgang til denne feature fås via ssh ved at skrive:  box install znc';
 
 ////////////////////////////////////////
 //BANDWIDTH & DATA TABLES

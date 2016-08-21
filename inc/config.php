@@ -2,7 +2,7 @@
 session_destroy();
 include '/srv/rutorrent/php/util.php';
 include ('../widgets/class.php');
-$version = "v2.4.5";
+$version = "v2.4.6";
 error_reporting(E_ERROR);
 $master = file_get_contents('/srv/rutorrent/home/db/master.txt');
 $master=preg_replace('/\s+/', '', $master);
@@ -463,11 +463,9 @@ case 77:
     if ($process == "btsync"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
-      shell_exec("sudo pkill -f $process");
     } elseif ($process == "shellinabox"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
-      shell_exec("sudo pkill -f $process");
     //} elseif ($process == "csf"){
     //  shell_exec("sudo systemctl stop $process");
     //  shell_exec("sudo systemctl disable $process");
@@ -475,15 +473,12 @@ case 77:
     } elseif ($process == "plexmediaserver"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
-      shell_exec("sudo pkill -f $process");
     } elseif ($process == "plexpy"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
-      shell_exec("sudo pkill -f $process");
     } elseif ($process == "plexrequests"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
-      shell_exec("sudo pkill -f $process");
     } else {
       shell_exec("sudo systemctl stop $process@$username");
       shell_exec("sudo systemctl disable $process@$username");
@@ -518,19 +513,6 @@ case 88:
     }
   header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
 break;
-
-/////////////////////////// UNUSED BLOCK ///////////////////////////
-/* stop services */
-case 99:
-  $process = $_GET['serviceend'];
-    if ($process == "btsync"){
-      shell_exec("sudo pkill $process");
-    } else {
-      shell_exec("sudo pkill -u $username $process");
-    }
-  header('Location: https://' . $_SERVER['HTTP_HOST'] . '/');
-break;
-/////////////////////////// UNUSED BLOCK ///////////////////////////
 
 }
 

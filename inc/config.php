@@ -271,30 +271,30 @@ function isEnabled($process, $username){
   }
 }
 
-if ($zssl == "true") {
-$zncURL = "https://" . $_SERVER['HTTP_HOST'] . ":$zport";
-}
-if ($zssl == "false") {
-$zncURL = "http://" . $_SERVER['HTTP_HOST'] . ":$zport";
-}
-
+$btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
+$cpURL = "http://" . $_SERVER['HTTP_HOST'] . ":5050";
+$csfURL = "https://" . $_SERVER['HTTP_HOST'] . ":3443";
 if ($dwssl == "true") {
 $dwURL = "https://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 }
 if ($dwssl == "false") {
 $dwURL = "http://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 }
+$jackettURL = "http://" . $_SERVER['HTTP_HOST'] . ":9117";
+$nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
+$plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
 $plexpyURL = "http://" . $_SERVER['HTTP_HOST'] . ":8181";
 $plexrequestsURL = "http://" . $_SERVER['HTTP_HOST'] . ":3000";
-$jackettURL = "http://" . $_SERVER['HTTP_HOST'] . ":9117";
-$cpURL = "http://" . $_SERVER['HTTP_HOST'] . ":5050";
-$csfURL = "https://" . $_SERVER['HTTP_HOST'] . ":3443";
-$btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
-$plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
-$rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . ":/rapidleech/";
+$rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . "/rapidleech";
 $sickrageURL = "http://" . $_SERVER['HTTP_HOST'] . ":8081";
 $sonarrURL = "http://" . $_SERVER['HTTP_HOST'] . ":8989";
 $syncthingURL = "https://" . $_SERVER['HTTP_HOST'] . ":8384";
+if ($zssl == "true") {
+$zncURL = "https://" . $_SERVER['HTTP_HOST'] . ":$zport";
+}
+if ($zssl == "false") {
+$zncURL = "http://" . $_SERVER['HTTP_HOST'] . ":$zport";
+}
 
 
 $reload='';

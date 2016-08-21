@@ -6,6 +6,7 @@ $packages = array(
         'couchpotato',
         'deluge',
         'jackett',
+        'nextcloud',
         'plex',
         'plexpy',
         'plexrequests',

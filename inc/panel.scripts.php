@@ -90,6 +90,24 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- NextCloud UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="nextcloudRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="NextCloudRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="NextCloudRemovalConfirm">Uninstall NextCloud?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall NextCloud from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversable. <br/><br/>You may reinstall NextCloud at any time, however, your settings will be reset to default.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-nextcloud=true" id="nextcloudRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- PLEX UNINSTALL MODAL -->
 <div class="modal bounceIn animated" id="plexRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="PlexRemovalConfirm" aria-hidden="true">
   <div class="modal-dialog">
@@ -140,6 +158,42 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <a href="?removepackage-plexrequests=true" id="plexrequestsRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+<!-- QUASSEL UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="quasselRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="quasselRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="quasselRemovalConfirm">Uninstall Quassel?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall Quassel from your system.<br/><br/> This will completely remove Quassel and all settings/stored backlogs from your system.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-quassel=true" id="quasselRemove" class="btn btn-primary">I understand, do it!</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+<!-- QUOTA UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="quotaRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="quotaRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="quotaRemovalConfirm">Uninstall Quassel?</h4>
+      </div>
+      <div class="modal-body">
+        You are about to uninstall quotas from your system.<br/><br/> This will completely remove user quotas and any settings associated with them.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="?removepackage-quota=true" id="quotaRemove" class="btn btn-primary">I understand, do it!</a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -212,42 +266,6 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <a href="?removepackage-syncthing=true" id="syncthingRemove" class="btn btn-primary">I understand, do it!</a>
-      </div>
-    </div><!-- modal-content -->
-  </div><!-- modal-dialog -->
-</div><!-- modal -->
-<!-- QUASSEL UNINSTALL MODAL -->
-<div class="modal bounceIn animated" id="quasselRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="quasselRemovalConfirm" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="quasselRemovalConfirm">Uninstall Quassel?</h4>
-      </div>
-      <div class="modal-body">
-        You are about to uninstall Quassel from your system.<br/><br/> This will completely remove Quassel and all settings/stored backlogs from your system.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-quassel=true" id="quasselRemove" class="btn btn-primary">I understand, do it!</a>
-      </div>
-    </div><!-- modal-content -->
-  </div><!-- modal-dialog -->
-</div><!-- modal -->
-<!-- QUOTA UNINSTALL MODAL -->
-<div class="modal bounceIn animated" id="quotaRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="quotaRemovalConfirm" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="quotaRemovalConfirm">Uninstall Quassel?</h4>
-      </div>
-      <div class="modal-body">
-        You are about to uninstall quotas from your system.<br/><br/> This will completely remove user quotas and any settings associated with them.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-quota=true" id="quotaRemove" class="btn btn-primary">I understand, do it!</a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->

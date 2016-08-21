@@ -279,6 +279,15 @@
                       <?php } ?>
                     </tr>
                     <tr>
+                      <td>NextCloud</td>
+                      <td><?php echo T('NEXTCLOUD'); ?></td>
+                      <?php if (file_exists("/install/.nextcloud.lock")) { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#nextcloudRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
+                      <?php } else { ?>
+                        <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="<?php echo T('BOX_TOOLTIP_NEXTCLOUD'); ?>" data-placement="top" class="btn btn-xs btn-danger disabled tooltips"><?php echo T('BOX'); ?></button></td>
+                      <?php } ?>
+                    </tr>
+                    <tr>
                       <td>OpenVPN</td>
                       <td><?php echo T('OVPN'); ?></td>
                       <?php if (file_exists("/install/.vpn.lock")) { ?>

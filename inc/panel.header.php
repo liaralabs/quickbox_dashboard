@@ -68,6 +68,7 @@
         }
       },
       yaxis: {
+        min: 0,
         tickFormatter: function(val, axis) { return val < axis.max ? val.toFixed(2) : "MB/s"; },
         font: {
           size: 11,
@@ -370,7 +371,7 @@ function update(_data) {
 }
 $(document).ready(function () {
   initData();
-  dataset = [        
+  dataset = [
     { label: "CPU", data: cpu, lines:{fill:0.2, lineWidth:1}, color: "#B0A4BE" }
   ];
   $.plot($("#flot-placeholder1"), dataset, options);

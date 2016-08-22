@@ -82,6 +82,10 @@ $L['CPU_STATUS'] = 'CPU Status';
 // server load widget
 $L['SERVER_LOAD'] = 'Server Load';
 
+// recent updates widget
+$L['RECENT_UPDATES'] = 'Recent Updates';
+$L['RECENT_UPDATES_TXT'] = 'This list updates every 10 minutes';
+
 
 ////////////////////////////////////////
 //PACKAGE MANAGEMENT CENTER

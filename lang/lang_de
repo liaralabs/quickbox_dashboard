@@ -32,12 +32,14 @@ $L['SETDISK_TXT'] = 'Führe diesen Befehl via SSH aus, um einem Benutzer eine be
 $L['CREATESEEDBOXUSER_TXT'] = 'Führe diesen Befehl via SSH aus, um einen neuen Seedbox-Benutzer auf dem Server zu erstellen.';
 $L['DELETESEEDBOXUSER_TXT'] = 'Führe diesen Befehl via SSH aus, um einen vorhandenen Seedbox-Benutzer auf dem Server zu löschen. Du musst den Account-Namen des Benutzers eingeben, nach dem du dann gefragt wirst.';
 $L['CHANGEUSERPASS_TXT'] = 'Führe diesen Befehl via SSH aus, um das Passwort eines Benutzers zu ändern.';
+$L['QUICKVPN_TXT'] = 'Type this command in ssh to setup your own VPN server in no more than a minute as well manage and create new user certificates for using the VPN server.';
 $L['SHOWSPACE_TXT'] = 'Führe den oben genannten Befehl als root aus, um dir den momentan genutzten Speicherplatz von jedem Benutzer anzeigen zu lassen.';
 $L['UPGRADEBTSYNC_TXT'] = 'Führe diesen Befehl via SSH aus, um BTSync auf die neueste verfügbare Version zu aktualisieren.';
 $L['UPGRADEPLEX_TXT'] = 'Führe diesen Befehl via SSH aus, um Plex auf die neueste verfügbare Version zu aktualisieren.';
 $L['UPGRADEDELUGE_TXT'] = 'Führe diesen Befehl via SSH aus, um Deluge auf die neueste verfügbare Version zu aktualisieren.';
 $L['UPGRADEJACKETT_TXT'] = 'Type this command in ssh to upgrade Jackett to newest version when available.';
 $L['CLEAN_MEM_TXT'] = 'Führe den oben genannten Befehl als root aus, wenn du den physikalischen Cache-Speicher deines Systems löschen möchtest.';
+
 // essential user commands section
 $L['ESSENTIAL_USER_COMMANDS'] = 'Grundlegende Nutzerbefehle';
 $L['RELOAD_TXT'] = 'Ermöglicht es dem Nutzer, seine Dienste neuzustarten (rTorrent sowie irssi)';
@@ -81,6 +83,10 @@ $L['CPU_STATUS'] = 'Status der CPU';
 // server load widget
 $L['SERVER_LOAD'] = 'Server-Last';
 
+// recent updates widget
+$L['RECENT_UPDATES'] = 'Recent Updates';
+$L['RECENT_UPDATES_TXT'] = 'This list updates every 10 minutes';
+
 
 ////////////////////////////////////////
 //PACKAGE MANAGEMENT CENTER
@@ -100,6 +106,8 @@ $L['COUCHPOTATO'] = 'Lade deine Filme, nachdem sie released wurden, einfach und 
 $L['CSF'] = 'ConfigServer Firewall, auch CSF genannt, ist ein Firewall-Konfigurationsskript, das dir eine bessere Sicherheit für deinen Server ermöglicht und dir eine einfache und umfangreiche Benutzeroberfläche für die Firewall-Einstellungen bietet.';
 $L['DELUGE'] = 'Deluge ist ein leichter, kostenloser, Cross-Plattform BitTorrent-Client.';
 $L['JACKETT'] = 'API-Unterstützung für deine favorisierten privaten Tracker.';
+$L['NEXTCLOUD'] = 'Nextcloud is an open source, self-hosted file sync and share and communication app platform. Access & sync your files, contacts, calendars & communicate and collaborate across your devices. You decide what happens with your data, where it is and who can access it!';
+$L['OVPN'] = 'SSL/TLS based user-space VPN. Supports Linux, Solaris, OpenBSD, FreeBSD, NetBSD, Mac OS X, and Windows 2000/XP+.';
 $L['PLEX'] = 'Mit Plex kannst du deine Medien verwalten und auf jedes Gerät streamen, auf dem Plex verfügbar ist.';
 $L['PLEX_REQUESTS'] = 'Plex Requests ist ein schicker und einfach zu bedienender Webdienst, über den die Benutzer Wünsche für die Plex-Bibliothek eintragen können. Dieser funktioniert mit CouchPotato, SickRage und Sonarr.';
 $L['PLEXPY'] = 'Eine auf Python basierende Web-Applikation, um den Plex-Server zu überwachen, zu managen und das Nutzungsverhalten der Benutzer zu analysieren.';
@@ -113,13 +121,14 @@ $L['X2GO'] = 'X2Go ist eine Open-Source Remote-Desktop-Software für Linux, die 
 $L['ZNC'] = 'ZNC ist ein IRC-Netzwerk Bouncer oder BNC. Er kann den Clienten vom eigentlichen IRC-Server sowie ausgewählten Chaträumen trennen.';
 
 // package management center buttons
+$L['CLI'] = 'Web Console Only';
 $L['INSTALL'] = 'Installieren';
 $L['INSTALLED'] = 'Installiert';
 $L['OVPN_TOOLTIP_I'] = 'Access this feature from your web-console by typing: quickVPN';
 $L['OVPN_TOOLTIP_U'] = 'Access this feature from your web-console by typing: quickVPN';
 $L['BOX'] = 'Nur BOX';
-$L['BOX_TOOLTIP'] = 'Greife per SSH auf das Feature mit dem Befehl box install <app> zu';
 $L['BOX_TOOLTIP_CSF'] = 'Greife per SSH auf das Feature mit dem Befehl "box install csf" zu';
+$L['BOX_TOOLTIP_NEXTCLOUD'] = 'Access this feature from ssh by typing: box install nextcloud';
 $L['BOX_TOOLTIP_ZNC'] = 'Greife per SSH auf das Feature mit dem Befehl "box install znc" zu';
 
 ////////////////////////////////////////
@@ -249,7 +258,12 @@ $L['UNINSTALLING'] = 'Uninstalling';
 ///////////////////////////////////////
 
 $L['REFRESH'] = 'Aktualisieren';
+$L['UPDATE'] = 'Run Updater';
 
+$L['CANCEL'] = 'Cancel';
+$L['AGREE'] = 'I understand, do it!';
+
+$L['CLOSE_REFRESH'] = 'Close & Refresh';
 
 ////////////////////////////////////////
 //ADDITIONAL DICTIONARY
@@ -268,7 +282,44 @@ $L['TOTAL_L'] = 'gesamt';
 $L['USED_L'] = 'verwendet';
 
 
+////////////////////////////////////////
+//MODALS & POPUP NOTICES
+///////////////////////////////////////
 
+//MODAL TITLES
+$L['UNINSTALL_TITLE'] = 'Uninstall';
+
+
+//MODAL TEXT
+$L['UNINSTALL_BTSYNC_TXT'] = 'You are about to uninstall BitTorrent Sync from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings... this action is irreversible. <br/><br/>You may reinstall BitTorrent Sync at any time, however, your storage path and linked folder settings will be reset to default.';
+$L['UNINSTALL_CSF_TXT'] = 'You are about to uninstall Config Server Firewall (CSF) from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversible. <br/><br/>You may reinstall Config Server Firewall (CSF) at any time, however, your configuration settings (if any changes were made) will be reset to default.';
+$L['UNINSTALL_COUCHPOTATO_TXT'] = 'You are about to uninstall CouchPotato from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversible. <br/><br/>You may reinstall CouchPotato at any time, however, your settings will be reset to default.';
+$L['UNINSTALL_DELUGE_TXT'] = 'You are about to uninstall Deluge from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings for <strong>all users</strong>... this action is irreversible. <br/><br/>You may reinstall Deluge at any time, however, your storage path and linked folder settings will be reset to default.';
+$L['UNINSTALL_JACKETT_TXT'] = 'You are about to uninstall Jackett from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversible. <br/><br/>You may reinstall Jackett at any time, however, your settings will be reset to default.';
+$L['UNINSTALL_NEXTCLOUD_TXT'] = 'You are about to uninstall NextCloud from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversible. <br/><br/>You may reinstall NextCloud at any time, however, your settings will be reset to default.';
+$L['UNINSTALL_PLEX_TXT'] = 'You are about to uninstall Plex Media Server from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversible. <br/><br/>You may reinstall Plex at any time, however, your library settings will be reset to default.';
+$L['UNINSTALL_PLEXPY_TXT'] = 'You are about to uninstall PlexPy from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversible. <br/><br/>You may reinstall PlexPy at any time, however, your settings will be reset to default.';
+$L['UNINSTALL_PLEXREQUESTS_TXT'] = 'You are about to uninstall Plex Requests from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversible. <br/><br/>You may reinstall Plex Requests at any time, however, your library settings and requests will be reset.';
+$L['UNINSTALL_QUASSEL_TXT'] = 'You are about to uninstall Quassel from your system.<br/><br/> This will completely remove Quassel and all settings/stored backlogs from your system.';
+$L['UNINSTALL_QUOTAS_TXT'] = 'You are about to uninstall quotas from your system.<br/><br/> This will completely remove user quotas and any settings associated with them.';
+$L['UNINSTALL_RAPIDLEECH_TXT'] = 'You are about to uninstall Rapidleech from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversible. <br/><br/>You may reinstall Rapidleech at any time, however, your configuration settings will be reset to default.';
+$L['UNINSTALL_SICKRAGE_TXT'] = 'You are about to uninstall SickRage from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversible. <br/><br/>You may reinstall SickRage at any time, however, your configuration settings will be reset to default.';
+$L['UNINSTALL_SONARR_TXT'] = 'You are about to uninstall Sonarr from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversible. <br/><br/>You may reinstall Sonarr-NzbDrone at any time, however, your configuration settings will be reset to default.';
+$L['UNINSTALL_SYNCTHING_TXT'] = 'You are about to uninstall Syncthing from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversible. <br/><br/>You may reinstall Syncthing at any time, however, your configuration settings will be reset to default.';
+$L['UNINSTALL_X2GO_TXT'] = 'You are about to uninstall x2go from your system.<br/><br/> This will completely remove x2goserver and xfce4 desktop environment from your system.';
+$L['UNINSTALL_ZNC_TXT'] = 'You are about to uninstall ZNC from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversible. <br/><br/>You may reinstall ZNC at any time, however, your settings will be reset to default.';
+
+//SYSTEM RESPONSE MODAL
+$L['SYSTEM_RESPONSE_TITLE'] = 'System Response';
+
+
+
+//GRITTER POPUPS
+$L['UNINSTALLING_TITLE'] = 'Uninstalling';
+
+//GRITTER TEXT
+$L['UNINSTALLING_TXT_1'] = 'Please wait while';
+$L['UNINSTALLING_TXT_2'] = 'is being uninstalled from your system.';
 
 
 ////////////////////////////////////////////////////////////////////////////

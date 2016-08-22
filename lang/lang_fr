@@ -101,6 +101,7 @@ $L['COUCHPOTATO'] = 'Téléchargez automatiquement des films, facilement et dans
 $L['CSF'] = 'ConfigServer Firewall, connu sous le nom de CSF, est un script de configuration de pare-feu créé pour assurer une meilleure sécurité pour votre serveur tout en vous donnant une interface avancée et facile à utiliser pour gérer vos paramètres de pare-feu.';
 $L['DELUGE'] = 'Deluge est un client BitTorrent léger, gratuit et multi-plateforme.';
 $L['JACKETT'] = 'Support API pour vos trackers privés préférés.';
+$L['NEXTCLOUD'] = 'NextCloud est un logiciel open source vous permettant d\'accéder depuis n\'importe quel endroit à vos documents importants. Il peut être installé sur n\'importe quel serveur et vous permet de synchroniser vos données (contacts, calendriers) \'dans le nuage\' sur votre serveur. Vous décidez de ce qui se passe avec vos données, où elles sont et qui peut y accéder!';
 $L['OVPN'] = 'VPN basé sur SSL/TLS. Supporté sur Solaris, OpenBSD, FreeBSD, NetBSD, Mac OS X, et Windows 2000/XP+.';
 $L['PLEX'] = 'Plex vous permet de diffuser votre contenu à tous vos dispositifs Plex activés.';
 $L['PLEX_REQUESTS'] = 'Plex Requests offre une belle interface pour que vos utilisateurs vous demandent facilement d\'ajouter de nouveaux films à la bibliothèque. S\'intègre avec CouchPotato, SickRage et Sonarr.';
@@ -121,8 +122,8 @@ $L['INSTALLED'] = 'Installé';
 $L['OVPN_TOOLTIP_I'] = 'Accedez à cette fonctionnalité depuis votre console web en tapant: quickVPN.';
 $L['OVPN_TOOLTIP_U'] = 'Accedez à cette fonctionnalité depuis votre console web en tapant: quickVPN.';
 $L['BOX'] = 'BOX requis';
-$L['BOX_TOOLTIP'] = 'Accedez à cette fonctionnalité en SSH simplement en tapant: box install <app>';
 $L['BOX_TOOLTIP_CSF'] = 'Accedez à cette fonctionnalité en SSH simplement en tapant: box install csf';
+$L['BOX_TOOLTIP_NEXTCLOUD'] = 'Accedez à cette fonctionnalité en SSH simplement en tapant: box install nextcloud';
 $L['BOX_TOOLTIP_ZNC'] = 'Accedez à cette fonctionnalité en SSH simplement en tapant: box install znc';
 
 ////////////////////////////////////////

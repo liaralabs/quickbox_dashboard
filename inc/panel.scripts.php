@@ -6,14 +6,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="BTSyncRemovalConfirm">Uninstall BTSync?</h4>
+        <h4 class="modal-title" id="BTSyncRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> BTSync?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall BitTorrent Sync from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings... this action is irreversable. <br/><br/>You may reinstall BitTorrent Sync at any time, however, your storage path and linked folder settings will be reset to default.
+        <?php echo T('UNINSTALL_BTSYNC_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-btsync=true" id="btsyncRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-btsync=true" id="btsyncRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -24,14 +24,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="CSFRemovalConfirm">Uninstall Config Server Firewall?</h4>
+        <h4 class="modal-title" id="CSFRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Config Server Firewall?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Config Server Firewall (CSF) from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversable. <br/><br/>You may reinstall Config Server Firewall (CSF) at any time, however, your configuration settings (if any changes were made) will be reset to default.
+        <?php echo T('UNINSTALL_CSF_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-csf=true" id="csfRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-csf=true" id="csfRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -42,14 +42,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="CouchPotatoRemovalConfirm">Uninstall CouchPotato?</h4>
+        <h4 class="modal-title" id="CouchPotatoRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> CouchPotato?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall CouchPotato from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversable. <br/><br/>You may reinstall CouchPotato at any time, however, your settings will be reset to default.
+        <?php echo T('UNINSTALL_COUCHPOTATO_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-couchpotato=true" id="couchpotatoRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-couchpotato=true" id="couchpotatoRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -60,14 +60,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="DelugeRemovalConfirm">Uninstall Deluge?</h4>
+        <h4 class="modal-title" id="DelugeRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Deluge?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Deluge from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings for <strong>all users</strong>... this action is irreversable. <br/><br/>You may reinstall Deluge at any time, however, your storage path and linked folder settings will be reset to default.
+        <?php echo T('UNINSTALL_DELUGE_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-deluge=true" id="delugeRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-deluge=true" id="delugeRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -78,14 +78,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="JackettRemovalConfirm">Uninstall Jackett?</h4>
+        <h4 class="modal-title" id="JackettRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Jackett?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Jackett from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversable. <br/><br/>You may reinstall Jackett at any time, however, your settings will be reset to default.
+        <?php echo T('UNINSTALL_JACKETT_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-jackett=true" id="jackettRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-jackett=true" id="jackettRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -96,14 +96,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="NextCloudRemovalConfirm">Uninstall NextCloud?</h4>
+        <h4 class="modal-title" id="NextCloudRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> NextCloud?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall NextCloud from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversable. <br/><br/>You may reinstall NextCloud at any time, however, your settings will be reset to default.
+        <?php echo T('UNINSTALL_NEXTCLOUD_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-nextcloud=true" id="nextcloudRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-nextcloud=true" id="nextcloudRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -114,14 +114,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="PlexRemovalConfirm">Uninstall Plex?</h4>
+        <h4 class="modal-title" id="PlexRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Plex?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Plex Media Server from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversable. <br/><br/>You may reinstall Plex at any time, however, your library settings will be reset to default.
+        <?php echo T('UNINSTALL_PLEX_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-plex=true" id="plexRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-plex=true" id="plexRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -132,14 +132,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="PlexPyRemovalConfirm">Uninstall PlexPy?</h4>
+        <h4 class="modal-title" id="PlexPyRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> PlexPy?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall PlexPy from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversable. <br/><br/>You may reinstall PlexPy at any time, however, your settings will be reset to default.
+        <?php echo T('UNINSTALL_PLEXPY_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-plexpy=true" id="plexpyRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-plexpy=true" id="plexpyRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -150,14 +150,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="PlexRequestsRemovalConfirm">Uninstall Plex Requests.NET?</h4>
+        <h4 class="modal-title" id="PlexRequestsRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Plex Requests.NET?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Plex Requests from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversable. <br/><br/>You may reinstall Plex Requests at any time, however, your library settings and requests will be reset.
+        <?php echo T('UNINSTALL_PLEXREQUESTS_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-plexrequests=true" id="plexrequestsRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-plexrequests=true" id="plexrequestsRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -168,14 +168,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="quasselRemovalConfirm">Uninstall Quassel?</h4>
+        <h4 class="modal-title" id="quasselRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Quassel?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Quassel from your system.<br/><br/> This will completely remove Quassel and all settings/stored backlogs from your system.
+        <?php echo T('UNINSTALL_QUASSEL_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-quassel=true" id="quasselRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-quassel=true" id="quasselRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -186,14 +186,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="quotaRemovalConfirm">Uninstall Quassel?</h4>
+        <h4 class="modal-title" id="quotaRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Quotas?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall quotas from your system.<br/><br/> This will completely remove user quotas and any settings associated with them.
+        <?php echo T('UNINSTALL_QUOTAS_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-quota=true" id="quotaRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-quota=true" id="quotaRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -204,14 +204,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="RapidleechRemovalConfirm">Uninstall Rapidleech?</h4>
+        <h4 class="modal-title" id="RapidleechRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Rapidleech?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Rapidleech from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversable. <br/><br/>You may reinstall Rapidleech at any time, however, your configuration settings will be reset to default.
+        <?php echo T('UNINSTALL_RAPIDLEECH_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-rapidleech=true" id="rapidleechRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-rapidleech=true" id="rapidleechRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -222,14 +222,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="SickRageRemovalConfirm">Uninstall SickRage?</h4>
+        <h4 class="modal-title" id="SickRageRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> SickRage?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall SickRage from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversable. <br/><br/>You may reinstall SickRage at any time, however, your configuration settings will be reset to default.
+        <?php echo T('UNINSTALL_SICKRAGE_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-sickrage=true" id="sickrageRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-sickrage=true" id="sickrageRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -240,14 +240,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="SonarrRemovalConfirm">Uninstall Sonarr-NzbDrone?</h4>
+        <h4 class="modal-title" id="SonarrRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Sonarr-NzbDrone?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Sonarr from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversable. <br/><br/>You may reinstall Sonarr-NzbDrone at any time, however, your configuration settings will be reset to default.
+        <?php echo T('UNINSTALL_SONARR_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-sonarr=true" id="sonarrRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-sonarr=true" id="sonarrRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -258,14 +258,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="SyncthingRemovalConfirm">Uninstall Syncthing?</h4>
+        <h4 class="modal-title" id="SyncthingRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Syncthing?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall Syncthing from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversable. <br/><br/>You may reinstall Syncthing at any time, however, your configuration settings will be reset to default.
+        <?php echo T('UNINSTALL_SYNCTHING_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-syncthing=true" id="syncthingRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-syncthing=true" id="syncthingRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -276,14 +276,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="x2goRemovalConfirm">Uninstall x2go?</h4>
+        <h4 class="modal-title" id="x2goRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> x2go?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall x2go from your system.<br/><br/> This will completely remove x2goserver and xfce4 desktop environment from your system.
+        <?php echo T('UNINSTALL_X2GO_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-x2go=true" id="x2goRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-x2go=true" id="x2goRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -294,14 +294,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="ZNCRemovalConfirm">Uninstall ZNC?</h4>
+        <h4 class="modal-title" id="ZNCRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> ZNC?</h4>
       </div>
       <div class="modal-body">
-        You are about to uninstall ZNC from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversable. <br/><br/>You may reinstall CouchPotato at any time, however, your settings will be reset to default.
+        <?php echo T('UNINSTALL_ZNC_TXT'); ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a href="?removepackage-znc=true" id="zncRemove" class="btn btn-primary">I understand, do it!</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-znc=true" id="zncRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -311,13 +311,13 @@
   <div class="modal-dialog" style="width: 600px">
     <div class="modal-content" style="background:rgba(0, 0, 0, 0.6);border:2px solid rgba(0, 0, 0, 0.2)">
       <div class="modal-header" style="background:rgba(0, 0, 0, 0.4);border:0!important">
-        <h4 class="modal-title" style="color:#fff">System Response</h4>
+        <h4 class="modal-title" style="color:#fff"><?php echo T('SYSTEM_RESPONSE_TITLE'); ?></h4>
       </div>
       <div class="modal-body ps-container" style="background:rgba(0, 0, 0, 0.4); max-height:600px;" id="sysPre">
         <pre style="color: rgb(83, 223, 131) !important;" class="sysout ps-child"><span id="sshoutput"></span></pre>
       </div>
       <div class="modal-footer" style="background:rgba(0, 0, 0, 0.4);border:0!important">
-        <a href="?clean_log=true" class="btn btn-xs btn-danger">Close & Refresh</a>
+        <a href="?clean_log=true" class="btn btn-xs btn-danger"><?php echo T('CLOSE_REFRESH'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -461,8 +461,8 @@ $(document).ready(function() {
   // BTSyncRemove
   $('#btsyncRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling BTSync',
-      text: 'Please wait while Bittorrent Sync is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> BTSync',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Bittorrent Sync <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -470,8 +470,8 @@ $(document).ready(function() {
   // csfRemove
   $('#csfRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling CSF',
-      text: 'Please wait while Config Server Firewall is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> CSF',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Config Server Firewall <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -479,8 +479,8 @@ $(document).ready(function() {
   // CouchPotatoRemove
   $('#couchpotatoRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling CouchPotato',
-      text: 'Please wait while CouchPotato is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> CouchPotato',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> CouchPotato <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -488,8 +488,8 @@ $(document).ready(function() {
   // DelugeRemove
   $('#delugeRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling Deluge',
-      text: 'Please wait while Deluge is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> Deluge',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Deluge <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -497,8 +497,17 @@ $(document).ready(function() {
   // JackettRemove
   $('#jackettRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling Jackett',
-      text: 'Please wait while Jackett is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> Jackett',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Jackett <?php echo T('UNINSTALLING_TXT_2'); ?>',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+  // NextCloudRemove
+  $('#nextcloudRemove').click(function(){
+    $.gritter.add({
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> NextCloud',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> NextCloud <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -506,8 +515,26 @@ $(document).ready(function() {
   // PlexRemove
   $('#plexRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling Plex',
-      text: 'Please wait while Plex Media Server is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> Plex',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Plex Media Server <?php echo T('UNINSTALLING_TXT_2'); ?>',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+  // PlexPYRemove
+  $('#plexpyRemove').click(function(){
+    $.gritter.add({
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> PlexPY',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> PlexPY <?php echo T('UNINSTALLING_TXT_2'); ?>',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+  // PlexRequestsRemove
+  $('#plexrequestsRemove').click(function(){
+    $.gritter.add({
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> Plex Requests',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Plex Requests <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -515,8 +542,8 @@ $(document).ready(function() {
   // RapidleechRemove
   $('#rapidleechRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling Rapidleech',
-      text: 'Please wait while Rapidleech is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> Rapidleech',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Rapidleech <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -524,8 +551,8 @@ $(document).ready(function() {
   // SickRageRemove
   $('#sickrageRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling SickRage',
-      text: 'Please wait while SickRage is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> SickRage',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> SickRage <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -533,8 +560,8 @@ $(document).ready(function() {
   // SonarrRemove
   $('#sonarrRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling Sonarr',
-      text: 'Please wait while Sonarr-NzbDrone is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> Sonarr',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Sonarr-NzbDrone <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -542,26 +569,26 @@ $(document).ready(function() {
   // SyncthingRemove
   $('#synctingRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling Syncthing',
-      text: 'Please wait while Sycthing is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> Syncthing',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Sycthing <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
   });
   // QuasselRemove
   $('#quasselRemove').click(function(){
-  $.gritter.add({
-    title: 'Uninstalling Quassel-Core',
-    text: 'Please wait while quassel is being uninstalled from your system.',
-    class_name: 'with-icon times-circle danger',
-    sticky: true
+    $.gritter.add({
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> Quassel-Core',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Quassel <?php echo T('UNINSTALLING_TXT_2'); ?>',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
   });
-});
-// QuotaRemove
+  // QuotaRemove
   $('#quotaRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling user quotas',
-      text: 'Please wait while quotas are uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> user quotas',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Quota <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -569,18 +596,17 @@ $(document).ready(function() {
   // x2goRemove
   $('#x2goRemove').click(function(){
     $.gritter.add({
-      title: 'Uninstalling x2go',
-      text: 'Please wait while x2go is being uninstalled from your system.',
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> x2go',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> x2go <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
   });
-
   // ZNCRemove
   $('#zncRemove').click(function(){
     $.gritter.add({
       title: 'Uninstalling ZNC',
-      text: 'Please wait while ZNC is being uninstalled from your system.',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> ZNC <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });

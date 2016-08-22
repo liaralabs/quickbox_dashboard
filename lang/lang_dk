@@ -85,7 +85,7 @@ $L['SERVER_LOAD'] = 'Serverbelastning';
 
 // recent updates widget
 $L['RECENT_UPDATES'] = 'Opdateringer';
-$L['RECENT_UPDATES_TXT'] = 'This list updates every 10 minutes';
+$L['RECENT_UPDATES_TXT'] = 'Denne liste opdaterer hvert 10. minut';
 
 
 ////////////////////////////////////////
@@ -103,10 +103,10 @@ $L['AVAILABILITY'] = 'Tilgængelighed';
 // packages
 $L['BTSYNC_DETAILS'] = 'BitTorrent Sync by BitTorrent, Inc er et proprietært peer-to-peer-fil synkronisering værktøj.';
 $L['COUCHPOTATO'] = 'Hent film automatisk, nemt og i den bedste kvalitet, så snart de er frigivet via usenet eller torrents.';
-$L['CSF'] = 'ConfigServer Firewall, also known as CSF, is a firewall configuration script created to provide better security for your server while giving you an easy to use, advanced interface for managing your firewall settings.';
+$L['CSF'] = 'ConfigServer Firewall, også kendt som CSF, er et firewall-konfigurationsscript således du kan få en bedre sikkerhed til din server og samtidig giver dig et nemt plus avanceret interface til styring af dine firewall-indstillinger.';
 $L['DELUGE'] = 'Deluge en gratis letvægts cross-platform BitTorrent klient.';
 $L['JACKETT'] = 'API support til dine favorit private trackere.';
-$L['NEXTCLOUD'] = 'Nextcloud is an open source, self-hosted file sync and share and communication app platform. Access & sync your files, contacts, calendars & communicate and collaborate across your devices. You decide what happens with your data, where it is and who can access it!';
+$L['NEXTCLOUD'] = 'Nextcloud er en open source, selvhosted filsynkroniserings-, delings- og kommunikationsplatform. Få nem adgang til og synkoniser dine filer, kontakter, kalendre og kommuniker på tværs af alle dine enheder. Du afgør selv hvad der sker med dine data, hvor den lagres, og hvem der kan få adgang!';
 $L['OVPN'] = 'SSL/TLS baseret user-space VPN. Supporterer Linux, Solaris, OpenBSD, FreeBSD, NetBSD, Mac OS X, and Windows 2000/XP+.';
 $L['PLEX'] = 'Plex lader dig streame dit indhold til enhver Plex enhed.';
 $L['PLEX_REQUESTS'] = 'Plex Requests tilbyder et smuk og let anvendeligt interface, således brugere nemt kan tilføje "Ønsker" til Plex-biblioteket. Integrerer med CouchPotato, SickRage and Sonarr.';
@@ -128,7 +128,7 @@ $L['OVPN_TOOLTIP_I'] = 'Adgang til denne feature fås via webkonsollen ved at sk
 $L['OVPN_TOOLTIP_U'] = 'Adgang til denne feature fås via webkonsollen ved at skrive: quickVPN';
 $L['BOX'] = 'Kun BOX';
 $L['BOX_TOOLTIP_CSF'] = 'Adgang til denne feature fås via ssh ved at skrive:  box install csf';
-$L['BOX_TOOLTIP_NEXTCLOUD'] = 'Access this feature from ssh by typing: box install nextcloud';
+$L['BOX_TOOLTIP_NEXTCLOUD'] = 'Adgang til denne feature fås via ssh ved at skrive: box install nextcloud';
 $L['BOX_TOOLTIP_ZNC'] = 'Adgang til denne feature fås via ssh ved at skrive:  box install znc';
 
 ////////////////////////////////////////
@@ -287,39 +287,39 @@ $L['USED_L'] = 'brugt';
 ///////////////////////////////////////
 
 //MODAL TITLES
-$L['UNINSTALL_TITLE'] = 'Uninstall';
+$L['UNINSTALL_TITLE'] = 'Afinstaller';
 
 
 //MODAL TEXT
-$L['UNINSTALL_BTSYNC_TXT'] = 'You are about to uninstall BitTorrent Sync from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings... this action is irreversible. <br/><br/>You may reinstall BitTorrent Sync at any time, however, your storage path and linked folder settings will be reset to default.';
-$L['UNINSTALL_CSF_TXT'] = 'You are about to uninstall Config Server Firewall (CSF) from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversible. <br/><br/>You may reinstall Config Server Firewall (CSF) at any time, however, your configuration settings (if any changes were made) will be reset to default.';
-$L['UNINSTALL_COUCHPOTATO_TXT'] = 'You are about to uninstall CouchPotato from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversible. <br/><br/>You may reinstall CouchPotato at any time, however, your settings will be reset to default.';
-$L['UNINSTALL_DELUGE_TXT'] = 'You are about to uninstall Deluge from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings for <strong>all users</strong>... this action is irreversible. <br/><br/>You may reinstall Deluge at any time, however, your storage path and linked folder settings will be reset to default.';
-$L['UNINSTALL_JACKETT_TXT'] = 'You are about to uninstall Jackett from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversible. <br/><br/>You may reinstall Jackett at any time, however, your settings will be reset to default.';
-$L['UNINSTALL_NEXTCLOUD_TXT'] = 'You are about to uninstall NextCloud from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversible. <br/><br/>You may reinstall NextCloud at any time, however, your settings will be reset to default.';
-$L['UNINSTALL_PLEX_TXT'] = 'You are about to uninstall Plex Media Server from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversible. <br/><br/>You may reinstall Plex at any time, however, your library settings will be reset to default.';
-$L['UNINSTALL_PLEXPY_TXT'] = 'You are about to uninstall PlexPy from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversible. <br/><br/>You may reinstall PlexPy at any time, however, your settings will be reset to default.';
-$L['UNINSTALL_PLEXREQUESTS_TXT'] = 'You are about to uninstall Plex Requests from your system.<br/><br/>This will completely remove all of your configuration and library settings... this action is irreversible. <br/><br/>You may reinstall Plex Requests at any time, however, your library settings and requests will be reset.';
-$L['UNINSTALL_QUASSEL_TXT'] = 'You are about to uninstall Quassel from your system.<br/><br/> This will completely remove Quassel and all settings/stored backlogs from your system.';
-$L['UNINSTALL_QUOTAS_TXT'] = 'You are about to uninstall quotas from your system.<br/><br/> This will completely remove user quotas and any settings associated with them.';
-$L['UNINSTALL_RAPIDLEECH_TXT'] = 'You are about to uninstall Rapidleech from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversible. <br/><br/>You may reinstall Rapidleech at any time, however, your configuration settings will be reset to default.';
-$L['UNINSTALL_SICKRAGE_TXT'] = 'You are about to uninstall SickRage from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversible. <br/><br/>You may reinstall SickRage at any time, however, your configuration settings will be reset to default.';
-$L['UNINSTALL_SONARR_TXT'] = 'You are about to uninstall Sonarr from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversible. <br/><br/>You may reinstall Sonarr-NzbDrone at any time, however, your configuration settings will be reset to default.';
-$L['UNINSTALL_SYNCTHING_TXT'] = 'You are about to uninstall Syncthing from your system.<br/><br/>This will completely remove all of your configuration settings... this action is irreversible. <br/><br/>You may reinstall Syncthing at any time, however, your configuration settings will be reset to default.';
-$L['UNINSTALL_X2GO_TXT'] = 'You are about to uninstall x2go from your system.<br/><br/> This will completely remove x2goserver and xfce4 desktop environment from your system.';
-$L['UNINSTALL_ZNC_TXT'] = 'You are about to uninstall ZNC from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversible. <br/><br/>You may reinstall ZNC at any time, however, your settings will be reset to default.';
+$L['UNINSTALL_BTSYNC_TXT'] = 'Du er ved at afinstallere BitTorrent Sync fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurations og delte indstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere BitTorrent Sync til hver en tid, men din sti til lagering og linkede mappeindstillinger vil blive nulstillet til standard.';
+$L['UNINSTALL_CSF_TXT'] = 'Du er ved at afinstallere Config Server Firewall (CSF) fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurationsindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Config Server Firewall (CSF) til hver en tid, men din konfiguration vil blive nulstillet til standard.';
+$L['UNINSTALL_COUCHPOTATO_TXT'] = 'Du er ved at afinstallere CouchPotato fra dit system.<br/><br/>>Dette vil fuldstændig fjerne din kofiguration og indstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere CouchPotato til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
+$L['UNINSTALL_DELUGE_TXT'] = 'Du er ved at afinstallere Deluge fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurations og delte indstillinger for <strong>alle brugere</strong>... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Deluge til hver en tid, men din sti til lagring og linkede mappeindstillinger vil blive nulstillet til standard..';
+$L['UNINSTALL_JACKETT_TXT'] = 'Du er ved at afinstallere Jackett fra dit system.<br/><br/>Dette vil fuldstændig fjerne din kofiguration og indstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Jackett til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
+$L['UNINSTALL_NEXTCLOUD_TXT'] = 'Du er ved at afinstallere NextCloud fra dit system.<br/><br/>Dette vil fuldstændig fjerne din kofiguration og indstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere NextCloud til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
+$L['UNINSTALL_PLEX_TXT'] = 'Du er ved at afinstallere Plex Media Server fra dit system.<br/><br/>Dette vil fuldstændig fjerne din kofiguration og biblioteksindstillinger... tdenne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Plex til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
+$L['UNINSTALL_PLEXPY_TXT'] = 'Du er ved at afinstallere PlexPy fra dit system.<br/><br/>Dette vil fuldstændig fjerne din kofiguration og biblioteksindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere PlexPy til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
+$L['UNINSTALL_PLEXREQUESTS_TXT'] = 'Du er ved at afinstallere Plex Requests fra dit system.<br/><br/>Dette vil fuldstændig fjerne din kofiguration og biblioteksindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Plex Requests til hver en tid, men dine biblioteksindstillinger og anmodninger vil blive nulstillet.';
+$L['UNINSTALL_QUASSEL_TXT'] = 'Du er ved at afinstallere Quassel fra dit system.<br/><br/> Dette vil fuldstændig fjerne Quassel, alle indstillinger/gemte backlogs fra dit system.';
+$L['UNINSTALL_QUOTAS_TXT'] = 'Du er ved at afinstallere Quotas fra dit system.<br/><br/> Dette vil fuldstændig fjerne bruger kvoter (user quotas) og enhver indstilling associeret med dem.';
+$L['UNINSTALL_RAPIDLEECH_TXT'] = 'Du er ved at afinstallere Rapidleech fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurationsindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Rapidleech til hver en tid, men din konfiguration vil blive nulstillet til standard.';
+$L['UNINSTALL_SICKRAGE_TXT'] = 'Du er ved at afinstallere SickRage fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurationsindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere SickRage til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
+$L['UNINSTALL_SONARR_TXT'] = 'Du er ved at afinstallere Sonarr fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurationsindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Sonarr-NzbDrone til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
+$L['UNINSTALL_SYNCTHING_TXT'] = 'Du er ved at afinstallere Syncthing fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurationsindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Syncthing til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
+$L['UNINSTALL_X2GO_TXT'] = 'Du er ved at afinstallere x2go fra dit system.<br/><br/> Dette vil fuldstændig fjerne x2goserver og xfce4 desktopmiljøet fra dit system.';
+$L['UNINSTALL_ZNC_TXT'] = 'Du er ved at afinstallere ZNC fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurationsindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere ZNC til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
 
 //SYSTEM RESPONSE MODAL
-$L['SYSTEM_RESPONSE_TITLE'] = 'System Response';
+$L['SYSTEM_RESPONSE_TITLE'] = 'System Respons';
 
 
 
 //GRITTER POPUPS
-$L['UNINSTALLING_TITLE'] = 'Uninstalling';
+$L['UNINSTALLING_TITLE'] = 'Afinstallerer';
 
 //GRITTER TEXT
-$L['UNINSTALLING_TXT_1'] = 'Please wait while';
-$L['UNINSTALLING_TXT_2'] = 'is being uninstalled from your system.';
+$L['UNINSTALLING_TXT_1'] = 'Vent venligst et øjeblik';
+$L['UNINSTALLING_TXT_2'] = 'bliver afinstalleret fra dit system.';
 
 
 ////////////////////////////////////////////////////////////////////////////

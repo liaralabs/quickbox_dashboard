@@ -247,23 +247,23 @@ $L['UPTIME'] = 'Oppetid';
 $L['ENABLED'] = 'Aktiveret';
 $L['DISABLED'] = 'Deaktiveret';
 
-$L['INSTALLED'] = 'Installed';
-$L['UNINSTALLED'] = 'Uninstalled';
-$L['INSTALLING'] = 'Installing';
-$L['UNINSTALLING'] = 'Uninstalling';
+$L['INSTALLED'] = 'Installeret';
+$L['UNINSTALLED'] = 'Uinstalleret';
+$L['INSTALLING'] = 'Installerer';
+$L['UNINSTALLING'] = 'Afinstallerer';
 
 
 ////////////////////////////////////////
 //STATUS BUTTONS
 ///////////////////////////////////////
 
-$L['REFRESH'] = 'Opdater';
-$L['UPDATE'] = 'Run Updater';
+$L['REFRESH'] = 'Genopfrisk';
+$L['UPDATE'] = 'Opdater';
 
-$L['CANCEL'] = 'Cancel';
-$L['AGREE'] = 'I understand, do it!';
+$L['CANCEL'] = 'Fortryd';
+$L['AGREE'] = 'Jeg forstår, gør det!';
 
-$L['CLOSE_REFRESH'] = 'Close & Refresh';
+$L['CLOSE_REFRESH'] = 'Luk & Genopfrisk';
 
 ////////////////////////////////////////
 //ADDITIONAL DICTIONARY

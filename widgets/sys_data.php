@@ -11,7 +11,7 @@ if (isset($_GET['clean_log'])) {
 
 if (isset($_GET['updateQuickBox'])) {
         header('Location: //');
-        shell_exec("sudo /usr/local/bin/quickbox/system/updateQuickBox");
+        shell_exec("sudo /usr/local/bin/quickbox/system/box upgrade");
 }
 
 if (isset($_GET['updatetestingQuickBox'])) {

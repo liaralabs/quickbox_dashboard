@@ -162,6 +162,24 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- PYLOAD UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="pyloadRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="pyLoadRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="pyLoadRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> pyLoad?</h4>
+      </div>
+      <div class="modal-body">
+        <?php echo T('UNINSTALL_PYLOAD_TXT'); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-pyload=true" id="pyloadRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- QUASSEL UNINSTALL MODAL -->
 <div class="modal bounceIn animated" id="quasselRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="quasselRemovalConfirm" aria-hidden="true">
   <div class="modal-dialog">
@@ -216,6 +234,24 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- SABNZBD UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="sabnzbdRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="SABnzbdRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="SABnzbdRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> SABnzbd?</h4>
+      </div>
+      <div class="modal-body">
+        <?php echo T('UNINSTALL_SABNZBD_TXT'); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-sabnzbd=true" id="sabnzbdRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- SICKRAGE UNINSTALL MODAL -->
 <div class="modal bounceIn animated" id="sickrageRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="SickRageRemovalConfirm" aria-hidden="true">
   <div class="modal-dialog">
@@ -248,6 +284,24 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
         <a href="?removepackage-sonarr=true" id="sonarrRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+<!-- SUBSONIC UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="subsonicRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="SubsonicRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="SubsonicRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> Subsonic?</h4>
+      </div>
+      <div class="modal-body">
+        <?php echo T('UNINSTALL_SUBSONIC_TXT'); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-subsonic=true" id="subsonicRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
@@ -539,11 +593,29 @@ $(document).ready(function() {
       sticky: true
     });
   });
+  // pyLoadRemove
+  $('#pyloadRemove').click(function(){
+    $.gritter.add({
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> pyLoad',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> pyLoad <?php echo T('UNINSTALLING_TXT_2'); ?>',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
   // RapidleechRemove
   $('#rapidleechRemove').click(function(){
     $.gritter.add({
       title: '<?php echo T('UNINSTALLING_TITLE'); ?> Rapidleech',
       text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Rapidleech <?php echo T('UNINSTALLING_TXT_2'); ?>',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+  // SABnzbdRemove
+  $('#sabnzbdRemove').click(function(){
+    $.gritter.add({
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> SABnzbd',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> SABnzbd <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });
@@ -562,6 +634,15 @@ $(document).ready(function() {
     $.gritter.add({
       title: '<?php echo T('UNINSTALLING_TITLE'); ?> Sonarr',
       text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Sonarr-NzbDrone <?php echo T('UNINSTALLING_TXT_2'); ?>',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+  // SubsonicRemove
+  $('#subsonicRemove').click(function(){
+    $.gritter.add({
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> Subsonic',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> Subsonic <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });

@@ -28,6 +28,8 @@
   <script type="text/javascript" src="lib/flot/jquery.flot.canvas.js"></script>
   <script type="text/javascript" src="lib/flot-spline/jquery.flot.spline.js"></script>
   <!--script type="text/javascript" src="lib/flot/jquery.flot.axislabels.js"></script-->
+
+  <!--///// BANDWIDTH CHART /////-->
   <script id="source" language="javascript" type="text/javascript">
   $(document).ready(function() {
     var options = {
@@ -109,6 +111,131 @@
     }
   });
   </script>
+  <!--///// CPU CHART /////-->
+  <script id="source" language="javascript" type="text/javascript">
+  var cpu = [];
+  var dataset;
+  var totalPoints = 100;
+  var updateInterval = 1000;
+  var now = new Date().getTime();
+  var options = {
+    series: {
+      lines: {
+        show: true,
+        lineWidth: 1.5,
+        fill: 0.4
+      }
+    },
+    points: { show: false },
+    legend: {
+      show: true,
+      noColumns: 0,
+      labelBoxBorderColor: '#ffffff',
+      position: 'ne',
+    },
+    grid: {
+      borderWidth: 0,
+      border: { show: false },
+      color: '#dddddd',
+      labelMargin: 5,
+      backgroundColor: '#ffffff'
+    },
+    xaxis: {
+      mode: "time",
+      tickSize: [60, "second"],
+      tickFormatter: function (v, axis) {
+        var date = new Date(v);
+        if (date.getSeconds() % 20 == 0) {
+          var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+          var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+          var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+          return hours + ":" + minutes + ":" + seconds;
+        } else {
+          return "";
+        }
+      },
+      axisLabel: "Time",
+      axisLabelUseCanvas: true,
+      axisLabelPadding: 1,
+      font: {
+        size: 9,
+        style: "normal",
+        color: "#999999",
+        weight: "light",
+        family: "open sans",
+        variant: "small-caps"
+      }
+    },
+    yaxes: [
+      {
+        min: 0,
+        max: 100,
+        tickSize: 5,
+        tickFormatter: function (v, axis) {
+          if (v % 10 == 0) {
+            return v + "%";
+          } else {
+            return "";
+          }
+        },
+        axisLabel: "CPU loading",
+        axisLabelUseCanvas: true,
+        axisLabelFontSizePixels: 6,
+        //axisLabelFontSizePixels: 8,
+        //axisLabelFontFamily: 'open sans',
+        axisLabelPadding: 1,
+        font: {
+          size: 9,
+          style: "normal",
+          color: "#999999",
+          weight: "light",
+          family: "open sans",
+          variant: "small-caps"
+        }
+      }
+    ],
+    border: { show: false },
+    shadowSize: 0
+  };
+  function initData() {
+    for (var i = 0; i < totalPoints; i++) {
+      var temp = [now += updateInterval, 0];
+      cpu.push(temp)
+    }
+  }
+  function GetData() {
+    $.ajaxSetup({ cache: false });
+
+    $.ajax({
+      url: "widgets/cpu.php",
+      dataType: 'json',
+      success: update,
+      error: function () {
+        setTimeout(GetData, updateInterval);
+      }
+    });
+  }
+  var temp;
+  function update(_data) {
+      cpu.shift();
+      now += updateInterval
+      temp = [now, _data.cpu];
+      cpu.push(temp);
+      dataset = [
+        { label: "CPU:" + _data.cpu + "%", data: cpu, lines: { fill: 0.2, lineWidth: 1.5 }, color: "#B0A4BE" }
+      ];
+      $.plot($("#flot-placeholder1"), dataset, options);
+      setTimeout(GetData, updateInterval);
+  }
+  $(document).ready(function () {
+    initData();
+    dataset = [
+      { label: "CPU", data: cpu, lines:{fill:0.2, lineWidth:1}, color: "#B0A4BE" }
+    ];
+    $.plot($("#flot-placeholder1"), dataset, options);
+    setTimeout(GetData, updateInterval);
+  });
+  </script>
   <script language="javascript" type="text/javascript">
   $(document).ready(function() {
   function uptime() {
@@ -126,14 +253,6 @@
     }});
   }
   sload();
-
-  //function servstatus() {
-  //  $.ajax({url: "widgets/service_status.php", cache:true, success: function (result) {
-  //    $('#servstat').html(result);
-  //    setTimeout(function(){servstatus()}, 1000);
-  //  }});
-  //}
-  //servstatus();
 
   function bwtables() {
     $.ajax({url: "widgets/bw_tables.php", cache:false, success: function (result) {
@@ -158,14 +277,6 @@
     }});
   }
   ramstats();
-
-  //function servstat() {
-  //  $.ajax({url: "widgets/service_restart.php", cache:false, success: function (result) {
-  //    $('#servstart').html(result);
-  //    setTimeout(function(){servstat()}, 1000);
-  //  }});
-  //}
-  //servstat();
 
   function msgoutput() {
     $.ajax({url: "db/output.log", cache:false, success: function (result) {
@@ -241,142 +352,6 @@ function displayData(dataJSON) {
   $("#NetInputSpeed4").html(ForDight((dataJSON.NetInputSpeed4-InputSpeed4),3)); InputSpeed4=dataJSON.NetInputSpeed4;
   $("#NetInputSpeed5").html(ForDight((dataJSON.NetInputSpeed5-InputSpeed5),3)); InputSpeed5=dataJSON.NetInputSpeed5;
 }
-</script>
-
-<script>
-var cpu = [];
-var dataset;
-var totalPoints = 100;
-var updateInterval = 1000;
-var now = new Date().getTime();
-
-var options = {
-  series: {
-    lines: {
-      show: true,
-      lineWidth: 1.5,
-      fill: 0.4
-    },
-    //bars: {
-      //show: true,
-      //barWidth : 800,
-      //tension: 0.2,
-      //lineWidth: 0.5,
-      //fill: 0.4
-    //}
-  },
-  points: { show: false },
-  legend: {
-    show: true,
-    noColumns: 0,
-    labelBoxBorderColor: '#ffffff',
-    position: 'ne',
-    //margin: 10
-  },
-  grid: {
-    borderWidth: 0,
-    border: { show: false },
-    color: '#dddddd',
-    labelMargin: 5,
-    backgroundColor: '#ffffff'
-  },
-  xaxis: {
-    mode: "time",
-    tickSize: [60, "second"],
-    tickFormatter: function (v, axis) {
-      var date = new Date(v);
-      if (date.getSeconds() % 20 == 0) {
-        var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
-        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-        var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
-        return hours + ":" + minutes + ":" + seconds;
-      } else {
-        return "";
-      }
-    },
-    axisLabel: "Time",
-    axisLabelUseCanvas: true,
-    //axisLabelFontSizePixels: 8,
-    //axisLabelFontFamily: 'open sans',
-    axisLabelPadding: 1,
-    font: {
-      size: 9,
-      style: "normal",
-      color: "#999999",
-      weight: "light",
-      family: "open sans",
-      variant: "small-caps"
-    }
-  },
-  yaxes: [
-    {
-      min: 0,
-      max: 100,
-      tickSize: 5,
-      tickFormatter: function (v, axis) {
-        if (v % 10 == 0) {
-          return v + "%";
-        } else {
-          return "";
-        }
-      },
-      axisLabel: "CPU loading",
-      axisLabelUseCanvas: true,
-      axisLabelFontSizePixels: 6,
-      //axisLabelFontSizePixels: 8,
-      //axisLabelFontFamily: 'open sans',
-      axisLabelPadding: 1,
-      font: {
-        size: 9,
-        style: "normal",
-        color: "#999999",
-        weight: "light",
-        family: "open sans",
-        variant: "small-caps"
-      }
-    }
-  ],
-  border: { show: false },
-  shadowSize: 0
-};
-function initData() {
-  for (var i = 0; i < totalPoints; i++) {
-    var temp = [now += updateInterval, 0];
-    cpu.push(temp)
-  }
-}
-function GetData() {
-  $.ajaxSetup({ cache: false });
-
-  $.ajax({
-    url: "widgets/cpu.php",
-    dataType: 'json',
-    success: update,
-    error: function () {
-      setTimeout(GetData, updateInterval);
-    }
-  });
-}
-var temp;
-function update(_data) {
-    cpu.shift();
-    now += updateInterval
-    temp = [now, _data.cpu];
-    cpu.push(temp);
-    dataset = [
-      { label: "CPU:" + _data.cpu + "%", data: cpu, lines: { fill: 0.2, lineWidth: 1.5 }, color: "#B0A4BE" }
-    ];
-    $.plot($("#flot-placeholder1"), dataset, options);
-    setTimeout(GetData, updateInterval);
-}
-$(document).ready(function () {
-  initData();
-  dataset = [
-    { label: "CPU", data: cpu, lines:{fill:0.2, lineWidth:1}, color: "#B0A4BE" }
-  ];
-  $.plot($("#flot-placeholder1"), dataset, options);
-  setTimeout(GetData, updateInterval);
-});
 </script>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

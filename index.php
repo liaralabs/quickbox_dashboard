@@ -172,6 +172,22 @@
                     </tr>
                     <?php } ?>
 
+                    <?php if (file_exists("/install/.pyload.lock")) { ?>
+                    <tr>
+                      <td><?php echo "$plval"; ?> pyLoad </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=pyload'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><?php echo "$cbodypl"; ?></td>
+                    </tr>
+                    <?php } ?>
+
+                    <?php if (file_exists("/install/.sabnzbd.lock")) { ?>
+                    <tr>
+                      <td><?php echo "$srval"; ?> SABnzbd </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=sabnzbd'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><?php echo "$cbodysz"; ?></td>
+                    </tr>
+                    <?php } ?>
+
                     <?php if (file_exists("/install/.sickrage.lock")) { ?>
                     <tr>
                       <td><?php echo "$srval"; ?> SickRage </td>
@@ -185,6 +201,14 @@
                       <td><?php echo "$sval"; ?> Sonarr </td>
                       <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=sonarr'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
                       <td class="text-center"><?php echo "$cbodys"; ?></td>
+                    </tr>
+                    <?php } ?>
+
+                    <?php if (file_exists("/install/.subsonic.lock")) { ?>
+                    <tr>
+                      <td><?php echo "$ssval"; ?> Subsonic </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=subsonic'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><?php echo "$cbodyss"; ?></td>
                     </tr>
                     <?php } ?>
 
@@ -324,6 +348,15 @@
                       <?php } ?>
                     </tr>
                     <tr>
+                      <td>pyLoad</td>
+                      <td><?php echo T('PYLOAD'); ?></td>
+                      <?php if (file_exists("/install/.pyload.lock")) { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#pyloadRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
+                      <?php } else { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="?installpackage-pyload=true" data-toggle="modal" data-target="#sysResponse" id="pyloadInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
+                      <?php } ?>
+                    </tr>
+                    <tr>
                       <td>Quassel</td>
                       <td><?php echo T('QUASSEL'); ?></td>
                       <?php if (file_exists("/install/.quassel.lock")) { ?>
@@ -351,6 +384,15 @@
                       <?php } ?>
                     </tr>
                     <tr>
+                      <td>SABnzbd</td>
+                      <td><?php echo T('SABNZBD'); ?></td>
+                      <?php if (file_exists("/install/.sabnzbd.lock")) { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#sabnzbdRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
+                      <?php } else { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="?installpackage-sabnzbd=true" data-toggle="modal" data-target="#sysResponse" id="sabnzbdInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
+                      <?php } ?>
+                    </tr>
+                    <tr>
                       <td>SickRage</td>
                       <td><?php echo T('SICKRAGE'); ?></td>
                       <?php if (file_exists("/install/.sickrage.lock")) { ?>
@@ -366,6 +408,15 @@
                         <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#sonarrRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
                       <?php } else { ?>
                         <td style="vertical-align: middle; text-align: center"><a href="?installpackage-sonarr=true" data-toggle="modal" data-target="#sysResponse" id="sonarrInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
+                      <?php } ?>
+                    </tr>
+                    <tr>
+                      <td>Subsonic</td>
+                      <td><?php echo T('SUBSONIC'); ?></td>
+                      <?php if (file_exists("/install/.subsonic.lock")) { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#subsonicRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
+                      <?php } else { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="?installpackage-subsonic=true" data-toggle="modal" data-target="#sysResponse" id="subsonicInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
                       <?php } ?>
                     </tr>
                     <td>Syncthing</td>

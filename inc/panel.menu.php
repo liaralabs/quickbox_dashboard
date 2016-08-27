@@ -79,6 +79,9 @@
               <?php if (file_exists('/install/.csf.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$csfURL"; ?>" target="_blank"><img src="img/brands/csf.png" class="brand-ico"> <span>CSF (firewall)</span></a></li>
               <?php } ?>
+              <?php if (file_exists('/install/.jackett.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$jackettURL"; ?>" target="_blank"><img src="img/brands/jackett.png" class="brand-ico"> <span>Jackett</span></a></li>
+              <?php } ?>
               <?php if (file_exists('/install/.nextcloud.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$nextcloudURL"; ?>" target="_blank"><img src="img/brands/nextcloud.png" class="brand-ico"> <span>NextCloud</span></a></li>
               <?php } ?>
@@ -91,8 +94,14 @@
               <?php if (file_exists("/install/.plexrequests.lock")) { ?>
                 <li><a class="grayscale" href="<?php echo "$plexrequestsURL"; ?>" target="_blank"><img src="img/brands/plexrequests-net.png" class="brand-ico"> <span>Plex Requests.NET</span></a></li>
               <?php } ?>
+              <?php if (file_exists('/install/.pyload.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$pyloadURL"; ?>" target="_blank"><img src="img/brands/pyload.png" class="brand-ico"> <span>pyLoad</span></a></li>
+              <?php } ?>
               <?php if (file_exists('/install/.rapidleech.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$rapidleechURL"; ?>" target="_blank"><img src="img/brands/rapidleech.png" class="brand-ico"> <span>Rapidleech</span></a></li>
+              <?php } ?>
+              <?php if (file_exists('/install/.sabnzbd.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$sabnzbdURL"; ?>" target="_blank"><img src="img/brands/sabnzbd.png" class="brand-ico"> <span>SABnzbd</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.sickrage.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sickrageURL"; ?>" target="_blank"><img src="img/brands/sickrage.png" class="brand-ico"> <span>SickRage</span></a></li>
@@ -100,8 +109,8 @@
               <?php if (processExists("nzbdrone",$username) && file_exists('/install/.sonarr.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sonarrURL"; ?>" target="_blank"><img src="img/brands/sonarr.png" class="brand-ico"> <span>Sonarr</span></a></li>
               <?php } ?>
-              <?php if (file_exists('/install/.jackett.lock')) { ?>
-                <li><a class="grayscale" href="<?php echo "$jackettURL"; ?>" target="_blank"><img src="img/brands/jackett.png" class="brand-ico"> <span>Jackett</span></a></li>
+              <?php if (file_exists('/install/.subsonic.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$subsonicURL"; ?>" target="_blank"><img src="img/brands/subsonic.png" class="brand-ico"> <span>Subsonic</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.syncthing.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$syncthingURL"; ?>" target="_blank"><img src="img/brands/syncthing.png" class="brand-ico"> <span>Syncthing</span></a></li>
@@ -163,14 +172,20 @@
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradeBTSync</span><br/>
               <small><?php echo T('UPGRADEBTSYNC_TXT'); ?></small>
             </li>
-            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradePlex</span><br/>
-              <small><?php echo T('UPGRADEPLEX_TXT'); ?></small>
-            </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradeDeluge</span><br/>
               <small><?php echo T('UPGRADEDELUGE_TXT'); ?></small>
             </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradeJackett</span><br/>
               <small><?php echo T('UPGRADEJACKETT_TXT'); ?></small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradePlex</span><br/>
+              <small><?php echo T('UPGRADEPLEX_TXT'); ?></small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">upgradepyLoad</span><br/>
+              <small><?php echo T('UPGRADEPYLOAD_TXT'); ?></small>
+            </li>
+            <li style="padding: 7px"><span style="font-size: 12px; color:#eee">setup-pyLoad</span><br/>
+              <small><?php echo T('SETUPPYLOAD_TXT'); ?></small>
             </li>
             <li style="padding: 7px"><span style="font-size: 12px; color:#eee">clean_mem</span><br/>
               <small><?php echo T('CLEAN_MEM_TXT'); ?></small>

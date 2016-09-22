@@ -281,7 +281,7 @@ function isEnabled($process, $username){
   }
 }
 
-$btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
+$btsyncURL = "https://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
 $cpURL = "https://" . $_SERVER['HTTP_HOST'] . "/couchpotato";
 $csfURL = "https://" . $_SERVER['HTTP_HOST'] . ":3443";
 if ($dwssl == "true") {

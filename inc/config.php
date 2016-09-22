@@ -290,17 +290,17 @@ $dwURL = "https://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 if ($dwssl == "false") {
 $dwURL = "http://" . $_SERVER['HTTP_HOST'] . ":$dwport";
 }
-$jackettURL = "http://" . $_SERVER['HTTP_HOST'] . ":9117";
+$jackettURL = "https://" . $_SERVER['HTTP_HOST'] . "/jackett/Admin/Dashboard";
 $nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
 $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
 $plexpyURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexpy";
 $plexrequestsURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexrequests";
 $pyloadURL = "http://" . $_SERVER['HTTP_HOST'] . ":8000";
 $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . "/rapidleech";
-$sabnzbdURL = "http://" . $_SERVER['HTTP_HOST'] . ":65080";
-$sickrageURL = "http://" . $_SERVER['HTTP_HOST'] . ":8081";
-$sonarrURL = "http://" . $_SERVER['HTTP_HOST'] . ":8989";
-$subsonicURL = "http://" . $_SERVER['HTTP_HOST'] . ":4040";
+$sabnzbdURL = "https://" . $_SERVER['HTTP_HOST'] . "/sabnzbd";
+$sickrageURL = "https://" . $_SERVER['HTTP_HOST'] . "/sickrage";
+$sonarrURL = "https://" . $_SERVER['HTTP_HOST'] . "/sonarr";
+$subsonicURL = "https://" . $_SERVER['HTTP_HOST'] . "/subsonic";
 $syncthingURL = "https://" . $_SERVER['HTTP_HOST'] . ":8384";
 if ($zssl == "true") {
 $zncURL = "https://" . $_SERVER['HTTP_HOST'] . ":$zport";

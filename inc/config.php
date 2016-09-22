@@ -301,7 +301,7 @@ $sabnzbdURL = "https://" . $_SERVER['HTTP_HOST'] . "/sabnzbd";
 $sickrageURL = "https://" . $_SERVER['HTTP_HOST'] . "/sickrage";
 $sonarrURL = "https://" . $_SERVER['HTTP_HOST'] . "/sonarr";
 $subsonicURL = "https://" . $_SERVER['HTTP_HOST'] . "/subsonic";
-$syncthingURL = "https://" . $_SERVER['HTTP_HOST'] . ":8384";
+$syncthingURL = "https://" . $_SERVER['HTTP_HOST'] . "/syncthing/";
 if ($zssl == "true") {
 $zncURL = "https://" . $_SERVER['HTTP_HOST'] . ":$zport";
 }

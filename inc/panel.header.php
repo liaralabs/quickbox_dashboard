@@ -372,4 +372,8 @@ function displayData(dataJSON) {
   }
   </style>
 
+  <style>
+  <?php include ('skins/custom.css'); ?>
+  </style>
+
 </head>

@@ -5,6 +5,7 @@ $packages = array(
         'csf',
         'couchpotato',
         'deluge',
+        'emby',
         'jackett',
         'nextcloud',
         'plex',

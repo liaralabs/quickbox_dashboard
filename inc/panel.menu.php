@@ -26,7 +26,7 @@
               <ul class="dropdown-menu pull-right">
                 <li><span style="margin-top:5x"></span></li>
                 <?php foreach($language as $lang) { ?>
-                <li><a href='?langSelect-<?php echo $lang['file'] ?>=true' class='tooltips' data-toggle='tooltip' title='<?php echo $lang['title'] ?>' data-placement='bottom'><img class='lang-flag' src='lang/flag_<?php echo $lang['file'] ?>.png' /><?php echo $lang['title'] ?></a></li>
+                <li><a href='?langSelect-<?php echo $lang['file'] ?>=true'><img class='lang-flag' src='lang/flag_<?php echo $lang['file'] ?>.png' /><?php echo $lang['title'] ?></a></li>
                 <?php } ?>
               </ul>
             </div>

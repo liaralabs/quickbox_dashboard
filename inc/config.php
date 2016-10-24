@@ -254,6 +254,7 @@ function processExists($processName, $username) {
 $btsync = processExists("btsync",btsync);
 $deluged = processExists("deluged",$username);
 $delugedweb = processExists("deluge-web",$username);
+$emby = processExists("emby-server",$username);
 $irssi = processExists("irssi",$username);
 $plex = processExists("Plex",plex);
 $plexpy = processExists("plexpy",plexpy);
@@ -340,6 +341,10 @@ if ($couchpotato == "1") { $cpval = "<span class=\"badge badge-service-running-d
 } else { $cpval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
+if ($emby == "1") { $eval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $eval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
+}
+
 if ($jackett == "1") { $jval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $jval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
@@ -422,6 +427,8 @@ case 0:
     $cbodyb .= $btsync;
   $couchpotato = isEnabled("couchpotato", $username);
     $cbodycp .= $couchpotato;
+  $emby = isEnabled("emby-server", $username);
+    $cbodye .= $emby;
   $jackett = isEnabled("jackett", $username);
     $cbodyj .= $jackett;
   $plex = isEnabled("plexmediaserver",plex);
@@ -462,6 +469,9 @@ case 66:
     } elseif ($process == "shellinabox"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
+    } elseif ($process == "emby-server"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl start $process");
     } elseif ($process == "plexmediaserver"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
@@ -490,6 +500,9 @@ case 77:
     } elseif ($process == "shellinabox"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
+    } elseif ($process == "emby-server"){
+      shell_exec("sudo systemctl stop $process");
+      shell_exec("sudo systemctl disable $process");
     } elseif ($process == "plexmediaserver"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
@@ -516,6 +529,9 @@ case 88:
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
     } elseif ($process == "shellinabox"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl restart $process");
+    } elseif ($process == "emby-server"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
     } elseif ($process == "plexmediaserver"){

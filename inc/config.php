@@ -282,32 +282,31 @@ function isEnabled($process, $username){
   }
 }
 
-$btsyncURL = "https://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
-$cpURL = "https://" . $_SERVER['HTTP_HOST'] . "/couchpotato";
-$csfURL = "https://" . $_SERVER['HTTP_HOST'] . ":3443";
-if ($dwssl == "true") {
-$dwURL = "https://" . $_SERVER['HTTP_HOST'] . ":$dwport";
-}
-if ($dwssl == "false") {
-$dwURL = "http://" . $_SERVER['HTTP_HOST'] . ":$dwport";
-}
-$jackettURL = "https://" . $_SERVER['HTTP_HOST'] . "/jackett/Admin/Dashboard";
-$nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
-$plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
-$plexpyURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexpy";
-$plexrequestsURL = "http://" . $_SERVER['HTTP_HOST'] . ":3000";
-$pyloadURL = "http://" . $_SERVER['HTTP_HOST'] . ":8000";
-$rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . "/rapidleech";
-$sabnzbdURL = "https://" . $_SERVER['HTTP_HOST'] . "/sabnzbd";
-$sickrageURL = "https://" . $_SERVER['HTTP_HOST'] . "/sickrage";
-$sonarrURL = "https://" . $_SERVER['HTTP_HOST'] . "/sonarr";
-$subsonicURL = "https://" . $_SERVER['HTTP_HOST'] . "/subsonic";
-$syncthingURL = "https://" . $_SERVER['HTTP_HOST'] . "/syncthing/";
-if ($zssl == "true") {
-$zncURL = "https://" . $_SERVER['HTTP_HOST'] . ":$zport";
-}
-if ($zssl == "false") {
-$zncURL = "http://" . $_SERVER['HTTP_HOST'] . ":$zport";
+if(file_exists('/srv/rutorrent/home/custom/url.override.php')){
+  // BEGIN CUSTOM URL OVERRIDES //
+  include ($_SERVER['DOCUMENT_ROOT'].'/custom/url.override.php');
+  // END CUSTOM URL OVERRIDES ////
+} else {
+  $btsyncURL = "https://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
+  $cpURL = "https://" . $_SERVER['HTTP_HOST'] . "/couchpotato";
+  $csfURL = "https://" . $_SERVER['HTTP_HOST'] . ":3443";
+  if ($dwssl == "true") { $dwURL = "https://" . $_SERVER['HTTP_HOST'] . ":$dwport"; }
+  if ($dwssl == "false") { $dwURL = "http://" . $_SERVER['HTTP_HOST'] . ":$dwport"; }
+  $embyURL = "http://" . $_SERVER['HTTP_HOST'] . ":8096";
+  $jackettURL = "https://" . $_SERVER['HTTP_HOST'] . "/jackett/Admin/Dashboard";
+  $nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
+  $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
+  $plexpyURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexpy";
+  $plexrequestsURL = "http://" . $_SERVER['HTTP_HOST'] . ":3000";
+  $pyloadURL = "http://" . $_SERVER['HTTP_HOST'] . ":8000";
+  $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . "/rapidleech";
+  $sabnzbdURL = "https://" . $_SERVER['HTTP_HOST'] . "/sabnzbd";
+  $sickrageURL = "https://" . $_SERVER['HTTP_HOST'] . "/sickrage";
+  $sonarrURL = "https://" . $_SERVER['HTTP_HOST'] . "/sonarr";
+  $subsonicURL = "https://" . $_SERVER['HTTP_HOST'] . "/subsonic";
+  $syncthingURL = "https://" . $_SERVER['HTTP_HOST'] . "/syncthing/";
+  if ($zssl == "true") { $zncURL = "https://" . $_SERVER['HTTP_HOST'] . ":$zport"; }
+  if ($zssl == "false") { $zncURL = "http://" . $_SERVER['HTTP_HOST'] . ":$zport"; }
 }
 
 

@@ -53,7 +53,7 @@ $panel = array(
     'author'            => 'Everyone that contributes to the open QuickBox project!',
     'robots'            => 'noindex, nofollow',
     'title'             => 'Quickbox Dashboard',
-    'description'       => 'QuickBox is an open-source seedbox project that is developed and maintained by anyone who so choses to provide time and energy. QuickBox has been made possible by the Team at Swizards. See Swizards.net. For more QuickBox, checkout https://plaza.quickbox.io',
+    'description'       => 'QuickBox is an open-source seedbox project that is developed and maintained by anyone who so choses to provide time and energy. For more QuickBox, checkout https://plaza.quickbox.io',
     'active_page'       => basename($_SERVER['PHP_SELF']),
 );
 

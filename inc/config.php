@@ -297,7 +297,7 @@ if(file_exists('/srv/rutorrent/home/custom/url.override.php')){
   $nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
   $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
   $plexpyURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexpy";
-  $plexrequestsURL = "http://" . $_SERVER['HTTP_HOST'] . ":3000";
+  $plexrequestsURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexrequests";
   $pyloadURL = "http://" . $_SERVER['HTTP_HOST'] . ":8000";
   $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . "/rapidleech";
   $sabnzbdURL = "https://" . $_SERVER['HTTP_HOST'] . "/sabnzbd";

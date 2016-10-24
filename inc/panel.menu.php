@@ -118,6 +118,9 @@
               <?php if (file_exists('/install/.znc.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$zncURL"; ?>" target="_blank"><img src="img/brands/znc.png" class="brand-ico"> <span>ZNC</span></a></li>
               <?php } ?>
+              <!-- /// BEGIN INSERT CUSTOM MENU /// -->
+                <?php include ($_SERVER['DOCUMENT_ROOT'].'/custom/custom.menu.php'); ?>
+              <!-- /// END INSERT CUSTOM MENU /// -->
             <?php } ?>
             <li class="nav-parent">
               <a href=""><i class="fa fa-download"></i> <span><?php echo T('DOWNLOADS'); ?></span></a>

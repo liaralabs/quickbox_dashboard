@@ -140,6 +140,14 @@
                     </tr>
                     <?php } ?>
 
+                    <?php if (file_exists("/install/.emby.lock")) { ?>
+                    <tr>
+                      <td><?php echo "$eval"; ?> Emby </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=emby'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><?php echo "$cbodye"; ?></td>
+                    </tr>
+                    <?php } ?>
+
                     <?php if (file_exists("/install/.jackett.lock")) { ?>
                     <tr>
                       <td><?php echo "$jval"; ?> Jackett </td>
@@ -291,6 +299,15 @@
                         <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#delugeRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
                       <?php } else { ?>
                         <td style="vertical-align: middle; text-align: center"><a href="?installpackage-deluge=true" data-toggle="modal" data-target="#sysResponse" id="delugeInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
+                      <?php } ?>
+                    </tr>
+                    <tr>
+                      <td>Emby</td>
+                      <td><?php echo T('EMBY'); ?></td>
+                      <?php if (file_exists("/install/.emby.lock")) { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#embyRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
+                      <?php } else { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="?installpackage-emby=true" data-toggle="modal" data-target="#sysResponse" id="embyInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
                       <?php } ?>
                     </tr>
                     <tr>

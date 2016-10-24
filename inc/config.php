@@ -292,7 +292,7 @@ if(file_exists('/srv/rutorrent/home/custom/url.override.php')){
   $csfURL = "https://" . $_SERVER['HTTP_HOST'] . ":3443";
   if ($dwssl == "true") { $dwURL = "https://" . $_SERVER['HTTP_HOST'] . ":$dwport"; }
   if ($dwssl == "false") { $dwURL = "http://" . $_SERVER['HTTP_HOST'] . ":$dwport"; }
-  $embyURL = "http://" . $_SERVER['HTTP_HOST'] . ":8096";
+  $embyURL = "https://" . $_SERVER['HTTP_HOST'] . "/emby";
   $jackettURL = "https://" . $_SERVER['HTTP_HOST'] . "/jackett/Admin/Dashboard";
   $nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
   $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";

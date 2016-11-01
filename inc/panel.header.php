@@ -60,6 +60,21 @@
       },
       xaxis: {
         mode: "time",
+        tickSize: [60, "second"],
+        tickFormatter: function (v, axis) {
+          var date = new Date(v);
+          if (date.getSeconds() % 20 == 0) {
+            var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+            var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+            var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+            return hours + ":" + minutes + ":" + seconds;
+          } else {
+            return "";
+          }
+        },
+        axisLabel: "Time",
+        axisLabelUseCanvas: true,
+        axisLabelPadding: 1,
         font: {
           size: 9,
           style: "normal",
@@ -97,6 +112,7 @@
             // data, we could merge it with what we already got
             data = series;
             var updateInterval = 30;
+            var now = new Date().getTime();
             $.plot($("#mainbw"), data, options);
           fetchData();
           }

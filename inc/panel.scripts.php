@@ -126,6 +126,24 @@
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->
 </div><!-- modal -->
+<!-- NZBHydra UNINSTALL MODAL -->
+<div class="modal bounceIn animated" id="nzbhydraRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="NZBHydraRemovalConfirm" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="NZBHydraRemovalConfirm"><?php echo T('UNINSTALL_TITLE'); ?> NZBHydra?</h4>
+      </div>
+      <div class="modal-body">
+        <?php echo T('UNINSTALL_NZBHYDRA_TXT'); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
+        <a href="?removepackage-nzbhydra=true" id="nzbhydraRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!-- PLEX UNINSTALL MODAL -->
 <div class="modal bounceIn animated" id="plexRemovalConfirm" tabindex="-1" role="dialog" aria-labelledby="PlexRemovalConfirm" aria-hidden="true">
   <div class="modal-dialog">
@@ -589,6 +607,15 @@ $(document).ready(function() {
     $.gritter.add({
       title: '<?php echo T('UNINSTALLING_TITLE'); ?> NextCloud',
       text: '<?php echo T('UNINSTALLING_TXT_1'); ?> NextCloud <?php echo T('UNINSTALLING_TXT_2'); ?>',
+      class_name: 'with-icon times-circle danger',
+      sticky: true
+    });
+  });
+  // NZBHydraRemove
+  $('#nzbhydraRemove').click(function(){
+    $.gritter.add({
+      title: '<?php echo T('UNINSTALLING_TITLE'); ?> NZBHydra',
+      text: '<?php echo T('UNINSTALLING_TXT_1'); ?> NZBHydra <?php echo T('UNINSTALLING_TXT_2'); ?>',
       class_name: 'with-icon times-circle danger',
       sticky: true
     });

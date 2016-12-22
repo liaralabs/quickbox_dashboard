@@ -8,6 +8,7 @@ $packages = array(
         'emby',
         'jackett',
         'nextcloud',
+        'nzbhydra',
         'plex',
         'plexpy',
         'plexrequests',

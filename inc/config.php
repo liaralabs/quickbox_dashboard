@@ -295,7 +295,7 @@ if(file_exists('/srv/rutorrent/home/custom/url.override.php')){
   $embyURL = "https://" . $_SERVER['HTTP_HOST'] . "/emby";
   $jackettURL = "https://" . $_SERVER['HTTP_HOST'] . "/jackett/Admin/Dashboard";
   $nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
-  $nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nzbhydra";
+  $nzbhydraURL = "https://" . $_SERVER['HTTP_HOST'] . "/nzbhydra";
   $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
   $plexpyURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexpy";
   $plexrequestsURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexrequests";

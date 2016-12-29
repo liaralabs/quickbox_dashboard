@@ -423,7 +423,7 @@ case 0:
     $cbodydw .= $delugedweb;
   $shellinabox = isEnabled("shellinabox",shellinabox);
     $wcbodyb .= $shellinabox;
-  $btsync = isEnabled("btsync",btsync);
+  $btsync = isEnabled("resilio-sync",rslsync);
     $cbodyb .= $btsync;
   $couchpotato = isEnabled("couchpotato", $username);
     $cbodycp .= $couchpotato;
@@ -463,7 +463,7 @@ break;
 /* enable & start services */
 case 66:
   $process = $_GET['serviceenable'];
-    if ($process == "btsync"){
+    if ($process == "resilio-sync"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
     } elseif ($process == "shellinabox"){
@@ -494,7 +494,7 @@ break;
 /* disable & stop services */
 case 77:
   $process = $_GET['servicedisable'];
-    if ($process == "btsync"){
+    if ($process == "resilio-sync"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
     } elseif ($process == "shellinabox"){
@@ -525,7 +525,7 @@ break;
 /* restart services */
 case 88:
   $process = $_GET['servicestart'];
-    if ($process == "btsync"){
+    if ($process == "resilio-sync"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
     } elseif ($process == "shellinabox"){

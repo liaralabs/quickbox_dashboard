@@ -251,7 +251,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$btsync = processExists("btsync",btsync);
+$btsync = processExists("resilio-sync",rslsync);
 $deluged = processExists("deluged",$username);
 $delugedweb = processExists("deluge-web",$username);
 $emby = processExists("emby-server",$username);

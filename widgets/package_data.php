@@ -1,7 +1,7 @@
 <?php
 
 $packages = array(
-        'resilio-sync',
+        'btsync',
         'csf',
         'couchpotato',
         'deluge',

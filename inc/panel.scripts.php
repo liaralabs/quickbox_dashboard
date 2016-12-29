@@ -13,7 +13,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo T('CANCEL'); ?></button>
-        <a href="?removepackage-btsync=true" id="btsyncRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
+        <a href="?removepackage-resilio-sync=true" id="btsyncRemove" class="btn btn-primary"><?php echo T('AGREE'); ?></a>
       </div>
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->

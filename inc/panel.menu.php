@@ -38,7 +38,9 @@
                     <li>
                     <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">host:</strong> Chat.QuickBox.io</span><br/>
                     <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">chan:</strong> #QuickBox.io</span><br/>
-                    <div class="chat-btn"><a href="https://chat.quickbox.io" target="_blank">Click to connect</a></div>
+                    </li>
+                    <li style="border-top: 1px solid #444">
+                      <span class="chat-btn"><a href="https://chat.quickbox.io" class="label label-success" target="_blank">Click to connect</a></span>
                     </li>
                 </ul>
               </div>

@@ -3560,6 +3560,30 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
+.headermenu > li > .btn-group > .btn-logged.btn-donate {
+  border: 2px solid #222;
+  padding: 6px 12px;
+  color: #fff;
+}
+.headermenu > li > .btn-group > .btn-logged.btn-donate:hover {
+  border: 2px solid #fc575e !important;
+  padding: 6px 12px;
+}
+a.btn-donate {
+  color: #fff;
+}
+.chat-btn {
+  background: transparent none repeat scroll 0 0;
+  clear: both;
+  color: #333 !important;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 2px 12px;
+  position: relative;
+  text-align: center;
+  top: 5px;
+  width: 100% !important;
+}
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;

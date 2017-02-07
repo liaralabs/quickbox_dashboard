@@ -12,18 +12,49 @@
       <div class="header-right">
         <ul class="headermenu">
           <?php if ($username == "$master") { ?>
-          <li>
-          <?php $language = array();
+            <li>
+              <div class="btn-group">
+                <button type="button" class="btn btn-logged" data-toggle="dropdown">
+                  <a href="#" class="title" style="color:#8fa8f6">QuickBox +</a>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right" style="font-size: 13px">
+                  <li><a href="//quickbox.io/category/announcements/" target="_blank">Announcements</a></li>
+                  <li><a href="https://quickbox.io/readme-md/" target="_blank">README.md</a></li>
+                  <li><a href="/t/quickbox-changelog/45" target="_blank">CHANGELOG</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="btn-group">
+                <button type="button" class="btn btn-logged" data-toggle="dropdown">
+                  <a href="#" style="color: #FFFFFF">#QuickBox</a>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right" style="font-size: 13px">
+                    <li style="border-bottom: 1px solid #444">
+                    <span class="title" style="color: #fff; font-weight: 300; font-size: 13px;">Join Us On Live Chat!</span>
+                    </li>
+                    <li>
+                    <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">host:</strong> Chat.QuickBox.io</span><br/>
+                    <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">chan:</strong> #QuickBox.io</span><br/>
+                    <div class="chat-btn"><a href="https://chat.quickbox.io" target="_blank">Click to connect</a></div>
+                    </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <?php $language = array();
                 $language[] = array('file' => 'lang_dk', 'title' =>'Danish');
                 $language[] = array('file' => 'lang_en', 'title' =>'English');
                 $language[] = array('file' => 'lang_fr', 'title' =>'French');
                 $language[] = array('file' => 'lang_de', 'title' =>'German'); { ?>
-            <div class="btn-group">
-              <button type="button" class="btn btn-logged" data-toggle="dropdown">
-                <?php echo T('LANG_SELECT'); ?>
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu pull-right">
+              <div class="btn-group">
+                <button type="button" class="btn btn-logged" data-toggle="dropdown">
+                  <?php echo T('LANG_SELECT'); ?>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
                 <li><span style="margin-top:5x"></span></li>
                 <?php foreach($language as $lang) { ?>
                 <li><a href='?langSelect-<?php echo $lang['file'] ?>=true'><img class='lang-flag' src='lang/flag_<?php echo $lang['file'] ?>.png' /><?php echo $lang['title'] ?></a></li>
@@ -124,9 +155,6 @@
               <?php if (file_exists('/install/.znc.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$zncURL"; ?>" target="_blank"><img src="img/brands/znc.png" class="brand-ico"> <span>ZNC</span></a></li>
               <?php } ?>
-              <!-- /// BEGIN INSERT CUSTOM MENU /// -->
-                <?php include ($_SERVER['DOCUMENT_ROOT'].'/custom/custom.menu.php'); ?>
-              <!-- /// END INSERT CUSTOM MENU /// -->
             <?php } ?>
             <li class="nav-parent">
               <a href=""><i class="fa fa-download"></i> <span><?php echo T('DOWNLOADS'); ?></span></a>
@@ -143,6 +171,9 @@
             <?php if (processExists("shellinabox",shellinabox) && ($username == "$master")) { ?>
             <li><a href="/<?php echo "$username"; ?>.console" target="_blank"><i class="fa fa-keyboard-o"></i> <span><?php echo T('WEB_CONSOLE'); ?></span></a></li>
             <?php } ?>
+            <!-- /// BEGIN INSERT CUSTOM MENU /// -->
+            <?php include ($_SERVER['DOCUMENT_ROOT'].'/custom/custom.menu.php'); ?>
+            <!-- /// END INSERT CUSTOM MENU /// -->
           </ul>
         </div><!-- tab pane -->
 

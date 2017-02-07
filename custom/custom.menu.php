@@ -36,10 +36,10 @@
 
 
 // INSERT YOUR CUSTOM EXTERNAL or INTERNAL LINKS HERE! //
-$quickboxURL = "https://plaza.quickbox.io/";
+$quickboxURL = "https://quickbox.io/donate/";
 
 ?> <!-- Do not remove this closing (?>) -->
 
 
 <!-- // INSERT YOUR CUSTOM EXTERNAL or INTERNAL MENU ITEMS HERE! // -->
-<li><a class="grayscale" href="<?php echo "$quickboxURL"; ?>" target="_blank"><img src="img/brands/quickbox.png" class="brand-ico"> <span>QuickBox Plaza</span></a></li>
+<li><a href="<?php echo "$quickboxURL"; ?>" class="grayscale" target="_blank"><i class="fa fa-heart text-danger"></i> <span>Donate </span></a></li>

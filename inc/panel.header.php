@@ -7,6 +7,13 @@
   <meta name="author" content="<?php echo $panel['author'] ?>">
   <title><?php echo $panel['title'] ?></title>
   <meta name="robots" content="<?php echo $panel['robots'] ?>">
+  <meta name="theme-color" content="#ffffff">
+  <!-- FAVICON ASSETTS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/favicon//favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="img/favicon/manifest.json">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <!-- CSS STYLESHEETS AND ASSETTS -->
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/ico">
   <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.css">

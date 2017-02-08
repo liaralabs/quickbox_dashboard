@@ -87,7 +87,7 @@ $L['SERVER_LOAD'] = 'Serverbelastning';
 
 // recent updates widget
 $L['RECENT_UPDATES'] = 'Opdateringer';
-$L['RECENT_UPDATES_TXT'] = 'Denne liste opdaterer hvert 10. minut';
+$L['RECENT_UPDATES_TXT'] = 'Denne liste opdaterer hvert 4 hours';
 
 
 ////////////////////////////////////////

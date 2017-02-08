@@ -86,7 +86,7 @@ $L['SERVER_LOAD'] = 'Charge Serveur';
 
 // recent updates widget
 $L['RECENT_UPDATES'] = 'Nouveautés';
-$L['RECENT_UPDATES_TXT'] = 'Cette liste est rafraîchie toutes les 4 hours';
+$L['RECENT_UPDATES_TXT'] = 'Cette liste est rafraîchie toutes les 4 heures';
 
 
 ////////////////////////////////////////

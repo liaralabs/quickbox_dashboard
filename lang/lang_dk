@@ -87,7 +87,7 @@ $L['SERVER_LOAD'] = 'Serverbelastning';
 
 // recent updates widget
 $L['RECENT_UPDATES'] = 'Opdateringer';
-$L['RECENT_UPDATES_TXT'] = 'Denne liste opdaterer hvert 4 hours';
+$L['RECENT_UPDATES_TXT'] = 'This is a live feed. To view more history <a href="https://quickbox.io/development-feed/" target="blank">click here</a>';
 
 
 ////////////////////////////////////////

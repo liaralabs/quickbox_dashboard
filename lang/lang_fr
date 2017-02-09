@@ -86,7 +86,7 @@ $L['SERVER_LOAD'] = 'Charge Serveur';
 
 // recent updates widget
 $L['RECENT_UPDATES'] = 'Nouveautés';
-$L['RECENT_UPDATES_TXT'] = 'Cette liste est rafraîchie toutes les 4 heures';
+$L['RECENT_UPDATES_TXT'] = 'This is a live feed. To view more history <a href="https://quickbox.io/development-feed/" target="blank">click here</a>';
 
 
 ////////////////////////////////////////

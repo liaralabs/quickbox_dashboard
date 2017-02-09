@@ -539,11 +539,11 @@
                 <div class="panel-heading">
                   <h4 class="panel-title text-success"><?php echo T('RECENT_UPDATES'); ?> <small class="label label-primary" style="font-size:10px; padding-top:0; padding-bottom:0px; top: -2px; position: relative;">QuickBox :: <span style="color: #fff;text-shadow: 0px 0px 6px #fff;"><?php echo "$version"; ?></span></small></h4>
                 </div>
-                <div class="panel-body ps-container" style="max-height: 300px; padding: 0;">
+                <div class="panel-body ps-container" style="max-height: 350px; padding: 0;">
                   <div class="alert alert-default" style="margin-bottom: 4px; text-align: center" role="alert">
                     <strong><?php echo T('RECENT_UPDATES_TXT'); ?></strong>
                   </div>
-                  <embed src="https://quickbox.io/widget/feed/qb-project.php" width='100%' height='100%' class="ps-child" style="padding-bottom:45px" />
+                  <div id="feed"></div>
                 </div>
                 <div class="panel-footer">
                 <a href="?updateQuickBox=true" data-toggle="modal" data-target="#sysResponse"><button class="btn btn-success btn-quirk btn-block"><i class="fa fa-bell text-success"></i> <?php echo T('UPDATE'); ?> </button></a>

@@ -543,7 +543,7 @@
                   <div class="alert alert-default" style="margin-bottom: 4px; text-align: center" role="alert">
                     <strong><?php echo T('RECENT_UPDATES_TXT'); ?></strong>
                   </div>
-                  <div id="feed"></div>
+                  <div id="activityfeed"></div>
                 </div>
                 <div class="panel-footer">
                 <a href="?updateQuickBox=true" data-toggle="modal" data-target="#sysResponse"><button class="btn btn-success btn-quirk btn-block"><i class="fa fa-bell text-success"></i> <?php echo T('UPDATE'); ?> </button></a>

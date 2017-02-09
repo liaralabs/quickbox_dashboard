@@ -26,8 +26,6 @@
   <link rel="stylesheet" href="lib/select2/select2.css">
   <link rel="stylesheet" href="skins/quick.css">
   <link rel="stylesheet" href="skins/lobipanel.css"/>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-  <link rel="stylesheet" href="skins/css/github-activity.css">
   <!-- JAVASCRIPT -->
   <script src="lib/modernizr/modernizr.js"></script>
   <script src="lib/jquery/jquery.js"></script>
@@ -37,8 +35,6 @@
   <script type="text/javascript" src="lib/flot/jquery.flot.canvas.js"></script>
   <script type="text/javascript" src="lib/flot-spline/jquery.flot.spline.js"></script>
   <!--script type="text/javascript" src="lib/flot/jquery.flot.axislabels.js"></script-->
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-  <script type="text/javascript" src="js/github-activity.js"></script>
 
   <!--///// BANDWIDTH CHART /////-->
   <script id="source" language="javascript" type="text/javascript">
@@ -304,6 +300,14 @@
     }});
   }
   ramstats();
+
+  function activefeed() {
+    $.ajax({url: "widgets/activity_feed.php", cache:false, success: function (result) {
+      $('#activityfeed').html(result);
+      setTimeout(function(){activefeed()}, 300000);
+    }});
+  }
+  activefeed();
 
   function msgoutput() {
     $.ajax({url: "db/output.log", cache:false, success: function (result) {

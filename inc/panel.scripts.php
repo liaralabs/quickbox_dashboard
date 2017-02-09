@@ -815,13 +815,3 @@ $(document).ready(function() {
 
 });
 </script>
-<script>
-$(document).ready(function() {
-  GitHubActivity.feed({
-    username: "QuickBox",
-    repository: "", // optional
-    selector: "#feed",
-    limit: 3 // optional
-  });
-});
-</script>

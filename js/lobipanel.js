@@ -1510,7 +1510,7 @@ $(function(){
         draggable: true,
         //Makes <b>pinned</b> panels sortable
         //Warning!!! This requires jquery ui sortable widget to be included
-        sortable: false,
+        sortable: true,
         //jquery ui sortable plugin option.
         //To avoid any problems this option must be same for all panels which are direct children of their parent
         connectWith: '.ui-sortable',
@@ -1536,7 +1536,7 @@ $(function(){
         collapseAnimation: 100,
         state: 'pinned', // pinned, unpinned, collapsed, minimized, fullscreen,
         initialIndex: null,
-        stateful: false, // If you set this to true you must specify data-inner-id. Plugin will save (in localStorage) it's states such as
+        stateful: true, // If you set this to true you must specify data-inner-id. Plugin will save (in localStorage) it's states such as
                          // pinned, unpinned, collapsed, minimized, fullscreen, position among it's siblings
                          // and apply them when you reload the browser
         unpin: {

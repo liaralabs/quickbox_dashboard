@@ -537,7 +537,11 @@
             <div class="col-sm-12">
               <div id="project-commits" class="panel panel-inverse">
                 <div class="panel-heading">
-                  <h4 class="panel-title text-success"><?php echo T('RECENT_UPDATES'); ?> <small class="label label-primary" style="font-size:10px; padding-top:0; padding-bottom:0px; top: -2px; position: relative;">QuickBox :: <span style="color: #fff;text-shadow: 0px 0px 6px #fff;"><?php echo "$version"; ?></span></small></h4>
+                  <h4 class="panel-title text-success"><?php echo T('RECENT_UPDATES'); ?>
+
+                    <small><a href="javascript:void()" data-toggle="modal" data-target="#commitComparison" title="Compare recent QuickBox versions to latest commits" data-placement="top" class="label label-primary tooltips" style="font-size:10px; padding-top:0; padding-bottom:0px; top: -2px; position: relative;" target='_blank'>QuickBox :: <span style="color: #fff;text-shadow: 0px 0px 6px #fff;"><?php echo "$version"; ?></span></a></small>
+
+                  </h4>
                 </div>
                 <div class="panel-body ps-container" style="max-height: 350px; padding: 0;">
                   <div class="alert alert-default" style="margin-bottom: 4px; text-align: center" role="alert">

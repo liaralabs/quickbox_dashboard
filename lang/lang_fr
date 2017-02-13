@@ -86,7 +86,7 @@ $L['SERVER_LOAD'] = 'Charge Serveur';
 
 // recent updates widget
 $L['RECENT_UPDATES'] = 'Nouveautés';
-$L['RECENT_UPDATES_TXT'] = 'This feed updates every 5 minutes';
+$L['RECENT_UPDATES_TXT'] = 'This feed updates every 60 seconds';
 
 
 ////////////////////////////////////////

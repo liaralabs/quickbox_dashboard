@@ -77,12 +77,19 @@
                     </tr>
                   </thead>
                   <tbody>
-                  <?php if (file_exists("/install/.rtorrent.lock")) { ?>
-                    <tr>
-                      <td><?php echo "$rval"; ?> RTorrent </td>
-                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=rtorrent'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
-                      <td class="text-center"><?php echo "$cbodyr"; ?></td>
-                    </tr>
+                    <?php if (file_exists("/install/.rtorrent.lock")) { ?>
+                      <tr>
+                        <?php
+                        $rtorrentrc = '/home/'.$username.'/.rtorrent.rc';
+                        if (file_exists($rtorrentrc)) {
+                            $rtorrentrc_data = file_get_contents($rtorrentrc);
+                            $scgiport = search($rtorrentrc_data, 'localhost:', "\n");
+                        }
+                        ?>
+                        <td><?php echo "$rval"; ?> RTorrent <span class="tooltips" data-toggle="tooltip" title="scgi_port: <?php echo $scgiport; ?>" data-placement="right"><i class="tooltips fa fa-usb"></i><span></td>
+                        <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=rtorrent'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                        <td class="text-center"><?php echo "$cbodyr"; ?></td>
+                      </tr>
                     <?php } ?>
 
                   <?php if (file_exists("/install/.autodlirssi.lock")) { ?>

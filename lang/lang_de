@@ -86,7 +86,7 @@ $L['CPU_STATUS'] = 'Status der CPU';
 $L['SERVER_LOAD'] = 'Server-Last';
 
 // recent updates widget
-$L['RECENT_UPDATES'] = 'Neueste Updates';
+$L['RECENT_UPDATES'] = 'Recent Activity & Updates';
 $L['RECENT_UPDATES_TXT'] = 'This feed updates every 60 seconds';
 
 

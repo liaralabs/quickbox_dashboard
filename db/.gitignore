@@ -2,6 +2,8 @@
 *
 # Except this file
 !.gitignore
-#!branding-l.php
+!branding-l.php
 !branding-m.php
 #!domain.list
+!.defaulted.lock
+#!interface.txt

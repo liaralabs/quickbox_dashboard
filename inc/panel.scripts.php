@@ -493,6 +493,7 @@
       close: false,
       save: true,
       sortable: true,
+      stateful: true,
       draggable: true,
       reload: false,
       resize: true,

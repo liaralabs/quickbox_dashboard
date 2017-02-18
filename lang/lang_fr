@@ -54,8 +54,8 @@
 	$L['ESSENTIAL_USER_COMMANDS'] = 'Commandes utilisateur essentielles';
 	$L['RELOAD_TXT'] = 'Autorise l’utilisateur à recharger ses services (rTorrent et IRSSI).';
 	$L['SCREEN_RTORRNENT_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter rTorrent en SSH.';
-  $L['SCREEN_IRSSI_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter IRSSI en SSH.';
-  
+	$L['SCREEN_IRSSI_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter IRSSI en SSH.';
+
 
 	////////////////////////////////////////
 	//DASHBOARD WIDGET TITLES
@@ -344,3 +344,4 @@
 
 
 	?>
+  

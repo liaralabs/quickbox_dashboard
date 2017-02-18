@@ -1,5 +1,5 @@
 <?php
-$interface = INETFACE;
+$interface = 'INETFACE';
 session_start();
 $rx[] = @file_get_contents("/sys/class/net/INETFACE/statistics/rx_bytes");
 $tx[] = @file_get_contents("/sys/class/net/INETFACE/statistics/tx_bytes");

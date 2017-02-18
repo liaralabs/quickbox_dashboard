@@ -11,7 +11,7 @@
 ///////////////////////////////////////
 
 // panel menu tab
-$L['DEV_REPO-TXT'] = 'You are on the QuickBox Development Repo';
+$L['DEV_REPO_TXT'] = 'You are on the QuickBox Development Repo';
 $L['ANNOUCEMENTS'] = 'Annoucements';
 $L['JOIN_US_TXT'] = 'Join Us On Live Chat!';
 $L['CHAT_CONNECT_TXT'] = 'Click to connect';

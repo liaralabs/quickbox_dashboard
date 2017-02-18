@@ -11,12 +11,12 @@
 	///////////////////////////////////////
 
 	// panel menu tab
-	$L['Dev_Repo'] = 'Vous êtes dans le dépôt de développement QuickBox.';
-	$L['Annoucements'] = 'Annonces';
-	$L['Join_Us'] = 'Rejoins-nous sur le chat';
-	$L['Chat_Connect'] = 'Se Connecter';
-	$L['Issue'] = 'Reporter une erreur';
-	$L['Marketplace'] = 'Marché';
+	$L['DEV_REPO_TXT'] = 'Vous êtes dans le dépôt de développement QuickBox.';
+	$L['ANNOUNCEMENTS'] = 'Annonces';
+	$L['JOIN_US_TXT'] = 'Rejoins-nous sur le chat';
+	$L['CHAT_CONNECT_TXT'] = 'Se Connecter';
+	$L['ISSUE_REPORT_TXT'] = 'Reporter une erreur';
+	$L['MARKETPLACE'] = 'Marché';
 	$L['LANG_SELECT'] = 'Selectionner Langue';
 
 	// main menu tab

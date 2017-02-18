@@ -87,7 +87,7 @@ $L['SERVER_LOAD'] = 'Server-Last';
 
 // recent updates widget
 $L['RECENT_UPDATES'] = 'Recent Activity & Updates';
-$L['RECENT_UPDATES_TXT'] = 'This feed updates every 60 seconds';
+$L['RECENT_UPDATES_TXT'] = 'Diese Liste aktualisiert sich alle 60 Sekunden';
 
 
 ////////////////////////////////////////

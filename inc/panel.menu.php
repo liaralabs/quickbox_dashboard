@@ -16,7 +16,7 @@
             <li>
               <div class="btn-group">
                 <button type="button" class="btn btn-logged">
-                  <a href="#" class="label label-warning" style="">You are on the QuickBox Development Repo</a>
+                  <a href="#" class="label label-warning" style=""><?php echo T('Dev_Repo'); ?></a>
                 </button>
               </div>
             </li>
@@ -28,9 +28,9 @@
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu pull-right" style="font-size: 13px">
-                  <li><a href="//quickbox.io/category/announcements/" target="_blank">Announcements</a></li>
-                  <li><a href="https://quickbox.io/readme-md/" target="_blank">README.md</a></li>
-                  <li><a href="/t/quickbox-changelog/45" target="_blank">CHANGELOG</a></li>
+                  <li><a href="//quickbox.io/category/announcements/" target="_blank"><?php echo T('Annoucements'); ?></a></li>  
+				<li><a href="//plaza.quickbox.io/t/quickbox-changelog/45" target="_blank">CHANGELOG</a></li>
+				<li><a href="https://quickbox.io/readme-md/" target="_blank">README.md</a></li>
                 </ul>
               </div>
             </li>
@@ -42,14 +42,14 @@
                 </button>
                 <ul class="dropdown-menu pull-right" style="font-size: 13px">
                     <li style="border-bottom: 1px solid #444">
-                    <span class="title" style="color: #fff; font-weight: 300; font-size: 13px;">Join Us On Live Chat!</span>
+                    <span class="title" style="color: #fff; font-weight: 300; font-size: 13px;"><?php echo T('Join_Us'); ?></span>
                     </li>
                     <li>
                     <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">host:</strong> Chat.QuickBox.io</span><br/>
                     <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">chan:</strong> #QuickBox.io</span><br/>
                     </li>
                     <li style="border-top: 1px solid #444">
-                      <span class="chat-btn"><a href="https://chat.quickbox.io" class="label label-success" target="_blank">Click to connect</a></span>
+                      <span class="chat-btn"><a href="https://chat.quickbox.io" class="label label-success" target="_blank"><?php echo T('Chat_Connect'); ?></a></span>
                     </li>
                 </ul>
               </div>
@@ -58,7 +58,7 @@
               <?php $language = array();
                 $language[] = array('file' => 'lang_dk', 'title' =>'Danish');
                 $language[] = array('file' => 'lang_en', 'title' =>'English');
-                $language[] = array('file' => 'lang_fr', 'title' =>'French');
+                $language[] = array('file' => 'lang_fr', 'title' =>'Français');
                 $language[] = array('file' => 'lang_de', 'title' =>'German'); { ?>
               <div class="btn-group">
                 <button type="button" class="btn btn-logged" data-toggle="dropdown">

@@ -42,4 +42,4 @@ $quickboxURL = "https://quickbox.io/donate/";
 
 
 <!-- // INSERT YOUR CUSTOM EXTERNAL or INTERNAL MENU ITEMS HERE! // -->
-<li><a href="<?php echo "$quickboxURL"; ?>" class="grayscale" target="_blank"><i class="fa fa-heart text-danger"></i> <span>Donate </span></a></li>
+<li><a href="<?php echo "$quickboxURL"; ?>" class="grayscale" target="_blank"><i class="fa fa-heart text-danger"></i> <span><?php echo T('DONATE'); ?></span></a></li>

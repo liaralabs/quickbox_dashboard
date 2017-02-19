@@ -10,10 +10,20 @@
 //DASHBOARD MENU
 ///////////////////////////////////////
 
+// panel menu tab
+$L['DEV_REPO_TXT'] = 'You are on the QuickBox Development Repo';
+$L['ANNOUCEMENTS'] = 'Annoucements';
+$L['JOIN_US_TXT'] = 'Join Us On Live Chat!';
+$L['CHAT_CONNECT_TXT'] = 'Click to connect';
+$L['ISSUE_REPORT_TXT'] = 'Report an issue';
+$L['MARKETPLACE'] = 'Marketplace';
+$L['LANG_SELECT'] = 'Vælg sprog';
+
 // main menu tab
 $L['MAIN_MENU'] = 'Hovedmenu';
 $L['DOWNLOADS'] = 'Downloads';
 $L['WEB_CONSOLE'] = 'Webkonsol';
+$L['DONATE'] = 'Donate';
 
 // plugin menu tab
 $L['PLUGIN_MENU'] = 'Pluginmenu';
@@ -36,19 +46,16 @@ $L['QUICKVPN_TXT'] = 'Skriv denne kommando i ssh for at installere din egen VPN 
 $L['SHOWSPACE_TXT'] = 'Skriv denne kommando i ssh (root) for at vise hver brugers nuværende diskforbrug.';
 $L['UPGRADEBTSYNC_TXT'] = 'Skriv denne kommando i ssh for at opgradere BTSync til nyeste version.';
 $L['UPGRADEPLEX_TXT'] = 'Skriv denne kommando i ssh for at opgradere Plex til nyeste version.';
-$L['UPGRADEPYLOAD_TXT'] = 'Type this command in ssh to upgrade pyLoad to newest version when available.';
-$L['SETUPPYLOAD_TXT'] = 'Type this command in ssh to run the pyLoad setup script.';
 $L['UPGRADEDELUGE_TXT'] = 'Skriv denne kommando i ssh for at opgradere Deluge til nyeste version.';
 $L['UPGRADEJACKETT_TXT'] = 'Skriv denne kommando for at opgradere Jackett til nyeste version.';
+$L['UPGRADEPYLOAD_TXT'] = 'Type this command in ssh to upgrade pyLoad to newest version when available.';
+$L['SETUPPYLOAD_TXT'] = 'Type this command in ssh to run the pyLoad setup script.';
 $L['CLEAN_MEM_TXT'] = 'Skriv denne kommando i ssh (root) for at nulstille systemets fysiske Hukommelsescache.';
-
 // essential user commands section
 $L['ESSENTIAL_USER_COMMANDS'] = 'Vigtige Brugerkommandoer';
 $L['RELOAD_TXT'] = 'tillader en bruger at genstarte services (rtorrent and irssi)';
 $L['SCREEN_RTORRNENT_TXT'] = 'tillader en bruger at genstarte/genforbinde rtorrent via SSH';
 $L['SCREEN_IRSSI_TXT'] = 'tillader en bruger at genstarte/genforbinde irssi via SSH';
-
-$L['LANG_SELECT'] = 'Vælg sprog';
 
 
 ////////////////////////////////////////
@@ -107,8 +114,10 @@ $L['BTSYNC_DETAILS'] = 'BitTorrent Sync by BitTorrent, Inc er et proprietært pe
 $L['COUCHPOTATO'] = 'Hent film automatisk, nemt og i den bedste kvalitet, så snart de er frigivet via usenet eller torrents.';
 $L['CSF'] = 'ConfigServer Firewall, også kendt som CSF, er et firewall-konfigurationsscript således du kan få en bedre sikkerhed til din server og samtidig giver dig et nemt plus avanceret interface til styring af dine firewall-indstillinger.';
 $L['DELUGE'] = 'Deluge en gratis letvægts cross-platform BitTorrent klient.';
+$L['EMBY'] = 'Emby Server is a client-server software package that lets consumers host their legal personal copies of multimedia — music, video and picture files. ... The Emby client software is an app you need to install on mobile devices and certain settop boxes for televisions, like Android TV.';
 $L['JACKETT'] = 'API support til dine favorit private trackere.';
 $L['NEXTCLOUD'] = 'Nextcloud er en open source, selvhosted filsynkroniserings-, delings- og kommunikationsplatform. Få nem adgang til og synkoniser dine filer, kontakter, kalendre og kommuniker på tværs af alle dine enheder. Du afgør selv hvad der sker med dine data, hvor den lagres, og hvem der kan få adgang!';
+$L['NZBHYDRA'] = 'NZBHydra is a meta search for NZB indexers. It provides easy access to a number of raw and newznab based indexers. You can search all your indexers from one place and use it as indexer source for tools like Sonarr or CouchPotato.';
 $L['OVPN'] = 'SSL/TLS baseret user-space VPN. Supporterer Linux, Solaris, OpenBSD, FreeBSD, NetBSD, Mac OS X, and Windows 2000/XP+.';
 $L['PLEX'] = 'Plex lader dig streame dit indhold til enhver Plex enhed.';
 $L['PLEX_REQUESTS'] = 'Plex Requests tilbyder et smuk og let anvendeligt interface, således brugere nemt kan tilføje "Ønsker" til Plex-biblioteket. Integrerer med CouchPotato, SickRage and Sonarr.';
@@ -294,14 +303,15 @@ $L['USED_L'] = 'brugt';
 //MODAL TITLES
 $L['UNINSTALL_TITLE'] = 'Afinstaller';
 
-
 //MODAL TEXT
 $L['UNINSTALL_BTSYNC_TXT'] = 'Du er ved at afinstallere BitTorrent Sync fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurations og delte indstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere BitTorrent Sync til hver en tid, men din sti til lagering og linkede mappeindstillinger vil blive nulstillet til standard.';
 $L['UNINSTALL_CSF_TXT'] = 'Du er ved at afinstallere Config Server Firewall (CSF) fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurationsindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Config Server Firewall (CSF) til hver en tid, men din konfiguration vil blive nulstillet til standard.';
 $L['UNINSTALL_COUCHPOTATO_TXT'] = 'Du er ved at afinstallere CouchPotato fra dit system.<br/><br/>>Dette vil fuldstændig fjerne din kofiguration og indstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere CouchPotato til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
 $L['UNINSTALL_DELUGE_TXT'] = 'Du er ved at afinstallere Deluge fra dit system.<br/><br/>Dette vil fuldstændig fjerne dine kofigurations og delte indstillinger for <strong>alle brugere</strong>... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Deluge til hver en tid, men din sti til lagring og linkede mappeindstillinger vil blive nulstillet til standard..';
+$L['UNINSTALL_EMBY_TXT'] = 'You are about to uninstall Emby from your system.<br/><br/>This will completely remove all of your configuration and shared folder settings... this action is irreversible. <br/><br/>You may reinstall Emby at any time, however, your storage path and linked folder settings will be reset to default.';
 $L['UNINSTALL_JACKETT_TXT'] = 'Du er ved at afinstallere Jackett fra dit system.<br/><br/>Dette vil fuldstændig fjerne din kofiguration og indstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Jackett til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
 $L['UNINSTALL_NEXTCLOUD_TXT'] = 'Du er ved at afinstallere NextCloud fra dit system.<br/><br/>Dette vil fuldstændig fjerne din kofiguration og indstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere NextCloud til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
+$L['UNINSTALL_NZBHYDRA_TXT'] = 'You are about to uninstall NZBHydra from your system.<br/><br/>This will completely remove all of your configurations and settings... this action is irreversible. <br/><br/>You may reinstall NZBHydra at any time, however, your settings will be reset to default.';
 $L['UNINSTALL_PLEX_TXT'] = 'Du er ved at afinstallere Plex Media Server fra dit system.<br/><br/>Dette vil fuldstændig fjerne din kofiguration og biblioteksindstillinger... tdenne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Plex til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
 $L['UNINSTALL_PLEXPY_TXT'] = 'Du er ved at afinstallere PlexPy fra dit system.<br/><br/>Dette vil fuldstændig fjerne din kofiguration og biblioteksindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere PlexPy til hver en tid, men dine indstillinger vil blive nulstillet til standard.';
 $L['UNINSTALL_PLEXREQUESTS_TXT'] = 'Du er ved at afinstallere Plex Requests fra dit system.<br/><br/>Dette vil fuldstændig fjerne din kofiguration og biblioteksindstillinger... denne handling kan ikke fortrydes. <br/><br/>Du har mulighed for at geninstallere Plex Requests til hver en tid, men dine biblioteksindstillinger og anmodninger vil blive nulstillet.';
@@ -319,8 +329,6 @@ $L['UNINSTALL_ZNC_TXT'] = 'Du er ved at afinstallere ZNC fra dit system.<br/><br
 
 //SYSTEM RESPONSE MODAL
 $L['SYSTEM_RESPONSE_TITLE'] = 'System Respons';
-
-
 
 //GRITTER POPUPS
 $L['UNINSTALLING_TITLE'] = 'Afinstallerer';

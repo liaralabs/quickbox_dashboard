@@ -23,6 +23,7 @@ $L['LANG_SELECT'] = 'Select Language';
 $L['MAIN_MENU'] = 'Main Menu';
 $L['DOWNLOADS'] = 'Downloads';
 $L['WEB_CONSOLE'] = 'Web Console';
+$L['DONATE'] = 'Donate';
 
 // plugin menu tab
 $L['PLUGIN_MENU'] = 'Plugin Menu';

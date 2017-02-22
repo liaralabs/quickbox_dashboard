@@ -10,10 +10,20 @@
 //DASHBOARD MENU
 ///////////////////////////////////////
 
+// panel menu tab
+$L['DEV_REPO_TXT'] = 'Vous êtes dans le dépôt de développement QuickBox.';
+$L['ANNOUNCEMENTS'] = 'Annonces';
+$L['JOIN_US_TXT'] = 'Rejoins-nous sur le chat';
+$L['CHAT_CONNECT_TXT'] = 'Se Connecter';
+$L['ISSUE_REPORT_TXT'] = 'Reporter une erreur';
+$L['MARKETPLACE'] = 'Marché';
+$L['LANG_SELECT'] = 'Selectionner Langue';
+
 // main menu tab
 $L['MAIN_MENU'] = 'Menu Principal';
 $L['DOWNLOADS'] = 'Téléchargements';
 $L['WEB_CONSOLE'] = 'Console Web';
+$L['DONATE'] = 'Faire un Don';
 
 // plugin menu tab
 $L['PLUGIN_MENU'] = 'Menu Plugins';
@@ -46,9 +56,6 @@ $L['ESSENTIAL_USER_COMMANDS'] = 'Commandes utilisateur essentielles';
 $L['RELOAD_TXT'] = 'Autorise l’utilisateur à recharger ses services (rTorrent et IRSSI).';
 $L['SCREEN_RTORRNENT_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter rTorrent en SSH.';
 $L['SCREEN_IRSSI_TXT'] = 'Autorise l’utilisateur à redémarrer/remonter IRSSI en SSH.';
-
-$L['LANG_SELECT'] = 'Selectionner Langue';
-
 
 ////////////////////////////////////////
 //DASHBOARD WIDGET TITLES
@@ -85,8 +92,8 @@ $L['CPU_STATUS'] = 'Statut CPU';
 $L['SERVER_LOAD'] = 'Charge Serveur';
 
 // recent updates widget
-$L['RECENT_UPDATES'] = 'Recent Activity & Updates';
-$L['RECENT_UPDATES_TXT'] = 'This feed updates every 60 seconds';
+$L['RECENT_UPDATES'] = 'Activités récentes & MaJ';
+$L['RECENT_UPDATES_TXT'] = 'Ce flux se met à jour chaque minute';
 
 
 ////////////////////////////////////////
@@ -106,8 +113,10 @@ $L['BTSYNC_DETAILS'] = 'BitTorrent Sync par BitTorrent.Inc est un outil proprié
 $L['COUCHPOTATO'] = 'Téléchargez automatiquement des films, facilement et dans la meilleure qualité dès qu\'ils sont libérés, par l\'intermédiaire d\'Usenet ou de torrents.';
 $L['CSF'] = 'ConfigServer Firewall, connu sous le nom de CSF, est un script de configuration de pare-feu créé pour assurer une meilleure sécurité pour votre serveur tout en vous donnant une interface avancée et facile à utiliser pour gérer vos paramètres de pare-feu.';
 $L['DELUGE'] = 'Deluge est un client BitTorrent léger, gratuit et multi-plateforme.';
+$L['EMBY'] = 'Emby Server vous permet de diffuser votre contenu à tous vos dispositifs Emby activés. Une alternative robuste et open source à Plex';
 $L['JACKETT'] = 'Support API pour vos trackers privés préférés.';
 $L['NEXTCLOUD'] = 'NextCloud est un logiciel open source vous permettant d\'accéder depuis n\'importe quel endroit à vos documents importants. Il peut être installé sur n\'importe quel serveur et vous permet de synchroniser vos données (contacts, calendriers) \'dans le nuage\' sur votre serveur. Vous décidez de ce qui se passe avec vos données, où elles sont et qui peut y accéder!';
+$L['NZBHYDRA'] = 'NZBhydra vous permet de rechercher plus facilement les NZB. Le programme recherche plusieurs indexeurs NZB compatibles Newznab. Ils comprennent les NZBClub, NZBIndex, Womble et d\'autres... Vous pouvez aussi l\'utiliser comme source d\'indexeur pour des outils comme CouchPotato ou Sonarr.';
 $L['OVPN'] = 'VPN basé sur SSL/TLS. Supporté sur Solaris, OpenBSD, FreeBSD, NetBSD, Mac OS X, et Windows 2000/XP+.';
 $L['PLEX'] = 'Plex vous permet de diffuser votre contenu à tous vos dispositifs Plex activés.';
 $L['PLEX_REQUESTS'] = 'Plex Requests offre une belle interface pour que vos utilisateurs vous demandent facilement d\'ajouter de nouveaux films à la bibliothèque. S\'intègre avec CouchPotato, SickRage et Sonarr.';
@@ -293,14 +302,15 @@ $L['USED_L'] = 'utilisé';
 //MODAL TITLES
 $L['UNINSTALL_TITLE'] = 'Désinstaller';
 
-
 //MODAL TEXT
 $L['UNINSTALL_BTSYNC_TXT'] = 'Vous êtes sur le point de désinstaller BitTorrent Sync de votre système.<br/><br/>Cela va complètement supprimer toutes ses configurations et paramètres de dossiers partagés ... cette action est irréversible. <br/><br/>Vous pouvez réinstaller BitTorrent Sync à tout moment, cependant, vos chemin de stockage et les paramètres des dossiers liés seront réinitialisés.';
 $L['UNINSTALL_CSF_TXT'] = 'Vous êtes sur le point de désinstaller Config Server Firewall (CSF) de votre système.<br/><br/>Cela va complètement supprimer tous ses paramètres... cette action est irréversible. <br/><br/>Vous pouvez réinstaller Config Server Firewall (CSF) à tout moment, cependant, vos paramètres de configuration (si des modifications ont été apportées) seront réinitialisés.';
 $L['UNINSTALL_COUCHPOTATO_TXT'] = 'Vous êtes sur le point de désinstaller CouchPotato de votre système.<br/><br/>Cela va complètement supprimer toutes ses configurations et paramètres... cette action est irréversible. <br/><br/>Vous pouvez réinstaller CouchPotato à tout moment, cependant, vos paramètres seront réinitialisés.';
 $L['UNINSTALL_DELUGE_TXT'] = 'Vous êtes sur le point de désinstaller Deluge de votre système.<br/><br/>Cela va complètement supprimer toutes ses configurations et paramètres de dossiers partagés pour <strong>tous les utilisateurs</strong>... cette action est irréversible. <br/><br/>Vous pouvez réinstaller Deluge à tout moment, cependant, vos chemin de stockage et les paramètres des dossiers liés seront réinitialisés.';
+$L['UNINSTALL_EMBY_TXT'] = 'Vous êtes sur le point de désinstaller Emby de votre système.<br/><br/>Cela va complètement supprimer toutes ses configurations et paramètres de dossiers partagés ... cette action est irréversible. <br/><br/>Vous pouvez réinstaller Emby à tout moment, cependant, vos chemin de stockage et les paramètres des dossiers liés seront réinitialisés.';
 $L['UNINSTALL_JACKETT_TXT'] = 'Vous êtes sur le point de désinstaller Jackett de votre système.<br/><br/>Cela va complètement supprimer toutes ses configurations et paramètres... cette action est irréversible. <br/><br/>Vous pouvez réinstaller Jackett à tout moment, cependant, vos paramètres seront réinitialisés.';
 $L['UNINSTALL_NEXTCLOUD_TXT'] = 'Vous êtes sur le point de désinstaller NextCloud de votre système.<br/><br/>Cela va complètement supprimer toutes ses configurations et paramètres... cette action est irréversible. <br/><br/>Vous pouvez réinstaller NextCloud à tout moment, cependant, vos paramètres seront réinitialisés.';
+$L['UNINSTALL_NZBHYDRA_TXT'] = 'Vous êtes sur le point de désinstaller NZBHydra de votre système.<br/><br/>Cela va complètement supprimer toutes ses configurations et paramètres... cette action est irréversible. <br/><br/>Vous pouvez réinstaller NZBHydra à tout moment, cependant, vos paramètres seront réinitialisés.';
 $L['UNINSTALL_PLEX_TXT'] = 'Vous êtes sur le point de désinstaller Plex Media Server de votre système.<br/><br/>Cela va complètement supprimer toutes ses configurations et paramètres de librairies... cette action est irréversible. <br/><br/>Vous pouvez réinstaller Plex à tout moment, cependant, vos paramètres et librairies seront réinitialisés.';
 $L['UNINSTALL_PLEXPY_TXT'] = 'Vous êtes sur le point de désinstaller PlexPy de votre système.<br/><br/>Cela va complètement supprimer toutes ses configurations et paramètres de librairies... cette action est irréversible. <br/><br/>Vous pouvez réinstaller PlexPy à tout moment, cependant, vos paramètres seront réinitialisés.';
 $L['UNINSTALL_PLEXREQUESTS_TXT'] = 'Vous êtes sur le point de désinstaller Plex Requests de votre système.<br/><br/>Cela va complètement supprimer toutes ses configurations et paramètres de librairies... cette action est irréversible. <br/><br/>Vous pouvez réinstaller Plex Requests à tout moment, cependant, vos paramètres de librairies et vos requêtes en cours seront réinitialisés.';
@@ -318,8 +328,6 @@ $L['UNINSTALL_ZNC_TXT'] = 'Vous êtes sur le point de désinstaller ZNC de votre
 
 //SYSTEM RESPONSE MODAL
 $L['SYSTEM_RESPONSE_TITLE'] = 'Réponse Système';
-
-
 
 //GRITTER POPUPS
 $L['UNINSTALLING_TITLE'] = 'Désinstallation';

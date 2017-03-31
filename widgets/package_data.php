@@ -11,7 +11,7 @@ $packages = array(
         'nzbhydra',
         'plex',
         'plexpy',
-        'plexrequests',
+        'ombi',
         'pyload',
         'rapidleech',
         'sabnzbd',

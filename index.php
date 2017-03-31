@@ -179,10 +179,10 @@
                     </tr>
                     <?php } ?>
 
-                    <?php if (file_exists("/install/.plexrequests.lock")) { ?>
+                    <?php if (file_exists("/install/.ombi.lock")) { ?>
                     <tr>
-                      <td><?php echo "$prval"; ?> Plex Requests </td>
-                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=plexrequests'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td><?php echo "$prval"; ?> Ombi </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=ombi'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
                       <td class="text-center"><?php echo "$cbodypr"; ?></td>
                     </tr>
                     <?php } ?>
@@ -363,12 +363,12 @@
                       <?php } ?>
                     </tr>
                     <tr>
-                      <td>Plex Requests.NET</td>
+                      <td>Ombi (formerly Plex Requests.NET)</td>
                       <td><?php echo T('PLEX_REQUESTS'); ?></td>
-                      <?php if (file_exists("/install/.plexrequests.lock")) { ?>
-                        <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#plexrequestsRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
+                      <?php if (file_exists("/install/.ombi.lock")) { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#ombiRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
                       <?php } else { ?>
-                        <td style="vertical-align: middle; text-align: center"><a href="?installpackage-plexrequests=true" data-toggle="modal" data-target="#sysResponse" id="plexrequestsInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
+                        <td style="vertical-align: middle; text-align: center"><a href="?installpackage-ombi=true" data-toggle="modal" data-target="#sysResponse" id="ombiInstall" class="btn btn-xs btn-info"><?php echo T('INSTALL'); ?></a></td>
                       <?php } ?>
                     </tr>
                     <tr>

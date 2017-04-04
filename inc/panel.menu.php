@@ -139,8 +139,8 @@
               <?php if (file_exists("/install/.plexpy.lock")) { ?>
                 <li><a class="grayscale" href="<?php echo "$plexpyURL"; ?>" target="_blank"><img src="img/brands/plexpy.png" class="brand-ico"> <span>PlexPy</span></a></li>
               <?php } ?>
-              <?php if (file_exists("/install/.plexrequests.lock")) { ?>
-                <li><a class="grayscale" href="<?php echo "$plexrequestsURL"; ?>" target="_blank"><img src="img/brands/plexrequests-net.png" class="brand-ico"> <span>Plex Requests.NET</span></a></li>
+              <?php if (file_exists("/install/.ombi.lock")) { ?>
+                <li><a class="grayscale" href="<?php echo "$ombiURL"; ?>" target="_blank"><img src="img/brands/plexrequests-net.png" class="brand-ico"> <span>Ombi</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.pyload.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$pyloadURL"; ?>" target="_blank"><img src="img/brands/pyload.png" class="brand-ico"> <span>pyLoad</span></a></li>

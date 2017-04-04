@@ -258,7 +258,7 @@ $emby = processExists("emby-server",$username);
 $irssi = processExists("irssi",$username);
 $plex = processExists("Plex",plex);
 $plexpy = processExists("plexpy",plexpy);
-$plexrequests = processExists("Plex",$username);
+$ombi = processExists("Plex",$username);
 $pyload = processExists("pyload",$username);
 $rtorrent = processExists("rtorrent",$username);
 $sabnzbd = processExists("sabnzbd",$username);
@@ -298,7 +298,7 @@ if(file_exists('/srv/rutorrent/home/custom/url.override.php')){
   $nzbhydraURL = "https://" . $_SERVER['HTTP_HOST'] . "/nzbhydra";
   $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
   $plexpyURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexpy";
-  $plexrequestsURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexrequests";
+  $ombiURL = "https://" . $_SERVER['HTTP_HOST'] . "/ombi";
   $pyloadURL = "http://" . $_SERVER['HTTP_HOST'] . ":8000";
   $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . "/rapidleech";
   $sabnzbdURL = "https://" . $_SERVER['HTTP_HOST'] . "/sabnzbd";
@@ -357,7 +357,7 @@ if ($plexpy == "1") { $ppval = "<span class=\"badge badge-service-running-dot\">
 } else { $ppval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-if ($plexrequests == "1") { $prval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+if ($ombi == "1") { $prval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $prval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
@@ -435,8 +435,8 @@ case 0:
     $cbodyp .= $plex;
   $plexpy = isEnabled("plexpy",plexpy);
     $cbodypp .= $plexpy;
-  $plexrequests = isEnabled("plexrequests", $username);
-    $cbodypr .= $plexrequests;
+  $ombi = isEnabled("ombi", $username);
+    $cbodypr .= $ombi;
   $pyload = isEnabled("pyload", $username);
     $cbodypl .= $pyload;
   $quassel = isEnabled("quassel", $username);
@@ -478,7 +478,7 @@ case 66:
     } elseif ($process == "plexpy"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
-    } elseif ($process == "plexrequests"){
+    } elseif ($process == "ombi"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
     } elseif ($process == "subsonic"){
@@ -509,7 +509,7 @@ case 77:
     } elseif ($process == "plexpy"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
-    } elseif ($process == "plexrequests"){
+    } elseif ($process == "ombi"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
     } elseif ($process == "subsonic"){
@@ -540,7 +540,7 @@ case 88:
     } elseif ($process == "plexpy"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
-    } elseif ($process == "plexrequests"){
+    } elseif ($process == "ombi"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
     } elseif ($process == "subsonic"){

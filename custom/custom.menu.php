@@ -23,7 +23,7 @@
 //----------------------
 //
 // You can add custom logos to your created menu items by placing the logos
-// within the /srv/rutorrent/home/img/brands/ directory. For best results, add
+// within the /srv/panel/img/brands/ directory. For best results, add
 // images to be no greater than 128x128 pixels in size.
 // Remember to change the image source to the name you have given your logo icon.
 // Any image format is acceptable: (jpg,png,svg,gif)

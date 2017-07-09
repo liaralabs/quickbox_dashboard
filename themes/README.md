@@ -13,16 +13,16 @@ Thanks [@Reynald](https://plaza.quickbox.io/u/reynald) for confirming this metho
 
 You can add a **.smoked.lock** which the updater (if it dicovers the theme lock) will port in the needed theme assets. You can add this lock by doing
 ```
-printf "" > /srv/rutorrent/home/db/.smoked.lock
+printf "" > /srv/panel/db/.smoked.lock
 ```
 
 If you want the default theme back then do:
 ```
-rm -f /srv/rutorrent/home/db/.smoked.lock
+rm -f /srv/panel/db/.smoked.lock
 ```
 Then add the 'defaulted' lock file and run the update.
 ```
-printf "" > /srv/rutorrent/home/db/.defaulted.lock
+printf "" > /srv/panel/db/.defaulted.lock
 ```
 
 Perform `box upgrade` to set the new/previous theme.
@@ -32,12 +32,12 @@ Perform `box upgrade` to set the new/previous theme.
 
 Select **smoked**:
 ```
-rm -f /srv/rutorrent/home/db/.defaulted.lock && printf "" > /srv/rutorrent/home/db/.smoked.lock && box upgrade
+rm -f /srv/panel/db/.defaulted.lock && printf "" > /srv/panel/db/.smoked.lock && box upgrade
 ```
 
 Select **defaulted**:
 ```
-rm -f /srv/rutorrent/home/db/.smoked.lock && printf "" > /srv/rutorrent/home/db/.defaulted.lock && box upgrade
+rm -f /srv/panel/db/.smoked.lock && printf "" > /srv/panel/db/.defaulted.lock && box upgrade
 ```
 
 >These have been built in for an addition to the dashboard to swap themes... (that's coming soon)

@@ -266,7 +266,7 @@ else
         <div class="col-sm-12">
           <!--div class="vertical-container"-->
             <p style="font-size:10px"><?php echo T('PHYSICAL_MEMORY_TITLE'); ?>: <?php echo "$memPercent"; ?>%<br/>
-              <?php echo T('PHYSICAL_MEMORY_USED_TXT'); ?>: <font color='#CC0000'><?php echo "$mu"; ?></font>  | <?php echo T('PHYSICAL_MEMORY_IDLE_TXT'); ?>: <font color='#CC0000'><?php echo "$mf"; ?></font>
+              <?php echo T('PHYSICAL_MEMORY_USED_TXT'); ?>: <font color='#eb4549'><?php echo "$mu"; ?></font>  | <?php echo T('PHYSICAL_MEMORY_IDLE_TXT'); ?>: <font color='#eb4549'><?php echo "$mf"; ?></font>
             </p>
             <div class="progress progress-striped">
               <?php

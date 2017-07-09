@@ -16,7 +16,7 @@
             <li>
               <div class="btn-group">
                 <button type="button" class="btn btn-logged">
-                  <a href="#" class="label label-warning" style=""><?php echo T('DEV_REPO_TXT'); ?></a>
+                  <a href="#" class="label label-warning" style="">You are on the QuickBox Development Repo</a>
                 </button>
               </div>
             </li>
@@ -28,9 +28,9 @@
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu pull-right" style="font-size: 13px">
-                  <li><a href="//quickbox.io/category/announcements/" target="_blank"><?php echo T('ANNOUNCEMENTS'); ?></a></li>
-				<li><a href="//plaza.quickbox.io/t/quickbox-changelog/45" target="_blank">CHANGELOG</a></li>
-				<li><a href="https://quickbox.io/readme-md/" target="_blank">README.md</a></li>
+                  <li><a href="//quickbox.io/category/announcements/" target="_blank">Announcements</a></li>
+                  <li><a href="https://quickbox.io/readme-md/" target="_blank">README.md</a></li>
+                  <li><a href="https://github.com/QuickBox/QB/compare/v2.5.0...<?php echo $version; ?>" target="_blank">CHANGELOG</a></li>
                 </ul>
               </div>
             </li>
@@ -46,10 +46,10 @@
                     </li>
                     <li>
                     <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">host:</strong> chat.quickbox.io</span><br/>
-                    <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">chan:</strong> #QuickBox.io</span><br/>
+                    <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">chan:</strong> #QB-Support</span><br/>
                     </li>
                     <li style="border-top: 1px solid #444">
-                      <span class="chat-btn"><a href="https://chat.quickbox.io/channel/QuickBox.io" class="label label-success" target="_blank"><?php echo T('CHAT_CONNECT_TXT'); ?></a></span>
+                      <span class="chat-btn"><a href="https://chat.quickbox.io/channel/QB-Support" class="label label-success" target="_blank"><?php echo T('CHAT_CONNECT_TXT'); ?></a></span>
                     </li>
                 </ul>
               </div>
@@ -58,7 +58,7 @@
               <?php $language = array();
                 $language[] = array('file' => 'lang_dk', 'title' =>'Danish');
                 $language[] = array('file' => 'lang_en', 'title' =>'English');
-                $language[] = array('file' => 'lang_fr', 'title' =>'Français');
+                $language[] = array('file' => 'lang_fr', 'title' =>'French');
                 $language[] = array('file' => 'lang_de', 'title' =>'German'); { ?>
               <div class="btn-group">
                 <button type="button" class="btn btn-logged" data-toggle="dropdown">
@@ -70,6 +70,24 @@
                 <?php foreach($language as $lang) { ?>
                 <li><a href='?langSelect-<?php echo $lang['file'] ?>=true'><img class='lang-flag' src='lang/flag_<?php echo $lang['file'] ?>.png' /><?php echo $lang['title'] ?></a></li>
                 <?php } ?>
+              </ul>
+            </div>
+            <?php } ?>
+          </li>
+          <li>
+            <?php $option = array();
+              $option[] = array('file' => 'defaulted', 'title' =>'Defaulted');
+              $option[] = array('file' => 'smoked', 'title' =>'Smoked'); { ?>
+            <div class="btn-group">
+              <button type="button" class="btn btn-logged" data-toggle="dropdown">
+                <?php echo T('THEME_SELECT'); ?>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu pull-right">
+              <li><span style="margin-top:5x"></span></li>
+              <?php foreach($option as $theme) { ?>
+              <li><a href="javascript:void()" data-toggle="modal" data-target="#themeSelect<?php echo $theme['file'] ?>Confirm"><img class='lang-flag' src='img/themes/opt_<?php echo $theme['file'] ?>.png' /><?php echo $theme['title'] ?></a></li>
+              <?php } ?>
               </ul>
             </div>
             <?php } ?>
@@ -124,6 +142,9 @@
               <?php if (file_exists('/install/.emby.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$embyURL"; ?>" target="_blank"><img src="img/brands/emby.png" class="brand-ico"> <span>Emby</span></a></li>
               <?php } ?>
+              <?php if (file_exists('/install/.headphones.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$headphonesURL"; ?>" target="_blank"><img src="img/brands/headphones.png" class="brand-ico"> <span>Headphones</span></a></li>
+              <?php } ?>
               <?php if (file_exists('/install/.jackett.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$jackettURL"; ?>" target="_blank"><img src="img/brands/jackett.png" class="brand-ico"> <span>Jackett</span></a></li>
               <?php } ?>
@@ -144,6 +165,9 @@
               <?php } ?>
               <?php if (file_exists('/install/.pyload.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$pyloadURL"; ?>" target="_blank"><img src="img/brands/pyload.png" class="brand-ico"> <span>pyLoad</span></a></li>
+              <?php } ?>
+              <?php if (file_exists('/install/.radarr.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$radarrURL"; ?>" target="_blank"><img src="img/brands/radarr.png" class="brand-ico"> <span>Radarr</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.rapidleech.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$rapidleechURL"; ?>" target="_blank"><img src="img/brands/rapidleech.png" class="brand-ico"> <span>Rapidleech</span></a></li>

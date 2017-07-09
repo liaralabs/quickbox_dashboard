@@ -54,16 +54,16 @@
       points: { show: false },
       legend: {
         show: true,
-        labelBoxBorderColor: '#ffffff',
+        labelBoxBorderColor: '#222',
         position: 'ne',
         margin: 10
       },
       grid: {
         borderWidth: 0,
         border: { show: false },
-        color: '#dddddd',
+        color: '#333',
         labelMargin: 5,
-        backgroundColor: '#ffffff'
+        backgroundColor: '#222'
       },
       xaxis: {
         mode: "time",
@@ -139,7 +139,7 @@
   var cpu = [];
   var dataset;
   var totalPoints = 100;
-  var updateInterval = 1000;
+  var updateInterval = 30;
   var now = new Date().getTime();
   var options = {
     series: {
@@ -153,15 +153,15 @@
     legend: {
       show: true,
       noColumns: 0,
-      labelBoxBorderColor: '#ffffff',
+      labelBoxBorderColor: '#222',
       position: 'ne',
     },
     grid: {
       borderWidth: 0,
       border: { show: false },
-      color: '#dddddd',
+      color: '#333',
       labelMargin: 5,
-      backgroundColor: '#ffffff'
+      backgroundColor: '#222'
     },
     xaxis: {
       mode: "time",
@@ -241,7 +241,7 @@
   var temp;
   function update(_data) {
       cpu.shift();
-      now += updateInterval
+      now = new Date().getTime();
       temp = [now, _data.cpu];
       cpu.push(temp);
       dataset = [

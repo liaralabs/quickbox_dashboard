@@ -6,7 +6,7 @@ All additional themes for the QuickBox Dashboard are housed here... nice and tid
 #### First you'll need to navigate to your dashboard directory
 
 ```
-cd /srv/panel
+cd /srv/rutorrent/home
 ```
 
 #### Next, you'll need to initialize the directory with git
@@ -59,13 +59,13 @@ git reset --hard origin/defaulted
 
 **For the 'Smoked' theme**
 ```
-cd /srv/panel
+cd /srv/rutorrent/home
 git pull origin smoked
 ```
 
 **For the 'Defaulted' theme**
 ```
-cd /srv/panel
+cd /srv/rutorrent/home
 git pull origin defaulted
 ```
 

@@ -6,6 +6,7 @@ $packages = array(
         'couchpotato',
         'deluge',
         'emby',
+        'headphones',
         'jackett',
         'nextcloud',
         'nzbhydra',
@@ -13,6 +14,7 @@ $packages = array(
         'plexpy',
         'ombi',
         'pyload',
+        'radarr',
         'rapidleech',
         'sabnzbd',
         'sickrage',
@@ -28,13 +30,13 @@ $packages = array(
 foreach ($packages as $ipackage) {
 if (isset($_GET['installpackage-'.$ipackage.''])) {
         header('Location: //');
-        shell_exec("sudo /usr/local/bin/swizzin/install/$ipackage");
+        shell_exec("sudo /usr/local/bin/quickbox/package/install/installpackage-$ipackage");
 }}
 
 foreach ($packages as $rpackage) {
 if (isset($_GET['removepackage-'.$rpackage.''])) {
         header('Location: /');
-        shell_exec("sudo /usr/local/bin/swizzin/remove/$rpackage");
+        shell_exec("sudo /usr/local/bin/quickbox/package/remove/removepackage-$rpackage");
 }}
 
 ?>

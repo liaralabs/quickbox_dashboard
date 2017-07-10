@@ -10,7 +10,7 @@ $language = array(
 foreach ($language as $lang) {
 if (isset($_GET['langSelect-'.$lang.''])) {
         header('Location: /');
-        shell_exec("sudo /usr/local/bin/quickbox/system/lang/langSelect-$lang");
+        shell_exec("sudo /usr/local/bin/swizzin/panel/lang/langSelect-$lang");
 }}
 
 ?>

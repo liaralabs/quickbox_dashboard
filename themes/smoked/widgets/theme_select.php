@@ -8,7 +8,7 @@ $option = array(
 foreach ($option as $theme) {
 if (isset($_GET['themeSelect-'.$theme.''])) {
         header('Location: /');
-        shell_exec("sudo /usr/local/bin/quickbox/system/theme/themeSelect-$theme");
+        shell_exec("sudo /usr/local/bin/swizzin/panel/theme/themeSelect-$theme");
 }}
 
 ?>

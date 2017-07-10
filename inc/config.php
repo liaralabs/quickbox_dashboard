@@ -4,7 +4,7 @@ include '/srv/rutorrent/php/util.php';
 include ($_SERVER['DOCUMENT_ROOT'].'/widgets/class.php');
 $version = "v2.5.1";
 error_reporting(E_ERROR);
-$master = file_get_contents('/srv/rutorrent/home/db/master.txt');
+$master = file_get_contents('/srv/panel/db/master.txt');
 $master=preg_replace('/\s+/', '', $master);
 $username = getUser();
 
@@ -32,7 +32,7 @@ if (file_exists($szconf)) {
     $szssl = search($szconf_data, 'https_port = ', "\n");
 }
 
-$zconf = '/srv/rutorrent/home/db/znc.txt';
+$zconf = '/srv/panel/db/znc.txt';
 if (file_exists($zconf)) {
     $zconf_data = file_get_contents($zconf);
     $zport = search($zconf_data, 'Port = ', "\n");
@@ -285,7 +285,7 @@ function isEnabled($process, $username){
   }
 }
 
-if(file_exists('/srv/rutorrent/home/custom/url.override.php')){
+if(file_exists('/srv/panel/custom/url.override.php')){
   // BEGIN CUSTOM URL OVERRIDES //
   include ($_SERVER['DOCUMENT_ROOT'].'/custom/url.override.php');
   // END CUSTOM URL OVERRIDES ////

@@ -6,7 +6,7 @@ All additional themes for the QuickBox Dashboard are housed here... nice and tid
 #### First you'll need to navigate to your dashboard directory
 
 ```
-cd /srv/rutorrent/home
+cd /srv/panel
 ```
 
 #### Next, you'll need to initialize the directory with git
@@ -51,7 +51,7 @@ git reset --hard origin/smoked
 git reset --hard origin/defaulted
 ```
 
-> You may need to restart apache to see these changes go into effect immediately. You can do so with `service apache2 restart`
+> You may need to restart nginx to see these changes go into effect immediately. You can do so with `service nginx restart`
 
 ---
 
@@ -59,13 +59,13 @@ git reset --hard origin/defaulted
 
 **For the 'Smoked' theme**
 ```
-cd /srv/rutorrent/home
+cd /srv/panel
 git pull origin smoked
 ```
 
 **For the 'Defaulted' theme**
 ```
-cd /srv/rutorrent/home
+cd /srv/panel
 git pull origin defaulted
 ```
 

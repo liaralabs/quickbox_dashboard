@@ -21,6 +21,7 @@
               </div>
             </li>
             <?php } ?>
+            <?php if (file_exists('/install/.foo.lock')) { ?>
             <li>
               <div class="btn-group">
                 <button type="button" class="btn btn-logged" data-toggle="dropdown">
@@ -34,10 +35,12 @@
                 </ul>
               </div>
             </li>
+            <?php } ?>
+
             <li>
               <div class="btn-group">
                 <button type="button" class="btn btn-logged" data-toggle="dropdown">
-                  <a href="#" style="color: #FFFFFF">#QuickBox</a>
+                  <a href="#" style="color: #FFFFFF">#swizzin</a>
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu pull-right" style="font-size: 13px">
@@ -45,11 +48,8 @@
                     <span class="title" style="color: #fff; font-weight: 300; font-size: 13px;"><?php echo T('JOIN_US_TXT'); ?></span>
                     </li>
                     <li>
-                    <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">host:</strong> chat.quickbox.io</span><br/>
-                    <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">chan:</strong> #QB-Support</span><br/>
-                    </li>
-                    <li style="border-top: 1px solid #444">
-                      <span class="chat-btn"><a href="https://chat.quickbox.io/channel/QB-Support" class="label label-success" target="_blank"><?php echo T('CHAT_CONNECT_TXT'); ?></a></span>
+                    <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">host:</strong> irc.swizzin.ltd:6697</span><br/>
+                    <span style="padding: 6px 10px; color:#fff"><strong style="color: #4CD4B0">chan:</strong> #swizzin</span><br/>
                     </li>
                 </ul>
               </div>
@@ -112,9 +112,6 @@
     <div class="leftpanelinner">
       <ul class="nav nav-tabs nav-justified nav-sidebar">
         <li class="tooltips active" data-toggle="tooltip" title="<?php echo T('MAIN_MENU'); ?>" data-placement="bottom"><a data-toggle="tab" data-target="#mainmenu"><i class="tooltips fa fa-ellipsis-h"></i></a></li>
-        <?php if ($username == "$master"){ ?>
-          <li class="tooltips" data-toggle="tooltip" title="<?php echo T('RPLUGIN_MENU'); ?>" data-placement="bottom"><a data-toggle="tab" data-target="#plugins"><i class="tooltips fa fa-puzzle-piece"></i></a></li>
-        <?php } ?>
         <li class="tooltips" data-toggle="tooltip" title="<?php echo T('HELP_COMMANDS'); ?>" data-placement="bottom"><a data-toggle="tab" data-target="#help"><i class="tooltips fa fa-question-circle"></i></a></li>
       </ul>
       <div class="tab-content">
@@ -191,10 +188,13 @@
                 <li><a class="grayscale" href="<?php echo "$zncURL"; ?>" target="_blank"><img src="img/brands/znc.png" class="brand-ico"> <span>ZNC</span></a></li>
               <?php } ?>
             <?php } ?>
+            <?php if (file_exists('/install/.rtorrent.lock') || file_exists('/install/.deluge.lock')) { ?>
             <li class="nav-parent">
               <a href=""><i class="fa fa-download"></i> <span><?php echo T('DOWNLOADS'); ?></span></a>
               <ul class="children">
+                <?php if (file_exists('/install/.rtorrent.lock')) { ?>
                 <li><a href="/<?php echo "$username"; ?>.rtorrent.downloads" target="_blank">ruTorrent</a></a></li>
+                <?php } ?>
                 <?php if (file_exists('/install/.deluge.lock')) { ?>
                   <li><a href="/<?php echo "$username"; ?>.deluge.downloads" target="_blank">Deluge</a></li>
                 <?php } ?>
@@ -203,8 +203,9 @@
                 <?php } ?>
               </ul>
             </li>
+            <?php } ?>
             <?php if (processExists("shellinabox",shellinabox) && ($username == "$master")) { ?>
-            <li><a href="/<?php echo "$username"; ?>.console" target="_blank"><i class="fa fa-keyboard-o"></i> <span><?php echo T('WEB_CONSOLE'); ?></span></a></li>
+            <li><a href="/shell/" target="_blank"><i class="fa fa-keyboard-o"></i> <span><?php echo T('WEB_CONSOLE'); ?></span></a></li>
             <?php } ?>
             <!-- /// BEGIN INSERT CUSTOM MENU /// -->
             <?php include ($_SERVER['DOCUMENT_ROOT'].'/custom/custom.menu.php'); ?>
@@ -275,29 +276,6 @@
             <small><?php echo T('SCREEN_IRSSI_TXT'); ?></small></li>
           </ul>
         </div><!-- tab-pane -->
-
-        <!-- ######################## RUTORRENT PLUGINS TAB ##################### -->
-        <div class="tab-pane" id="plugins">
-          <h5 class="sidebar-title"><?php echo T('PLUGIN_MENU'); ?></h5>
-          <ul class="nav nav-pills nav-stacked nav-quirk">
-            <li class="nav-parent nav-active">
-              <a href=""><i class="fa fa-puzzle-piece"></i> <span><?php echo T('PLUGINS'); ?></span></a>
-              <ul class="children">
-                <li class="info-quote"><p class="info-quote"><?php echo T('PMENU_NOTICE_TXT'); ?></p></li>
-                <?php foreach ($plugins as $plugin) { ?>
-                  <li>
-                  <?php if(file_exists('/srv/rutorrent/plugins/'.$plugin.'/plugin.info')) {
-                    echo "<a href=\"javascript:void()\">$plugin</a> <div class=\"toggle-wrapper pull-right\" style=\"margin-right: -10px; margin-top: 5px;\"> <div class=\"toggle-pen toggle-modern\" onclick=\"location.href='?removeplugin-$plugin=true'\"></div></div>";
-                  } else {
-                    echo "<a href=\"javascript:void()\">$plugin</a> <div class=\"toggle-wrapper pull-right\" style=\"margin-right: -10px; margin-top: 5px;\"> <div class=\"toggle-pdis toggle-modern\" onclick=\"location.href='?installplugin-$plugin=true'\"></div></div>";
-                  } ?>
-                  </li>
-                <?php } ?>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- tab-pane -->
-
       </div><!-- tab-content -->
     </div><!-- leftpanelinner -->
   </div><!-- leftpanel -->

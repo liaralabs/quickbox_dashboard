@@ -113,7 +113,7 @@
                     </tr>
                     <?php } ?>
 
-                <?php if ($username == "$master") { ?>
+                <?php if ($username == "$master" && file_exists("/install/.shellinabox.lock")) { ?>
 
                     <tr>
                       <td><?php echo "$wcval"; ?> Web Console </td>
@@ -591,7 +591,7 @@
                 </div>
               </div>
             </div><!-- CPU WIDGET -->
-            <?php if ($username == "$master") { ?>
+            <?php if ($username == "$master" && file_exists("/install/.foo.lock")) { ?>
               <div class="col-sm-12">
                 <div id="project-commits" class="panel panel-inverse">
                   <div class="panel-heading">

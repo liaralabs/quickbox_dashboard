@@ -439,7 +439,7 @@
                       <?php if (file_exists("/install/.quota.lock")) { ?>
                         <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#quotaRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
                       <?php } else { ?>
-                        <td style="vertical-align: middle; text-align: center"><a href="?installpackage-quota=true" data-toggle="modal" data-target="#sysResponse" id="quotaInstall" class="btn btn-xs btn-default"><?php echo T('INSTALL'); ?></a></td>
+                        <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="<?php echo T('BOX_TOOLTIP_QUOTA'); ?>" data-placement="top" class="btn btn-xs btn-danger disabled tooltips"><?php echo T('BOX'); ?></button></td>
                       <?php } ?>
                     </tr>
                     <tr>

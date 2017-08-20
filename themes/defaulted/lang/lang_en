@@ -145,6 +145,7 @@ $L['OVPN_TOOLTIP_U'] = 'Access this feature from your web-console by typing: qui
 $L['BOX'] = 'BOX Only';
 $L['BOX_TOOLTIP_CSF'] = 'Access this feature from ssh by typing: box install csf';
 $L['BOX_TOOLTIP_NEXTCLOUD'] = 'Access this feature from ssh by typing: box install nextcloud';
+$L['BOX_TOOLTIP_QUOTA'] = 'Access this feature from ssh by typing: box install quota';
 $L['BOX_TOOLTIP_ZNC'] = 'Access this feature from ssh by typing: box install znc';
 
 ////////////////////////////////////////

@@ -110,10 +110,13 @@
 <section>
   <div class="leftpanel ps-container">
     <div class="leftpanelinner">
+      <?php if (file_exists('/install/.foo.lock')) { ?>
       <ul class="nav nav-tabs nav-justified nav-sidebar">
         <li class="tooltips active" data-toggle="tooltip" title="<?php echo T('MAIN_MENU'); ?>" data-placement="bottom"><a data-toggle="tab" data-target="#mainmenu"><i class="tooltips fa fa-ellipsis-h"></i></a></li>
-        <li class="tooltips" data-toggle="tooltip" title="<?php echo T('HELP_COMMANDS'); ?>" data-placement="bottom"><a data-toggle="tab" data-target="#help"><i class="tooltips fa fa-question-circle"></i></a></li>
+          <li class="tooltips" data-toggle="tooltip" title="<?php echo T('HELP_COMMANDS'); ?>" data-placement="bottom"><a data-toggle="tab" data-target="#help"><i class="tooltips fa fa-question-circle"></i></a></li>
       </ul>
+      <?php } ?>
+
       <div class="tab-content">
         <!-- ################# MAIN MENU ################### -->
         <div class="tab-pane active" id="mainmenu">

@@ -300,7 +300,7 @@ if(file_exists('/srv/panel/custom/url.override.php')){
   $jackettURL = "https://" . $_SERVER['HTTP_HOST'] . "/jackett/Admin/Dashboard";
   $nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
   $nzbhydraURL = "https://" . $_SERVER['HTTP_HOST'] . "/nzbhydra";
-  $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
+  $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
   $plexpyURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexpy";
   $ombiURL = "https://" . $_SERVER['HTTP_HOST'] . "/ombi";
   $pyloadURL = "https://" . $_SERVER['HTTP_HOST'] . "/pyload/login";

@@ -379,6 +379,7 @@
                         <td style="vertical-align: middle; text-align: center"><a href="?installpackage-nzbhydra=true" data-toggle="modal" data-target="#sysResponse" id="nzbhydraInstall" class="btn btn-xs btn-default"><?php echo T('INSTALL'); ?></a></td>
                       <?php } ?>
                     </tr>
+                    <?php if (file_exists("/install/.foo.lock")) { ?>
                     <tr>
                       <td>OpenVPN</td>
                       <td><?php echo T('OVPN'); ?></td>
@@ -388,6 +389,7 @@
                         <td style="vertical-align: middle; text-align: center"><button data-toggle="tooltip" title="<?php echo T('OVPN_TOOLTIP_I'); ?>" data-placement="top" class="btn btn-xs btn-danger disabled tooltips"><?php echo T('CLI'); ?></button></td>
                       <?php } ?>
                     </tr>
+                    <?php } ?>
                     <tr>
                       <td>Plex</td>
                       <td><?php echo T('PLEX'); ?></td>

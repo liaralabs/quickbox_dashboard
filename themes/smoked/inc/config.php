@@ -257,6 +257,7 @@ $delugedweb = processExists("deluge-web",$username);
 $emby = processExists("emby-server",$username);
 $headphones = processExists("headphones",$username);
 $irssi = processExists("irssi",$username);
+$medusa = processExists("medusa",$username);
 $nzbhydra = processExists("nzbhydra",$username);
 $ombi = processExists("ombi",$username);
 $plex = processExists("Plex",plex);
@@ -298,9 +299,10 @@ if(file_exists('/srv/panel/custom/url.override.php')){
   $embyURL = "https://" . $_SERVER['HTTP_HOST'] . "/emby";
   $headphonesURL = "https://" . $_SERVER['HTTP_HOST'] . "/headphones/home";
   $jackettURL = "https://" . $_SERVER['HTTP_HOST'] . "/jackett/";
+  $medusaURL = "https://" . $_SERVER['HTTP_HOST'] . "/medusa";
   $nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
   $nzbhydraURL = "https://" . $_SERVER['HTTP_HOST'] . "/nzbhydra";
-  $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":31400/web/";
+  $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";
   $plexpyURL = "https://" . $_SERVER['HTTP_HOST'] . "/plexpy";
   $ombiURL = "https://" . $_SERVER['HTTP_HOST'] . "/ombi";
   $pyloadURL = "https://" . $_SERVER['HTTP_HOST'] . "/pyload/login";
@@ -356,6 +358,10 @@ if ($headphones == "1") { $hpval = "<span class=\"badge badge-service-running-do
 
 if ($jackett == "1") { $jval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $jval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
+}
+
+if ($medusa == "1") { $medval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $medval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
 if ($nzbhydra == "1") { $nzbval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
@@ -451,6 +457,8 @@ case 0:
     $cbodyhp .= $headphones;
   $jackett = isEnabled("jackett", $username);
     $cbodyj .= $jackett;
+  $medusa = isEnabled("medusa", $username);
+    $cbodymed .= $medusa;
   $nzbhydra = isEnabled("nzbhydra", $username);
     $cbodynzb .= $nzbhydra;
   $ombi = isEnabled("ombi", $username);
@@ -499,6 +507,11 @@ case 66:
     } elseif ($process == "headphones"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
+    } elseif ($process == "medusa"){
+      shell_exec("sudo systemctl disable sickrage@$username");
+      shell_exec("sudo systemctl stop sickrage@$username");
+      shell_exec("sudo systemctl enable $process@$username");
+      shell_exec("sudo systemctl start $process@$username");
     } elseif ($process == "plexmediaserver"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
@@ -511,6 +524,11 @@ case 66:
     } elseif ($process == "radarr"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
+    } elseif ($process == "sickrage"){
+      shell_exec("sudo systemctl disable medusa@$username");
+      shell_exec("sudo systemctl stop medusa@$username");
+      shell_exec("sudo systemctl enable $process@$username");
+      shell_exec("sudo systemctl start $process@$username");
     } elseif ($process == "subsonic"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");

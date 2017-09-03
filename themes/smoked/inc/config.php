@@ -49,11 +49,11 @@ function search($data, $find, $end) {
 define('HTTP_HOST', preg_replace('~^www\.~i', '', $_SERVER['HTTP_HOST']));
 
 $panel = array(
-    'name'              => 'QuickBox Seedbox',
-    'author'            => 'Everyone that contributes to the open QuickBox project!',
+    'name'              => 'swizzin Seedbox',
+    'author'            => 'liaralabs',
     'robots'            => 'noindex, nofollow',
-    'title'             => 'Quickbox Dashboard',
-    'description'       => 'QuickBox is an open-source seedbox project that is developed and maintained by anyone who so choses to provide time and energy. For more QuickBox, checkout https://plaza.quickbox.io',
+    'title'             => 'swizzin dash',
+    'description'       => 'swizzin is an open-source seedbox project check out https://github.com/liaralabs/swizzin for more info',
     'active_page'       => basename($_SERVER['PHP_SELF']),
 );
 

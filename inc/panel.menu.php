@@ -148,14 +148,17 @@
               <?php if (file_exists('/install/.jackett.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$jackettURL"; ?>" target="_blank"><img src="img/brands/jackett.png" class="brand-ico"> <span>Jackett</span></a></li>
               <?php } ?>
+              <?php if (processExists("medusa",$username) && file_exists('/install/.medusa.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$medusaURL"; ?>" target="_blank"><img src="img/brands/medusa.png" class="brand-ico"> <span>Medusa</span></a></li>
+              <?php } ?>
+              <?php if (file_exists('/install/.netdata.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$netdataURL"; ?>" target="_blank"><img src="img/brands/netdata.png" class="brand-ico"> <span>Netdata</span></a></li>
+              <?php } ?>
               <?php if (file_exists('/install/.nextcloud.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$nextcloudURL"; ?>" target="_blank"><img src="img/brands/nextcloud.png" class="brand-ico"> <span>NextCloud</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.nzbhydra.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$nzbhydraURL"; ?>" target="_blank"><img src="img/brands/nzbhydra.png" class="brand-ico"> <span>NZBHydra</span></a></li>
-              <?php } ?>
-              <?php if (processExists("medusa",$username) && file_exists('/install/.medusa.lock')) { ?>
-                <li><a class="grayscale" href="<?php echo "$medusaURL"; ?>" target="_blank"><img src="img/brands/medusa.png" class="brand-ico"> <span>Medusa</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.plex.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$plexURL"; ?>" target="_blank"><img src="img/brands/plex.png" class="brand-ico"> <span>Plex</span></a></li>

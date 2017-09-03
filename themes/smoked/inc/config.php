@@ -258,6 +258,7 @@ $emby = processExists("emby-server",$username);
 $headphones = processExists("headphones",$username);
 $irssi = processExists("irssi",$username);
 $medusa = processExists("medusa",$username);
+$netdata = processExists("netdata",netdata);
 $nzbhydra = processExists("nzbhydra",$username);
 $ombi = processExists("ombi",$username);
 $plex = processExists("Plex",plex);
@@ -364,6 +365,10 @@ if ($medusa == "1") { $medval = "<span class=\"badge badge-service-running-dot\"
 } else { $medval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
+if ($netdata == "1") { $netval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $netval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
+}
+
 if ($nzbhydra == "1") { $nzbval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $nzbval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
@@ -459,6 +464,8 @@ case 0:
     $cbodyj .= $jackett;
   $medusa = isEnabled("medusa", $username);
     $cbodymed .= $medusa;
+  $netdata = isEnabled("netdata", netdata);
+    $cbodynet .= $netdata;
   $nzbhydra = isEnabled("nzbhydra", $username);
     $cbodynzb .= $nzbhydra;
   $ombi = isEnabled("ombi", $username);
@@ -512,6 +519,9 @@ case 66:
       shell_exec("sudo systemctl stop sickrage@$username");
       shell_exec("sudo systemctl enable $process@$username");
       shell_exec("sudo systemctl start $process@$username");
+    } elseif ($process == "netdata"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl start $process");
     } elseif ($process == "plexmediaserver"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl start $process");
@@ -554,6 +564,9 @@ case 77:
     } elseif ($process == "headphones"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
+    } elseif ($process == "netdata"){
+      shell_exec("sudo systemctl stop $process");
+      shell_exec("sudo systemctl disable $process");
     } elseif ($process == "plexmediaserver"){
       shell_exec("sudo systemctl stop $process");
       shell_exec("sudo systemctl disable $process");
@@ -589,6 +602,9 @@ case 88:
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
     } elseif ($process == "headphones"){
+      shell_exec("sudo systemctl enable $process");
+      shell_exec("sudo systemctl restart $process");
+    } elseif ($process == "netdata"){
       shell_exec("sudo systemctl enable $process");
       shell_exec("sudo systemctl restart $process");
     } elseif ($process == "plexmediaserver"){

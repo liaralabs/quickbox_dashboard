@@ -301,6 +301,7 @@ if(file_exists('/srv/panel/custom/url.override.php')){
   $headphonesURL = "https://" . $_SERVER['HTTP_HOST'] . "/headphones/home";
   $jackettURL = "https://" . $_SERVER['HTTP_HOST'] . "/jackett/";
   $medusaURL = "https://" . $_SERVER['HTTP_HOST'] . "/medusa";
+  $netdataURL = "https://" . $_SERVER['HTTP_HOST'] . "/netdata/";
   $nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
   $nzbhydraURL = "https://" . $_SERVER['HTTP_HOST'] . "/nzbhydra";
   $plexURL = "http://" . $_SERVER['HTTP_HOST'] . ":32400/web/";

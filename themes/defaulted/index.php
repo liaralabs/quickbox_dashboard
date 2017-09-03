@@ -284,7 +284,7 @@
             </div>
           </div><!-- panel -->
 
-          <?php if ($username == "$master") { ?>
+          <?php if (file_exists("/install/.foo.lock")) { ?>
           <!--PACKAGE MANAGEMENT CENTER-->
           <div class="panel panel-main panel-inverse">
             <div class="panel-heading">

@@ -202,10 +202,10 @@
               <a href=""><i class="fa fa-download"></i> <span><?php echo T('DOWNLOADS'); ?></span></a>
               <ul class="children">
                 <?php if (file_exists('/install/.rtorrent.lock')) { ?>
-                <li><a href="/<?php echo "$username"; ?>.rtorrent.downloads" target="_blank">ruTorrent</a></a></li>
+                <li><a href="/rtorrent.downloads" target="_blank">ruTorrent</a></a></li>
                 <?php } ?>
                 <?php if (file_exists('/install/.deluge.lock')) { ?>
-                  <li><a href="/<?php echo "$username"; ?>.deluge.downloads" target="_blank">Deluge</a></li>
+                  <li><a href="/deluge.downloads" target="_blank">Deluge</a></li>
                 <?php } ?>
                 <?php if (file_exists('/home/'. $username .'/public_html/'. $username .'.zip')) { ?>
                   <li><a href="/~<?php echo "$username"; ?>/<?php echo "$username"; ?>.zip" target="_blank"> <span>OpenVPN Config</span></a></li>

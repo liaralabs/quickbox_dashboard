@@ -164,6 +164,9 @@
             <?php if (file_exists('/install/.rutorrent.lock')) { ?>
               <li><a class="grayscale" href="/rutorrent" target="_blank"><img src="img/brands/rtorrent.png" class="brand-ico"> <span>ruTorrent</span></a></li>
             <?php } ?>
+            <?php if (processExists("flood",$username) && file_exists('/install/.flood.lock')) { ?>
+              <li><a class="grayscale" href="<?php echo "$floodURL"; ?>" target="_blank"><img src="img/brands/flood.png" class="brand-ico"> <span>Flood</span></a></li>
+            <?php } ?>
             <?php if (processExists("deluge-web",$username) && file_exists('/install/.deluge.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$dwURL"; ?>" target="_blank"><img src="img/brands/deluge.png" class="brand-ico"> <span>Deluge Web</span></a></li>
             <?php } ?>

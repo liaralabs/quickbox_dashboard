@@ -49,6 +49,15 @@ $(document).ready(function() {
   }
   appstat_emby();
 
+  // <<-------- FLOOD -------->> //
+  function appstat_flood() {
+    $.ajax({url: "/widgets/app_status/app_status_flood.php", cache:true, success: function (result) {
+      $('#appstat_fkiid').html(result);
+      setTimeout(function(){appstat_flood()}, 1000);
+    }});
+  }
+  appstat_flood();
+
   // <<-------- HEADPHONES -------->> //
   function appstat_headphones() {
     $.ajax({url: "/widgets/app_status/app_status_headphones.php", cache:true, success: function (result) {

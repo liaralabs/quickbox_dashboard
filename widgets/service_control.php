@@ -34,6 +34,13 @@
                       <td class="text-center"><?php echo "$cbodyr"; ?></td>
                     </tr>
                   <?php } ?>
+                  <?php if (file_exists("/install/.flood.lock")) { ?>
+                    <tr>
+                      <td><span id="appstat_flood"></span> Flood </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=flood'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><?php echo "$cbodyf"; ?></td>
+                    </tr>
+                    <?php } ?>
 
                   <?php if (file_exists("/install/.autodlirssi.lock")) { ?>
                     <tr>

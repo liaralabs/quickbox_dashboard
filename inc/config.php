@@ -255,6 +255,7 @@ $btsync = processExists("resilio-sync",rslsync);
 $deluged = processExists("deluged",$username);
 $delugedweb = processExists("deluge-web",$username);
 $emby = processExists("emby-server",$username);
+$emby = processExists("flood",$username);
 $headphones = processExists("headphones",$username);
 $irssi = processExists("irssi",$username);
 $nzbget = processExists("nzbget",$username);
@@ -299,6 +300,7 @@ if(file_exists('/srv/panel/custom/url.override.php')){
   $csfURL = "https://" . $_SERVER['HTTP_HOST'] . ":3443";
   $dwURL = "https://" . $_SERVER['HTTP_HOST'] . "/deluge/";
   $embyURL = "https://" . $_SERVER['HTTP_HOST'] . "/emby";
+  $floodURL = "https://" . $_SERVER['HTTP_HOST'] . "/flood/";
   $headphonesURL = "https://" . $_SERVER['HTTP_HOST'] . "/headphones/home";
   $jackettURL = "https://" . $_SERVER['HTTP_HOST'] . "/jackett/";
   $medusaURL = "https://" . $_SERVER['HTTP_HOST'] . "/medusa";
@@ -349,6 +351,8 @@ case 0:
     $cbodycp .= $couchpotato;
   $emby = isEnabled("emby-server", $username);
     $cbodye .= $emby;
+  $flood = isEnabled("flood", $username);
+    $cbodyf .= $flood;
   $headphones = isEnabled("headphones", $username);
     $cbodyhp .= $headphones;
   $jackett = isEnabled("jackett", $username);

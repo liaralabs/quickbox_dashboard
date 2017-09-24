@@ -52,7 +52,7 @@ $(document).ready(function() {
   // <<-------- FLOOD -------->> //
   function appstat_flood() {
     $.ajax({url: "/widgets/app_status/app_status_flood.php", cache:true, success: function (result) {
-      $('#appstat_fkiid').html(result);
+      $('#appstat_flood').html(result);
       setTimeout(function(){appstat_flood()}, 1000);
     }});
   }

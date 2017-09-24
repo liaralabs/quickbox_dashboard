@@ -12,7 +12,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$emby = processExists("flood",$username);
+$flood = processExists("flood",$username);
 
 if ($flood == "1") { $fval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $fval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";

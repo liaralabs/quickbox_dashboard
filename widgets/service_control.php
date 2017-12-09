@@ -42,7 +42,7 @@
                     </tr>
                     <?php } ?>
 
-                  <?php if (file_exists("/install/.autodlirssi.lock")) { ?>
+                  <?php if (file_exists("/install/.autodl.lock")) { ?>
                     <tr>
                       <td><span id="appstat_irssi"></span> iRSSi-AutoDL </td>
                       <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=irssi'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
@@ -63,14 +63,14 @@
                     </tr>
                     <?php } ?>
 
-                <?php if ($username == "$master" && file_exists("/install/.shellinabox.lock")) { ?>
-
+                <?php if ($username == "$master") { ?>
+                  <?php if (file_exists("/install/.shellinabox.lock")) { ?>
                     <tr>
                       <td><span id="appstat_webconsole"></span> Web Console </td>
                       <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=shellinabox'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
                       <td class="text-center"><?php echo "$wcbodyb"; ?></td>
                     </tr>
-
+                  <?php } ?>
                     <!--
                     <//?php if (file_exists("/install/.csf.lock")) { ?>
                     <tr>

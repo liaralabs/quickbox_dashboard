@@ -240,6 +240,14 @@
                       <td class="text-center"><?php echo "$cbodyst"; ?></td>
                     </tr>
                     <?php } ?>
+                    
+                    <?php if (file_exists("/install/.lounge.lock")) { ?>
+                    <tr>
+                      <td><span id="appstat_lounge"></span> The Lounge </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=lounge'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><?php echo "$cbodylounge"; ?></td>
+                    </tr>
+                    <?php } ?>
 
                     <?php if (file_exists("/install/.sample.lock")) { ?>
                     <tr>

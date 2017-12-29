@@ -170,6 +170,9 @@
             <?php if (processExists("deluge-web",$username) && file_exists('/install/.deluge.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$dwURL"; ?>" target="_blank"><img src="img/brands/deluge.png" class="brand-ico"> <span>Deluge Web</span></a></li>
             <?php } ?>
+            <?php if (processExists("lounge",lounge) && file_exists('/install/.lounge.lock')) { ?>
+              <li><a class="grayscale" href="<?php echo "$loungeURL"; ?>" target="_blank"><img src="img/brands/lounge.svg" class="brand-ico"> <span>Flood</span></a></li>
+            <?php } ?>
             <?php if ($username == "$master") { ?>
               <?php if (processExists("resilio-sync",rslsync) && file_exists('/install/.btsync.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$btsyncURL"; ?>" target="_blank"><img src="img/brands/btsync.png" class="brand-ico"> <span>BTSync</span></a></li>

@@ -85,6 +85,15 @@ $(document).ready(function() {
   }
   appstat_jackett();
 
+  // <<-------- THE LOUNGE -------->> //
+  function appstat_lounge() {
+    $.ajax({url: "/widgets/app_status/app_status_lounge.php", cache:true, success: function (result) {
+      $('#appstat_lounge').html(result);
+      setTimeout(function(){appstat_lounge()}, 1000);
+    }});
+  }
+  appstat_lounge();
+
   // <<-------- MEDUSA -------->> //
   function appstat_medusa() {
     $.ajax({url: "/widgets/app_status/app_status_medusa.php", cache:true, success: function (result) {

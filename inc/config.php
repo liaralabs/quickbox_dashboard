@@ -18,20 +18,6 @@ $vnstat_bin = '/usr/bin/vnstat';
 $data_dir = './dumps';
 $byte_notation = null;
 
-$dconf = '/home/'.$username.'/.config/deluge/web.conf';
-if (file_exists($dconf)) {
-    $dconf_data = file_get_contents($dconf);
-    $dwport = search($dconf_data, '"port": ', ',');
-    $dwssl = search($dconf_data, '"https": ', ',');
-}
-
-$szconf = '/home/'.$username.'/.sabnzbd/sabnzbd.ini';
-if (file_exists($szconf)) {
-    $szconf_data = file_get_contents($szconf);
-    $szport = search($szconf_data, 'port = ', "\n");
-    $szssl = search($szconf_data, 'https_port = ', "\n");
-}
-
 $zconf = '/srv/panel/db/znc.txt';
 if (file_exists($zconf)) {
     $zconf_data = file_get_contents($zconf);

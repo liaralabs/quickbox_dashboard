@@ -170,6 +170,9 @@
             <?php if (processExists("deluge-web",$username) && file_exists('/install/.deluge.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$dwURL"; ?>" target="_blank"><img src="img/brands/deluge.png" class="brand-ico"> <span>Deluge Web</span></a></li>
             <?php } ?>
+            <?php if (file_exists('/install/.nzbget.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$nzbgetURL"; ?>" target="_blank"><img src="img/brands/nzbget.png" class="brand-ico"> <span>NZBGet</span></a></li>
+            <?php } ?>
             <?php if (processExists("lounge",lounge) && file_exists('/install/.lounge.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$loungeURL"; ?>" target="_blank"><img src="img/brands/lounge.svg" class="brand-ico"> <span>The Lounge</span></a></li>
             <?php } ?>
@@ -200,9 +203,6 @@
               <?php } ?>
               <?php if (file_exists('/install/.nextcloud.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$nextcloudURL"; ?>" target="_blank"><img src="img/brands/nextcloud.png" class="brand-ico"> <span>NextCloud</span></a></li>
-              <?php } ?>
-              <?php if (file_exists('/install/.nzbget.lock')) { ?>
-                <li><a class="grayscale" href="<?php echo "$nzbgetURL"; ?>" target="_blank"><img src="img/brands/nzbget.png" class="brand-ico"> <span>NZBGet</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.nzbhydra.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$nzbhydraURL"; ?>" target="_blank"><img src="img/brands/nzbhydra.png" class="brand-ico"> <span>NZBHydra</span></a></li>

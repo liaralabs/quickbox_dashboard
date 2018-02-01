@@ -63,6 +63,14 @@
                     </tr>
                     <?php } ?>
 
+                    <?php if (file_exists("/install/.nzbget.lock")) { ?>
+                    <tr>
+                      <td><span id="appstat_nzbget"></span> NZBGet </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=nzbget'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><?php echo "$cbodynzg"; ?></td>
+                    </tr>
+                    <?php } ?>
+
                 <?php if ($username == "$master") { ?>
                   <?php if (file_exists("/install/.shellinabox.lock")) { ?>
                     <tr>
@@ -134,14 +142,6 @@
                       <td><?php echo "$netval"; ?> Netdata </td>
                       <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=netdata'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
                       <td class="text-center"><?php echo "$cbodynet"; ?></td>
-                    </tr>
-                    <?php } ?>
-
-                    <?php if (file_exists("/install/.nzbget.lock")) { ?>
-                    <tr>
-                      <td><span id="appstat_nzbget"></span> NZBGet </td>
-                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=nzbget'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
-                      <td class="text-center"><?php echo "$cbodynzg"; ?></td>
                     </tr>
                     <?php } ?>
 

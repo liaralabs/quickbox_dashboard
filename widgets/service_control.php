@@ -139,7 +139,7 @@
 
                     <?php if (file_exists("/install/.netdata.lock")) { ?>
                     <tr>
-                      <td><?php echo "$netval"; ?> Netdata </td>
+                      <td><span id="appstat_netdata"></span> Netdata </td>
                       <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=netdata'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
                       <td class="text-center"><?php echo "$cbodynet"; ?></td>
                     </tr>

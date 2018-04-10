@@ -87,7 +87,7 @@ if (file_exists('/home/'.$username.'/.sessions/rtorrent.lock')) {
                   <p class="nomargin"><?php echo T('USED'); ?>: <span style="font-weight: 700; position: absolute; left: 100px;"><?php echo "$dfused"; ?> <b>GB</b></span></p>
                   <p class="nomargin"><?php echo T('SIZE'); ?>: <span style="font-weight: 700; position: absolute; left: 100px;"><?php echo "$dftotal"; ?> <b>GB</b></span></p>
                   <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-sm-12">
                       <!--h4 class="panel-title text-success">Disk Space</h4-->
                       <h3><?php echo T('DISK_SPACE'); ?></h3>
                       <div class="progress">
@@ -101,14 +101,6 @@ if (file_exists('/home/'.$username.'/.sessions/rtorrent.lock')) {
                         </div>
                       </div>
                       <p style="font-size:10px"><?php echo T('PERCENTAGE_TXT_1'); ?> <?php echo "$perused" ?>% <?php echo T('PERCENTAGE_TXT_2'); ?></p>
-                    </div>
-                    <div class="col-sm-4 text-right">
-                      <?php
-                        if ($perused < "70") { $diskcolor="disk-good"; }
-                        if ($perused > "70") { $diskcolor="disk-warning"; }
-                        if ($perused > "90") { $diskcolor="disk-danger"; }
-                      ?>
-                      <i class="fa fa-hdd-o <?php echo $diskcolor ?>" style="font-size: 90px;"></i>
                     </div>
                   </div>
                   <hr />

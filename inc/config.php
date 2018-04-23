@@ -302,6 +302,7 @@ if(file_exists('/srv/panel/custom/url.override.php')){
   $pyloadURL = "https://" . $_SERVER['HTTP_HOST'] . "/pyload/login";
   $radarrURL = "https://" . $_SERVER['HTTP_HOST'] . "/radarr";
   $rapidleechURL = "https://" . $_SERVER['HTTP_HOST'] . "/rapidleech";
+  $rutorrentURL = "https://" . $_SERVER['HTTP_HOST'] . "/rutorrent";
   $sabnzbdURL = "https://" . $_SERVER['HTTP_HOST'] . "/sabnzbd";
   $sickgearURL = "https://" . $_SERVER['HTTP_HOST'] . "/sickgear";
   $sickrageURL = "https://" . $_SERVER['HTTP_HOST'] . "/sickrage";

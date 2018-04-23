@@ -162,7 +162,7 @@
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <!--li class="active"><a href="index.php"><i class="fa fa-home"></i> <span>Dashboard</span></a></li-->
             <?php if (file_exists('/install/.rutorrent.lock')) { ?>
-              <li><a class="grayscale" href="/rutorrent" target="_blank"><img src="img/brands/rtorrent.png" class="brand-ico"> <span>ruTorrent</span></a></li>
+              <li><a class="grayscale" href="<?php echo "$rutorrentURL"; ?>" target="_blank"><img src="img/brands/rtorrent.png" class="brand-ico"> <span>ruTorrent</span></a></li>
             <?php } ?>
             <?php if (processExists("flood",$username) && file_exists('/install/.flood.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$floodURL"; ?>" target="_blank"><img src="img/brands/flood.png" class="brand-ico"> <span>Flood</span></a></li>

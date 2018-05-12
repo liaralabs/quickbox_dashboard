@@ -6,7 +6,7 @@ if (isset($_GET['clean_mem'])) {
 
 if (isset($_GET['clean_log'])) {
         header('Location: /');
-        shell_exec("sudo /usr/local/bin/swizzin/panel/clean_log");
+        shell_exec("printf '' > /srv/panel/db/output.log");
 }
 
 if (isset($_GET['updateQuickBox'])) {

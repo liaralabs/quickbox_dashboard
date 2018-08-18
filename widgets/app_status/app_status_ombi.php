@@ -12,7 +12,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$ombi = processExists("ombi",$username);
+$ombi = processExists("ombi",ombi);
 
 if ($ombi == "1") { $prval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $prval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";

@@ -1,4 +1,5 @@
 <?php
+include '/srv/panel/inc/util.php';
 include ("../inc/localize.php");
 $username = getUser();
 $master = file_get_contents('/srv/panel/db/master.txt');

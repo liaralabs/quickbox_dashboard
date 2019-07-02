@@ -88,6 +88,13 @@
                     </tr>
                     <//?php } ?>
                     -->
+                    <?php if (file_exists("/install/.bazarr.lock")) { ?>
+                    <tr>
+                      <td><span id="appstat_bazarr"></span> Bazarr </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=bazarr'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><?php echo "$cbodybaz"; ?></td>
+                    </tr>
+                    <?php } ?>
 
                     <?php if (file_exists("/install/.btsync.lock")) { ?>
                     <tr>
@@ -126,6 +133,15 @@
                       <td><span id="appstat_jackett"></span> Jackett </td>
                       <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=jackett'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
                       <td class="text-center"><?php echo "$cbodyj"; ?></td>
+                    </tr>
+                    <?php } ?>
+
+
+                    <?php if (file_exists("/install/.lidarr.lock")) { ?>
+                    <tr>
+                      <td><span id="appstat_lidarr"></span> Lidarr </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=liddarr'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td class="text-center"><?php echo "$cbodylidarr"; ?></td>
                     </tr>
                     <?php } ?>
 

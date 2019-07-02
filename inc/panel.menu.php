@@ -181,6 +181,9 @@
               <?php if (processExists("resilio-sync",rslsync) && file_exists('/install/.btsync.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$btsyncURL"; ?>" target="_blank"><img src="img/brands/btsync.png" class="brand-ico"> <span>BTSync</span></a></li>
               <?php } ?>
+              <?php if file_exists('/install/.bazarr.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$bazarrURL"; ?>" target="_blank"><img src="img/brands/bazarr.png" class="brand-ico"> <span>Bazarr</span></a></li>
+              <?php } ?>
               <?php if (file_exists('/install/.couchpotato.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$cpURL"; ?>" target="_blank"><img src="img/brands/couchpotato.png" class="brand-ico"> <span>CouchPotato</span></a></li>
               <?php } ?>
@@ -195,6 +198,9 @@
               <?php } ?>
               <?php if (file_exists('/install/.jackett.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$jackettURL"; ?>" target="_blank"><img src="img/brands/jackett.png" class="brand-ico"> <span>Jackett</span></a></li>
+              <?php } ?>
+              <?php if file_exists('/install/.lidarr.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$lidarrURL"; ?>" target="_blank"><img src="img/brands/lidarr.png" class="brand-ico"> <span>Lidarr</span></a></li>
               <?php } ?>
               <?php if (processExists("medusa",$username) && file_exists('/install/.medusa.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$medusaURL"; ?>" target="_blank"><img src="img/brands/medusa.png" class="brand-ico"> <span>Medusa</span></a></li>

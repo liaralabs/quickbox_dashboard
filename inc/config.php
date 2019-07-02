@@ -237,13 +237,15 @@ function processExists($processName, $username) {
   return $exists;
 }
 
+$bazarr = processExists("bazarr",$username);
 $btsync = processExists("resilio-sync",rslsync);
 $deluged = processExists("deluged",$username);
 $delugedweb = processExists("deluge-web",$username);
 $emby = processExists("emby-server",$username);
-$emby = processExists("flood",$username);
+$flood = processExists("flood",$username);
 $headphones = processExists("headphones",$username);
 $irssi = processExists("irssi",$username);
+$lidarr = processExists("lidarr",$username);
 $lounge = processExists("lounge",lounge);
 $nzbget = processExists("nzbget",$username);
 $nzbhydra = processExists("nzbhydra",$username);
@@ -282,6 +284,7 @@ if(file_exists('/srv/panel/custom/url.override.php')){
   include ($_SERVER['DOCUMENT_ROOT'].'/custom/url.override.php');
   // END CUSTOM URL OVERRIDES ////
 } else {
+  $bazarrURL = "http://" . $_SERVER['HTTP_HOST'] . "/bazarr";
   $btsyncURL = "http://" . $_SERVER['HTTP_HOST'] . ":8888/gui/";
   $cpURL = "https://" . $_SERVER['HTTP_HOST'] . "/couchpotato";
   $csfURL = "https://" . $_SERVER['HTTP_HOST'] . ":3443";
@@ -291,6 +294,7 @@ if(file_exists('/srv/panel/custom/url.override.php')){
   $headphonesURL = "https://" . $_SERVER['HTTP_HOST'] . "/headphones/home";
   $jackettURL = "https://" . $_SERVER['HTTP_HOST'] . "/jackett/";
   $loungeURL = "https://" . $_SERVER['HTTP_HOST'] . "/irc";
+  $lidarrURL = "http://" . $_SERVER['HTTP_HOST'] . "/lidarr";
   $medusaURL = "https://" . $_SERVER['HTTP_HOST'] . "/medusa";
   $netdataURL = "https://" . $_SERVER['HTTP_HOST'] . "/netdata/";
   $nextcloudURL = "https://" . $_SERVER['HTTP_HOST'] . "/nextcloud";
@@ -334,6 +338,8 @@ case 0:
     $cbodydw .= $delugedweb;
   $shellinabox = isEnabled("shellinabox",shellinabox);
     $wcbodyb .= $shellinabox;
+  $bazarr = isEnabled("bazarr",$username);
+    $cbodybaz .= $bazarr;
   $btsync = isEnabled("resilio-sync",rslsync);
     $cbodyb .= $btsync;
   $couchpotato = isEnabled("couchpotato", $username);
@@ -346,6 +352,8 @@ case 0:
     $cbodyhp .= $headphones;
   $jackett = isEnabled("jackett", $username);
     $cbodyj .= $jackett;
+  $lidarr = isEnabled("lidarr", $username);
+    $cbodylidarr .= $lidarr;
   $lounge = isEnabled("lounge", lounge);
     $cbodylounge .= $lounge;
   $medusa = isEnabled("medusa", $username);

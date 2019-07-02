@@ -3,6 +3,14 @@ $(document).ready(function() {
   /////////////////////////////////////////////
   // BEGIN AJAX APP CALLS ON SERVICE STATUS //
   ///////////////////////////////////////////
+  // <<-------- BAZARR -------->> //
+  function appstat_bazarr() {
+    $.ajax({url: "widgets/app_status/app_status_bazarr.php", cache:true, success: function (result) {
+      $('#appstat_bazarr').html(result);
+      setTimeout(function(){appstat_bazarr()}, 1000);
+    }});
+  }
+  appstat_bazarr();
 
   // <<-------- BTSYNC -------->> //
   function appstat_btsync() {
@@ -84,6 +92,15 @@ $(document).ready(function() {
     }});
   }
   appstat_jackett();
+  
+  // <<-------- LIDARR -------->> //
+  function appstat_lidarr() {
+    $.ajax({url: "widgets/app_status/app_status_lidarr.php", cache:true, success: function (result) {
+      $('#appstat_lidarr').html(result);
+      setTimeout(function(){appstat_lidarr()}, 1000);
+    }});
+  }
+  appstat_lidarr();  
 
   // <<-------- THE LOUNGE -------->> //
   function appstat_lounge() {

@@ -1,7 +1,8 @@
 <?php
-
 include ("../inc/localize.php");
-
+$username = getUser();
+$master = file_get_contents('/srv/panel/db/master.txt');
+$master=preg_replace('/\s+/', '', $master);
 $time_start = microtime_float();
 
 function memory_usage()

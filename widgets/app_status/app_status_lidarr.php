@@ -12,7 +12,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$sonarr = processExists("lidarr",$username);
+$lidarr = processExists("lidarr",$username);
 
 if ($lidarr == "1") { $lidval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $lidval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";

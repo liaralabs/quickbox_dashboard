@@ -83,7 +83,7 @@ function write_summary_t() {
   // let's build array for write_data_table
   //
 
-  $sum = array();
+/*  $sum = array();
 
   if (count($day) > 0 && count($hour) > 0 && count($month) > 0) {
     $sum[0]['act'] = 1;
@@ -105,7 +105,7 @@ function write_summary_t() {
     $sum[3]['label'] = T('All time');
     $sum[3]['rx'] = $trx;
     $sum[3]['tx'] = $ttx;
-  }
+  }*/
 
 write_data_table_t(T('Top 10 days'), $top);
 

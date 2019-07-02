@@ -1,11 +1,13 @@
 <?php
-$interface = INETFACE;
+$interface = "INETFACE";
 session_start();
 $rx[] = @file_get_contents("/sys/class/net/INETFACE/statistics/rx_bytes");
 $tx[] = @file_get_contents("/sys/class/net/INETFACE/statistics/tx_bytes");
 sleep(1);
 $rx[] = @file_get_contents("/sys/class/net/INETFACE/statistics/rx_bytes");
 $tx[] = @file_get_contents("/sys/class/net/INETFACE/statistics/tx_bytes");
+settype($rx[], "integer");
+settype($tx[], "integer");
 $tbps = $tx[1] - $tx[0];
 $rbps = $rx[1] - $rx[0];
 $round_rx=round(($rbps*8)/10000000, 3);

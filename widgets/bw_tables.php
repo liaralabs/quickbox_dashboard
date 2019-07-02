@@ -1,7 +1,7 @@
 <?php
 
 // Network Interface
-$interface = INETFACE;
+$interface = "INETFACE";
 $iface_list = array('INETFACE');
 $iface_title['INETFACE'] = 'External';
 $vnstat_bin = '/usr/bin/vnstat';
@@ -76,8 +76,8 @@ write_data_table_s(T('Summary'), $sum);
 function write_summary_t() {
   global $top;
 
-  $trx = $summary['totalrx']*1024+$summary['totalrxk'];
-  $ttx = $summary['totaltx']*1024+$summary['totaltxk'];
+  /*$trx = $summary['totalrx']*1024+$summary['totalrxk'];
+  $ttx = $summary['totaltx']*1024+$summary['totaltxk'];*/
 
   //
   // let's build array for write_data_table
@@ -181,7 +181,7 @@ get_vnstat_data();
 
             <div class="col-sm-12" style="padding-left:0;padding-right:0;">
               <div class="table-responsive">
-                <?php $graph_params = "if=$iface&amp;page=$page&amp;style=$style";
+                <?php $graph_params = "if=$iface&amp;page=$page&amp";
                   if ($page == 's') {
                     write_summary_s();
                   } else if ($page == 'h') {
@@ -197,7 +197,7 @@ get_vnstat_data();
 
             <div class="col-sm-12" style="padding-left:0;padding-right:0;">
               <div class="table-responsive">
-                <?php $graph_params = "if=$iface&amp;page=$page&amp;style=$style";
+                <?php $graph_params = "if=$iface&amp;page=$page&amp";
                   if ($page == 's') {
                     write_summary_t();
                   } else if ($page == 'h') {

@@ -4,6 +4,7 @@ include ("../inc/localize.php");
   header('Content-Type: text/event-stream');
   header('Cache-Control: no-cache');
   $uptime = shell_exec("cut -d. -f1 /proc/uptime");
+  settype($uptime, "integer");
   $days = floor($uptime/60/60/24);
   $hours = $uptime/60/60%24;
   $mins = $uptime/60%60;

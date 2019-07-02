@@ -12,7 +12,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$btsync = processExists("resilio-sync",rslsync);
+$btsync = processExists("resilio-sync","rslsync");
 
 if ($btsync == "1") { $bval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $bval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";

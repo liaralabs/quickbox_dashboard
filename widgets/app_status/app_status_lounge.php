@@ -12,7 +12,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$lounge = processExists("lounge",lounge);
+$lounge = processExists("lounge","lounge");
 
 if ($lounge == "1") { $loungeval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $loungeval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";

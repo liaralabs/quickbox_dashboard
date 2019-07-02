@@ -12,7 +12,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$shellinabox = processExists("shellinabox",shellinabox);
+$shellinabox = processExists("shellinabox","shellinabox");
 
 if ($shellinabox == "1") { $wcval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $wcval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";

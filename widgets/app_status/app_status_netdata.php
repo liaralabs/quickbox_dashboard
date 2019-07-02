@@ -12,7 +12,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$netdata = processExists("netdata",netdata);
+$netdata = processExists("netdata","netdata");
 
 	if ($netdata == "1") { $netval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $netval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";

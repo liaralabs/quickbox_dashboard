@@ -12,7 +12,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$tautulli = processExists("Tautulli",tautulli);
+$tautulli = processExists("Tautulli","tautulli");
 
 if ($tautulli == "1") { $ppval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $ppval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";

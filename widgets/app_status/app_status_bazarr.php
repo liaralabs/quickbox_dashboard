@@ -12,12 +12,12 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$sonarr = processExists("bazarr",$username);
+$bazarr = processExists("bazarr",$username);
 
-if ($sonarr == "1") { $sval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
-} else { $sval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
+if ($bazarr == "1") { $bazval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+} else { $bazval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 
-echo "$sval";
+echo "$bazval";
 
 ?>

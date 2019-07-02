@@ -12,7 +12,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$plex = processExists("Plex",plex);
+$plex = processExists("Plex","plex");
 
 if ($plex == "1") { $pval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $pval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";

@@ -1,10 +1,9 @@
 <?php
-if (!isset($_SESSION))
+if (isset($_SESSION))
 {
-  session_start();
+  session_destroy();
 }
 
-session_destroy();
 include '/srv/panel/inc/util.php';
 include ($_SERVER['DOCUMENT_ROOT'].'/widgets/class.php');
 $version = "v1.2.0";

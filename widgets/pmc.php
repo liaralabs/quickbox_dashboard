@@ -225,12 +225,12 @@
                       <?php } ?>
                     </tr>
                     <tr>
-                      <td>SickRage</td>
-                      <td><?php echo T('SICKRAGE'); ?></td>
-                      <?php if (file_exists("/install/.sickrage.lock")) { ?>
-                        <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#sickrageRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
+                      <td>sickchill</td>
+                      <td><?php echo T('sickchill'); ?></td>
+                      <?php if (file_exists("/install/.sickchill.lock")) { ?>
+                        <td style="vertical-align: middle; text-align: center"><a href="javascript:void()" data-toggle="modal" data-target="#sickchillRemovalConfirm" class="btn btn-xs btn-success"><?php echo T('INSTALLED'); ?></a></td>
                       <?php } else { ?>
-                        <td style="vertical-align: middle; text-align: center"><a href="?installpackage-sickrage=true" data-toggle="modal" data-target="#sysResponse" id="sickrageInstall" class="btn btn-xs btn-default"><?php echo T('INSTALL'); ?></a></td>
+                        <td style="vertical-align: middle; text-align: center"><a href="?installpackage-sickchill=true" data-toggle="modal" data-target="#sysResponse" id="sickchillInstall" class="btn btn-xs btn-default"><?php echo T('INSTALL'); ?></a></td>
                       <?php } ?>
                     </tr>
                     <tr>

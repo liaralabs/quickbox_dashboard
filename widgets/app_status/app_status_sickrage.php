@@ -12,9 +12,9 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$sickrage = processExists("sickrage",$username);
+$sickchill = processExists("sickchill",$username);
 
-if ($sickrage == "1") { $srval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
+if ($sickchill == "1") { $srval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $srval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";
 }
 

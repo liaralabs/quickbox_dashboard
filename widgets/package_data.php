@@ -22,7 +22,7 @@ $packages = array(
         'rapidleech',
         'sabnzbd',
         'sickgear',
-        'sickrage',
+        'sickchill',
         'sonarr',
         'subsonic',
         'syncthing',

@@ -255,14 +255,14 @@ $(document).ready(function() {
   }
   appstat_sickgear();
 
-  // <<-------- SICKRAGE -------->> //
-  function appstat_sickrage() {
-    $.ajax({url: "widgets/app_status/app_status_sickrage.php", cache:true, success: function (result) {
-      $('#appstat_sickrage').html(result);
-      setTimeout(function(){appstat_sickrage()}, 1000);
+  // <<-------- sickchill -------->> //
+  function appstat_sickchill() {
+    $.ajax({url: "widgets/app_status/app_status_sickchill.php", cache:true, success: function (result) {
+      $('#appstat_sickchill').html(result);
+      setTimeout(function(){appstat_sickchill()}, 1000);
     }});
   }
-  appstat_sickrage();
+  appstat_sickchill();
 
   // <<-------- SONARR -------->> //
   function appstat_sonarr() {

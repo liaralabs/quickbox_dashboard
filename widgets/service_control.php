@@ -225,10 +225,10 @@
                     </tr>
                     <?php } ?>
 
-                    <?php if (file_exists("/install/.sickrage.lock")) { ?>
+                    <?php if (file_exists("/install/.sickchill.lock")) { ?>
                     <tr>
-                      <td><span id="appstat_sickrage"></span> SickRage </td>
-                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=sickrage'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
+                      <td><span id="appstat_sickchill"></span> sickchill </td>
+                      <td class="text-center"><a href="javascript:;" onclick="location.href='?id=88&servicestart=sickchill'" class="btn btn-xs btn-default"><i class="fa fa-refresh text-info"></i> <?php echo T('REFRESH'); ?></a></td>
                       <td class="text-center"><?php echo "$cbodysr"; ?></td>
                     </tr>
                     <?php } ?>

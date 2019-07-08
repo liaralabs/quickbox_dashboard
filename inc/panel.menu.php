@@ -238,8 +238,8 @@
               <?php if (processExists("sickgear",$username) && file_exists('/install/.sickgear.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sickgearURL"; ?>" target="_blank"><img src="img/brands/sickgear.png" class="brand-ico"> <span>SickGear</span></a></li>
               <?php } ?>
-              <?php if (processExists("sickrage",$username) && file_exists('/install/.sickrage.lock')) { ?>
-                <li><a class="grayscale" href="<?php echo "$sickrageURL"; ?>" target="_blank"><img src="img/brands/sickrage.png" class="brand-ico"> <span>SickRage</span></a></li>
+              <?php if (processExists("sickchill",$username) && file_exists('/install/.sickchill.lock')) { ?>
+                <li><a class="grayscale" href="<?php echo "$sickchillURL"; ?>" target="_blank"><img src="img/brands/sickchill.png" class="brand-ico"> <span>sickchill</span></a></li>
               <?php } ?>
               <?php if (processExists("nzbdrone",$username) && file_exists('/install/.sonarr.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sonarrURL"; ?>" target="_blank"><img src="img/brands/sonarr.png" class="brand-ico"> <span>Sonarr</span></a></li>

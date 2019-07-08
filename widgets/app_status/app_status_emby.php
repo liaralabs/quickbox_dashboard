@@ -12,7 +12,7 @@ function processExists($processName, $username) {
   return $exists;
 }
 
-$emby = processExists("EmbyServer",$username);
+$emby = processExists("EmbyServer","emby");
 
 if ($emby == "1") { $eval = "<span class=\"badge badge-service-running-dot\"></span><span class=\"badge badge-service-running-pulse\"></span>";
 } else { $eval = "<span class=\"badge badge-service-disabled-dot\"></span><span class=\"badge badge-service-disabled-pulse\"></span>";

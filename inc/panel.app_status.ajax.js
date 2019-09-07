@@ -343,7 +343,7 @@ $(document).ready(function() {
   function sload() {
     $.ajax({url: "widgets/load.php", cache:true, success: function (result) {
       $('#cpuload').html(result);
-      setTimeout(function(){sload()}, 1000);
+      setTimeout(function(){sload()}, 15000);
     }});
   }
   sload();
@@ -367,7 +367,7 @@ $(document).ready(function() {
   function ramstats() {
     $.ajax({url: "widgets/ram_stats.php", cache:false, success: function (result) {
       $('#meterram').html(result);
-      setTimeout(function(){ramstats()}, 1000);
+      setTimeout(function(){ramstats()}, 15000);
     }});
   }
   ramstats();

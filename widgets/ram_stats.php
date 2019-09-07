@@ -264,20 +264,20 @@ else
             $sysInfo[$v] = $sysInfo[$v] ? $sysInfo[$v] : 0;
         }
         ?>
-        <!-- PHSYSICAL MEMORY USAGE -->
-        <div class="col-sm-12">
+
+        <!-- REAL MEMORY USAGE -->
+        <div class="col-sm-12" style="padding-top:10px">
           <!--div class="vertical-container"-->
-            <p style="font-size:10px"><?php echo T('PHYSICAL_MEMORY_TITLE'); ?>: <?php echo "$memPercent"; ?>%<br/>
-              <?php echo T('PHYSICAL_MEMORY_USED_TXT'); ?>: <font color='#eb4549'><?php echo "$mu"; ?></font>  | <?php echo T('PHYSICAL_MEMORY_IDLE_TXT'); ?>: <font color='#eb4549'><?php echo "$mf"; ?></font>
-            </p>
+            <p style="font-size:10px"><?php echo T('REAL_MEMORY_TITLE'); ?>: <?php echo "$memRealPercent"; ?>%<br/>
+              <?php echo T('REAL_MEMORY_USAGE_TXT'); ?> <?php echo "$memRealUsed"; ?> | <?php echo T('REAL_MEMORY_FREE_TXT'); ?> <?php echo "$memRealFree"; ?></p>
             <div class="progress progress-striped">
               <?php
-                if ($memPercent < "70") { $ramcolor="progress-bar-success"; }
-                if ($memPercent > "70") { $ramcolor="progress-bar-warning"; }
-                if ($memPercent > "90") { $ramcolor="progress-bar-danger"; }
+                if ($memRealPercent < "70") { $ramcolor="progress-bar-success"; }
+                if ($memRealPercent > "70") { $ramcolor="progress-bar-warning"; }
+                if ($memRealPercent > "90") { $ramcolor="progress-bar-danger"; }
               ?>
-              <div style="width:<?php echo "$memPercent"; ?>%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo "$memPercent"; ?>" role="progressbar" class="progress-bar <?php echo $ramcolor ?>">
-                <span class="sr-only"><?php echo "$memPercent"; ?>% <?php echo T('USED'); ?></span>
+              <div style="width:<?php echo "$memRealPercent"; ?>%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo "$memRealPercent"; ?>" role="progressbar" class="progress-bar <?php echo $ramcolor ?>">
+                <span class="sr-only"><?php echo "$memRealPercent"; ?>% <?php echo T('USED'); ?></span>
               </div>
             </div>
           <!--/div-->
@@ -301,23 +301,6 @@ else
               ?>
               <div style="width:<?php echo "$memCachedPercent"; ?>%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo "$memCachedPercent"; ?>" role="progressbar" class="progress-bar <?php echo $ramcolor ?>">
                 <span class="sr-only"><?php echo "$memCachedPercent"; ?>% <?php echo T('USED'); ?></span>
-              </div>
-            </div>
-          <!--/div-->
-        </div>
-        <!-- REAL MEMORY USAGE -->
-        <div class="col-sm-12" style="padding-top:10px">
-          <!--div class="vertical-container"-->
-            <p style="font-size:10px"><?php echo T('REAL_MEMORY_TITLE'); ?>: <?php echo "$memRealPercent"; ?>%<br/>
-              <?php echo T('REAL_MEMORY_USAGE_TXT'); ?> <?php echo "$memRealUsed"; ?> | <?php echo T('REAL_MEMORY_FREE_TXT'); ?> <?php echo "$memRealFree"; ?></p>
-            <div class="progress progress-striped">
-              <?php
-                if ($memRealPercent < "70") { $ramcolor="progress-bar-success"; }
-                if ($memRealPercent > "70") { $ramcolor="progress-bar-warning"; }
-                if ($memRealPercent > "90") { $ramcolor="progress-bar-danger"; }
-              ?>
-              <div style="width:<?php echo "$memRealPercent"; ?>%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo "$memRealPercent"; ?>" role="progressbar" class="progress-bar <?php echo $ramcolor ?>">
-                <span class="sr-only"><?php echo "$memRealPercent"; ?>% <?php echo T('USED'); ?></span>
               </div>
             </div>
           <!--/div-->

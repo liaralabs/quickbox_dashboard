@@ -174,11 +174,11 @@
             <?php if (file_exists('/install/.nzbget.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$nzbgetURL"; ?>" target="_blank"><img src="img/brands/nzbget.png" class="brand-ico"> <span>NZBGet</span></a></li>
             <?php } ?>
-            <?php if (processExistsOther("lounge",lounge) && file_exists('/install/.lounge.lock')) { ?>
+            <?php if (processExistsOther("lounge","lounge") && file_exists('/install/.lounge.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$loungeURL"; ?>" target="_blank"><img src="img/brands/lounge.svg" class="brand-ico"> <span>The Lounge</span></a></li>
             <?php } ?>
             <?php if ($username == "$master") { ?>
-              <?php if (processExistsOther("resilio-sync",rslsync) && file_exists('/install/.btsync.lock')) { ?>
+              <?php if (processExistsOther("resilio-sync","rslsync") && file_exists('/install/.btsync.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$btsyncURL"; ?>" target="_blank"><img src="img/brands/btsync.png" class="brand-ico"> <span>BTSync</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.bazarr.lock')) { ?>
@@ -273,7 +273,7 @@
               </ul>
             </li>
             <?php } ?>
-            <?php if (processExistsOther("shellinabox",shellinabox) && ($username == "$master")) { ?>
+            <?php if (processExistsOther("shellinabox","shellinabox") && ($username == "$master")) { ?>
             <li><a href="/shell" target="_blank"><i class="fa fa-keyboard-o"></i> <span><?php echo T('WEB_CONSOLE'); ?></span></a></li>
             <?php } ?>
             <!-- /// BEGIN INSERT CUSTOM MENU /// -->

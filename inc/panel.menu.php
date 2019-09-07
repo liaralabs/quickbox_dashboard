@@ -165,20 +165,20 @@
             <?php if (file_exists('/install/.rutorrent.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$rutorrentURL"; ?>" target="_blank"><img src="img/brands/rtorrent.png" class="brand-ico"> <span>ruTorrent</span></a></li>
             <?php } ?>
-            <?php if (processExists("flood",$username) && file_exists('/install/.flood.lock')) { ?>
+            <?php if (processExists("flood",$userRunning) && file_exists('/install/.flood.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$floodURL"; ?>" target="_blank"><img src="img/brands/flood.png" class="brand-ico"> <span>Flood</span></a></li>
             <?php } ?>
-            <?php if (processExists("deluge-web",$username) && file_exists('/install/.deluge.lock')) { ?>
+            <?php if (processExists("deluge-web",$userRunning) && file_exists('/install/.deluge.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$dwURL"; ?>" target="_blank"><img src="img/brands/deluge.png" class="brand-ico"> <span>Deluge Web</span></a></li>
             <?php } ?>
             <?php if (file_exists('/install/.nzbget.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$nzbgetURL"; ?>" target="_blank"><img src="img/brands/nzbget.png" class="brand-ico"> <span>NZBGet</span></a></li>
             <?php } ?>
-            <?php if (processExists("lounge",lounge) && file_exists('/install/.lounge.lock')) { ?>
+            <?php if (processExistsOther("lounge",lounge) && file_exists('/install/.lounge.lock')) { ?>
               <li><a class="grayscale" href="<?php echo "$loungeURL"; ?>" target="_blank"><img src="img/brands/lounge.svg" class="brand-ico"> <span>The Lounge</span></a></li>
             <?php } ?>
             <?php if ($username == "$master") { ?>
-              <?php if (processExists("resilio-sync",rslsync) && file_exists('/install/.btsync.lock')) { ?>
+              <?php if (processExistsOther("resilio-sync",rslsync) && file_exists('/install/.btsync.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$btsyncURL"; ?>" target="_blank"><img src="img/brands/btsync.png" class="brand-ico"> <span>BTSync</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.bazarr.lock')) { ?>
@@ -205,7 +205,7 @@
               <?php if (file_exists('/install/.lidarr.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$lidarrURL"; ?>" target="_blank"><img src="img/brands/lidarr.png" class="brand-ico"> <span>Lidarr</span></a></li>
               <?php } ?>
-              <?php if (processExists("medusa",$username) && file_exists('/install/.medusa.lock')) { ?>
+              <?php if (processExists("medusa",$userRunning) && file_exists('/install/.medusa.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$medusaURL"; ?>" target="_blank"><img src="img/brands/medusa.png" class="brand-ico"> <span>Medusa</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.netdata.lock')) { ?>
@@ -238,13 +238,13 @@
               <?php if (file_exists('/install/.sabnzbd.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sabnzbdURL"; ?>" target="_blank"><img src="img/brands/sabnzbd.png" class="brand-ico"> <span>SABnzbd</span></a></li>
               <?php } ?>
-              <?php if (processExists("sickgear",$username) && file_exists('/install/.sickgear.lock')) { ?>
+              <?php if (processExists("sickgear",$userRunning) && file_exists('/install/.sickgear.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sickgearURL"; ?>" target="_blank"><img src="img/brands/sickgear.png" class="brand-ico"> <span>SickGear</span></a></li>
               <?php } ?>
-              <?php if (processExists("sickchill",$username) && file_exists('/install/.sickchill.lock')) { ?>
+              <?php if (processExists("sickchill",$userRunning) && file_exists('/install/.sickchill.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sickchillURL"; ?>" target="_blank"><img src="img/brands/sickchill.png" class="brand-ico"> <span>SickChill</span></a></li>
               <?php } ?>
-              <?php if (processExists("nzbdrone",$username) && file_exists('/install/.sonarr.lock')) { ?>
+              <?php if (processExists("nzbdrone",$userRunning) && file_exists('/install/.sonarr.lock')) { ?>
                 <li><a class="grayscale" href="<?php echo "$sonarrURL"; ?>" target="_blank"><img src="img/brands/sonarr.png" class="brand-ico"> <span>Sonarr</span></a></li>
               <?php } ?>
               <?php if (file_exists('/install/.subsonic.lock')) { ?>
@@ -273,7 +273,7 @@
               </ul>
             </li>
             <?php } ?>
-            <?php if (processExists("shellinabox",shellinabox) && ($username == "$master")) { ?>
+            <?php if (processExistsOther("shellinabox",shellinabox) && ($username == "$master")) { ?>
             <li><a href="/shell" target="_blank"><i class="fa fa-keyboard-o"></i> <span><?php echo T('WEB_CONSOLE'); ?></span></a></li>
             <?php } ?>
             <!-- /// BEGIN INSERT CUSTOM MENU /// -->

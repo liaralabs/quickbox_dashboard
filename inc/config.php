@@ -232,48 +232,62 @@ function session_start_timeout($timeout=5, $probability=100, $cookie_domain='/')
 session_start_timeout(5);
 $MSGFILE = session_id();
 
-function processExists($processName, $username) {
+function processes($username) {
+  $userRunning = shell_exec("ps -fu $username");
+  return $userRunning;
+}
+
+function processExists($processName, $userRunning) {
   $exists= false;
-  exec("ps axo user:20,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm,cmd|grep $username | grep -iE $processName | grep -v grep", $pids);
+  if (stripos($userRunning, $processName) !==false) {
+    $exists = true;
+  }
+  return $exists;
+}
+
+function processExistsOther($processName, $username) {
+  $exists= false;
+  exec("ps -fu $username | grep -iE $processName | grep -v grep", $pids);
   if (count($pids) > 0) {
     $exists = true;
   }
   return $exists;
 }
 
-$bazarr = processExists("bazarr",$username);
-$btsync = processExists("resilio-sync",rslsync);
-$deluged = processExists("deluged",$username);
-$delugedweb = processExists("deluge-web",$username);
-$emby = processExists("EmbyServer",emby);
-$filebrowser = processExists("filebrowser",$username);
-$flood = processExists("flood",$username);
-$headphones = processExists("headphones",$username);
-$irssi = processExists("irssi",$username);
-$lidarr = processExists("lidarr",$username);
-$lounge = processExists("lounge",lounge);
-$nzbget = processExists("nzbget",$username);
-$nzbhydra = processExists("nzbhydra",$username);
-$ombi = processExists("ombi",$username);
+$userRunning = processes($username);
+$bazarr = processExists("bazarr",$userRunning);
+$btsync = processExistsOther("resilio-sync",rslsync);
+$deluged = processExists("deluged",$userRunning);
+$delugedweb = processExists("deluge-web",$userRunning);
+$emby = processExistsOther("EmbyServer",emby);
+$filebrowser = processExists("filebrowser",$userRunning);
+$flood = processExists("flood",$userRunning);
+$headphones = processExists("headphones",$userRunning);
+$irssi = processExists("irssi",$userRunning);
+$lidarr = processExists("lidarr",$userRunning);
+$lounge = processExistsOther("lounge",lounge);
+$nzbget = processExists("nzbget",$userRunning);
+$nzbhydra = processExists("nzbhydra",$userRunning);
+$ombi = processExists("ombi",$userRunning);
 $plex = processExists("Plex",plex);
-$tautulli = processExists("Tautulli",tautulli);
-$pyload = processExists("pyload",$username);
-$radarr = processExists("radarr",$username);
-$rtorrent = processExists("rtorrent",$username);
-$sabnzbd = processExists("sabnzbd",$username);
-$sickchill = processExists("sickchill",$username);
-$medusa = processExists("medusa",$username);
-$netdata = processExists("netdata",netdata);
-$sonarr = processExists("nzbdrone",$username);
-$subsonic = processExists("subsonic",$username);
-$syncthing = processExists("syncthing",$username);
-$jackett = processExists("jackett",$username);
-$couchpotato = processExists("couchpotato",$username);
-$quassel = processExists("quassel",$username);
-$shellinabox = processExists("shellinabox",shellinabox);
-$csf = processExists("lfd",root);
-$sickgear = processExists("sickgear",$username);
-$znc = processExists("znc",$username);
+$tautulli = processExistsOther("Tautulli",tautulli);
+$pyload = processExists("pyload",$userRunning);
+$radarr = processExists("radarr",$userRunning);
+$rtorrent = processExists("rtorrent",$userRunning);
+$sabnzbd = processExists("sabnzbd",$userRunning);
+$sickchill = processExists("sickchill",$userRunning);
+$medusa = processExists("medusa",$userRunning);
+$netdata = processExistsOther("netdata",netdata);
+$sonarr = processExists("nzbdrone",$userRunning);
+$subsonic = processExists("subsonic",$userRunning);
+$syncthing = processExists("syncthing",$userRunning);
+$jackett = processExists("jackett",$userRunning);
+$couchpotato = processExists("couchpotato",$userRunning);
+$quassel = processExists("quassel",$userRunning);
+$shellinabox = processExistsOther("shellinabox",shellinabox);
+$csf = processExistsOther("lfd",root);
+$sickgear = processExists("sickgear",$userRunning);
+$znc = processExists("znc",$userRunning);
 
 function isEnabled($process, $username){
   $service = $process;

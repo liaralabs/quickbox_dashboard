@@ -234,7 +234,7 @@
       dataType: 'json',
       success: update,
       error: function () {
-        setTimeout(GetData, updateInterval);
+        setTimeout(GetData, 1000);
       }
     });
   }
@@ -248,7 +248,7 @@
         { label: "CPU:" + _data.cpu + "%", data: cpu, lines: { fill: 0.2, lineWidth: 1.5 }, color: "#B0A4BE" }
       ];
       $.plot($("#flot-placeholder1"), dataset, options);
-      setTimeout(GetData, updateInterval);
+      setTimeout(GetData, 1000);
   }
   $(document).ready(function () {
     initData();

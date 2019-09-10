@@ -46,9 +46,9 @@ $time = microtime(); $time = explode(" ", $time);
 $time = $time[1] + $time[0]; $start = $time;
 
 if (file_exists('/install/.quota.lock')) {
-  $dftotal = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf \$4/1024/1024}'");
-  $dffree = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf (\$4-\$3)/1024/1024}'");
-  $dfused = shell_exec("sudo /usr/sbin/repquota /|/bin/grep ^".$username."|/usr/bin/awk '{printf \$3/1024/1024}'");
+  $dftotal = shell_exec("sudo /usr/bin/quota -u ".$username."| tail -n 1 | sed -e 's|^[ \t]*||' | awk '{print $3/1024/1024}'");
+  $dfused = shell_exec("sudo /usr/bin/quota -u ".$username."| tail -n 1 | sed -e 's|^[ \t]*||' | awk '{print $2/1024/1024}'");
+  $dffree = sprintf('%0.2f', $dftotal - $dfused);
   $perused = sprintf('%1.0f', $dfused / $dftotal * 100);
 
 } else {

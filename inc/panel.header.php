@@ -274,7 +274,7 @@ var InputSpeed4=<?php echo floor($NetInputSpeed[4]) ?>;
 var InputSpeed5=<?php echo floor($NetInputSpeed[5]) ?>;
 function getJSONData()
 {
-  setTimeout("getJSONData()", 2500);
+  setTimeout("getJSONData()", 1000);
   $.getJSON('?act=rt&callback=?', displayData);
 }
 function ForDight(Dight,How)
